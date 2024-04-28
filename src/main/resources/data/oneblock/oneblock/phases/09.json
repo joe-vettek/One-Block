@@ -1,0 +1,142 @@
+{
+  "name": "09",
+  "count": 780,
+  "end_gift": "ija-one-block:09-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:stone_bricks",
+      "weight": 139
+    },
+    {
+      "type": "block",
+      "id": "minecraft:mossy_stone_bricks",
+      "weight": 112
+    },
+    {
+      "type": "block",
+      "id": "minecraft:mycelium",
+      "weight": 84
+    },
+    {
+      "type": "block",
+      "id": "minecraft:cracked_stone_bricks",
+      "weight": 59
+    },
+    {
+      "type": "block",
+      "id": "minecraft:chiseled_stone_bricks",
+      "weight": 59
+    },
+    {
+      "type": "block",
+      "id": "minecraft:light_gray_concrete_powder",
+      "weight": 58
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gravel",
+      "weight": 39
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 16
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 8
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:skeleton",
+      "weight": 14,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:dark_oak_log",
+      "weight": 14
+    },
+    {
+      "type": "block",
+      "id": "minecraft:bone_block",
+      "weight": 13
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:cave_spider",
+      "weight": 12,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:silverfish",
+      "weight": 12,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:redstone_ore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:emerald_ore",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "minecraft:lapis_ore",
+      "weight": 5
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:09",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diamond_ore",
+      "weight": 5
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:evoker",
+      "weight": 4,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:creeper",
+      "weight": 4,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:09-variety",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "minecraft:jack_o_lantern",
+      "weight": 3
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:odd",
+      "weight": 3
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:rare",
+      "weight": 1
+    }
+  ]
+}

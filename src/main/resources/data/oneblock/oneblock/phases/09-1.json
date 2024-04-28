@@ -1,0 +1,148 @@
+{
+  "name": "Subterranean Depths",
+  "count": 750,
+  "end_gift": "oneblock:09-1-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:deepslate",
+      "weight": 150
+    },
+    {
+      "type": "block",
+      "id": "minecraft:cobbled_deepslate",
+      "weight": 69
+    },
+    {
+      "type": "block",
+      "id": "minecraft:oak_log",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "minecraft:reinforced_deepslate",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sculk_catalyst",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sculk",
+      "weight": 20
+    },
+    {
+      "type": "block",
+      "id": "minecraft:amethyst",
+      "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "minecraft:amethyst_block",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "minecraft:smooth_basalt",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:calcite",
+      "weight": 10
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:zombie",
+      "weight": 2,
+      "count": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:skeleton",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:deepslate_gold_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:deepslate_lapis_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:deepslate_iron_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:deepslate_emerald_ore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:deepslate_copper_ore",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "minecraft:deepslate_redstone_ore",
+      "weight": 8
+    },
+    {
+      "type": "gift",
+      "id": "oneblock:08-1",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:creeper",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:deepslate_diamond_ore",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:spider",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "oneblock:09-1",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:glow_squid",
+      "weight": 3,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:musical",
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:warden",
+      "weight": 1,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:rare",
+      "weight": 1
+    }
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "name": "08-1",
+  "count": 750,
+  "end_gift": "oneblock:08-1-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:dripstone_block",
+      "weight": 80
+    },
+    {
+      "type": "block",
+      "id": "minecraft:grass_block",
+      "weight": 50
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coarse_dirt",
+      "weight": 20
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:allay",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:camel",
+      "weight": 5,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:cherry_log",
+      "weight": 29
+    },
+    {
+      "type": "block",
+      "id": "minecraft:lapis_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:emerald_ore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:moss_block",
+      "weight": 16
+    },
+    {
+      "type": "block",
+      "id": "minecraft:rooted_dirt",
+      "weight": 8
+    },
+    {
+      "type": "gift",
+      "id": "oneblock:08-1",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "minecraft:oak_log",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:goat",
+      "weight": 3,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:08-variety",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:axolotl",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:musical",
+      "weight": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:rare",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:stone",
+      "weight": 8
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_sand",
+      "loot_table": "minecraft:archaeology/desert_pyramid",
+      "weight": 8
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_sand",
+      "loot_table": "minecraft:archaeology/desert_well",
+      "weight": 8
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_sand",
+      "loot_table": "minecraft:archaeology/ocean_ruin_warm",
+      "weight": 8
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_gravel",
+      "loot_table": "minecraft:archaeology/ocean_ruin_cold",
+      "weight": 8
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_gravel",
+      "loot_table": "minecraft:archaeology/trail_ruins_common",
+      "weight": 12
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_gravel",
+      "loot_table": "minecraft:archaeology/trail_ruins_rare",
+      "weight": 3
+    }
+  ]
+}

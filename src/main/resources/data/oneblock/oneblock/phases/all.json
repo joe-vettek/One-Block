@@ -1,0 +1,898 @@
+{
+  "name": "afterphases",
+  "count": -1,
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:grass_block",
+      "weight": 294
+    },
+    {
+      "type": "block",
+      "id": "minecraft:end_stone",
+      "weight": 219
+    },
+    {
+      "type": "block",
+      "id": "minecraft:quartz_block",
+      "weight": 213
+    },
+    {
+      "type": "block",
+      "id": "minecraft:cobblestone",
+      "weight": 212
+    },
+    {
+      "type": "block",
+      "id": "minecraft:stone",
+      "weight": 176
+    },
+    {
+      "type": "block",
+      "id": "minecraft:end_stone_bricks",
+      "weight": 160
+    },
+    {
+      "type": "block",
+      "id": "minecraft:stone_bricks",
+      "weight": 139
+    },
+    {
+      "type": "block",
+      "id": "minecraft:mossy_cobblestone",
+      "weight": 128
+    },
+    {
+      "type": "block",
+      "id": "minecraft:purpur_block",
+      "weight": 124
+    },
+    {
+      "type": "block",
+      "id": "minecraft:purpur_pillar",
+      "weight": 115
+    },
+    {
+      "type": "block",
+      "id": "minecraft:mossy_stone_bricks",
+      "weight": 112
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sand",
+      "weight": 110
+    },
+    {
+      "type": "block",
+      "id": "minecraft:red_sand",
+      "weight": 103
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 103
+    },
+    {
+      "type": "block",
+      "id": "minecraft:oak_log",
+      "weight": 101
+    },
+    {
+      "type": "block",
+      "id": "minecraft:netherrack",
+      "weight": 95
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gravel",
+      "weight": 95
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 89
+    },
+    {
+      "type": "block",
+      "id": "minecraft:mycelium",
+      "weight": 84
+    },
+    {
+      "type": "block",
+      "id": "minecraft:red_sandstone",
+      "weight": 81
+    },
+    {
+      "type": "block",
+      "id": "minecraft:blackstone",
+      "weight": 80
+    },
+    {
+      "type": "block",
+      "id": "minecraft:prismarine",
+      "weight": 77
+    },
+    {
+      "type": "block",
+      "id": "minecraft:jungle_log",
+      "weight": 70
+    },
+    {
+      "type": "block",
+      "id": "minecraft:redstone_ore",
+      "weight": 65
+    },
+    {
+      "type": "block",
+      "id": "minecraft:cracked_stone_bricks",
+      "weight": 59
+    },
+    {
+      "type": "block",
+      "id": "minecraft:chiseled_stone_bricks",
+      "weight": 59
+    },
+    {
+      "type": "block",
+      "id": "minecraft:light_gray_concrete_powder",
+      "weight": 58
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:endermi",
+      "weight": 2,
+      "count": 57
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gold_ore",
+      "weight": 52
+    },
+    {
+      "type": "block",
+      "id": "minecraft:soul_sand",
+      "weight": 49
+    },
+    {
+      "type": "block",
+      "id": "minecraft:prismarine_bricks",
+      "weight": 49
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_bricks",
+      "weight": 47
+    },
+    {
+      "type": "block",
+      "id": "minecraft:dark_prismarine",
+      "weight": 45
+    },
+    {
+      "type": "block",
+      "id": "minecraft:snow_block",
+      "weight": 44
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diorite",
+      "weight": 43
+    },
+    {
+      "type": "block",
+      "id": "minecraft:terracotta",
+      "weight": 40
+    },
+    {
+      "type": "block",
+      "id": "minecraft:basalt",
+      "weight": 37
+    },
+    {
+      "type": "block",
+      "id": "minecraft:red_nether_bricks",
+      "weight": 37
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sandstone",
+      "weight": 36
+    },
+    {
+      "type": "block",
+      "id": "minecraft:dark_oak_log",
+      "weight": 35
+    },
+    {
+      "type": "block",
+      "id": "minecraft:emerald_ore",
+      "weight": 33
+    },
+    {
+      "type": "block",
+      "id": "minecraft:lapis_ore",
+      "weight": 33
+    },
+    {
+      "type": "block",
+      "id": "minecraft:dirt",
+      "weight": 33
+    },
+    {
+      "type": "block",
+      "id": "minecraft:andesite",
+      "weight": 33
+    },
+    {
+      "type": "block",
+      "id": "minecraft:granite",
+      "weight": 32
+    },
+    {
+      "type": "block",
+      "id": "minecraft:magma_block",
+      "weight": 31
+    },
+    {
+      "type": "block",
+      "id": "minecraft:clay",
+      "weight": 31
+    },
+    {
+      "type": "block",
+      "id": "minecraft:warped_nylium",
+      "weight": 30
+    },
+    {
+      "type": "block",
+      "id": "minecraft:crimson_nylium",
+      "weight": 29
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diamond_ore",
+      "weight": 26
+    },
+    {
+      "type": "block",
+      "id": "minecraft:acacia_log",
+      "weight": 25
+    },
+    {
+      "type": "block",
+      "id": "minecraft:birch_log",
+      "weight": 25
+    },
+    {
+      "type": "block",
+      "id": "minecraft:brown_terracotta",
+      "weight": 24
+    },
+    {
+      "type": "block",
+      "id": "minecraft:spruce_log",
+      "weight": 24
+    },
+    {
+      "type": "block",
+      "id": "minecraft:obsidian",
+      "weight": 23
+    },
+    {
+      "type": "block",
+      "id": "minecraft:orange_terracotta",
+      "weight": 23
+    },
+    {
+      "type": "block",
+      "id": "minecraft:red_terracotta",
+      "weight": 23
+    },
+    {
+      "type": "block",
+      "id": "minecraft:yellow_terracotta",
+      "weight": 23
+    },
+    {
+      "type": "block",
+      "id": "minecraft:soul_soil",
+      "weight": 21
+    },
+    {
+      "type": "block",
+      "id": "minecraft:glowstone",
+      "weight": 19
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:enderma",
+      "weight": 2,
+      "count": 18
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_quartz_ore",
+      "weight": 18
+    },
+    {
+      "type": "block",
+      "id": "minecraft:shroomlight",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_wart_block",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:warped_wart_block",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:light_gray_terracotta",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:white_terracotta",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:packed_ice",
+      "weight": 17
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:slime",
+      "weight": 2,
+      "count": 16
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:bee",
+      "weight": 2,
+      "count": 16
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gilded_blackstone",
+      "weight": 16
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:husk",
+      "weight": 2,
+      "count": 16
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:skeleto",
+      "weight": 2,
+      "count": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sea_lantern",
+      "weight": 14
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:stray",
+      "weight": 2,
+      "count": 14
+    },
+    {
+      "type": "block",
+      "id": "minecraft:bone_block",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sponge",
+      "weight": 13
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:cave_sp",
+      "weight": 2,
+      "count": 12
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:silverf",
+      "weight": 2,
+      "count": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_gold_ore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:fire_coral_block",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:horn_coral_block",
+      "weight": 11
+    },
+    {
+      "type": "block",
+      "id": "minecraft:honeycomb_block",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:tube_coral_block",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:bubble_coral_block",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:brain_coral_block",
+      "weight": 10
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:fox",
+      "weight": 2,
+      "count": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:melon",
+      "weight": 10
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:magma_c",
+      "weight": 2,
+      "count": 9
+    },
+    {
+      "type": "block",
+      "id": "minecraft:podzol",
+      "weight": 9
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:07",
+      "weight": 8
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:rabbit",
+      "weight": 2,
+      "count": 8
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:06",
+      "weight": 7
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:odd",
+      "weight": 7
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:04",
+      "weight": 7
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:03",
+      "weight": 7
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:10",
+      "weight": 6
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:08",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:cat",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:blaze",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:hoglin",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:piglin",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:pillage",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:witch",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:ocelot",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:vex",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:05",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:parrot",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:guardia",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:creeper",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:zombie",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:02",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "minecraft:pumpkin",
+      "weight": 6
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:09",
+      "weight": 5
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:musical",
+      "weight": 5
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:10-variety",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:evoker",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:phantom",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:08-variety",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:mule",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "block",
+      "id": "minecraft:slime_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "minecraft:honey_block",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:ghast",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:wither_",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "block",
+      "id": "minecraft:ancient_debris",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:vindica",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:donkey",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:village",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:llama",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:horse",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:cod",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:tropica",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:salmon",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:drowned",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:turtle",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:spider",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:chicken",
+      "weight": 2,
+      "count": 4
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:01",
+      "weight": 4
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:09-variety",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "minecraft:jack_o_lantern",
+      "weight": 3
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:rare",
+      "weight": 3
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:07-variety",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "minecraft:crying_obsidian",
+      "weight": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:wolf",
+      "weight": 2,
+      "count": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:pig",
+      "weight": 2,
+      "count": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:shulker",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:strider",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:06-variety",
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:wanderi",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:05-variety",
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:dolphin",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:elder_g",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:pufferf",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:squid",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:mooshro",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:sheep",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:cow",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:00",
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:zombie_",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:bee_nest",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:beehive",
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:panda",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:04-variety",
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:polar_b",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:03-variety",
+      "weight": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:02-variety",
+      "weight": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:tutorial-waterbucket",
+      "weight": 1,
+      "min_times": 1
+    }
+  ]
+}

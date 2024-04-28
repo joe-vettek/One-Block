@@ -1,0 +1,19 @@
+{
+  "order": [
+    "oneblock:phases/00",
+    "oneblock:phases/01",
+    "oneblock:phases/02",
+    "oneblock:phases/03",
+    "oneblock:phases/03-1",
+    "oneblock:phases/04",
+    "oneblock:phases/05",
+    "oneblock:phases/06",
+    "oneblock:phases/07",
+    "oneblock:phases/08",
+    "oneblock:phases/08-1",
+    "oneblock:phases/09",
+    "oneblock:phases/09-1",
+    "oneblock:phases/10",
+    "oneblock:phases/all"
+  ]
+}

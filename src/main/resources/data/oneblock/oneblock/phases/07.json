@@ -1,0 +1,164 @@
+{
+  "name": "07",
+  "count": 840,
+  "end_gift": "ija-one-block:07-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:netherrack",
+      "weight": 95
+    },
+    {
+      "type": "block",
+      "id": "minecraft:blackstone",
+      "weight": 80
+    },
+    {
+      "type": "block",
+      "id": "minecraft:soul_sand",
+      "weight": 49
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_bricks",
+      "weight": 47
+    },
+    {
+      "type": "block",
+      "id": "minecraft:basalt",
+      "weight": 37
+    },
+    {
+      "type": "block",
+      "id": "minecraft:red_nether_bricks",
+      "weight": 37
+    },
+    {
+      "type": "block",
+      "id": "minecraft:magma_block",
+      "weight": 31
+    },
+    {
+      "type": "block",
+      "id": "minecraft:warped_nylium",
+      "weight": 30
+    },
+    {
+      "type": "block",
+      "id": "minecraft:crimson_nylium",
+      "weight": 29
+    },
+    {
+      "type": "block",
+      "id": "minecraft:soul_soil",
+      "weight": 21
+    },
+    {
+      "type": "block",
+      "id": "minecraft:glowstone",
+      "weight": 19
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_quartz_ore",
+      "weight": 18
+    },
+    {
+      "type": "block",
+      "id": "minecraft:shroomlight",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_wart_block",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:warped_wart_block",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gilded_blackstone",
+      "weight": 16
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_gold_ore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:obsidian",
+      "weight": 12
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:magma_cube",
+      "weight": 9,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:07",
+      "weight": 8
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:blaze",
+      "weight": 6,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:hoglin",
+      "weight": 6,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:piglin",
+      "weight": 6,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:ghast",
+      "weight": 4,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:wither_skeleton",
+      "weight": 4,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:ancient_debris",
+      "weight": 4
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:07-variety",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "minecraft:crying_obsidian",
+      "weight": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:strider",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:odd",
+      "weight": 1
+    }
+  ]
+}

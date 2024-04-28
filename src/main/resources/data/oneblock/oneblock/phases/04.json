@@ -1,0 +1,187 @@
+{
+  "name": "04",
+  "count": 890,
+  "end_gift": "ija-one-block:04-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:sand",
+      "weight": 79
+    },
+    {
+      "type": "block",
+      "id": "minecraft:prismarine",
+      "weight": 77
+    },
+    {
+      "type": "block",
+      "id": "minecraft:prismarine_bricks",
+      "weight": 49
+    },
+    {
+      "type": "block",
+      "id": "minecraft:dark_prismarine",
+      "weight": 45
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sea_lantern",
+      "weight": 14
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sponge",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diorite",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:clay",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:fire_coral_block",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gold_ore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:dark_oak_log",
+      "weight": 11
+    },
+    {
+      "type": "block",
+      "id": "minecraft:horn_coral_block",
+      "weight": 11
+    },
+    {
+      "type": "block",
+      "id": "minecraft:stone",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:tube_coral_block",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:bubble_coral_block",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:brain_coral_block",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:oak_log",
+      "weight": 9
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:04",
+      "weight": 7
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:guardian",
+      "weight": 6,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:cod",
+      "weight": 4,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:tropical_fish",
+      "weight": 4,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:salmon",
+      "weight": 4,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:drowned",
+      "weight": 4,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:turtle",
+      "weight": 4,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:dolphin",
+      "weight": 3,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:elder_guardian",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:pufferfish",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:squid",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diamond_ore",
+      "weight": 2
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:musical",
+      "weight": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:04-variety",
+      "weight": 1
+    }
+  ]
+}

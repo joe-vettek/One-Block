@@ -1,0 +1,113 @@
+{
+  "name": "05",
+  "count": 570,
+  "end_gift": "ija-one-block:05-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:cobblestone",
+      "weight": 212
+    },
+    {
+      "type": "block",
+      "id": "minecraft:mossy_cobblestone",
+      "weight": 128
+    },
+    {
+      "type": "block",
+      "id": "minecraft:jungle_log",
+      "weight": 70
+    },
+    {
+      "type": "block",
+      "id": "minecraft:grass_block",
+      "weight": 41
+    },
+    {
+      "type": "block",
+      "id": "minecraft:redstone_ore",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 9
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gold_ore",
+      "weight": 8
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:witch",
+      "weight": 6,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:ocelot",
+      "weight": 6,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:vex",
+      "weight": 6,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:05",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:parrot",
+      "weight": 2,
+      "count": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:horse",
+      "weight": 4,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diamond_ore",
+      "weight": 3
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:05-variety",
+      "weight": 2
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:musical",
+      "weight": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:odd",
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:panda",
+      "weight": 2,
+      "count": 1
+    }
+  ]
+}
