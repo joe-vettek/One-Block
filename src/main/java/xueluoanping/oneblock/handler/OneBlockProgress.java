@@ -4,16 +4,25 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 
 class OneBlockProgress {
+    public static final String KEY_NAME = "name";
+    public static final String KEY_ID = "id";
+    public static final String KEY_TYPE = "type";
+    public static final String KEY_COUNT = "count";
+    public static final String KEY_START = "start";
+    public static final String KEY_END = "end";
+    // public static final String KEY_NAME="name";
+
     public OneBlockProgress(String name, int counter) {
-        this(name, counter, 0, new ListTag(), new ListTag());
+        this(name, counter, 0, new ListTag(), new ListTag(),new ListTag());
     }
 
-    public OneBlockProgress(String name, int counter, int bedrockLastTime, ListTag remainCounter, ListTag quotaCounter) {
+    public OneBlockProgress(String name, int counter, int bedrockLastTime, ListTag remainCounter, ListTag quotaCounter, ListTag precedenceCounter) {
         this.name = name;
         this.counter = counter;
         this.bedrockLastTime = bedrockLastTime;
         this.remainCounter = remainCounter;
         this.quotaCounter = quotaCounter;
+        this.precedenceCounter = precedenceCounter;
     }
 
 
@@ -26,23 +35,25 @@ class OneBlockProgress {
     public int bedrockLastTime;
     public ListTag remainCounter;
     public ListTag quotaCounter;
+    public ListTag precedenceCounter;
     private static final int TAG_REMAIN = 1;
     private static final int TAG_QUOTA = 2;
+    private static final int TAG_precedence_LOCK = 3;
 
     public int getRemainAmount() {
         int amount = 0;
         for (int i = 0; i < this.remainCounter.size(); i++) {
             var tag = this.remainCounter.getCompound(i);
-            amount += tag.getInt("count");
+            amount += tag.getInt(KEY_COUNT);
         }
         return amount;
     }
 
     public void addListTag(int tagType, String type, String id, int count) {
         var tag = new CompoundTag();
-        tag.putString("type", type);
-        tag.putString("id", id);
-        tag.putInt("count", count);
+        tag.putString(KEY_TYPE, type);
+        tag.putString(KEY_ID, id);
+        tag.putInt(KEY_COUNT, count);
         if (tagType == TAG_REMAIN)
             this.remainCounter.add(tag);
         else if (tagType == TAG_QUOTA) {
@@ -58,16 +69,25 @@ class OneBlockProgress {
         addListTag(TAG_QUOTA, type, id, count);
     }
 
+    public void addPrecedence(String type, String id, int start, int end) {
+        var tag = new CompoundTag();
+        tag.putString(KEY_TYPE, type);
+        tag.putString(KEY_ID, id);
+        tag.putInt(KEY_START, start);
+        tag.putInt(KEY_END, end);
+        this.precedenceCounter.add(tag);
+    }
+
     public int updateListTag(int tagType, String type, String id) {
         var listTag = tagType == TAG_REMAIN ? this.remainCounter : this.quotaCounter;
         int removeIndex = -1;
         for (int i = 0; i < listTag.size(); i++) {
             var tag = listTag.getCompound(i);
-            if (tag.getString("type").equals(type)
-                    && tag.getString("id").equals(id)) {
-                int count = tag.getInt("count") - 1;
+            if (tag.getString(KEY_TYPE).equals(type)
+                    && tag.getString(KEY_ID).equals(id)) {
+                int count = tag.getInt(KEY_COUNT) - 1;
                 if (count > 0) {
-                    tag.putInt("count", tag.getInt("count") - 1);
+                    tag.putInt(KEY_COUNT, tag.getInt(KEY_COUNT) - 1);
                 } else {
                     removeIndex = i;
                 }
@@ -93,8 +113,8 @@ class OneBlockProgress {
         int index = -1;
         for (int i = 0; i < listTag.size(); i++) {
             var tag = listTag.getCompound(i);
-            if (tag.getString("type").equals(type)
-                    && tag.getString("id").equals(id)) {
+            if (tag.getString(KEY_TYPE).equals(type)
+                    && tag.getString(KEY_ID).equals(id)) {
                 index = i;
                 break;
             }
@@ -114,9 +134,25 @@ class OneBlockProgress {
         int index = indexOfQuota(type, id);
         boolean result = true;
         if (index >= 0) {
-            result = this.quotaCounter.getCompound(index).getInt("count") > 0;
+            result = this.quotaCounter.getCompound(index).getInt(KEY_COUNT) > 0;
         }
         return result;
+    }
+
+    public String checkPrecedence(int localCount) {
+        String uid = null;
+        for (int i = 0; i < precedenceCounter.size(); i++) {
+            var tag = precedenceCounter.getCompound(i);
+            int start = tag.getInt(KEY_START);
+            start = start != 0 ? start : Integer.MIN_VALUE;
+            int end = tag.getInt(KEY_END);
+            end = end != 0 ? end : Integer.MAX_VALUE;
+            if (start <= localCount && localCount <= end) {
+                uid = tag.getString(KEY_ID);
+                break;
+            }
+        }
+        return uid;
     }
 
     public void cleanRemain() {
@@ -125,6 +161,16 @@ class OneBlockProgress {
 
     public void cleanQuota() {
         this.quotaCounter.clear();
+    }
+
+    public void cleanPrecedence() {
+        this.precedenceCounter.clear();
+    }
+
+    public void cleanLocalCounter() {
+        this.cleanRemain();
+        this.cleanQuota();
+        this.cleanPrecedence();
     }
 
     public void updateBedrockLastTime() {
@@ -140,4 +186,8 @@ class OneBlockProgress {
     }
 
 
+    public void updateLocalCounter(String type, String id) {
+        this.updateRemain(type, id);
+        this.updateQuota(type, id);
+    }
 }

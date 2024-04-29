@@ -41,7 +41,7 @@
     {
       "type": "mob",
       "id": "minecraft:chicken",
-      "weight": 2,
+      "weight": 1,
       "count": 1
     },
     {
@@ -52,19 +52,19 @@
     {
       "type": "mob",
       "id": "minecraft:sheep",
-      "weight": 2,
+      "weight": 1,
       "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:cow",
-      "weight": 2,
+      "weight": 1,
       "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:pig",
-      "weight": 2,
+      "weight": 1,
       "count": 1
     }
   ]

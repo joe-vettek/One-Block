@@ -3,9 +3,16 @@
   "count": 47,
   "end_gift": "ija-one-block:00-gift",
   "list": [
+
+    {
+      "type": "block",
+      "id": "minecraft:dirt",
+      "precedence": 2
+    },
     {
       "type": "block",
       "id": "minecraft:grass_block",
+      "precedence_end": 5,
       "weight": 19
     },
     {
@@ -21,7 +28,7 @@
     {
       "type": "gift",
       "id": "ija-one-block:00",
-      "weight": 2
+      "weight": 1
     },
     {
       "type": "gift",
@@ -32,7 +39,7 @@
     {
       "type": "mob",
       "id": "minecraft:pig",
-      "weight": 2,
+      "weight": 1,
       "count": 1
     }
   ]

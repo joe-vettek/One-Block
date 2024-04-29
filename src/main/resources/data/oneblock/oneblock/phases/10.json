@@ -4,6 +4,24 @@
   "end_gift": "ija-one-block:10-gift",
   "list": [
     {
+      "type": "template",
+      "id": "oneblock:end_portal",
+      "precedence": 1,
+      "offset_y": -4,
+      "offset_x": -2,
+      "offset_z": -2,
+      "preprocessing": [
+        {
+          "type": "block",
+          "id": "minecraft:end_stone"
+        },
+        {
+          "type": "command",
+          "id": "/playsound minecraft:block.end_portal.spawn block @a %s %s %s"
+        }
+      ]
+    },
+    {
       "type": "block",
       "id": "minecraft:end_stone",
       "weight": 219

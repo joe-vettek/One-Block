@@ -76,25 +76,25 @@
     {
       "type": "mob",
       "id": "minecraft:frog",
-      "weight": 2,
+      "weight": 1,
       "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:tadpole",
-      "weight": 2,
+      "weight": 1,
       "count": 2
     },
     {
       "type": "mob",
       "id": "minecraft:cod",
-      "weight": 2,
+      "weight": 1,
       "count": 4
     },
     {
       "type": "mob",
       "id": "minecraft:salmon",
-      "weight": 2,
+      "weight": 1,
       "count": 4
     },
     {

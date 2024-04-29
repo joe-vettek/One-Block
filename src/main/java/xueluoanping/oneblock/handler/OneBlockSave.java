@@ -34,6 +34,8 @@ public class OneBlockSave extends SavedData {
                 p.remainCounter = manaTag.getList("remainCounter", ListTag.TAG_COMPOUND);
             if (manaTag.contains("quotaCounter"))
                 p.quotaCounter = manaTag.getList("quotaCounter", ListTag.TAG_COMPOUND);
+            if (manaTag.contains("precedenceCounter"))
+                p.precedenceCounter = manaTag.getList("precedenceCounter", ListTag.TAG_COMPOUND);
             chunkPosData.put(chunkPos, p);
         }
     }
@@ -52,8 +54,12 @@ public class OneBlockSave extends SavedData {
         setDirty();
     }
 
-    public OneBlockProgress get(BlockPos pos) {
+    public OneBlockProgress getOrDefault(BlockPos pos) {
         return chunkPosData.getOrDefault(pos, new OneBlockProgress());
+    }
+
+    public OneBlockProgress get(BlockPos pos) {
+        return chunkPosData.get(pos);
     }
 
     public BlockPos remove(BlockPos blockPos) {
@@ -78,6 +84,7 @@ public class OneBlockSave extends SavedData {
             manaTag.putInt("counter", mana.counter);
             manaTag.put("remainCounter", mana.remainCounter);
             manaTag.put("quotaCounter", mana.quotaCounter);
+            manaTag.put("precedenceCounter", mana.precedenceCounter);
             list.add(manaTag);
         });
         tag.put("oneblock", list);

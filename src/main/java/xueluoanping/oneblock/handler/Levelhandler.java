@@ -1,34 +1,13 @@
 package xueluoanping.oneblock.handler;
 
-import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import net.minecraft.ResourceLocationException;
-import net.minecraft.commands.arguments.coordinates.BlockPosArgument;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.SectionPos;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.AbortableIterationConsumer;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MoverType;
-import net.minecraft.world.entity.decoration.ArmorStand;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.StructureBlock;
-import net.minecraft.world.level.chunk.ChunkGenerator;
-import net.minecraft.world.level.levelgen.structure.BoundingBox;
-import net.minecraft.world.level.levelgen.structure.BuiltinStructures;
-import net.minecraft.world.level.levelgen.structure.Structure;
-import net.minecraft.world.level.levelgen.structure.StructureStart;
-import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.TickEvent;
@@ -37,14 +16,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
-import xueluoanping.oneblock.util.PlaceUtil;
-import xueluoanping.oneblock.util.RegisterFinderUtil;
 
 import java.util.ConcurrentModificationException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class Levelhandler {
@@ -91,7 +66,9 @@ public class Levelhandler {
 
         ClientUtils.playASHParticles(level, pos);
         if (level.isEmptyBlock(pos)) {
-            var nowProgress = oneBlockSave.get(pos);
+            if (General.debug.get())
+                OneBlock.logger("Start Set at ", System.currentTimeMillis());
+            var nowProgress = oneBlockSave.getOrDefault(pos);
             var stageHolder = network.getStage(nowProgress.counter);
             var stage = stageHolder.data();
             nowProgress.name = stage.getResName();
@@ -99,7 +76,7 @@ public class Levelhandler {
             boolean set_gift = has_gift && stageHolder.stageRemainCount() == 1;
             if (stageHolder.isEnd()) {
                 network.setBedrock(level, pos);
-                nowProgress.setBedrockLastTime(stage.getCount());
+                nowProgress.setBedrockLastTime(stage.getCount()>0? stage.getCount():50*60);
             } else if (set_gift) {
                 network.setGif(level, pos, stage.getEnd_gift());
             } else {
@@ -107,7 +84,7 @@ public class Levelhandler {
                     ClientUtils.tittlePlayerClean(server);
                     ClientUtils.informNewStage(server, stage.getResName());
                     // reset the record when a new stage
-                    nowProgress.cleanRemain();
+                    nowProgress.cleanLocalCounter();
                     for (StageData.BlockEntry blockEntry : stage.getList()) {
                         if (blockEntry.getMin_times() > 0) {
                             nowProgress.addRemain(blockEntry.getType(), blockEntry.getGlobalId(), blockEntry.getMin_times());
@@ -115,13 +92,26 @@ public class Levelhandler {
                         if (blockEntry.getMax_times() > 0) {
                             nowProgress.addQuota(blockEntry.getType(), blockEntry.getGlobalId(), blockEntry.getMin_times());
                         }
+                        if (blockEntry.getTimes() > 0) {
+                            nowProgress.addRemain(blockEntry.getType(), blockEntry.getGlobalId(), blockEntry.getMin_times());
+                            nowProgress.addQuota(blockEntry.getType(), blockEntry.getGlobalId(), blockEntry.getMin_times());
+                        }
+                        if (blockEntry.getPrecedence_start() != 0 || blockEntry.getPrecedence_end() != 0) {
+                            int start = blockEntry.getPrecedence_start() > 0 ? blockEntry.getPrecedence_start() : stage.getCount() + blockEntry.getPrecedence_start() + 1;
+                            int end = blockEntry.getPrecedence_end() > 0 ? blockEntry.getPrecedence_end() : stage.getCount() + blockEntry.getPrecedence_end() + 1;
+                            nowProgress.addPrecedence(blockEntry.getType(), blockEntry.getGlobalId(), start, end);
+                        }
+                        if (blockEntry.getPrecedence() != 0) {
+                            int precedence = blockEntry.getPrecedence() > 0 ? blockEntry.getPrecedence() : stage.getCount() + blockEntry.getPrecedence() + 1;
+                            nowProgress.addPrecedence(blockEntry.getType(), blockEntry.getGlobalId(), precedence, precedence);
+                        }
                     }
                 }
                 // the last is a gift,so we need to prepare
                 int remainCount = has_gift ? stageHolder.stageRemainCount() - 1 : stageHolder.stageRemainCount();
                 var select = network.setNewBlock(level, pos, stage, remainCount, nowProgress);
-                nowProgress.updateRemain(select.getType(), select.getGlobalId());
-                nowProgress.updateQuota(select.getType(), select.getGlobalId());
+
+                nowProgress.updateLocalCounter(select.getType(), select.getGlobalId());
             }
             nowProgress.updateCounter();
             oneBlockSave.update(pos, nowProgress);
@@ -132,8 +122,10 @@ public class Levelhandler {
             if (General.debug.get())
                 ClientUtils.informPlayerProgress(server, nowProgress.name, nowProgress.counter);
 
+            if (General.debug.get())
+                OneBlock.logger("End Set at ", System.currentTimeMillis());
         } else if (level.getBlockState(pos).is(Blocks.BEDROCK)) {
-            var oneBlockSaveInstance = oneBlockSave.get(pos);
+            var oneBlockSaveInstance = oneBlockSave.getOrDefault(pos);
             if (oneBlockSaveInstance.bedrockLastTime <= 0) {
                 level.removeBlock(pos, false);
             } else {

@@ -5,6 +5,7 @@ import net.minecraft.util.RandomSource;
 import xueluoanping.oneblock.OneBlock;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class StageData {
@@ -14,18 +15,18 @@ public class StageData {
     private List<BlockEntry> list;
     private String end_gift;
     private ResourceLocation resourceLocation;
-    private String sub_target;
+    private String target;
 
     public String getResName() {
         return String.format("%s.%s", resourceLocation.getNamespace(), resourceLocation.getPath().replace("/", "."));
     }
 
-    public String getSub_target() {
-        return sub_target;
+    public String getTarget() {
+        return target;
     }
 
-    public void setSub_target(String sub_target) {
-        this.sub_target = sub_target;
+    public void setTarget(String target) {
+        this.target = target;
     }
 
     public String getName() {
@@ -68,8 +69,17 @@ public class StageData {
         this.resourceLocation = resourceLocation;
     }
 
-    public BlockEntry selectRandomByWeight(RandomSource random, OneBlockProgress nowProgress, boolean reachRemain) {
+
+    public BlockEntry selectRandomByWeight(RandomSource random, OneBlockProgress nowProgress, boolean reachRemain, int localCount) {
         var blockEntryStream = this.list;
+
+        String fix_uid = nowProgress.checkPrecedence(localCount);
+
+        var need_fix = blockEntryStream.stream().filter(blockEntry -> Objects.equals(blockEntry.getGlobalId(), fix_uid)).findFirst();
+        if (need_fix.isPresent()) {
+            return need_fix.get();
+        }
+
         if (reachRemain)
             blockEntryStream = blockEntryStream.stream()
                     .filter(blockEntry -> nowProgress.indexOfRemain(blockEntry.getType(), blockEntry.getGlobalId()) >= 0).collect(Collectors.toList());
@@ -95,13 +105,24 @@ public class StageData {
     public static class BlockEntry {
         private String type;
         private String id;
+        // set it if you need to
+        private String uid;
         private int weight;
         private String loot_table;
         private String blockstates;
         private String nbt;
         private int count;
+
+        // force to get, ignore when 0
+        // we could set it less than 0 but then transfer it into a positive number will help our work
+        private int precedence_start;
+        private int precedence;
+        private int precedence_end;
+
+        // not use it with fix
         private int min_times;
         private int max_times;
+        private int times;
 
         private List<BlockEntry> preprocessing;
         private int offset_x;
@@ -109,18 +130,32 @@ public class StageData {
         private int offset_z;
 
 
+        @Override
+        public String toString() {
+            return "BlockEntry{" +
+                    "type='" + type + '\'' +
+                    ", id='" + id + '\'' +
+                    ", uid='" + uid + '\'' +
+                    ", weight=" + weight +
+                    ", loot_table='" + loot_table + '\'' +
+                    ", blockstates='" + blockstates + '\'' +
+                    ", nbt='" + nbt + '\'' +
+                    ", count=" + count +
+                    ", fix_start=" + precedence_start +
+                    ", fix_end=" + precedence_end +
+                    ", min_times=" + min_times +
+                    ", max_times=" + max_times +
+                    ", preprocessing=" + preprocessing +
+                    ", offset_x=" + offset_x +
+                    ", offset_y=" + offset_y +
+                    ", offset_z=" + offset_z +
+                    '}';
+        }
+
         public String getGlobalId() {
-            String gid = this.id;
-            if (this.getBlockstates() != null) {
-                gid += ";Blockstates:" + this.getBlockstates();
-            }
-            if (this.getNbt() != null) {
-                gid += ";Nbt:" + this.getNbt();
-            }
-            if (this.getLoot_table() != null) {
-                gid += ";Loot_table:" + this.getLoot_table();
-            }
-            return gid;
+            if (this.getUid() != null)
+                return this.getUid();
+            return toString();
         }
 
         public BlockEntry(String type, String id) {
@@ -240,6 +275,46 @@ public class StageData {
 
         public void setPreprocessing(List<BlockEntry> preprocessing) {
             this.preprocessing = preprocessing;
+        }
+
+        public String getUid() {
+            return uid;
+        }
+
+        public void setUid(String uid) {
+            this.uid = uid;
+        }
+
+        public int getPrecedence_start() {
+            return precedence_start;
+        }
+
+        public void setPrecedence_start(int precedence_start) {
+            this.precedence_start = precedence_start;
+        }
+
+        public int getPrecedence_end() {
+            return precedence_end;
+        }
+
+        public void setPrecedence_end(int precedence_end) {
+            this.precedence_end = precedence_end;
+        }
+
+        public int getPrecedence() {
+            return precedence;
+        }
+
+        public void setPrecedence(int precedence) {
+            this.precedence = precedence;
+        }
+
+        public int getTimes() {
+            return times;
+        }
+
+        public void setTimes(int times) {
+            this.times = times;
         }
     }
 }

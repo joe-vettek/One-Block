@@ -9,7 +9,7 @@ public class General {
     public static ForgeConfigSpec COMMON_CONFIG;
     public static ForgeConfigSpec.BooleanValue debug;
     public static ForgeConfigSpec.BooleanValue collectItemNearby;
-    public static ForgeConfigSpec.ConfigValue<ArrayList<String>> order;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> order;
 
     static {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
@@ -17,13 +17,12 @@ public class General {
         debug = COMMON_BUILDER.comment("Set false to stop output dig log.").define("debugMode", false);
         COMMON_BUILDER.pop();
 
-        COMMON_BUILDER.comment("Play settings").push("Collect Item");
+        COMMON_BUILDER.comment("Play settings").push("Play settings");
         collectItemNearby = COMMON_BUILDER.comment("Set true to collect item dropped nearby the oneblock but may cause some delay.").define("Collect Item", true);
-        COMMON_BUILDER.pop();
+        // COMMON_BUILDER.pop();
 
-        COMMON_BUILDER.push("Order");
-        order = COMMON_BUILDER.comment("Set stage order.").define("order", new ArrayList<>(List.of(
-                "oneblock:phases/end_portal",
+        // COMMON_BUILDER.push("Order");
+        order = COMMON_BUILDER.comment("Set stage order.").defineList("Order", new ArrayList<>(List.of(
                 "oneblock:phases/00",
                 "oneblock:phases/01",
                 "oneblock:phases/02",
@@ -37,9 +36,8 @@ public class General {
                 "oneblock:phases/08-1",
                 "oneblock:phases/09",
                 "oneblock:phases/09-1",
-                "oneblock:phases/end_portal",
                 "oneblock:phases/10",
-                "oneblock:phases/all")),o -> true);
+                "oneblock:phases/all")),o -> o instanceof String);
         COMMON_BUILDER.pop();
         COMMON_CONFIG = COMMON_BUILDER.build();
     }

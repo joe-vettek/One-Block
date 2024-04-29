@@ -48,6 +48,8 @@ public class OneBlock {
         ModContents.BLOCK_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModContents.ITEM_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
         ModContents.BLOCK_ENTITY_TYPE_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
+        ModContents.LOOT_MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+
 
         MinecraftForge.EVENT_BUS.register(Levelhandler.instance);
         MinecraftForge.EVENT_BUS.register(ReloadHandler.instance);

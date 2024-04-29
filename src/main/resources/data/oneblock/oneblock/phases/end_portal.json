@@ -17,7 +17,7 @@
         },
         {
           "type": "command",
-          "id": "playsound minecraft:block.end_portal.spawn "
+          "id": "/playsound minecraft:block.end_portal.spawn block @a %s %s %s"
         }
       ]
     }

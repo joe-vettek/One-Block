@@ -1,7 +1,6 @@
 package xueluoanping.oneblock.handler;
 
 import java.util.*;
-import java.util.concurrent.atomic.AtomicReference;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -16,19 +15,13 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.packs.resources.ResourceManager;
 import net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener;
 import net.minecraft.util.profiling.ProfilerFiller;
-import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ChestBlock;
-import net.minecraft.world.level.block.entity.BrushableBlockEntity;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
-import xueluoanping.oneblock.ModConstants;
 import xueluoanping.oneblock.OneBlock;
-import xueluoanping.oneblock.client.OneBlockTranslator;
 import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
-import xueluoanping.oneblock.util.CommandUtils;
 import xueluoanping.oneblock.util.PlaceUtil;
-import xueluoanping.oneblock.util.RegisterFinderUtil;
 
 
 // https://github.com/teaconmc/SignMeUp/blob/1.18-forge/src/main/java/org/teacon/signin/data/GuideMapManager.java
@@ -46,6 +39,24 @@ public class network extends SimpleJsonResourceReloadListener {
     record StageHolder(StageData data, boolean isBegin, boolean isEnd, int stageRemainCount) {
     }
 
+    public static int getStageStartPos(ResourceLocation resourceLocation) {
+        // it means we set the first block
+        int pos = 0;
+        int size = STAGE_DATA_LIST.size();
+        for (int i = 0; i < size; i++) {
+            StageData stageData = STAGE_DATA_LIST.get(i);
+            if (i == size - 1 || stageData.getResourceLocation().compareTo(resourceLocation)==0) {
+
+                break;
+            } else {
+                pos += stageData.getCount();
+                // because a bedrock cost a counter, so we need to +1 if we have set the bedrock
+                pos++;
+            }
+        }
+        return pos;
+    }
+
     public static StageHolder getStage(int lastProgress) {
         StageData stageData = null;
         boolean is_begin = false;
@@ -57,11 +68,13 @@ public class network extends SimpleJsonResourceReloadListener {
         for (int i = 0; i < size; i++) {
             StageData data = STAGE_DATA_LIST.get(i);
             if (i < size - 1) {
+                int count= data.getCount();
+                count= Math.max(count, 0);
                 progress -= data.getCount();
                 if (progress < 0) {
                     stageData = data;
-                    is_begin = stageData.getCount() + progress == 0 || lastProgress == 0;
-                    is_end = lastProgress > 1 && stageData.getCount() + progress + 1 == 0;
+                    is_begin = (count + progress == 0 || lastProgress == 0)&&count!=0;
+                    is_end = lastProgress > 1 && count + progress + 1 == 0;
                     stageRemainCount = -progress;
                     break;
                 }
@@ -70,15 +83,15 @@ public class network extends SimpleJsonResourceReloadListener {
 
             } else {
                 // a bedrock is set before the stage so we need
-                if (progress == 1) {
+                if (progress == -1) {
+                    is_end = true;
+                }else if (progress == 0) {
                     is_begin = true;
                 }
                 stageData = data;
                 stageRemainCount = Integer.MAX_VALUE;
             }
-
         }
-
         return new StageHolder(stageData, is_begin, is_end, stageRemainCount);
     }
 
@@ -95,7 +108,7 @@ public class network extends SimpleJsonResourceReloadListener {
     }
 
     public static StageData.BlockEntry setNewBlock(ServerLevel level, BlockPos basePos, StageData stage, int remain, OneBlockProgress nowProgress) {
-        var select = stage.selectRandomByWeight(level.getRandom(), nowProgress, nowProgress.getRemainAmount() >= remain);
+        var select = stage.selectRandomByWeight(level.getRandom(), nowProgress, nowProgress.getRemainAmount() >= remain, stage.getCount() - remain);
         PlaceUtil.placeSelect(level, basePos, select);
         return select;
     }
@@ -116,7 +129,7 @@ public class network extends SimpleJsonResourceReloadListener {
             if (res.toString().contains("phases")) {
                 StageData stageData = gson.fromJson(json, StageData.class);
                 stageData.setResourceLocation(res);
-                if (stageData.getSub_target() == null)
+                if (stageData.getTarget() == null)
                     STAGE_DATA_LIST.add(stageData);
                 else subStageDataList.add(stageData);
             }
@@ -142,7 +155,7 @@ public class network extends SimpleJsonResourceReloadListener {
         for (StageData subData : subStageDataList) {
             for (int i = 0; i < STAGE_DATA_LIST.size(); i++) {
                 var data = STAGE_DATA_LIST.get(i);
-                if (data.getResourceLocation().toString().equals(subData.getSub_target())) {
+                if (data.getResourceLocation().toString().equals(subData.getTarget())) {
                     data.getList().addAll(subData.getList());
                     break;
                 }

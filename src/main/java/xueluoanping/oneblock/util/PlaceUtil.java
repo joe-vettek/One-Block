@@ -78,7 +78,7 @@ public class PlaceUtil {
             OneBlock.error("Failed place" + resourceLocation.toString());
         } else {
             StructureTemplate structuretemplate = optional.get();
-            var size = structuretemplate.getSize();
+            // var size = structuretemplate.getSize();
             // base=base.offset(size.);
             checkLoaded(level, new ChunkPos(base), new ChunkPos(base.offset(structuretemplate.getSize())));
             StructurePlaceSettings structureplacesettings = (new StructurePlaceSettings()).setMirror(mirror).setRotation(rotation);
@@ -87,7 +87,7 @@ public class PlaceUtil {
                 structureplacesettings.clearProcessors().addProcessor(new BlockRotProcessor(integrity)).setRandom(level.getRandom());
             }
             // above to start
-            base = base.above();
+            // base = base.above();
             boolean flag = structuretemplate.placeInWorld(level, base, base, structureplacesettings, level.getRandom(), Block.UPDATE_CLIENTS);
             OneBlock.error("Place " + flag + resourceLocation.toString());
         }
@@ -100,7 +100,7 @@ public class PlaceUtil {
             ChunkPos chunkpos = new ChunkPos(pos);
             if (checkLoaded(level, new ChunkPos(chunkpos.x - 1, chunkpos.z - 1), new ChunkPos(chunkpos.x + 1, chunkpos.z + 1)))
                 // above to start
-                if (!configuredfeature.place(level, level.getChunkSource().getGenerator(), level.getRandom(), pos.above())) {
+                if (!configuredfeature.place(level, level.getChunkSource().getGenerator(), level.getRandom(), pos)) {
                     OneBlock.error("Failed place" + resourceLocation.toString());
                 }
         }

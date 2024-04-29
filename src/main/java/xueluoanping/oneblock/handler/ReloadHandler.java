@@ -1,25 +1,16 @@
 package xueluoanping.oneblock.handler;
 
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.commands.arguments.ResourceLocationArgument;
+import net.minecraft.commands.arguments.coordinates.BlockPosArgument;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.packs.resources.PreparableReloadListener;
-import net.minecraft.server.packs.resources.ResourceManager;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.util.profiling.ProfilerFiller;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.AddReloadListenerEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.level.LevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import xueluoanping.oneblock.ModContents;
-
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.Executor;
-import java.util.stream.Collectors;
+import xueluoanping.oneblock.OneBlock;
+import xueluoanping.oneblock.config.General;
 
 // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class ReloadHandler {
@@ -43,8 +34,72 @@ public class ReloadHandler {
 
     @SubscribeEvent
     public void onRegisterCommands(RegisterCommandsEvent event) {
+        var dispatcher = event.getDispatcher();
+
+        dispatcher.register(
+                Commands.literal(OneBlock.MOD_ID)
+                        .requires((sourceStack) -> sourceStack.hasPermission(2))
+                        .then(Commands.literal("skip_to")
+                                .then(Commands.argument("stage", ResourceLocationArgument.id())
+                                        .suggests((context, builder) -> {
+                                            General.order.get().forEach(builder::suggest);
+                                            return builder.buildFuture();
+                                        })
+                                        .then(Commands.argument("pos", BlockPosArgument.blockPos()).executes((stackCommandContext) ->
+                                                skip_to_stage(stackCommandContext.getSource(), ResourceLocationArgument.getId(stackCommandContext, "stage"), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos"))))))
+        );
+        dispatcher.register(
+                Commands.literal(OneBlock.MOD_ID)
+                        .requires((sourceStack) -> sourceStack.hasPermission(2))
+                        .then(Commands.literal("set")
+                                .then(Commands.argument("pos", BlockPosArgument.blockPos()).executes((stackCommandContext) ->
+                                        set_stage(stackCommandContext.getSource(), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos")))))
+        );
+        dispatcher.register(
+                Commands.literal(OneBlock.MOD_ID)
+                        .requires((sourceStack) -> sourceStack.hasPermission(2))
+                        .then(Commands.literal("remove")
+                                .then(Commands.argument("pos", BlockPosArgument.blockPos()).executes((stackCommandContext) ->
+                                        remove_stage(stackCommandContext.getSource(), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos")))))
+        );
     }
 
+    private int skip_to_stage(CommandSourceStack source, ResourceLocation id, BlockPos pos) {
+        OneBlock.logger(id, pos, network.getStageStartPos(id), source.getLevel());
+        var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
+        var progress = save.get(pos);
+        if (progress != null) {
+            progress.counter = network.getStageStartPos(id);
+            save.update(pos, progress);
+            source.getLevel().removeBlock(pos, false);
+        } else {
+            return 0;
+        }
+        return 1;
+    }
 
+    private int set_stage(CommandSourceStack source, BlockPos pos) {
+        OneBlock.logger("Set", pos, source.getLevel());
+        var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
+        var progress = save.get(pos);
+        if (progress != null) {
+            save.update(pos, save.getOrDefault(pos));
+            source.getLevel().removeBlock(pos, false);
+        } else {
+            return 0;
+        }
+        return 1;
+    }
 
+    private int remove_stage(CommandSourceStack source, BlockPos pos) {
+        OneBlock.logger("Remove", pos, source.getLevel());
+        var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
+        var progress = save.get(pos);
+        if (progress != null) {
+            save.remove(pos);
+        } else {
+            return 0;
+        }
+        return 1;
+    }
 }
