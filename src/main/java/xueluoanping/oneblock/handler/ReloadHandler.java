@@ -82,7 +82,7 @@ public class ReloadHandler {
         OneBlock.logger("Set", pos, source.getLevel());
         var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
         var progress = save.get(pos);
-        if (progress != null) {
+        if (progress == null) {
             save.update(pos, save.getOrDefault(pos));
             source.getLevel().removeBlock(pos, false);
         } else {
