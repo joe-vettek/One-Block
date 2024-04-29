@@ -1,0 +1,25 @@
+{
+  "name": "end portal",
+  "count": 1,
+  "list": [
+    {
+      "type": "template",
+      "id": "oneblock:end_portal",
+      "weight": 1000,
+      "count": 1,
+      "offset_y": -4,
+      "offset_x": -2,
+      "offset_z": -2,
+      "preprocessing": [
+        {
+          "type": "block",
+          "id": "minecraft:end_stone"
+        },
+        {
+          "type": "command",
+          "id": "playsound minecraft:block.end_portal.spawn "
+        }
+      ]
+    }
+  ]
+}

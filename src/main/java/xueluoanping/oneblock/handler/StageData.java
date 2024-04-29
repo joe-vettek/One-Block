@@ -5,7 +5,6 @@ import net.minecraft.util.RandomSource;
 import xueluoanping.oneblock.OneBlock;
 
 import java.util.List;
-import java.util.Random;
 import java.util.stream.Collectors;
 
 public class StageData {
@@ -104,6 +103,12 @@ public class StageData {
         private int min_times;
         private int max_times;
 
+        private List<BlockEntry> preprocessing;
+        private int offset_x;
+        private int offset_y;
+        private int offset_z;
+
+
         public String getGlobalId() {
             String gid = this.id;
             if (this.getBlockstates() != null) {
@@ -123,8 +128,13 @@ public class StageData {
             this.id = id;
             this.weight = 0;
             this.count = 0;
+            // Gson default set 0 so we could ignore it if it less than 1
             this.min_times = 0;
             this.max_times = 0;
+            // not offset
+            this.offset_x = 0;
+            this.offset_y = 0;
+            this.offset_z = 0;
         }
 
         public String getLoot_table() {
@@ -200,6 +210,36 @@ public class StageData {
             this.nbt = nbt;
         }
 
+        public int getOffset_x() {
+            return offset_x;
+        }
 
+        public void setOffset_x(int offset_x) {
+            this.offset_x = offset_x;
+        }
+
+        public int getOffset_y() {
+            return offset_y;
+        }
+
+        public void setOffset_y(int offset_y) {
+            this.offset_y = offset_y;
+        }
+
+        public int getOffset_z() {
+            return offset_z;
+        }
+
+        public void setOffset_z(int offset_z) {
+            this.offset_z = offset_z;
+        }
+
+        public List<BlockEntry> getPreprocessing() {
+            return preprocessing;
+        }
+
+        public void setPreprocessing(List<BlockEntry> preprocessing) {
+            this.preprocessing = preprocessing;
+        }
     }
 }
