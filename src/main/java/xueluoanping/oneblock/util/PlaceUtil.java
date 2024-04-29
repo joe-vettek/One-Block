@@ -107,11 +107,11 @@ public class PlaceUtil {
     }
 
 
-    // 
+    //
     public static void placeSelect(ServerLevel level, BlockPos basePos, StageData.BlockEntry select) {
         if (select.getPreprocessing() != null) {
             for (StageData.BlockEntry blockEntry : select.getPreprocessing()) {
-                placeSelect(level, basePos, select);
+                placeSelect(level, basePos, blockEntry);
             }
         }
 
