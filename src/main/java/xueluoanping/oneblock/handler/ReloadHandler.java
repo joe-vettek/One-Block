@@ -45,7 +45,13 @@ public class ReloadHandler {
                                             General.order.get().forEach(builder::suggest);
                                             return builder.buildFuture();
                                         })
-                                        .then(Commands.argument("pos", BlockPosArgument.blockPos()).executes((stackCommandContext) ->
+                                        .then(Commands.argument("pos", BlockPosArgument.blockPos())
+                                                .suggests((context, builder) -> {
+                                                    var save = Levelhandler.oneBlockSaveHolder.get(context.getSource().getLevel());
+                                                    save.getBlockPos().stream().map(pos -> String.format("%s %s %s",pos.getX(),pos.getY(),pos.getZ())).forEach(builder::suggest);
+                                                    return builder.buildFuture();
+                                                })
+                                                .executes((stackCommandContext) ->
                                                 skip_to_stage(stackCommandContext.getSource(), ResourceLocationArgument.getId(stackCommandContext, "stage"), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos"))))))
         );
         dispatcher.register(
@@ -59,7 +65,13 @@ public class ReloadHandler {
                 Commands.literal(OneBlock.MOD_ID)
                         .requires((sourceStack) -> sourceStack.hasPermission(2))
                         .then(Commands.literal("remove")
-                                .then(Commands.argument("pos", BlockPosArgument.blockPos()).executes((stackCommandContext) ->
+                                .then(Commands.argument("pos", BlockPosArgument.blockPos())
+                                        .suggests((context, builder) -> {
+                                            var save = Levelhandler.oneBlockSaveHolder.get(context.getSource().getLevel());
+                                            save.getBlockPos().stream().map(pos -> String.format("%s %s %s",pos.getX(),pos.getY(),pos.getZ())).forEach(builder::suggest);
+                                            return builder.buildFuture();
+                                        })
+                                        .executes((stackCommandContext) ->
                                         remove_stage(stackCommandContext.getSource(), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos")))))
         );
     }

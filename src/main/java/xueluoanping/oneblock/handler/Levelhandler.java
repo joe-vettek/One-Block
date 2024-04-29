@@ -97,8 +97,8 @@ public class Levelhandler {
                             nowProgress.addQuota(blockEntry.getType(), blockEntry.getGlobalId(), blockEntry.getMin_times());
                         }
                         if (blockEntry.getPrecedence_start() != 0 || blockEntry.getPrecedence_end() != 0) {
-                            int start = blockEntry.getPrecedence_start() > 0 ? blockEntry.getPrecedence_start() : stage.getCount() + blockEntry.getPrecedence_start() + 1;
-                            int end = blockEntry.getPrecedence_end() > 0 ? blockEntry.getPrecedence_end() : stage.getCount() + blockEntry.getPrecedence_end() + 1;
+                            int start = blockEntry.getPrecedence_start() >= 0 ? blockEntry.getPrecedence_start() : stage.getCount() + blockEntry.getPrecedence_start() + 1;
+                            int end = blockEntry.getPrecedence_end() >= 0 ? blockEntry.getPrecedence_end() : stage.getCount() + blockEntry.getPrecedence_end() + 1;
                             nowProgress.addPrecedence(blockEntry.getType(), blockEntry.getGlobalId(), start, end);
                         }
                         if (blockEntry.getPrecedence() != 0) {

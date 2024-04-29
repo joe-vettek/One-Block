@@ -36,6 +36,7 @@ public class FantasyBraceletItem extends Item {
                             itemstack.setDamageValue(0);
                     } else {
                         itemstack.setDamageValue(1);
+                        save.remove(pos);
                         save.update(pos, save.getOrDefault(pos));
                         level.removeBlock(pos, false);
                     }
