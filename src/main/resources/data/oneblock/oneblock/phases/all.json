@@ -150,7 +150,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:endermi",
+      "id": "minecraft:endermite",
       "weight": 57,
       "count": 1
     },
@@ -316,7 +316,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:enderma",
+      "id": "minecraft:enderman",
       "weight": 18,
       "count": 1
     },
@@ -380,7 +380,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:skeleto",
+      "id": "minecraft:skeleton",
       "weight": 15,
       "count": 1
     },
@@ -407,13 +407,13 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:cave_sp",
+      "id": "minecraft:cave_spider",
       "weight": 12,
       "count": 1
     },
     {
       "type": "mob",
-      "id": "minecraft:silverf",
+      "id": "minecraft:silverfish",
       "weight": 12,
       "count": 1
     },
@@ -465,7 +465,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:magma_c",
+      "id": "minecraft:magma_cube",
       "weight": 9,
       "count": 1
     },
@@ -541,7 +541,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:pillage",
+      "id": "minecraft:pillager",
       "weight": 6,
       "count": 1
     },
@@ -576,7 +576,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:guardia",
+      "id": "minecraft:guardian",
       "weight": 6,
       "count": 1
     },
@@ -658,7 +658,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:wither_",
+      "id": "minecraft:wither_skeleton",
       "weight": 4,
       "count": 1
     },
@@ -669,7 +669,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:vindica",
+      "id": "minecraft:vindicator",
       "weight": 4,
       "count": 1
     },
@@ -681,7 +681,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:village",
+      "id": "minecraft:villager",
       "weight": 4,
       "count": 1
     },
@@ -705,7 +705,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:tropica",
+      "id": "minecraft:tropical_fish",
       "weight": 4,
       "count": 1
     },
@@ -800,7 +800,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:wanderi",
+      "id": "minecraft:wandering_trader",
       "weight": 2,
       "count": 1
     },
@@ -817,13 +817,13 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:elder_g",
+      "id": "minecraft:elder_guardian",
       "weight": 2,
       "count": 1
     },
     {
       "type": "mob",
-      "id": "minecraft:pufferf",
+      "id": "minecraft:pufferfish",
       "weight": 2,
       "count": 1
     },
@@ -835,7 +835,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:mooshro",
+      "id": "minecraft:mooshroom",
       "weight": 2,
       "count": 1
     },
@@ -858,7 +858,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:zombie_",
+      "id": "minecraft:zombie_horse",
       "weight": 2,
       "count": 1
     },
@@ -885,7 +885,7 @@
     },
     {
       "type": "mob",
-      "id": "minecraft:polar_b",
+      "id": "minecraft:polar_bear",
       "weight": 2,
       "count": 1
     },
