@@ -45,7 +45,7 @@ public class network extends SimpleJsonResourceReloadListener {
         int size = STAGE_DATA_LIST.size();
         for (int i = 0; i < size; i++) {
             StageData stageData = STAGE_DATA_LIST.get(i);
-            if (i == size - 1 || stageData.getResourceLocation().compareTo(resourceLocation)==0) {
+            if (i == size - 1 || stageData.getResourceLocation().compareTo(resourceLocation) == 0) {
 
                 break;
             } else {
@@ -67,13 +67,13 @@ public class network extends SimpleJsonResourceReloadListener {
         int size = STAGE_DATA_LIST.size();
         for (int i = 0; i < size; i++) {
             StageData data = STAGE_DATA_LIST.get(i);
-            if (i < size - 1) {
-                int count= data.getCount();
-                count= Math.max(count, 0);
+            if (i < size - 1 && data.getCount() > 0) {
+                int count = data.getCount();
+                count = Math.max(count, 0);
                 progress -= data.getCount();
                 if (progress < 0) {
                     stageData = data;
-                    is_begin = (count + progress == 0 || lastProgress == 0)&&count!=0;
+                    is_begin = (count + progress == 0 || lastProgress == 0) && count != 0;
                     is_end = lastProgress > 1 && count + progress + 1 == 0;
                     stageRemainCount = -progress;
                     break;
@@ -85,11 +85,18 @@ public class network extends SimpleJsonResourceReloadListener {
                 // a bedrock is set before the stage so we need
                 if (progress == -1) {
                     is_end = true;
-                }else if (progress == 0) {
+                } else if (progress == 0) {
                     is_begin = true;
                 }
                 stageData = data;
-                stageRemainCount = Integer.MAX_VALUE;
+                if (data.getCount() < 0) {
+                    // due to it was set -1 to go endless so we need update the remain to get the local progress
+                    stageRemainCount = -(progress - data.getCount())-1;
+                }else{
+                    progress -= data.getCount();
+                    stageRemainCount = -progress;
+                }
+                break;
             }
         }
         return new StageHolder(stageData, is_begin, is_end, stageRemainCount);
@@ -108,7 +115,8 @@ public class network extends SimpleJsonResourceReloadListener {
     }
 
     public static StageData.BlockEntry setNewBlock(ServerLevel level, BlockPos basePos, StageData stage, int remain, OneBlockProgress nowProgress) {
-        var select = stage.selectRandomByWeight(level.getRandom(), nowProgress, nowProgress.getRemainAmount() >= remain, stage.getCount() - remain);
+        // remain less than 0 if endless stage
+        var select = stage.selectRandomByWeight(level.getRandom(), nowProgress, nowProgress.getRemainAmount() >= remain&&remain>0, stage.getCount() - remain);
         PlaceUtil.placeSelect(level, basePos, select);
         return select;
     }

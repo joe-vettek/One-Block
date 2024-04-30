@@ -116,13 +116,13 @@ public class ReloadHandler {
 
     private int remove_stage(CommandSourceStack source, BlockPos pos) {
         OneBlock.logger("Remove", pos, source.getLevel());
-        // var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
-        // var progress = save.get(pos);
-        // if (progress != null) {
-        //     save.remove(pos);
-        // } else {
-        //     return 0;
-        // }
+        var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
+        var progress = save.get(pos);
+        if (progress != null) {
+            save.remove(pos);
+        } else {
+            return 0;
+        }
         source.getLevel().setBlockAndUpdate(pos, ModContents.one_stone.get().defaultBlockState());
         return 1;
     }

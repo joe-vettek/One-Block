@@ -4,13 +4,9 @@
   "list": [
     {
       "type": "block",
-      "id": "oneblock:end_portal",
+      "id": "minecraft:grass_block",
       "precedence": 1,
       "preprocessing": [
-        {
-          "type": "block",
-          "id": "minecraft:end_stone"
-        },
         {
           "type": "sound",
           "id": "minecraft:music.overworld.cherry_grove"

@@ -8,6 +8,7 @@ import net.minecraft.core.SectionPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundSoundPacket;
+import net.minecraft.network.protocol.game.ClientboundStopSoundPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -131,6 +132,13 @@ public class PlaceUtil {
             throw new IllegalArgumentException("Not Found Category for " + select);
         } catch (IllegalArgumentException e) {
             OneBlock.error(e.getMessage());
+        }
+        // Stop other music
+        if (soundSource==SoundSource.MUSIC){
+            ClientboundStopSoundPacket clientboundstopsoundpacket = new ClientboundStopSoundPacket(null,soundSource);
+            for(ServerPlayer serverplayer : level.players()) {
+                serverplayer.connection.send(clientboundstopsoundpacket);
+            }
         }
         double d0 = (double) Mth.square(holder.value().getRange(volume));
         long j = level.getRandom().nextLong();
