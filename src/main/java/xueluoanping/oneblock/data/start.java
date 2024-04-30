@@ -9,6 +9,7 @@ import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.data.blockstate.ItemModelProvider;
 import xueluoanping.oneblock.data.lang.Lang_EN;
 import xueluoanping.oneblock.data.lang.Lang_ZH;
+import xueluoanping.oneblock.data.loot.GLMProvider;
 import xueluoanping.oneblock.data.loot.LFTLootTableProvider;
 import xueluoanping.oneblock.data.tag.FDLItemTagsProvider;
 import xueluoanping.oneblock.data.tag.TagsDataProvider;
@@ -32,7 +33,7 @@ public class start {
             // generator.addProvider(event.includeServer(),new FDLItemTagsProvider(packOutput, lookupProvider, blockTags.contentsGetter()));
             //
             // generator.addProvider(event.includeServer(),new LFTLootTableProvider(packOutput));
-            // generator.addProvider(new GLMProvider(generator, MODID));
+            generator.addProvider(event.includeServer(),new GLMProvider(packOutput, MODID));
 
 
         }

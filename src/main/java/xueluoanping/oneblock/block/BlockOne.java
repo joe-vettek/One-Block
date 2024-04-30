@@ -2,52 +2,28 @@ package xueluoanping.oneblock.block;
 
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.*;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.item.*;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.HorizontalDirectionalBlock;
 import net.minecraft.world.level.block.RenderShape;
-import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DirectionProperty;
-import net.minecraft.world.level.material.Fluids;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.HitResult;
-import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.common.SoundActions;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.fluids.FluidUtil;
-import net.minecraftforge.fluids.capability.IFluidHandler;
-import net.minecraftforge.network.NetworkHooks;
-import org.jetbrains.annotations.NotNull;
-import xueluoanping.oneblock.ModContents;
+import org.jetbrains.annotations.Nullable;
+import xueluoanping.oneblock.OneBlock;
+import xueluoanping.oneblock.handler.Levelhandler;
+import xueluoanping.oneblock.util.ClientUtils;
 
 
-import javax.annotation.Nullable;
-import java.util.HashMap;
-import java.util.Map;
-
-
-public class BlockOne extends Block implements EntityBlock {
+// Todo: make a start block
+public class BlockOne extends Block {
 
 
     public BlockOne(Properties properties) {
@@ -71,9 +47,8 @@ public class BlockOne extends Block implements EntityBlock {
 
     @Override
     public RenderShape getRenderShape(BlockState p_149645_1_) {
-        return RenderShape.ENTITYBLOCK_ANIMATED;
+        return RenderShape.INVISIBLE;
     }
-
 
 
     @Override
@@ -89,9 +64,49 @@ public class BlockOne extends Block implements EntityBlock {
     }
 
 
+    // @Override
+    // public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
+    //     return new BlockEntityOne( pos, state);
+    // }
+
     @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return new BlockEntityOne( pos, state);
+    public void setPlacedBy(Level p_49847_, BlockPos p_49848_, BlockState p_49849_, @Nullable LivingEntity p_49850_, ItemStack p_49851_) {
+        super.setPlacedBy(p_49847_, p_49848_, p_49849_, p_49850_, p_49851_);
+    }
+
+    // trigger whenever on place
+    @Override
+    public void onPlace(BlockState state, Level level, BlockPos pos, BlockState state1, boolean p_60570_) {
+        super.onPlace(state, level, pos, state1, p_60570_);
+        if (level instanceof ServerLevel serverLevel) {
+            serverLevel.scheduleTick(pos, this, 1);
+        }
+    }
+
+    // do work
+    @Override
+    public void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource) {
+        super.tick(state, level, pos, randomSource);
+        // if (level instanceof ServerLevel serverLevel)
+        {
+            OneBlock.logger(pos,"Loading a stage");
+            var save = Levelhandler.oneBlockSaveHolder.get(level);
+            save.remove(pos);
+            save.update(pos, save.getOrDefault(pos));
+            level.removeBlock(pos, false);
+            ClientUtils.playFireWorkParticles(level, pos);
+        }
+    }
+
+    @Override
+    public boolean isRandomlyTicking(BlockState p_49921_) {
+        return true;
+    }
+
+    // set trigger
+    @Override
+    public void randomTick(BlockState p_222954_, ServerLevel p_222955_, BlockPos p_222956_, RandomSource p_222957_) {
+        super.randomTick(p_222954_, p_222955_, p_222956_, p_222957_);
     }
 
 }

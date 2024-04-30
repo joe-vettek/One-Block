@@ -23,6 +23,7 @@ public class ModConstants {
     public static final String TYPE_TEMPLATE = "template";
     public static final String TYPE_CONFIGURED_FEATURE = "configured_feature";
     public static final String TYPE_COMMAND = "command";
+    public static final String TYPE_SOUND = "sound";
     // var b=BuiltInRegistries.BLOCK.stream()
     //         .filter(block -> block.defaultBlockState()
     //                 .is(BlockTags.LOGS))

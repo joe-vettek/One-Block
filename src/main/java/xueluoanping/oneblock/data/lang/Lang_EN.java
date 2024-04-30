@@ -1,7 +1,6 @@
 package xueluoanping.oneblock.data.lang;
 
 import net.minecraft.data.PackOutput;
-import net.minecraft.server.packs.PackType;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import xueluoanping.oneblock.ModContents;
 import xueluoanping.oneblock.OneBlock;
@@ -33,7 +32,8 @@ public class Lang_EN extends LangHelper {
         addNewStageTip("10", "§6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Phase 13: The End§7\n Ancient powers rise as the dark void collides with your world.\n§a\n New Blocks: §fEnd Stone, End Stone Bricks, Purpur Block, Purpur Pillar§a\n New Items: §fChorus Fruit, Dragon Breath, End Rod, Ender Eye, Ender Pearl, Spectral Arrow§a\n New Mobs: §fEnderman, Endermite, Shulker\n\n ");
         addNewStageTip("all", "§6\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n You reached the Afterphases!\n The infinite block pulsates with strange energy.");
 
-        add(ModContents.item.get(), "Fantasy Bracelet");
+        add(ModContents.one_stone.get(), "One Stone");
+        add(ModContents.fantasy_bracelet.get(), "Fantasy Bracelet");
         addCustomName("mob", "Gift from the Up");
     }
 

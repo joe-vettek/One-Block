@@ -1,5 +1,8 @@
 package xueluoanping.oneblock.handler;
 
+import com.mojang.brigadier.arguments.ArgumentType;
+import com.mojang.brigadier.arguments.StringArgumentType;
+import com.sun.jdi.connect.Connector;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.ResourceLocationArgument;
@@ -9,6 +12,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import xueluoanping.oneblock.ModContents;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.config.General;
 
@@ -42,17 +46,24 @@ public class ReloadHandler {
                         .then(Commands.literal("skip_to")
                                 .then(Commands.argument("stage", ResourceLocationArgument.id())
                                         .suggests((context, builder) -> {
-                                            General.order.get().forEach(builder::suggest);
+                                            String pre = "";
+                                            try {
+                                                pre= context.getArgument("stage", ResourceLocation.class).getPath();
+                                            } catch (IllegalArgumentException e) {
+                                                // e.printStackTrace();
+                                            }
+                                            String finalPre = pre;
+                                            General.order.get().stream().filter(s -> s.contains(finalPre)).forEach(builder::suggest);
                                             return builder.buildFuture();
                                         })
                                         .then(Commands.argument("pos", BlockPosArgument.blockPos())
                                                 .suggests((context, builder) -> {
                                                     var save = Levelhandler.oneBlockSaveHolder.get(context.getSource().getLevel());
-                                                    save.getBlockPos().stream().map(pos -> String.format("%s %s %s",pos.getX(),pos.getY(),pos.getZ())).forEach(builder::suggest);
+                                                    save.getBlockPos().stream().map(pos -> String.format("%s %s %s", pos.getX(), pos.getY(), pos.getZ())).forEach(builder::suggest);
                                                     return builder.buildFuture();
                                                 })
                                                 .executes((stackCommandContext) ->
-                                                skip_to_stage(stackCommandContext.getSource(), ResourceLocationArgument.getId(stackCommandContext, "stage"), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos"))))))
+                                                        skip_to_stage(stackCommandContext.getSource(), ResourceLocationArgument.getId(stackCommandContext, "stage"), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos"))))))
         );
         dispatcher.register(
                 Commands.literal(OneBlock.MOD_ID)
@@ -68,11 +79,11 @@ public class ReloadHandler {
                                 .then(Commands.argument("pos", BlockPosArgument.blockPos())
                                         .suggests((context, builder) -> {
                                             var save = Levelhandler.oneBlockSaveHolder.get(context.getSource().getLevel());
-                                            save.getBlockPos().stream().map(pos -> String.format("%s %s %s",pos.getX(),pos.getY(),pos.getZ())).forEach(builder::suggest);
+                                            save.getBlockPos().stream().map(pos -> String.format("%s %s %s", pos.getX(), pos.getY(), pos.getZ())).forEach(builder::suggest);
                                             return builder.buildFuture();
                                         })
                                         .executes((stackCommandContext) ->
-                                        remove_stage(stackCommandContext.getSource(), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos")))))
+                                                remove_stage(stackCommandContext.getSource(), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos")))))
         );
     }
 
@@ -105,13 +116,14 @@ public class ReloadHandler {
 
     private int remove_stage(CommandSourceStack source, BlockPos pos) {
         OneBlock.logger("Remove", pos, source.getLevel());
-        var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
-        var progress = save.get(pos);
-        if (progress != null) {
-            save.remove(pos);
-        } else {
-            return 0;
-        }
+        // var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
+        // var progress = save.get(pos);
+        // if (progress != null) {
+        //     save.remove(pos);
+        // } else {
+        //     return 0;
+        // }
+        source.getLevel().setBlockAndUpdate(pos, ModContents.one_stone.get().defaultBlockState());
         return 1;
     }
 }

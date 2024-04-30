@@ -16,7 +16,7 @@ public class Lang_ZH extends LangHelper {
     protected void addTranslations() {
         add(OneBlock.MOD_ID, "单方块");
 
-        add(ModContents.item.get(),"奇异手环");
+        add(ModContents.fantasy_bracelet.get(),"奇异手环");
         // addWailaHint( "§o<..按住shift以查看更多..>");
         // addSlot("§7%s号格子: 装有%s的%s");
     }

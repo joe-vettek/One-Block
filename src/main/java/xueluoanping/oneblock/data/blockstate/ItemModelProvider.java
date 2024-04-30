@@ -3,9 +3,7 @@ package xueluoanping.oneblock.data.blockstate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
 import xueluoanping.oneblock.ModContents;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.util.RegisterFinderUtil;
@@ -23,7 +21,7 @@ public class ItemModelProvider extends net.minecraftforge.client.model.generator
 
 	@Override
 	protected void registerModels() {
-		basicItem(ModContents.item.get());
+		basicItem(ModContents.fantasy_bracelet.get());
 	}
 
 

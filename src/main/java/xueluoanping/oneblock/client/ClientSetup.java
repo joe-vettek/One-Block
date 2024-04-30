@@ -45,6 +45,6 @@ public class ClientSetup {
     @SubscribeEvent
     public static void onBuildCreativeModeTabContentsEvent(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES)
-            event.accept(ModContents.item.get());
+            event.accept(ModContents.fantasy_bracelet.get());
     }
 }

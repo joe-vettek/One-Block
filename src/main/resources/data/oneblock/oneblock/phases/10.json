@@ -16,8 +16,8 @@
           "id": "minecraft:end_stone"
         },
         {
-          "type": "command",
-          "id": "/playsound minecraft:block.end_portal.spawn block @a %s %s %s"
+          "type": "sound",
+          "id": "minecraft:block.end_portal.spawn"
         }
       ]
     },

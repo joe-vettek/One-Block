@@ -2,7 +2,21 @@
   "name": "afterphases",
   "count": -1,
   "list": [
-
+    {
+      "type": "block",
+      "id": "oneblock:end_portal",
+      "precedence": 1,
+      "preprocessing": [
+        {
+          "type": "block",
+          "id": "minecraft:end_stone"
+        },
+        {
+          "type": "sound",
+          "id": "minecraft:music.overworld.cherry_grove"
+        }
+      ]
+    },
     {
       "type": "block",
       "id": "minecraft:grass_block",

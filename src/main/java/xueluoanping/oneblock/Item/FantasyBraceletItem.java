@@ -11,6 +11,7 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
+import xueluoanping.oneblock.ModContents;
 import xueluoanping.oneblock.handler.Levelhandler;
 
 public class FantasyBraceletItem extends Item {
@@ -36,10 +37,12 @@ public class FantasyBraceletItem extends Item {
                             itemstack.setDamageValue(0);
                     } else {
                         itemstack.setDamageValue(1);
-                        save.remove(pos);
-                        save.update(pos, save.getOrDefault(pos));
-                        level.removeBlock(pos, false);
+                        // save.remove(pos);
+                        // save.update(pos, save.getOrDefault(pos));
+                        // level.removeBlock(pos, false);
+                        level.setBlockAndUpdate(pos,ModContents.one_stone.get().defaultBlockState());
                     }
+
                     // if (!player.isCreative())
                     //     player.setItemInHand(hand, itemstack);
                     return InteractionResultHolder.success(itemstack);

@@ -14,7 +14,6 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import xueluoanping.oneblock.client.OneBlockTranslator;
-import xueluoanping.oneblock.config.General;
 
 public class ClientUtils {
 
@@ -85,7 +84,12 @@ public class ClientUtils {
 
     public static void playASHParticles(ServerLevel level, BlockPos pos) {
         for (ServerPlayer player : level.players()) {
-            level.sendParticles(player, ParticleTypes.ASH, false, pos.getX() + 0.5, pos.getY() + 1.8, pos.getZ() + 0.5, 3, 0.25, 0.05, 0.25, 0.01);
+            level.sendParticles(player, ParticleTypes.FIREWORK, false, pos.getX() + 0.5, pos.getY() + 2.2, pos.getZ() + 0.5, 1, 0.25, 0.05, 0.25, 0.55);
+        }
+    }
+    public static void playFireWorkParticles(ServerLevel level, BlockPos pos) {
+        for (ServerPlayer player : level.players()) {
+            level.sendParticles(player, ParticleTypes.FIREWORK, false, pos.getX() + 0.5, pos.getY() + 2.2, pos.getZ() + 0.5, 10, 0.25, 0.05, 0.25, 0.55);
         }
     }
 }

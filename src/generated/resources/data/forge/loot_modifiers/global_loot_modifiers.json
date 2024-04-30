@@ -1,0 +1,23 @@
+{
+  "entries": [
+    "oneblock:add_loot_10-variety_from_03-1",
+    "oneblock:add_loot_04-variety_from_copper",
+    "oneblock:add_loot_08-variety_from_copper",
+    "oneblock:add_loot_10-variety_from_08-1",
+    "oneblock:add_loot_10-variety_from_copper",
+    "oneblock:add_loot_10-variety_from_09-1",
+    "oneblock:add_loot_03-variety_from_copper",
+    "oneblock:add_loot_04-variety_from_03-1",
+    "oneblock:add_loot_09-variety_from_copper",
+    "oneblock:add_loot_07-variety_from_03-1",
+    "oneblock:add_loot_09-variety_from_03-1",
+    "oneblock:add_loot_09-variety_from_08-1",
+    "oneblock:add_loot_05-variety_from_03-1",
+    "oneblock:add_loot_05-variety_from_copper",
+    "oneblock:add_loot_08-variety_from_03-1",
+    "oneblock:add_loot_07-variety_from_copper",
+    "oneblock:add_loot_06-variety_from_03-1",
+    "oneblock:add_loot_06-variety_from_copper"
+  ],
+  "replace": false
+}
