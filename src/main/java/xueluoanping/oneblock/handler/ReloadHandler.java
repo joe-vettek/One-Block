@@ -123,7 +123,6 @@ public class ReloadHandler {
         } else {
             return 0;
         }
-        source.getLevel().setBlockAndUpdate(pos, ModContents.one_stone.get().defaultBlockState());
         return 1;
     }
 }
