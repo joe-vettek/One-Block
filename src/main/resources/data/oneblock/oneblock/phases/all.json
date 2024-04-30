@@ -151,8 +151,8 @@
     {
       "type": "mob",
       "id": "minecraft:endermi",
-      "weight": 2,
-      "count": 57
+      "weight": 57,
+      "count": 1
     },
     {
       "type": "block",
@@ -317,8 +317,8 @@
     {
       "type": "mob",
       "id": "minecraft:enderma",
-      "weight": 2,
-      "count": 18
+      "weight": 18,
+      "count": 1
     },
     {
       "type": "block",
@@ -358,14 +358,14 @@
     {
       "type": "mob",
       "id": "minecraft:slime",
-      "weight": 2,
-      "count": 16
+      "weight": 16,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:bee",
-      "weight": 2,
-      "count": 16
+      "weight": 16,
+      "count": 1
     },
     {
       "type": "block",
@@ -375,14 +375,14 @@
     {
       "type": "mob",
       "id": "minecraft:husk",
-      "weight": 2,
-      "count": 16
+      "weight": 16,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:skeleto",
-      "weight": 2,
-      "count": 15
+      "weight": 15,
+      "count": 1
     },
     {
       "type": "block",
@@ -392,8 +392,8 @@
     {
       "type": "mob",
       "id": "minecraft:stray",
-      "weight": 2,
-      "count": 14
+      "weight": 14,
+      "count": 1
     },
     {
       "type": "block",
@@ -408,8 +408,8 @@
     {
       "type": "mob",
       "id": "minecraft:cave_sp",
-      "weight": 2,
-      "count": 12
+      "weight": 12,
+      "count": 1
     },
     {
       "type": "mob",
