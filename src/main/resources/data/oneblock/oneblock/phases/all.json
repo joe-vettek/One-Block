@@ -414,8 +414,8 @@
     {
       "type": "mob",
       "id": "minecraft:silverf",
-      "weight": 2,
-      "count": 12
+      "weight": 12,
+      "count": 1
     },
     {
       "type": "block",
@@ -455,8 +455,8 @@
     {
       "type": "mob",
       "id": "minecraft:fox",
-      "weight": 2,
-      "count": 10
+      "weight": 10,
+      "count": 1
     },
     {
       "type": "block",
@@ -466,8 +466,8 @@
     {
       "type": "mob",
       "id": "minecraft:magma_c",
-      "weight": 2,
-      "count": 9
+      "weight": 9,
+      "count": 1
     },
     {
       "type": "block",
@@ -482,8 +482,8 @@
     {
       "type": "mob",
       "id": "minecraft:rabbit",
-      "weight": 2,
-      "count": 8
+      "weight": 8,
+      "count": 1
     },
     {
       "type": "gift",
@@ -518,50 +518,50 @@
     {
       "type": "mob",
       "id": "minecraft:cat",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:blaze",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:hoglin",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:piglin",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:pillage",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:witch",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:ocelot",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:vex",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "gift",
@@ -571,26 +571,26 @@
     {
       "type": "mob",
       "id": "minecraft:parrot",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:guardia",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:creeper",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:zombie",
-      "weight": 2,
-      "count": 6
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "gift",
@@ -620,14 +620,14 @@
     {
       "type": "mob",
       "id": "minecraft:evoker",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:phantom",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "gift",
@@ -637,8 +637,8 @@
     {
       "type": "mob",
       "id": "minecraft:mule",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "block",
@@ -653,14 +653,14 @@
     {
       "type": "mob",
       "id": "minecraft:ghast",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:wither_",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "block",
@@ -670,74 +670,74 @@
     {
       "type": "mob",
       "id": "minecraft:vindica",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:donkey",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:village",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:llama",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:horse",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:cod",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:tropica",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:salmon",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:drowned",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:turtle",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:spider",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:chicken",
-      "weight": 2,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "gift",
@@ -772,26 +772,26 @@
     {
       "type": "mob",
       "id": "minecraft:wolf",
-      "weight": 2,
-      "count": 3
+      "weight": 3,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:pig",
-      "weight": 2,
-      "count": 3
+      "weight": 3,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:shulker",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:strider",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "gift",
@@ -802,7 +802,7 @@
       "type": "mob",
       "id": "minecraft:wanderi",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "gift",
@@ -813,43 +813,43 @@
       "type": "mob",
       "id": "minecraft:dolphin",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:elder_g",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:pufferf",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:squid",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:mooshro",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:sheep",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:cow",
       "weight": 2,
-      "count": 2
+      "count": 1
     },
     {
       "type": "gift",
