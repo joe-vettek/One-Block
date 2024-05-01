@@ -4,6 +4,7 @@ package xueluoanping.oneblock.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -89,7 +90,7 @@ public class BlockOne extends Block {
         super.tick(state, level, pos, randomSource);
         // if (level instanceof ServerLevel serverLevel)
         {
-            OneBlock.logger(pos,"Loading a stage");
+            OneBlock.logger(pos, "Loading a stage");
             var save = Levelhandler.oneBlockSaveHolder.get(level);
             save.remove(pos);
             save.update(pos, save.getOrDefault(pos));
@@ -109,4 +110,10 @@ public class BlockOne extends Block {
         super.randomTick(p_222954_, p_222955_, p_222956_, p_222957_);
     }
 
+    @Override
+    public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, float v) {
+        super.fallOn(level, state, pos, entity, v);
+        if (level instanceof ServerLevel serverLevel)
+            this.tick(state, serverLevel, pos, level.getRandom());
+    }
 }

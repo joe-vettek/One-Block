@@ -32,7 +32,7 @@ public class Levelhandler {
     public void onLevelLoad(LevelEvent.Load event) {
         if (!event.getLevel().isClientSide())
             for (ServerLevel allLevel : event.getLevel().getServer().getAllLevels()) {
-                oneBlockSaveHolder.put(allLevel, OneBlockSave.get(event.getLevel().getServer().overworld()));
+                oneBlockSaveHolder.put(allLevel, OneBlockSave.get(allLevel));
             }
     }
 
@@ -65,6 +65,7 @@ public class Levelhandler {
     private void generateBlock(MinecraftServer server, OneBlockSave oneBlockSave, ServerLevel level, BlockPos pos) {
 
         ClientUtils.playASHParticles(level, pos);
+        // Player always dig it and we not get
         if (level.isEmptyBlock(pos)) {
             if (General.debug.get())
                 OneBlock.logger("Start Set at ", System.currentTimeMillis());
