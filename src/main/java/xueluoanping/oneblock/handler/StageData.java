@@ -129,6 +129,8 @@ public class StageData {
         private int offset_y;
         private int offset_z;
 
+        // usually for preprocessing
+        private float chance;
 
         @Override
         public String toString() {
@@ -149,6 +151,7 @@ public class StageData {
                     ", offset_x=" + offset_x +
                     ", offset_y=" + offset_y +
                     ", offset_z=" + offset_z +
+                    ", chance=" + chance +
                     '}';
         }
 
@@ -156,6 +159,13 @@ public class StageData {
             if (this.getUid() != null)
                 return this.getUid();
             return toString();
+        }
+
+        public float getRealChance() {
+            if (chance == 0) {
+                this.chance = 1.0f;
+            }
+            return chance;
         }
 
         public BlockEntry(String type, String id) {
@@ -315,6 +325,14 @@ public class StageData {
 
         public void setTimes(int times) {
             this.times = times;
+        }
+
+        public float getChance() {
+            return chance;
+        }
+
+        public void setChance(float chance) {
+            this.chance = chance;
         }
     }
 }

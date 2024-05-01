@@ -15,6 +15,11 @@
     },
     {
       "type": "block",
+      "id": "minecraft:tuff",
+      "weight": 20
+    },
+    {
+      "type": "block",
       "id": "minecraft:oak_log",
       "weight": 3
     },
