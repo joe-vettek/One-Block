@@ -144,7 +144,7 @@ public class network extends SimpleJsonResourceReloadListener {
             // Cuisine.logger(Minecraft.getInstance().isLocalServer());
         });
         // clean extra data
-        var oneBlockConfig = General.order.get();
+        var oneBlockConfig = General.getOrder();
         var removeList = new ArrayList<StageData>();
         for (StageData s : STAGE_DATA_LIST) {
             if (!oneBlockConfig.contains(s.getResourceLocation().toString())) {

@@ -9,12 +9,12 @@ public class General {
     public static ForgeConfigSpec COMMON_CONFIG;
     public static ForgeConfigSpec.BooleanValue debug;
     public static ForgeConfigSpec.BooleanValue collectItemNearby;
-    public static ForgeConfigSpec.ConfigValue<List<? extends String>> order;
+    public static ForgeConfigSpec.ConfigValue<String> order;
 
     static {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
-        COMMON_BUILDER.comment("Debug settings").push("DebugMode");
-        debug = COMMON_BUILDER.comment("Set false to stop output dig log.").define("debugMode", false);
+        COMMON_BUILDER.comment("Debug settings").push("Debug Mode");
+        debug = COMMON_BUILDER.comment("Set false to stop output dig log.").define("Debug Mode", false);
         COMMON_BUILDER.pop();
 
         COMMON_BUILDER.comment("Play settings").push("Play settings");
@@ -22,23 +22,12 @@ public class General {
         // COMMON_BUILDER.pop();
 
         // COMMON_BUILDER.push("Order");
-        order = COMMON_BUILDER.comment("Set stage order.").defineList("Order", new ArrayList<>(List.of(
-                "oneblock:phases/00",
-                "oneblock:phases/01",
-                "oneblock:phases/02",
-                "oneblock:phases/03",
-                "oneblock:phases/03-1",
-                "oneblock:phases/04",
-                "oneblock:phases/05",
-                "oneblock:phases/06",
-                "oneblock:phases/07",
-                "oneblock:phases/08",
-                "oneblock:phases/08-1",
-                "oneblock:phases/09",
-                "oneblock:phases/09-1",
-                "oneblock:phases/10",
-                "oneblock:phases/all")),o -> o instanceof String);
+        order = COMMON_BUILDER.comment("Set stage order.").define("Stage Order", "oneblock:phases/00;oneblock:phases/01;oneblock:phases/02;oneblock:phases/03;oneblock:phases/03-1;oneblock:phases/04;oneblock:phases/05;oneblock:phases/06;oneblock:phases/07;oneblock:phases/08;oneblock:phases/08-1;oneblock:phases/09;oneblock:phases/09-1;oneblock:phases/10;oneblock:phases/all");
         COMMON_BUILDER.pop();
         COMMON_CONFIG = COMMON_BUILDER.build();
+    }
+
+    public static ArrayList<String> getOrder() {
+        return new ArrayList<String>(List.of(order.get().split(";")));
     }
 }

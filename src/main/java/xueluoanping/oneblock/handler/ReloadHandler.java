@@ -53,7 +53,7 @@ public class ReloadHandler {
                                                 // e.printStackTrace();
                                             }
                                             String finalPre = pre;
-                                            General.order.get().stream().filter(s -> s.contains(finalPre)).forEach(builder::suggest);
+                                            General.getOrder().stream().filter(s -> s.contains(finalPre)).forEach(builder::suggest);
                                             return builder.buildFuture();
                                         })
                                         .then(Commands.argument("pos", BlockPosArgument.blockPos())

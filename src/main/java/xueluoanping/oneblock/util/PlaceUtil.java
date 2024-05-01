@@ -3,18 +3,11 @@ package xueluoanping.oneblock.util;
 import net.minecraft.ResourceLocationException;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Holder;
 import net.minecraft.core.SectionPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.protocol.game.ClientboundSoundPacket;
-import net.minecraft.network.protocol.game.ClientboundStopSoundPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.util.Mth;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.*;
@@ -29,7 +22,6 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.BlockRotProce
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager;
-import net.minecraft.world.phys.Vec3;
 import xueluoanping.oneblock.ModConstants;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.client.OneBlockTranslator;
@@ -114,55 +106,6 @@ public class PlaceUtil {
         }
     }
 
-    public static void placeSound(ServerLevel level, BlockPos basePos, String select) {
-        float volume = 1.0f;
-        float pitch = 1.0f;
-        float minVolume = 0.0f;
-        Vec3 vec3_base = basePos.getCenter();
-        Holder<SoundEvent> holder = Holder.direct(SoundEvent.createVariableRangeEvent(new ResourceLocation(select)));
-        SoundSource soundSource = SoundSource.BLOCKS;
-        try {
-            var values = SoundSource.values();
-            for (SoundSource value : values) {
-                if (value.getName().equals(new ResourceLocation(select).getPath().split("\\.")[0])) {
-                    soundSource = value;
-                    break;
-                }
-            }
-            throw new IllegalArgumentException("Not Found Category for " + select);
-        } catch (IllegalArgumentException e) {
-            OneBlock.error(e.getMessage());
-        }
-        // Stop other music
-        if (soundSource==SoundSource.MUSIC){
-            ClientboundStopSoundPacket clientboundstopsoundpacket = new ClientboundStopSoundPacket(null,soundSource);
-            for(ServerPlayer serverplayer : level.players()) {
-                serverplayer.connection.send(clientboundstopsoundpacket);
-            }
-        }
-        double d0 = (double) Mth.square(holder.value().getRange(volume));
-        long j = level.getRandom().nextLong();
-        for (ServerPlayer serverplayer : level.players()) {
-            double d1 = vec3_base.x() - serverplayer.getX();
-            double d2 = vec3_base.y() - serverplayer.getY();
-            double d3 = vec3_base.z() - serverplayer.getZ();
-            double d4 = d1 * d1 + d2 * d2 + d3 * d3;
-            Vec3 vec3 = basePos.getCenter();
-            float f = volume;
-            if (d4 > d0) {
-                if (minVolume <= 0.0F) {
-                    continue;
-                }
-
-                double d5 = Math.sqrt(d4);
-                vec3 = new Vec3(serverplayer.getX() + d1 / d5 * 2.0D, serverplayer.getY() + d2 / d5 * 2.0D, serverplayer.getZ() + d3 / d5 * 2.0D);
-                f = minVolume;
-            }
-
-            serverplayer.connection.send(new ClientboundSoundPacket(holder, soundSource, vec3.x(), vec3.y(), vec3.z(), f, pitch, j));
-        }
-    }
-
     //
     public static void placeSelect(ServerLevel level, BlockPos basePos, StageData.BlockEntry select) {
         if (select.getPreprocessing() != null) {
@@ -205,7 +148,7 @@ public class PlaceUtil {
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_CONFIGURED_FEATURE)) {
             placeFeature(level, offsetPos, new ResourceLocation(select.getId()));
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_SOUND)) {
-            placeSound(level, offsetPos, select.getId());
+            ClientUtils.placeSound(level, offsetPos, select.getId());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_COMMAND)) {
             CommandUtils.performCommand(level.getServer(), offsetPos, select.getId());
         }
