@@ -2,6 +2,7 @@ package xueluoanping.oneblock.block;
 
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
@@ -45,23 +46,17 @@ public class BlockOne extends Block {
         return super.getShape(state, worldIn, pos, context);
     }
 
+    @Override
+    public BlockState updateShape(BlockState blockState, Direction direction, BlockState state, LevelAccessor accessor, BlockPos pos, BlockPos pos1) {
+        if (accessor instanceof ServerLevel serverLevel) {
+            serverLevel.scheduleTick(pos, this, 1);
+        }
+        return super.updateShape(blockState, direction, state, accessor, pos, pos1);
+    }
 
     @Override
     public RenderShape getRenderShape(BlockState p_149645_1_) {
         return RenderShape.INVISIBLE;
-    }
-
-
-    @Override
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player playerEntity) {
-        super.playerWillDestroy(level, pos, state, playerEntity);
-        if (level instanceof ServerLevel) {
-        }
-    }
-
-    @Override
-    public void destroy(LevelAccessor level, BlockPos pos, BlockState state) {
-        super.destroy(level, pos, state);
     }
 
 
