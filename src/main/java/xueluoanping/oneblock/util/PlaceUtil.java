@@ -4,6 +4,7 @@ import net.minecraft.ResourceLocationException;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.SectionPos;
+import net.minecraft.core.Vec3i;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -22,6 +23,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.BlockRotProce
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager;
+import net.minecraft.world.ticks.LevelTicks;
 import xueluoanping.oneblock.ModConstants;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.client.OneBlockTranslator;
@@ -77,9 +79,13 @@ public class PlaceUtil {
         if (optional.isEmpty()) {
             OneBlock.error("Failed place" + resourceLocation.toString());
         } else {
+
             StructureTemplate structuretemplate = optional.get();
             // var size = structuretemplate.getSize();
             // base=base.offset(size.);
+            Vec3i center=new Vec3i(base.getX(),base.getY(), base.getZ());
+
+
             checkLoaded(level, new ChunkPos(base), new ChunkPos(base.offset(structuretemplate.getSize())));
             StructurePlaceSettings structureplacesettings = (new StructurePlaceSettings()).setMirror(mirror).setRotation(rotation);
             // degree of intactness
@@ -90,6 +96,10 @@ public class PlaceUtil {
             // base = base.above();
             boolean flag = structuretemplate.placeInWorld(level, base, base, structureplacesettings, level.getRandom(), Block.UPDATE_CLIENTS);
             OneBlock.error("Place " + flag + resourceLocation.toString());
+
+            // Clear tick counter? not sure if We need it and it may cause other problem if there are blocks exist
+            level.getBlockTicks().clearArea(BoundingBox.fromCorners(center, center.offset(structuretemplate.getSize())));
+
         }
     }
 
@@ -116,6 +126,7 @@ public class PlaceUtil {
         }
 
         var offsetPos = new BlockPos(basePos.getX() + select.getOffset_x(), basePos.getY() + select.getOffset_y(), basePos.getZ() + select.getOffset_z());
+
 
         if (Objects.equals(select.getType(), ModConstants.TYPE_BLOCK)) {
             var block = RegisterFinderUtil.getBlock(select.getId());

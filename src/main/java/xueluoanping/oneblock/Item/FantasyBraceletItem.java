@@ -30,7 +30,7 @@ public class FantasyBraceletItem extends Item {
             } else {
                 if (hitresult.getType() == HitResult.Type.BLOCK) {
                     BlockPos pos = hitresult.getBlockPos();
-                    var save = Levelhandler.oneBlockSaveHolder.get(serverLevel);
+                    var save = Levelhandler.getSaveData(serverLevel);
                     if (itemstack.getDamageValue() != 0) {
                         var oldPos = save.remove(pos);
                         if (oldPos != null)

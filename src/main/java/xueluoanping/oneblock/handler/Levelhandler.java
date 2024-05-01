@@ -28,6 +28,11 @@ public class Levelhandler {
     // public static OneBlockSave oneBlockSave;
     public static final Map<ServerLevel, OneBlockSave> oneBlockSaveHolder = new HashMap<>();
 
+
+    public static OneBlockSave getSaveData(ServerLevel level) {
+        return oneBlockSaveHolder.get(level);
+    }
+
     @SubscribeEvent
     public void onLevelLoad(LevelEvent.Load event) {
         if (!event.getLevel().isClientSide())
@@ -50,7 +55,7 @@ public class Levelhandler {
         // OneBlock.logger(System.currentTimeMillis());
         var server = event.getServer();
         for (ServerLevel level : server.getAllLevels()) {
-            var oneBlockSave = oneBlockSaveHolder.get(level);
+            var oneBlockSave = getSaveData(level);
             for (BlockPos pos : oneBlockSave.getBlockPos()) {
                 if (level.isLoaded(pos))
                     generateBlock(server, oneBlockSave, level, pos);
@@ -77,7 +82,7 @@ public class Levelhandler {
             boolean set_gift = has_gift && stageHolder.stageRemainCount() == 1;
             if (stageHolder.isEnd()) {
                 network.setBedrock(level, pos);
-                nowProgress.setBedrockLastTime(stage.getCount()>0? stage.getCount():50*60);
+                nowProgress.setBedrockLastTime(stage.getCount() > 0 ? stage.getCount() : 50 * 60);
             } else if (set_gift) {
                 network.setGif(level, pos, stage.getEnd_gift());
             } else {

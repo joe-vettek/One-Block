@@ -58,7 +58,7 @@ public class ReloadHandler {
                                         })
                                         .then(Commands.argument("pos", BlockPosArgument.blockPos())
                                                 .suggests((context, builder) -> {
-                                                    var save = Levelhandler.oneBlockSaveHolder.get(context.getSource().getLevel());
+                                                    var save = Levelhandler.getSaveData(context.getSource().getLevel());
                                                     save.getBlockPos().stream().map(pos -> String.format("%s %s %s", pos.getX(), pos.getY(), pos.getZ())).forEach(builder::suggest);
                                                     return builder.buildFuture();
                                                 })
@@ -78,7 +78,7 @@ public class ReloadHandler {
                         .then(Commands.literal("remove")
                                 .then(Commands.argument("pos", BlockPosArgument.blockPos())
                                         .suggests((context, builder) -> {
-                                            var save = Levelhandler.oneBlockSaveHolder.get(context.getSource().getLevel());
+                                            var save = Levelhandler.getSaveData(context.getSource().getLevel());
                                             save.getBlockPos().stream().map(pos -> String.format("%s %s %s", pos.getX(), pos.getY(), pos.getZ())).forEach(builder::suggest);
                                             return builder.buildFuture();
                                         })
@@ -89,7 +89,7 @@ public class ReloadHandler {
 
     private int skip_to_stage(CommandSourceStack source, ResourceLocation id, BlockPos pos) {
         OneBlock.logger(id, pos, network.getStageStartPos(id), source.getLevel());
-        var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
+        var save = Levelhandler.getSaveData(source.getLevel());
         var progress = save.get(pos);
         if (progress != null) {
             progress.counter = network.getStageStartPos(id);
@@ -103,7 +103,7 @@ public class ReloadHandler {
 
     private int set_stage(CommandSourceStack source, BlockPos pos) {
         OneBlock.logger("Set", pos, source.getLevel());
-        var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
+        var save = Levelhandler.getSaveData(source.getLevel());
         var progress = save.get(pos);
         if (progress == null) {
             save.update(pos, save.getOrDefault(pos));
@@ -116,7 +116,7 @@ public class ReloadHandler {
 
     private int remove_stage(CommandSourceStack source, BlockPos pos) {
         OneBlock.logger("Remove", pos, source.getLevel());
-        var save = Levelhandler.oneBlockSaveHolder.get(source.getLevel());
+        var save = Levelhandler.getSaveData(source.getLevel());
         var progress = save.get(pos);
         if (progress != null) {
             save.remove(pos);
