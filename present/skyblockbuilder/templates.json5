@@ -24,7 +24,7 @@
       "east": [],
       "west": []
     },
-    "test": {
+    "oneblock": {
       "north": [],
       "south": [
         [
@@ -57,9 +57,9 @@
   // The list of templates being available. The first entry is the default template.
   "templates": [
     {
-      "name": "test",
-      "file": "test.nbt",
-      "spawns": "test",
+      "name": "oneblock",
+      "file": "oneblock.nbt",
+      "spawns": "oneblock",
       "surroundingBlocks": "default",
       "spreads": "default"
     },
