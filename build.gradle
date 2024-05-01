@@ -191,7 +191,8 @@ dependencies {
     onlyMainRuntimeOnly fg.deobf("curse.maven:jade-324717:5072729")
     onlyMainImplementation fg.deobf("curse.maven:jei-238222:5101366")
 
-
+    onlyMainRuntimeOnly fg.deobf("curse.maven:skyblock-builder-446691:5291035")
+    onlyMainRuntimeOnly fg.deobf("curse.maven:libx-412525:5207625")
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
     // compile "some.group:artifact:version"

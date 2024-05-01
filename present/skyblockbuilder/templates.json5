@@ -12,18 +12,6 @@
   // }
   "spawn": null,
   "spawns": {
-    "default": {
-      "north": [],
-      "south": [
-        [
-          6,
-          3,
-          5
-        ]
-      ],
-      "east": [],
-      "west": []
-    },
     "oneblock": {
       "north": [],
       "south": [
@@ -60,13 +48,6 @@
       "name": "oneblock",
       "file": "oneblock.nbt",
       "spawns": "oneblock",
-      "surroundingBlocks": "default",
-      "spreads": "default"
-    },
-    {
-      "name": "default",
-      "file": "default.nbt",
-      "spawns": "default",
       "surroundingBlocks": "default",
       "spreads": "default"
     }
