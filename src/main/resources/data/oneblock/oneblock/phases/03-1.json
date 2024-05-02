@@ -82,20 +82,20 @@
     {
       "type": "mob",
       "id": "minecraft:tadpole",
-      "weight": 1,
-      "count": 2
+      "weight": 2,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:cod",
-      "weight": 1,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "mob",
       "id": "minecraft:salmon",
-      "weight": 1,
-      "count": 4
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "gift",
