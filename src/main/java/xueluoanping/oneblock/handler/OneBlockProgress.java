@@ -190,4 +190,16 @@ class OneBlockProgress {
         this.updateRemain(type, id);
         this.updateQuota(type, id);
     }
+
+    @Override
+    public String toString() {
+        return "OneBlockProgress{" +
+                "name='" + name + '\'' +
+                ", counter=" + counter +
+                ", bedrockLastTime=" + bedrockLastTime +
+                ", remainCounter=" + remainCounter +
+                ", quotaCounter=" + quotaCounter +
+                ", precedenceCounter=" + precedenceCounter +
+                '}';
+    }
 }

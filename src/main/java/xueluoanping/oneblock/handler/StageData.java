@@ -89,6 +89,10 @@ public class StageData {
                 .filter(blockEntry -> nowProgress.checkQuota(blockEntry.getType(), blockEntry.getGlobalId()))
                 .mapToInt(BlockEntry::getWeight).sum();
 
+        if (totalWeight<=0){
+            throw new IllegalArgumentException( OneBlock.getStr("Found error in", this.getResName(),reachRemain,localCount, totalWeight, nowProgress,this.list));
+        }
+
         int randomNumber = random.nextInt(totalWeight) + 1;
 
         int cumulativeWeight = 0;
@@ -98,7 +102,7 @@ public class StageData {
                 return entry;
             }
         }
-        OneBlock.error("Found error in", this.getResName(), totalWeight, nowProgress == null ? null : nowProgress.remainCounter.toString());
+        OneBlock.error("Found error in", this.getResName(), totalWeight, nowProgress.remainCounter);
         return new BlockEntry("block", "minecraft:barrier");
     }
 

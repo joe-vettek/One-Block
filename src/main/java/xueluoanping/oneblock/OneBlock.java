@@ -111,30 +111,21 @@ public class OneBlock {
     }
 
     public static void logger(Object... x) {
-
-        // if (General.bool.get())
         if (useLogger) {
-            StringBuilder output = new StringBuilder();
-            for (Object i : x) {
-                output.append("，【").append(i).append("】");
-            }
-            LOGGER.info(output.substring(1));
+            LOGGER.info(getStr(x));
         }
+    }
 
+    public static String getStr(Object... x) {
+        StringBuilder output = new StringBuilder();
+        for (Object i : x) {
+            output.append("，【").append(i).append("】");
+        }
+        return output.toString();
     }
 
     public static void error(Object... x) {
-
-        // if (General.bool.get())
-        // if (useLogger)
-        {
-            StringBuilder output = new StringBuilder();
-            for (Object i : x) {
-                output.append("，【").append(i).append("】");
-            }
-            LOGGER.error(output.substring(1));
-        }
-
+        LOGGER.error(getStr(x));
     }
 
     public static ResourceLocation rl(String name) {
