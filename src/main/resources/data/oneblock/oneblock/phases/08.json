@@ -1,143 +1,163 @@
 {
-  "name": "08",
-  "count": 730,
-  "end_gift": "ija-one-block:08-gift",
+  "name": "07",
+  "count": 840,
+  "end_gift": "ija-one-block:07-gift",
   "list": [
     {
       "type": "block",
-      "id": "minecraft:quartz_block",
-      "weight": 213
+      "id": "minecraft:netherrack",
+      "weight": 95
     },
     {
       "type": "block",
-      "id": "minecraft:grass_block",
-      "weight": 69
+      "id": "minecraft:blackstone",
+      "weight": 80
     },
     {
       "type": "block",
-      "id": "minecraft:oak_log",
-      "weight": 50
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:slime",
-      "weight": 16,
-      "count": 1
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:bee",
-      "weight": 16,
-      "count": 1
+      "id": "minecraft:soul_sand",
+      "weight": 49
     },
     {
       "type": "block",
-      "id": "minecraft:gold_ore",
-      "weight": 15
+      "id": "minecraft:nether_bricks",
+      "weight": 47
     },
     {
       "type": "block",
-      "id": "minecraft:lapis_ore",
-      "weight": 15
+      "id": "minecraft:basalt",
+      "weight": 37
     },
     {
       "type": "block",
-      "id": "minecraft:iron_ore",
-      "weight": 13
+      "id": "minecraft:red_nether_bricks",
+      "weight": 37
     },
     {
       "type": "block",
-      "id": "minecraft:copper_ore",
-      "weight": 13
+      "id": "minecraft:magma_block",
+      "weight": 31
     },
     {
       "type": "block",
-      "id": "minecraft:emerald_ore",
+      "id": "minecraft:warped_nylium",
+      "weight": 30
+    },
+    {
+      "type": "block",
+      "id": "minecraft:crimson_nylium",
+      "weight": 29
+    },
+    {
+      "type": "block",
+      "id": "minecraft:soul_soil",
+      "weight": 21
+    },
+    {
+      "type": "block",
+      "id": "minecraft:glowstone",
+      "weight": 19
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_quartz_ore",
+      "weight": 18
+    },
+    {
+      "type": "block",
+      "id": "minecraft:shroomlight",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_wart_block",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:warped_wart_block",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gilded_blackstone",
+      "weight": 16
+    },
+    {
+      "type": "block",
+      "id": "minecraft:nether_gold_ore",
       "weight": 12
     },
     {
       "type": "block",
-      "id": "minecraft:honeycomb_block",
-      "weight": 10
-    },
-    {
-      "type": "block",
-      "id": "minecraft:redstone_ore",
-      "weight": 8
-    },
-    {
-      "type": "gift",
-      "id": "ija-one-block:08",
-      "weight": 6
+      "id": "minecraft:obsidian",
+      "weight": 12
     },
     {
       "type": "mob",
-      "id": "minecraft:cat",
+      "id": "minecraft:magma_cube",
+      "weight": 9,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:07",
+      "weight": 8
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:blaze",
       "weight": 6,
       "count": 1
     },
     {
-      "type": "block",
-      "id": "minecraft:diamond_ore",
-      "weight": 6
+      "type": "mob",
+      "id": "minecraft:hoglin",
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "mob",
-      "id": "minecraft:phantom",
+      "id": "minecraft:piglin",
+      "weight": 6,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:ghast",
       "weight": 4,
       "count": 1
     },
     {
-      "type": "gift",
-      "id": "ija-one-block:08-variety",
-      "weight": 4
-    },
-    {
       "type": "mob",
-      "id": "minecraft:mule",
+      "id": "minecraft:wither_skeleton",
       "weight": 4,
       "count": 1
     },
     {
       "type": "block",
-      "id": "minecraft:slime_block",
-      "weight": 4
-    },
-    {
-      "type": "block",
-      "id": "minecraft:honey_block",
+      "id": "minecraft:ancient_debris",
       "weight": 4
     },
     {
       "type": "gift",
-      "id": "ija-one-block:musical",
-      "weight": 1
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:zombie_horse",
-      "weight": 2,
-      "count": 1
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:skeleton_horse",
-      "weight": 2,
-      "count": 1
+      "id": "ija-one-block:07-variety",
+      "weight": 3
     },
     {
       "type": "block",
-      "id": "minecraft:bee_nest",
-      "weight": 1
+      "id": "minecraft:crying_obsidian",
+      "weight": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:strider",
+      "weight": 2,
+      "count": 2
     },
     {
       "type": "gift",
-      "id": "ija-one-block:rare",
-      "weight": 1
-    },
-    {
-      "type": "block",
-      "id": "minecraft:beehive",
+      "id": "ija-one-block:odd",
       "weight": 1
     }
   ]

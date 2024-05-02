@@ -17,8 +17,9 @@ public class Lang_ZH extends LangHelper {
         add(OneBlock.MOD_ID, "单方块");
 
         add(ModContents.fantasy_bracelet.get(),"奇异手环");
-        // addWailaHint( "§o<..按住shift以查看更多..>");
-        // addSlot("§7%s号格子: 装有%s的%s");
+
+        add(ModContents.one_stone.get(), "一块普通的石头");
+        addCustomName("mob", "天赐之物");
     }
 
 

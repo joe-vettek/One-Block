@@ -71,6 +71,7 @@ public class Levelhandler {
 
         ClientUtils.playASHParticles(level, pos);
         // Player always dig it and we not get
+        // Todo:Clean Water in future or clean tick
         if (level.isEmptyBlock(pos)) {
             if (General.debug.get())
                 OneBlock.logger("Start Set at ", System.currentTimeMillis());

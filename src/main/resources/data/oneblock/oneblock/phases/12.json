@@ -1,7 +1,7 @@
 {
   "name": "Subterranean Depths",
   "count": 750,
-  "end_gift": "oneblock:09-1-gift",
+  "end_gift": "oneblock:12-gift",
   "list": [
     {
       "type": "block",
@@ -124,7 +124,7 @@
     },
     {
       "type": "gift",
-      "id": "oneblock:09-1",
+      "id": "oneblock:12",
       "weight": 4
     },
     {

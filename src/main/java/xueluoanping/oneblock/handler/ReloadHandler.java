@@ -8,6 +8,10 @@ import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.ResourceLocationArgument;
 import net.minecraft.commands.arguments.coordinates.BlockPosArgument;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.ClickEvent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.HoverEvent;
+import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
@@ -15,6 +19,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import xueluoanping.oneblock.ModContents;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.config.General;
+import xueluoanping.oneblock.util.ClientUtils;
 
 // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class ReloadHandler {
@@ -48,7 +53,7 @@ public class ReloadHandler {
                                         .suggests((context, builder) -> {
                                             String pre = "";
                                             try {
-                                                pre= context.getArgument("stage", ResourceLocation.class).getPath();
+                                                pre = context.getArgument("stage", ResourceLocation.class).getPath();
                                             } catch (IllegalArgumentException e) {
                                                 // e.printStackTrace();
                                             }
@@ -84,7 +89,41 @@ public class ReloadHandler {
                                         })
                                         .executes((stackCommandContext) ->
                                                 remove_stage(stackCommandContext.getSource(), BlockPosArgument.getLoadedBlockPos(stackCommandContext, "pos")))))
+
+
         );
+        dispatcher.register(
+                Commands.literal(OneBlock.MOD_ID)
+                        .requires((sourceStack) -> sourceStack.hasPermission(2))
+                        .then(Commands.literal("list_stage_info")
+                                .executes((stackCommandContext) ->
+                                        list_stage(stackCommandContext.getSource()))));
+        dispatcher.register(
+                Commands.literal(OneBlock.MOD_ID)
+                        .requires((sourceStack) -> sourceStack.hasPermission(2))
+                        .then(Commands.literal("list")
+                                .then(Commands.literal("block").executes(context -> 1))
+                                .then(Commands.literal("item").executes(context -> 1))
+                                .then(Commands.literal("mob").executes(context -> 1))
+                                .then(Commands.literal("template").executes(context -> 1))
+                                .then(Commands.literal("structure").executes(context -> 1))
+                                .then(Commands.literal("feature").executes(context -> 1))
+                                .then(Commands.literal("sound").executes(context -> 1))
+                        )
+
+        );
+    }
+
+    private int list_stage(CommandSourceStack source) {
+        for (StageData stageData : network.STAGE_DATA_LIST) {
+            var stringBuilder= Component.empty().append("Click to Copy "+stageData.getName()+"\n")
+                    .withStyle((style) -> style
+                            .withColor(TextColor.parseColor("#7FFF00"))
+                            .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,Component.empty().append("Click it to copy")))
+                            .withClickEvent(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, stageData.toString())));
+            ClientUtils.informPlayer(source.getServer(), stringBuilder);
+        }
+        return 1;
     }
 
     private int skip_to_stage(CommandSourceStack source, ResourceLocation id, BlockPos pos) {

@@ -1,160 +1,97 @@
 {
-  "name": "06",
-  "count": 610,
-  "end_gift": "ija-one-block:06-gift",
+  "name": "05",
+  "count": 570,
+  "end_gift": "ija-one-block:05-gift",
   "list": [
     {
       "type": "block",
-      "id": "minecraft:red_sand",
-      "weight": 103
+      "id": "minecraft:cobblestone",
+      "weight": 212
     },
     {
       "type": "block",
-      "id": "minecraft:red_sandstone",
-      "weight": 81
+      "id": "minecraft:mossy_cobblestone",
+      "weight": 128
     },
     {
       "type": "block",
-      "id": "minecraft:terracotta",
-      "weight": 40
+      "id": "minecraft:jungle_log",
+      "weight": 70
     },
     {
       "type": "block",
-      "id": "minecraft:sandstone",
-      "weight": 36
-    },
-    {
-      "type": "block",
-      "id": "minecraft:sand",
-      "weight": 31
-    },
-    {
-      "type": "block",
-      "id": "minecraft:acacia_log",
-      "weight": 25
-    },
-    {
-      "type": "block",
-      "id": "minecraft:brown_terracotta",
-      "weight": 24
-    },
-    {
-      "type": "block",
-      "id": "minecraft:orange_terracotta",
-      "weight": 23
-    },
-    {
-      "type": "block",
-      "id": "minecraft:red_terracotta",
-      "weight": 23
-    },
-    {
-      "type": "block",
-      "id": "minecraft:yellow_terracotta",
-      "weight": 23
+      "id": "minecraft:grass_block",
+      "weight": 41
     },
     {
       "type": "block",
       "id": "minecraft:redstone_ore",
-      "weight": 20
-    },
-    {
-      "type": "block",
-      "id": "minecraft:light_gray_terracotta",
       "weight": 17
-    },
-    {
-      "type": "block",
-      "id": "minecraft:white_terracotta",
-      "weight": 17
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:husk",
-      "weight": 16,
-      "count": 2
-    },
-    {
-      "type": "block",
-      "id": "minecraft:emerald_ore",
-      "weight": 13
     },
     {
       "type": "block",
       "id": "minecraft:iron_ore",
-      "weight": 11
-    },
-    {
-      "type": "block",
-      "id": "minecraft:coal_ore",
-      "weight": 10
+      "weight": 13
     },
     {
       "type": "block",
       "id": "minecraft:copper_ore",
-      "weight": 15
+      "weight": 6
     },
     {
       "type": "block",
-      "id": "minecraft:lapis_ore",
+      "id": "minecraft:coal_ore",
+      "weight": 9
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gold_ore",
       "weight": 8
     },
     {
-      "type": "gift",
-      "id": "ija-one-block:06",
-      "weight": 7
-    },
-    {
       "type": "mob",
-      "id": "minecraft:pillager",
+      "id": "minecraft:witch",
       "weight": 6,
       "count": 1
     },
     {
       "type": "mob",
-      "id": "minecraft:vindicator",
-      "weight": 4,
+      "id": "minecraft:ocelot",
+      "weight": 6,
       "count": 1
     },
     {
       "type": "mob",
-      "id": "minecraft:donkey",
-      "weight": 4,
-      "count": 2
+      "id": "minecraft:vex",
+      "weight": 6,
+      "count": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:05",
+      "weight": 6
     },
     {
       "type": "mob",
-      "id": "minecraft:village",
-      "weight": 4,
-      "count": 2
+      "id": "minecraft:parrot",
+      "weight": 2,
+      "count": 6
     },
     {
       "type": "mob",
-      "id": "minecraft:fox",
+      "id": "minecraft:horse",
       "weight": 4,
-      "count": 2
+      "count": 1
     },
     {
       "type": "block",
       "id": "minecraft:diamond_ore",
-      "weight": 4
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:llama",
-      "weight": 4,
-      "count": 2
+      "weight": 3
     },
     {
       "type": "gift",
-      "id": "ija-one-block:06-variety",
+      "id": "ija-one-block:05-variety",
       "weight": 2
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:wandering_trader",
-      "weight": 2,
-      "count": 2
     },
     {
       "type": "gift",
@@ -165,6 +102,12 @@
       "type": "gift",
       "id": "ija-one-block:odd",
       "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:panda",
+      "weight": 2,
+      "count": 1
     }
   ]
 }

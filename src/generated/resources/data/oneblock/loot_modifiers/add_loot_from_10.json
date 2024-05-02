@@ -4,7 +4,11 @@
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "ija-one-block:09-variety"
+    },
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "ija-one-block:10-variety"
     }
   ],
-  "lootTable": "oneblock:copper"
+  "lootTable": "oneblock:10"
 }

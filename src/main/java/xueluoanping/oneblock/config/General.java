@@ -22,7 +22,7 @@ public class General {
         // COMMON_BUILDER.pop();
 
         // COMMON_BUILDER.push("Order");
-        order = COMMON_BUILDER.comment("Set stage order.").define("Stage Order", "oneblock:phases/00;oneblock:phases/01;oneblock:phases/02;oneblock:phases/03;oneblock:phases/03-1;oneblock:phases/04;oneblock:phases/05;oneblock:phases/06;oneblock:phases/07;oneblock:phases/08;oneblock:phases/08-1;oneblock:phases/09;oneblock:phases/09-1;oneblock:phases/10;oneblock:phases/all");
+        order = COMMON_BUILDER.comment("Set stage order.").define("Stage Order", "oneblock:phases/00;oneblock:phases/01;oneblock:phases/02;oneblock:phases/03;oneblock:phases/04;oneblock:phases/05;oneblock:phases/06;oneblock:phases/07;oneblock:phases/08;oneblock:phases/09;oneblock:phases/10;oneblock:phases/11;oneblock:phases/12;oneblock:phases/13;oneblock:phases/all");
         COMMON_BUILDER.pop();
         COMMON_CONFIG = COMMON_BUILDER.build();
     }

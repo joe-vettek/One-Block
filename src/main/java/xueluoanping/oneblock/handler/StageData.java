@@ -1,5 +1,7 @@
 package xueluoanping.oneblock.handler;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.RandomSource;
 import xueluoanping.oneblock.OneBlock;
@@ -16,6 +18,12 @@ public class StageData {
     private String end_gift;
     private ResourceLocation resourceLocation;
     private String target;
+
+    @Override
+    public String toString() {
+        Gson gson = new GsonBuilder().create();
+        return  gson.toJson(this);
+    }
 
     public String getResName() {
         return String.format("%s.%s", resourceLocation.getNamespace(), resourceLocation.getPath().replace("/", "."));

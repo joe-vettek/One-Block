@@ -16,29 +16,35 @@ public class GLMProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
-
         String variety = "-variety";
+
+        var cond=new LootItemCondition[7];
         for (int i = 4; i < 11; i++) {
-            this.add("add_loot_" + num(i) + variety+"_from_03-1", new AddLootTableModifier(new LootItemCondition[]{
-                    LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build()
-            }, new ResourceLocation("oneblock", "03-1")));
+            cond[i-4]=LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build();
         }
 
+        this.add("add_loot_from_04", new AddLootTableModifier(cond,
+                new ResourceLocation("oneblock", "04")));
+
+        cond=new LootItemCondition[2];
         for (int i = 9; i < 11; i++) {
-            this.add("add_loot_" + num(i) + variety+"_from_08-1", new AddLootTableModifier(new LootItemCondition[]{
-                    LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build()
-            }, new ResourceLocation("oneblock", "08-1")));
+            cond[i-9]=LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build();
         }
-        for (int i = 10; i < 11; i++) {
-            this.add("add_loot_" + num(i) + variety+"_from_09-1", new AddLootTableModifier(new LootItemCondition[]{
-                    LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build()
-            }, new ResourceLocation("oneblock", "09-1")));
+        this.add("add_loot_from_10", new AddLootTableModifier(cond,
+                new ResourceLocation("oneblock", "10")));
+
+
+        this.add("add_loot_from_12", new AddLootTableModifier(new LootItemCondition[]{
+                LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(10) + variety)).build()
+        }, new ResourceLocation("oneblock", "12")));
+
+
+        cond=new LootItemCondition[7];
+        for (int i = 4; i < 11; i++) {
+            cond[i-4]=LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build();
         }
-        for (int i = 3; i < 11; i++) {
-            this.add("add_loot_" + num(i) + variety+"_from_copper", new AddLootTableModifier(new LootItemCondition[]{
-                    LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build()
-            }, new ResourceLocation("oneblock", "copper")));
-        }
+        this.add("add_loot_from_copper", new AddLootTableModifier(cond,
+                new ResourceLocation("oneblock", "copper")));
     }
 
 

@@ -1,141 +1,143 @@
 {
-  "name": "09",
-  "count": 780,
-  "end_gift": "ija-one-block:09-gift",
+  "name": "08",
+  "count": 730,
+  "end_gift": "ija-one-block:08-gift",
   "list": [
     {
       "type": "block",
-      "id": "minecraft:stone_bricks",
-      "weight": 139
+      "id": "minecraft:quartz_block",
+      "weight": 213
     },
     {
       "type": "block",
-      "id": "minecraft:mossy_stone_bricks",
-      "weight": 112
+      "id": "minecraft:grass_block",
+      "weight": 69
     },
     {
       "type": "block",
-      "id": "minecraft:mycelium",
-      "weight": 84
+      "id": "minecraft:oak_log",
+      "weight": 50
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:slime",
+      "weight": 16,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:bee",
+      "weight": 16,
+      "count": 1
     },
     {
       "type": "block",
-      "id": "minecraft:cracked_stone_bricks",
-      "weight": 59
-    },
-    {
-      "type": "block",
-      "id": "minecraft:chiseled_stone_bricks",
-      "weight": 59
-    },
-    {
-      "type": "block",
-      "id": "minecraft:light_gray_concrete_powder",
-      "weight": 58
-    },
-    {
-      "type": "block",
-      "id": "minecraft:gravel",
-      "weight": 39
-    },
-    {
-      "type": "block",
-      "id": "minecraft:coal_ore",
-      "weight": 16
-    },
-    {
-      "type": "block",
-      "id": "minecraft:iron_ore",
+      "id": "minecraft:gold_ore",
       "weight": 15
     },
     {
       "type": "block",
-      "id": "minecraft:copper_ore",
-      "weight": 8
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:skeleton",
-      "weight": 14,
-      "count": 1
+      "id": "minecraft:lapis_ore",
+      "weight": 15
     },
     {
       "type": "block",
-      "id": "minecraft:dark_oak_log",
-      "weight": 14
-    },
-    {
-      "type": "block",
-      "id": "minecraft:bone_block",
+      "id": "minecraft:iron_ore",
       "weight": 13
     },
     {
-      "type": "mob",
-      "id": "minecraft:cave_spider",
-      "weight": 12,
-      "count": 1
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:silverfish",
-      "weight": 12,
-      "count": 1
-    },
-    {
       "type": "block",
-      "id": "minecraft:redstone_ore",
-      "weight": 12
+      "id": "minecraft:copper_ore",
+      "weight": 13
     },
     {
       "type": "block",
       "id": "minecraft:emerald_ore",
-      "weight": 5
+      "weight": 12
     },
     {
       "type": "block",
-      "id": "minecraft:lapis_ore",
-      "weight": 5
+      "id": "minecraft:honeycomb_block",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:redstone_ore",
+      "weight": 8
     },
     {
       "type": "gift",
-      "id": "ija-one-block:09",
-      "weight": 5
+      "id": "ija-one-block:08",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:cat",
+      "weight": 6,
+      "count": 1
     },
     {
       "type": "block",
       "id": "minecraft:diamond_ore",
-      "weight": 5
+      "weight": 6
     },
     {
       "type": "mob",
-      "id": "minecraft:evoker",
-      "weight": 4,
-      "count": 1
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:creeper",
+      "id": "minecraft:phantom",
       "weight": 4,
       "count": 1
     },
     {
       "type": "gift",
-      "id": "ija-one-block:09-variety",
-      "weight": 3
+      "id": "ija-one-block:08-variety",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:mule",
+      "weight": 4,
+      "count": 1
     },
     {
       "type": "block",
-      "id": "minecraft:jack_o_lantern",
-      "weight": 3
+      "id": "minecraft:slime_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "minecraft:honey_block",
+      "weight": 4
     },
     {
       "type": "gift",
-      "id": "ija-one-block:odd",
-      "weight": 3
+      "id": "ija-one-block:musical",
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:zombie_horse",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:skeleton_horse",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:bee_nest",
+      "weight": 1
     },
     {
       "type": "gift",
       "id": "ija-one-block:rare",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:beehive",
       "weight": 1
     }
   ]

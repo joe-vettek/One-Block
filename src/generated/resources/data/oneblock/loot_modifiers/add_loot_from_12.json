@@ -3,8 +3,8 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "ija-one-block:04-variety"
+      "loot_table_id": "ija-one-block:10-variety"
     }
   ],
-  "lootTable": "oneblock:copper"
+  "lootTable": "oneblock:12"
 }

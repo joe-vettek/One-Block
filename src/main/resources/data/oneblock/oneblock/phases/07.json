@@ -1,159 +1,165 @@
 {
-  "name": "07",
-  "count": 840,
-  "end_gift": "ija-one-block:07-gift",
+  "name": "06",
+  "count": 610,
+  "end_gift": "ija-one-block:06-gift",
   "list": [
     {
       "type": "block",
-      "id": "minecraft:netherrack",
-      "weight": 95
+      "id": "minecraft:red_sand",
+      "weight": 103
     },
     {
       "type": "block",
-      "id": "minecraft:blackstone",
-      "weight": 80
+      "id": "minecraft:red_sandstone",
+      "weight": 81
     },
     {
       "type": "block",
-      "id": "minecraft:soul_sand",
-      "weight": 49
+      "id": "minecraft:terracotta",
+      "weight": 40
     },
     {
       "type": "block",
-      "id": "minecraft:nether_bricks",
-      "weight": 47
+      "id": "minecraft:sandstone",
+      "weight": 36
     },
     {
       "type": "block",
-      "id": "minecraft:basalt",
-      "weight": 37
-    },
-    {
-      "type": "block",
-      "id": "minecraft:red_nether_bricks",
-      "weight": 37
-    },
-    {
-      "type": "block",
-      "id": "minecraft:magma_block",
+      "id": "minecraft:sand",
       "weight": 31
     },
     {
       "type": "block",
-      "id": "minecraft:warped_nylium",
-      "weight": 30
+      "id": "minecraft:acacia_log",
+      "weight": 25
     },
     {
       "type": "block",
-      "id": "minecraft:crimson_nylium",
-      "weight": 29
+      "id": "minecraft:brown_terracotta",
+      "weight": 24
     },
     {
       "type": "block",
-      "id": "minecraft:soul_soil",
-      "weight": 21
+      "id": "minecraft:orange_terracotta",
+      "weight": 23
     },
     {
       "type": "block",
-      "id": "minecraft:glowstone",
-      "weight": 19
+      "id": "minecraft:red_terracotta",
+      "weight": 23
     },
     {
       "type": "block",
-      "id": "minecraft:nether_quartz_ore",
-      "weight": 18
+      "id": "minecraft:yellow_terracotta",
+      "weight": 23
     },
     {
       "type": "block",
-      "id": "minecraft:shroomlight",
+      "id": "minecraft:redstone_ore",
+      "weight": 20
+    },
+    {
+      "type": "block",
+      "id": "minecraft:light_gray_terracotta",
       "weight": 17
     },
     {
       "type": "block",
-      "id": "minecraft:nether_wart_block",
+      "id": "minecraft:white_terracotta",
       "weight": 17
-    },
-    {
-      "type": "block",
-      "id": "minecraft:warped_wart_block",
-      "weight": 17
-    },
-    {
-      "type": "block",
-      "id": "minecraft:gilded_blackstone",
-      "weight": 16
-    },
-    {
-      "type": "block",
-      "id": "minecraft:nether_gold_ore",
-      "weight": 12
-    },
-    {
-      "type": "block",
-      "id": "minecraft:obsidian",
-      "weight": 12
     },
     {
       "type": "mob",
-      "id": "minecraft:magma_cube",
-      "weight": 9,
-      "count": 1
+      "id": "minecraft:husk",
+      "weight": 16,
+      "count": 2
     },
     {
-      "type": "gift",
-      "id": "ija-one-block:07",
+      "type": "block",
+      "id": "minecraft:emerald_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 11
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:lapis_ore",
       "weight": 8
     },
     {
+      "type": "gift",
+      "id": "ija-one-block:06",
+      "weight": 7
+    },
+    {
       "type": "mob",
-      "id": "minecraft:blaze",
+      "id": "minecraft:pillager",
       "weight": 6,
       "count": 1
     },
     {
       "type": "mob",
-      "id": "minecraft:hoglin",
-      "weight": 6,
-      "count": 1
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:piglin",
-      "weight": 6,
-      "count": 1
-    },
-    {
-      "type": "mob",
-      "id": "minecraft:ghast",
+      "id": "minecraft:vindicator",
       "weight": 4,
       "count": 1
     },
     {
       "type": "mob",
-      "id": "minecraft:wither_skeleton",
+      "id": "minecraft:donkey",
       "weight": 4,
-      "count": 1
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:village",
+      "weight": 4,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:fox",
+      "weight": 4,
+      "count": 2
     },
     {
       "type": "block",
-      "id": "minecraft:ancient_debris",
+      "id": "minecraft:diamond_ore",
       "weight": 4
     },
     {
-      "type": "gift",
-      "id": "ija-one-block:07-variety",
-      "weight": 3
+      "type": "mob",
+      "id": "minecraft:llama",
+      "weight": 4,
+      "count": 2
     },
     {
-      "type": "block",
-      "id": "minecraft:crying_obsidian",
-      "weight": 3
+      "type": "gift",
+      "id": "ija-one-block:06-variety",
+      "weight": 2
     },
     {
       "type": "mob",
-      "id": "minecraft:strider",
+      "id": "minecraft:wandering_trader",
       "weight": 2,
       "count": 2
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:musical",
+      "weight": 1
     },
     {
       "type": "gift",

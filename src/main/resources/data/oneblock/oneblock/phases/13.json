@@ -1,0 +1,128 @@
+{
+  "name": "10",
+  "count": 850,
+  "end_gift": "ija-one-block:10-gift",
+  "list": [
+    {
+      "type": "template",
+      "id": "oneblock:end_portal",
+      "precedence": 1,
+      "offset_y": -4,
+      "offset_x": -2,
+      "offset_z": -2,
+      "preprocessing": [
+        {
+          "type": "block",
+          "id": "minecraft:end_stone"
+        },
+        {
+          "type": "sound",
+          "id": "minecraft:block.end_portal.spawn"
+        }
+      ]
+    },
+    {
+      "type": "block",
+      "id": "minecraft:end_stone",
+      "weight": 219
+    },
+    {
+      "type": "block",
+      "id": "minecraft:end_stone_bricks",
+      "weight": 160
+    },
+    {
+      "type": "block",
+      "id": "minecraft:purpur_block",
+      "weight": 124
+    },
+    {
+      "type": "block",
+      "id": "minecraft:purpur_pillar",
+      "weight": 115
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:endermite",
+      "weight": 57,
+      "count": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:enderman",
+      "weight": 18,
+      "count": 1
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gold_ore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:obsidian",
+      "weight": 11
+    },
+    {
+      "type": "block",
+      "id": "minecraft:redstone_ore",
+      "weight": 8
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:10",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diamond_ore",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "minecraft:lapis_ore",
+      "weight": 5
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:10-variety",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "minecraft:emerald_ore",
+      "weight": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:shulker",
+      "weight": 2,
+      "count": 2
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:musical",
+      "weight": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:rare",
+      "weight": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:odd",
+      "weight": 1
+    }
+  ]
+}
