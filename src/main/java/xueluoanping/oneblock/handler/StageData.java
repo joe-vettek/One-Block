@@ -98,7 +98,14 @@ public class StageData {
                 .mapToInt(BlockEntry::getWeight).sum();
 
         if (totalWeight<=0){
-            throw new IllegalArgumentException( OneBlock.getStr("Found error in", this.getResName(),reachRemain,localCount, totalWeight, nowProgress,this.list));
+            OneBlock.error("Found error in", this.getResName(),reachRemain,localCount, totalWeight, nowProgress,this.list);
+            // Todo: fix the problem
+            blockEntryStream = this.list;
+            totalWeight = blockEntryStream
+                    .stream()
+                    .filter(blockEntry -> nowProgress.checkQuota(blockEntry.getType(), blockEntry.getGlobalId()))
+                    .mapToInt(BlockEntry::getWeight).sum();
+            // throw new IllegalArgumentException( OneBlock.getStr("Found error in", this.getResName(),reachRemain,localCount, totalWeight, nowProgress,this.list));
         }
 
         int randomNumber = random.nextInt(totalWeight) + 1;

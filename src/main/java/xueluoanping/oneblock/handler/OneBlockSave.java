@@ -14,14 +14,19 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+
+// Todo: clean remain counter in future
 public class OneBlockSave extends SavedData {
 
     private final Map<BlockPos, OneBlockProgress> chunkPosData = new HashMap<>();
+
+    private String hashStageVersion="";
 
     public OneBlockSave() {
     }
 
     public OneBlockSave(CompoundTag tag) {
+
         ListTag list = tag.getList("oneblock", Tag.TAG_COMPOUND);
         for (Tag t : list) {
             CompoundTag manaTag = (CompoundTag) t;
@@ -37,6 +42,10 @@ public class OneBlockSave extends SavedData {
             if (manaTag.contains("precedenceCounter"))
                 p.precedenceCounter = manaTag.getList("precedenceCounter", ListTag.TAG_COMPOUND);
             chunkPosData.put(chunkPos, p);
+        }
+
+        if (tag.contains("oneblockVersion")){
+            hashStageVersion=tag.getString("oneblockVersion");
         }
     }
 
@@ -88,6 +97,7 @@ public class OneBlockSave extends SavedData {
             list.add(manaTag);
         });
         tag.put("oneblock", list);
+        tag.putString("hashStageVersion","");
         return tag;
     }
 
