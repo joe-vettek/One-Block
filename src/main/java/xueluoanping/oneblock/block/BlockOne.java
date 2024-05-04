@@ -4,7 +4,9 @@ package xueluoanping.oneblock.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Vec3i;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.ParticleUtils;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -19,6 +21,7 @@ import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
+import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.ticks.LevelTicks;
@@ -91,5 +94,12 @@ public class BlockOne extends Block {
         super.fallOn(level, state, pos, entity, v);
         if (level instanceof ServerLevel serverLevel)
             this.tick(state, serverLevel, pos, level.getRandom());
+    }
+
+    @Override
+    public void animateTick(BlockState blockState, Level level, BlockPos pos, RandomSource randomSource) {
+        super.animateTick(blockState, level, pos, randomSource);
+        // var vec=new Vec3(pos.getX() + 0.5, pos.getY() + 2.2, pos.getZ() + 0.5);
+        // ParticleUtils.spawnParticleOnFace(level,pos,Direction.DOWN,ParticleTypes.FIREWORK,vec,0.1F);
     }
 }

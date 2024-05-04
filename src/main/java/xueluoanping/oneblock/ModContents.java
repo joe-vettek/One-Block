@@ -33,7 +33,7 @@ public class ModContents {
     // public static final RegistryObject<BlockEntityType<BlockEntityOne>> tankTileEntityType = DRBlockEntities.register("one",
     //         () ->  BlockEntityType.Builder.of(BlockEntityOne::new, fluiddrawer.get()).build( null));
     public static final RegistryObject<Item> fantasy_bracelet = ITEM_DEFERRED_REGISTER.register("fantasy_bracelet",
-            () -> new FantasyBraceletItem(new Item.Properties().durability(1)));
+            () -> new FantasyBraceletItem(new Item.Properties().durability(1).setNoRepair()));
 
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_LOOT_TABLE = LOOT_MODIFIERS.register("add_loot_table", AddLootTableModifier.CODEC);
 

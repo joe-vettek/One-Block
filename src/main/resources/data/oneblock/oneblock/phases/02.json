@@ -67,7 +67,7 @@
     {
       "type": "mob",
       "id": "minecraft:zombie",
-      "weight": 1,
+      "weight": 2,
       "count": 2
     },
     {
@@ -78,7 +78,7 @@
     {
       "type": "mob",
       "id": "minecraft:spider",
-      "weight": 1,
+      "weight": 2,
       "count": 1
     },
     {

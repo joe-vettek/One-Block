@@ -9,12 +9,6 @@ import xueluoanping.oneblock.util.RegisterFinderUtil;
 public class ModConstants {
 
 
-    public static final LazyGet<Block> POMEGRANATE_LEAVES = LazyGet.of(() -> RegisterFinderUtil.getBlock(OneBlock.rl("pomegranate_leaves")));
-    public static final LazyGet<Block> POMEGRANATE = LazyGet.of(() -> RegisterFinderUtil.getBlock(OneBlock.rl("pomegranate")));
-    public static final LazyGet<Block> POMEGRANATE_SAPLING = LazyGet.of(() -> RegisterFinderUtil.getBlock(OneBlock.rl("pomegranate_sapling")));
-    // public static final LazyGet<Block> POMEGRANATE_BRANCH = LazyGet.of(() -> RegisterFinderUtil.getBlock(DTFruitfulFun.rl("pomegranate_branch")));
-    public static final LazyGet<Item> POMEGRANATE_SEED = LazyGet.of(() -> RegisterFinderUtil.getItem(OneBlock.rl("pomegranate_seed")));
-
     public static final String TYPE_BLOCK = "block";
     public static final String TYPE_GIFT = "gift";
     public static final String TYPE_MOB = "mob";

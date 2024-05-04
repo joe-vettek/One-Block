@@ -33,8 +33,11 @@ public class FantasyBraceletItem extends Item {
                     var save = Levelhandler.getSaveData(serverLevel);
                     if (itemstack.getDamageValue() != 0) {
                         var oldPos = save.remove(pos);
-                        if (oldPos != null)
+                        if (oldPos != null) {
                             itemstack.setDamageValue(0);
+                            level.removeBlock(pos,false);
+                        }
+
                     } else {
                         itemstack.setDamageValue(1);
                         // save.remove(pos);
