@@ -10,14 +10,24 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.HoverEvent;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.PackType;
+import net.minecraft.server.packs.repository.Pack;
+import net.minecraft.server.packs.repository.PackSource;
+import net.minecraft.server.packs.repository.RepositorySource;
+import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
+import net.minecraftforge.forgespi.locating.IModFile;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
+import xueluoanping.oneblock.util.Platform;
 
+import java.util.List;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
@@ -33,6 +43,21 @@ public class ReloadHandler {
     //
     // }
 
+
+    public static void onAddPackFindersEvent(AddPackFindersEvent event) {
+        if (event.getPackType() == PackType.SERVER_DATA) {
+
+            IModFile modFile = Platform.getModFile(OneBlock.MOD_ID);
+            var list= List.of("test");
+            for (var pack : list) {
+                String packID="oneblock-extra-" + pack;
+                event.addRepositorySource(consumer -> consumer.accept(
+                        Pack.readMetaAndCreate("test", Component.translatable(pack), true,
+                                id -> new ModFilePackResources(pack, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
+                                Pack.Position.BOTTOM, PackSource.BUILT_IN)));
+            }
+        }
+    }
 
     @SubscribeEvent
     public void onAddReloadListener(AddReloadListenerEvent event) {
@@ -116,10 +141,10 @@ public class ReloadHandler {
 
     private int list_stage(CommandSourceStack source) {
         for (StageData stageData : network.STAGE_DATA_LIST) {
-            var stringBuilder= Component.empty().append("Click to Copy "+stageData.getResourceLocation())
+            var stringBuilder = Component.empty().append("Click to Copy " + stageData.getResourceLocation())
                     .withStyle((style) -> style
                             .withColor(TextColor.parseColor("#7FFF00"))
-                            .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,Component.empty().append("Click it to copy")))
+                            .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.empty().append("Click it to copy")))
                             .withClickEvent(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, stageData.toString())));
             ClientUtils.informPlayer(source.getServer(), stringBuilder);
         }

@@ -53,9 +53,10 @@ public class OneBlock {
 
         MinecraftForge.EVENT_BUS.register(Levelhandler.instance);
         MinecraftForge.EVENT_BUS.register(ReloadHandler.instance);
-
+        MinecraftForge.EVENT_BUS.register(ReloadHandler.instance);
 
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, General.COMMON_CONFIG);
+        FMLJavaModLoadingContext.get().getModEventBus().addListener(ReloadHandler::onAddPackFindersEvent);
 
     }
 

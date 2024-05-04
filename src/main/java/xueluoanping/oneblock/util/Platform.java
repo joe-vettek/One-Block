@@ -3,7 +3,9 @@ package xueluoanping.oneblock.util;
 import net.minecraft.server.MinecraftServer;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLEnvironment;
+import net.minecraftforge.forgespi.locating.IModFile;
 import net.minecraftforge.server.ServerLifecycleHooks;
+import xueluoanping.oneblock.OneBlock;
 
 import java.util.List;
 
@@ -27,5 +29,9 @@ public class Platform {
 
     public static boolean isProduction() {
         return FMLEnvironment.production;
+    }
+
+    public static IModFile getModFile(String s) {
+        return ModList.get().getModFileById(s).getFile();
     }
 }

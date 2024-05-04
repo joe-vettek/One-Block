@@ -7,12 +7,10 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.data.blockstate.ItemModelProvider;
+import xueluoanping.oneblock.data.datapacks.DataPacksProvider;
 import xueluoanping.oneblock.data.lang.Lang_EN;
 import xueluoanping.oneblock.data.lang.Lang_ZH;
 import xueluoanping.oneblock.data.loot.GLMProvider;
-import xueluoanping.oneblock.data.loot.LFTLootTableProvider;
-import xueluoanping.oneblock.data.tag.FDLItemTagsProvider;
-import xueluoanping.oneblock.data.tag.TagsDataProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -34,7 +32,7 @@ public class start {
             //
             // generator.addProvider(event.includeServer(),new LFTLootTableProvider(packOutput));
             generator.addProvider(event.includeServer(),new GLMProvider(packOutput, MODID));
-
+generator.addProvider(event.includeServer(),new DataPacksProvider(generator));
 
         }
         if (event.includeClient()) {

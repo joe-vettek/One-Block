@@ -2,10 +2,10 @@ package xueluoanping.oneblock.handler;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonElement;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.level.block.Blocks;
 import xueluoanping.oneblock.ModConstants;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.util.RegisterFinderUtil;
@@ -29,6 +29,11 @@ public class StageData {
     public String toString() {
         Gson gson = new GsonBuilder().create();
         return gson.toJson(this);
+    }
+
+    public JsonElement toJson() {
+        Gson gson = new GsonBuilder().create();
+        return gson.toJsonTree(this);
     }
 
     public String getResName() {

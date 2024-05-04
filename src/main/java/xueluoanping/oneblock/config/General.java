@@ -28,6 +28,6 @@ public class General {
     }
 
     public static ArrayList<String> getOrder() {
-        return new ArrayList<String>(List.of(order.get().split(";")));
+        return new ArrayList<>(List.of(order.get().split(";")));
     }
 }
