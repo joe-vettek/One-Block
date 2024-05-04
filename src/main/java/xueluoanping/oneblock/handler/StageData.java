@@ -22,6 +22,8 @@ public class StageData {
     private String end_gift;
     private ResourceLocation resourceLocation;
     private String target;
+    private List<String> mods;
+
 
     @Override
     public String toString() {
@@ -81,6 +83,13 @@ public class StageData {
         this.resourceLocation = resourceLocation;
     }
 
+    public List<String> getMods() {
+        return mods;
+    }
+
+    public void setMods(List<String> mods) {
+        this.mods = mods;
+    }
 
     public BlockEntry selectRandomByWeight(RandomSource random, OneBlockProgress nowProgress, boolean reachRemain, int localCount) {
         var blockEntryStream = this.list;

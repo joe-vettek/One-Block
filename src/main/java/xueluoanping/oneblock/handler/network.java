@@ -25,6 +25,7 @@ import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
 import xueluoanping.oneblock.util.PlaceUtil;
+import xueluoanping.oneblock.util.Platform;
 
 
 // https://github.com/teaconmc/SignMeUp/blob/1.18-forge/src/main/java/org/teacon/signin/data/GuideMapManager.java
@@ -140,10 +141,16 @@ public class network extends SimpleJsonResourceReloadListener {
             OneBlock.logger(json.toString(), res);
             if (res.toString().contains("phases")) {
                 StageData stageData = gson.fromJson(json, StageData.class);
+                // Check mods
+                if (stageData.getMods() != null) {
+                    if (!Platform.isModsLoaded(stageData.getMods()))
+                        return;
+                }
                 stageData.setResourceLocation(res);
                 if (stageData.getTarget() == null)
                     STAGE_DATA_LIST.add(stageData);
                 else subStageDataList.add(stageData);
+                OneBlock.logger("Go on", res);
             }
             // Cuisine.logger(Minecraft.getInstance().isLocalServer());
         });
