@@ -23,7 +23,6 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.BlockRotProce
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlaceSettings;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager;
-import net.minecraft.world.ticks.LevelTicks;
 import xueluoanping.oneblock.ModConstants;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.client.OneBlockTranslator;
@@ -41,7 +40,7 @@ public class PlaceUtil {
     }
 
     public static void placeStructure(ServerLevel level, BlockPos base, ResourceLocation resourceLocation) {
-        Structure structure = DatapackRegisterFinderUtil.getStructure(level, resourceLocation.toString());
+        Structure structure = RegisterFinderUtil.getStructure(level, resourceLocation.toString());
         ChunkGenerator chunkgenerator = level.getChunkSource().getGenerator();
         if (structure == null) {
             OneBlock.error("Failed found " + resourceLocation);
@@ -70,9 +69,9 @@ public class PlaceUtil {
         StructureTemplateManager structuretemplatemanager = level.getStructureManager();
         Optional<StructureTemplate> optional;
         try {
-            if (General.debug.get()) {
-                level.registryAccess().registryOrThrow(Registries.TEMPLATE_POOL).entrySet();
-            }
+            // if (General.debug.get()) {
+            //     level.registryAccess().registryOrThrow(Registries.TEMPLATE_POOL).entrySet();
+            // }
             optional = structuretemplatemanager.get(resourceLocation);
         } catch (ResourceLocationException resourcelocationexception) {
             OneBlock.error("Failed get" + resourceLocation.toString());
@@ -107,7 +106,7 @@ public class PlaceUtil {
     }
 
     public static void placeFeature(ServerLevel level, BlockPos pos, ResourceLocation resourceLocation) {
-        ConfiguredFeature<?, ?> configuredfeature = DatapackRegisterFinderUtil.getConfiguredFeature(level, resourceLocation.toString());
+        ConfiguredFeature<?, ?> configuredfeature = RegisterFinderUtil.getConfiguredFeature(level, resourceLocation.toString());
 
         if (configuredfeature != null) {
             ChunkPos chunkpos = new ChunkPos(pos);

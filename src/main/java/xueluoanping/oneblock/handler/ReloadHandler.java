@@ -1,8 +1,5 @@
 package xueluoanping.oneblock.handler;
 
-import com.mojang.brigadier.arguments.ArgumentType;
-import com.mojang.brigadier.arguments.StringArgumentType;
-import com.sun.jdi.connect.Connector;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.ResourceLocationArgument;
@@ -15,11 +12,13 @@ import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
+import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import xueluoanping.oneblock.ModContents;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
+
+import java.util.stream.Collectors;
 
 // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class ReloadHandler {
@@ -33,6 +32,7 @@ public class ReloadHandler {
     // public void onLevelSave(LevelEvent.Save event) {
     //
     // }
+
 
     @SubscribeEvent
     public void onAddReloadListener(AddReloadListenerEvent event) {

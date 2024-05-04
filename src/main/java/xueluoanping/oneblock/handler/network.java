@@ -1,6 +1,7 @@
 package xueluoanping.oneblock.handler;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -18,6 +19,8 @@ import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
+import net.minecraftforge.event.TagsUpdatedEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
@@ -33,7 +36,7 @@ public class network extends SimpleJsonResourceReloadListener {
     // public static final network instance = new network(GSON, "stages.config");
     public static final network instance2 = new network(GSON, "oneblock");
     public static final List<StageData> STAGE_DATA_LIST = new ArrayList<>();
-
+    public static boolean needCheck = false;
     // public static OneBlockConfig oneBlockConfig = new OneBlockConfig();
 
     record StageHolder(StageData data, boolean isBegin, boolean isEnd, int stageRemainCount) {
@@ -91,8 +94,8 @@ public class network extends SimpleJsonResourceReloadListener {
                 stageData = data;
                 if (data.getCount() < 0) {
                     // due to it was set -1 to go endless so we need update the remain to get the local progress
-                    stageRemainCount = -(progress - data.getCount())-1;
-                }else{
+                    stageRemainCount = -(progress - data.getCount()) - 1;
+                } else {
                     progress -= data.getCount();
                     stageRemainCount = -progress;
                 }
@@ -116,7 +119,7 @@ public class network extends SimpleJsonResourceReloadListener {
 
     public static StageData.BlockEntry setNewBlock(ServerLevel level, BlockPos basePos, StageData stage, int remain, OneBlockProgress nowProgress) {
         // remain less than 0 if endless stage
-        var select = stage.selectRandomByWeight(level.getRandom(), nowProgress, nowProgress.getRemainAmount() >= remain&&remain>0, stage.getCount() - remain);
+        var select = stage.selectRandomByWeight(level.getRandom(), nowProgress, nowProgress.getRemainAmount() >= remain && remain > 0, stage.getCount() - remain);
         PlaceUtil.placeSelect(level, basePos, select);
         return select;
     }
@@ -125,6 +128,7 @@ public class network extends SimpleJsonResourceReloadListener {
         super(json, s);
         OneBlock.logger("data init");
     }
+
 
     @Override
     protected void apply(Map<ResourceLocation, JsonElement> objects, ResourceManager manager, ProfilerFiller profiler) {
@@ -161,8 +165,7 @@ public class network extends SimpleJsonResourceReloadListener {
 
         // add sub target
         for (StageData subData : subStageDataList) {
-            for (int i = 0; i < STAGE_DATA_LIST.size(); i++) {
-                var data = STAGE_DATA_LIST.get(i);
+            for (StageData data : STAGE_DATA_LIST) {
                 if (data.getResourceLocation().toString().equals(subData.getTarget())) {
                     data.getList().addAll(subData.getList());
                     break;
@@ -170,8 +173,30 @@ public class network extends SimpleJsonResourceReloadListener {
             }
         }
 
+        setNeedCheck(true);
 
     }
 
+    public static void onCheck(ServerLevel level) {
 
+        for (StageData data : network.STAGE_DATA_LIST) {
+            data.setList(data.getList().stream().filter(blockEntry -> {
+                boolean isValid = blockEntry.isValid(level);
+                if (!isValid) {
+                    OneBlock.error("Error id found in ", data.getResourceLocation(), blockEntry);
+                }
+                return isValid;
+            }).collect(Collectors.toList()));
+
+        }
+        setNeedCheck(false);
+    }
+
+    public static boolean isNeedCheck() {
+        return needCheck;
+    }
+
+    public static void setNeedCheck(boolean needCheck) {
+        network.needCheck = needCheck;
+    }
 }

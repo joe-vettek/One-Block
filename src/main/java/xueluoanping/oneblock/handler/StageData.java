@@ -3,8 +3,12 @@ package xueluoanping.oneblock.handler;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.Blocks;
+import xueluoanping.oneblock.ModConstants;
 import xueluoanping.oneblock.OneBlock;
+import xueluoanping.oneblock.util.RegisterFinderUtil;
 
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +26,7 @@ public class StageData {
     @Override
     public String toString() {
         Gson gson = new GsonBuilder().create();
-        return  gson.toJson(this);
+        return gson.toJson(this);
     }
 
     public String getResName() {
@@ -97,8 +101,8 @@ public class StageData {
                 .filter(blockEntry -> nowProgress.checkQuota(blockEntry.getType(), blockEntry.getGlobalId()))
                 .mapToInt(BlockEntry::getWeight).sum();
 
-        if (totalWeight<=0){
-            OneBlock.error("Found error in", this.getResName(),reachRemain,localCount, totalWeight, nowProgress,this.list);
+        if (totalWeight <= 0) {
+            OneBlock.error("Found error in", this.getResName(), reachRemain, localCount, totalWeight, nowProgress, this.list);
             // Todo: fix the problem
             blockEntryStream = this.list;
             totalWeight = blockEntryStream
@@ -352,6 +356,38 @@ public class StageData {
 
         public void setChance(float chance) {
             this.chance = chance;
+        }
+
+        public boolean isValid(ServerLevel access) {
+            if (getPreprocessing() != null) {
+                for (BlockEntry blockEntry : getPreprocessing()) {
+                    boolean isChildValid = blockEntry.isValid(access);
+                    if (!isChildValid) {
+                        return false;
+                    }
+                }
+            }
+
+            switch (getType()) {
+                case ModConstants.TYPE_BLOCK -> {
+                    return RegisterFinderUtil.getBlockKey(RegisterFinderUtil.getBlock(getId())).toString().equals(getId());
+                }
+                case ModConstants.TYPE_GIFT, ModConstants.TYPE_COMMAND, ModConstants.TYPE_ARCHAEOLOGY, ModConstants.TYPE_STRUCTURE, ModConstants.TYPE_CONFIGURED_FEATURE -> {
+                    return true;
+                }
+                case ModConstants.TYPE_MOB -> {
+                    return RegisterFinderUtil.getEntityKey(RegisterFinderUtil.getEntity(getId())).toString().equals(getId());
+                }
+                case ModConstants.TYPE_SOUND -> {
+                    return RegisterFinderUtil.getSoundKey(RegisterFinderUtil.getSound(getId())).toString().equals(getId());
+                }
+                case ModConstants.TYPE_TEMPLATE -> {
+                    return RegisterFinderUtil.checkTemplateKey(access, getId());
+                }
+                default -> {
+                    return false;
+                }
+            }
         }
     }
 }

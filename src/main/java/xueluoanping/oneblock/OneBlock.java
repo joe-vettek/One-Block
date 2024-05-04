@@ -119,7 +119,7 @@ public class OneBlock {
     public static String getStr(Object... x) {
         StringBuilder output = new StringBuilder();
         for (Object i : x) {
-            output.append("，【").append(i).append("】");
+            output.append(i).append(" ");
         }
         return output.toString();
     }

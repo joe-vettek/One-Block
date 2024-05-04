@@ -53,6 +53,12 @@ public class Levelhandler {
     @SubscribeEvent
     public void onTick(TickEvent.ServerTickEvent event) {
         // OneBlock.logger(System.currentTimeMillis());
+        if (network.isNeedCheck()) {
+            var old=System.currentTimeMillis();
+            network.onCheck(event.getServer().overworld());
+            OneBlock.logger("Check Cost ",System.currentTimeMillis()-old);
+        }
+
         var server = event.getServer();
         for (ServerLevel level : server.getAllLevels()) {
             var oneBlockSave = getSaveData(level);
@@ -146,7 +152,7 @@ public class Levelhandler {
         if (General.collectItemNearby.get()) {
             try {
                 double x = pos.getX() + 0.5;
-                double y = level.isWaterAt(pos)?pos.getY() + 1+0.875:pos.getY() + 1;
+                double y = level.isWaterAt(pos) ? pos.getY() + 1 + 0.875 : pos.getY() + 1;
                 double z = pos.getZ() + 0.5;
                 var aabb = new AABB(new Vec3(x - 1.5, y - 1, z - 1.5), new Vec3(x + 1.5, y + 1.25, z + 1.5));
                 level.getEntities().get(EntityType.ITEM, aabb, itemEntity -> {
