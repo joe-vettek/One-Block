@@ -34,6 +34,9 @@ public class Lang_EN extends LangHelper {
 
         add(ModContents.one_stone.get(), "One Stone");
         add(ModContents.fantasy_bracelet.get(), "Fantasy Bracelet");
+        var itemStack=ModContents.fantasy_bracelet.get().getDefaultInstance();
+        itemStack.setDamageValue(1);
+        add(itemStack,"Shattered Bracelet");
         addCustomName("mob", "Gift from the Up");
     }
 

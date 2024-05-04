@@ -56,4 +56,10 @@ public class FantasyBraceletItem extends Item {
     }
 
 
+    @Override
+    public String getDescriptionId(ItemStack stack) {
+        if (stack.getDamageValue()==1)
+            return super.getDescriptionId(stack)+"_1";
+        return super.getDescriptionId(stack);
+    }
 }

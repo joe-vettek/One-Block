@@ -98,25 +98,25 @@ public class ReloadHandler {
                         .then(Commands.literal("list_stage_info")
                                 .executes((stackCommandContext) ->
                                         list_stage(stackCommandContext.getSource()))));
-        dispatcher.register(
-                Commands.literal(OneBlock.MOD_ID)
-                        .requires((sourceStack) -> sourceStack.hasPermission(2))
-                        .then(Commands.literal("list")
-                                .then(Commands.literal("block").executes(context -> 1))
-                                .then(Commands.literal("item").executes(context -> 1))
-                                .then(Commands.literal("mob").executes(context -> 1))
-                                .then(Commands.literal("template").executes(context -> 1))
-                                .then(Commands.literal("structure").executes(context -> 1))
-                                .then(Commands.literal("feature").executes(context -> 1))
-                                .then(Commands.literal("sound").executes(context -> 1))
-                        )
-
-        );
+        // dispatcher.register(
+        //         Commands.literal(OneBlock.MOD_ID)
+        //                 .requires((sourceStack) -> sourceStack.hasPermission(2))
+        //                 .then(Commands.literal("list")
+        //                         .then(Commands.literal("block").executes(context -> 1))
+        //                         .then(Commands.literal("item").executes(context -> 1))
+        //                         .then(Commands.literal("mob").executes(context -> 1))
+        //                         .then(Commands.literal("template").executes(context -> 1))
+        //                         .then(Commands.literal("structure").executes(context -> 1))
+        //                         .then(Commands.literal("feature").executes(context -> 1))
+        //                         .then(Commands.literal("sound").executes(context -> 1))
+        //                 )
+        //
+        // );
     }
 
     private int list_stage(CommandSourceStack source) {
         for (StageData stageData : network.STAGE_DATA_LIST) {
-            var stringBuilder= Component.empty().append("Click to Copy "+stageData.getName()+"\n")
+            var stringBuilder= Component.empty().append("Click to Copy "+stageData.getResourceLocation())
                     .withStyle((style) -> style
                             .withColor(TextColor.parseColor("#7FFF00"))
                             .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,Component.empty().append("Click it to copy")))

@@ -1,6 +1,7 @@
 {
   "block.oneblock.one_stone": "一块普通的石头",
   "item.oneblock.fantasy_bracelet": "奇异手环",
+  "item.oneblock.fantasy_bracelet_1": "破碎的手环",
   "misc.oneblock.custom_name.mob": "天赐之物",
   "oneblock": "单方块"
 }

@@ -3,6 +3,7 @@ package xueluoanping.oneblock.data.blockstate;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import xueluoanping.oneblock.ModContents;
 import xueluoanping.oneblock.OneBlock;
@@ -21,7 +22,11 @@ public class ItemModelProvider extends net.minecraftforge.client.model.generator
 
 	@Override
 	protected void registerModels() {
-		basicItem(ModContents.fantasy_bracelet.get());
+
+		basicItem(OneBlock.rl("fantasy_bracelet_1"));
+		basicItem(ModContents.fantasy_bracelet.get())
+				.override().predicate(new ResourceLocation("damage"),1).model(new ModelFile.UncheckedModelFile(OneBlock.rl("item/fantasy_bracelet_1")))
+		;
 	}
 
 

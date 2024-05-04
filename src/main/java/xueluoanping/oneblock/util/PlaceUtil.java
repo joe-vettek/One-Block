@@ -43,7 +43,10 @@ public class PlaceUtil {
     public static void placeStructure(ServerLevel level, BlockPos base, ResourceLocation resourceLocation) {
         Structure structure = DatapackRegisterFinderUtil.getStructure(level, resourceLocation.toString());
         ChunkGenerator chunkgenerator = level.getChunkSource().getGenerator();
-        if (structure == null) OneBlock.error("Failed found " + resourceLocation);
+        if (structure == null) {
+            OneBlock.error("Failed found " + resourceLocation);
+            return;
+        }
         StructureStart structurestart = structure.generate(level.structureManager().registryAccess(), chunkgenerator, chunkgenerator.getBiomeSource(), level.getChunkSource().randomState(), level.getStructureManager(), level.getSeed(), new ChunkPos(base), 0, level, (biomeHolder) -> true);
         if (!structurestart.isValid()) {
             OneBlock.error("Failed place" + "");
@@ -136,7 +139,8 @@ public class PlaceUtil {
             var block = Blocks.CHEST;
             level.setBlockAndUpdate(offsetPos, block.defaultBlockState().setValue(ChestBlock.FACING, Direction.EAST));
             if (level.getBlockEntity(offsetPos) instanceof RandomizableContainerBlockEntity containerBlockEntity)
-                containerBlockEntity.setLootTable(new ResourceLocation(select.getId()), level.getSeed());
+                containerBlockEntity.setLootTable(new ResourceLocation(select.getId()),level.getRandom().nextLong());
+                // containerBlockEntity.setLootTable(new ResourceLocation(select.getId()), level.getSeed());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_ARCHAEOLOGY)) {
             var block = RegisterFinderUtil.getBlock(select.getId());
             level.setBlockAndUpdate(offsetPos, block.defaultBlockState());
