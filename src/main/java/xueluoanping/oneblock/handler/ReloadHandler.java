@@ -26,6 +26,8 @@ import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
 import xueluoanping.oneblock.util.Platform;
 
+import java.io.IOException;
+import java.nio.file.Files;
 import java.util.List;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
@@ -45,18 +47,21 @@ public class ReloadHandler {
 
 
     public static void onAddPackFindersEvent(AddPackFindersEvent event) {
-        if (event.getPackType() == PackType.SERVER_DATA) {
 
+        if (event.getPackType() == PackType.SERVER_DATA) {
             IModFile modFile = Platform.getModFile(OneBlock.MOD_ID);
-            var list = List.of("bakery", "beachparty", "betterend", "bloomingnature", "candlelight", "create", "fruitfulfun", "natures_spirit", "upgrade_aquatic");
-            for (var pack : list) {
-                String packID = "oneblock-extra-" + pack;
-                OneBlock.logger(packID);
-                event.addRepositorySource(consumer -> consumer.accept(
-                        Pack.readMetaAndCreate(packID, Component.translatable(pack), true,
-                                id -> new ModFilePackResources(packID, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
-                                Pack.Position.BOTTOM, PackSource.BUILT_IN)));
-            }
+
+            General.enableList.forEach(
+                    (pack, booleanValue) -> {
+                        if(booleanValue.get()) {
+                            String packID = "oneblock-extra-" + pack;
+                            event.addRepositorySource(consumer -> consumer.accept(
+                                    Pack.readMetaAndCreate(packID, Component.translatable(pack), true,
+                                            id -> new ModFilePackResources(packID, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
+                                            Pack.Position.BOTTOM, PackSource.BUILT_IN)));
+                        }
+                    }
+            );
         }
     }
 
