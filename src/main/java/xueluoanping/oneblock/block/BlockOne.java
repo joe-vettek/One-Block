@@ -100,6 +100,9 @@ public class BlockOne extends Block {
     public void animateTick(BlockState blockState, Level level, BlockPos pos, RandomSource randomSource) {
         super.animateTick(blockState, level, pos, randomSource);
         // var vec=new Vec3(pos.getX() + 0.5, pos.getY() + 2.2, pos.getZ() + 0.5);
-        // ParticleUtils.spawnParticleOnFace(level,pos,Direction.DOWN,ParticleTypes.FIREWORK,vec,0.1F);
+        // ParticleUtils.spawnParticleOnFace(level,pos,Direction.DOWN,ParticleTypes.FIREWORK,vec,0.1F)
+
     }
+
+
 }

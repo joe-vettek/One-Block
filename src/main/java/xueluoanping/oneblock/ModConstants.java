@@ -1,13 +1,6 @@
 package xueluoanping.oneblock;
 
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import xueluoanping.oneblock.util.LazyGet;
-import xueluoanping.oneblock.util.RegisterFinderUtil;
-
-
 public class ModConstants {
-
 
     public static final String TYPE_BLOCK = "block";
     public static final String TYPE_GIFT = "gift";

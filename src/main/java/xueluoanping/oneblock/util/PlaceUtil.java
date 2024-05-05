@@ -85,7 +85,7 @@ public class PlaceUtil {
             StructureTemplate structuretemplate = optional.get();
             // var size = structuretemplate.getSize();
             // base=base.offset(size.);
-            Vec3i center=new Vec3i(base.getX(),base.getY(), base.getZ());
+            Vec3i center = new Vec3i(base.getX(), base.getY(), base.getZ());
 
 
             checkLoaded(level, new ChunkPos(base), new ChunkPos(base.offset(structuretemplate.getSize())));
@@ -122,8 +122,12 @@ public class PlaceUtil {
     public static void placeSelect(ServerLevel level, BlockPos basePos, StageData.BlockEntry select) {
         if (select.getPreprocessing() != null) {
             for (StageData.BlockEntry blockEntry : select.getPreprocessing()) {
-                if (level.getRandom().nextFloat() > 1 - blockEntry.getRealChance())
-                    placeSelect(level, basePos, blockEntry);
+
+                if (level.getRandom().nextFloat() > 1 - blockEntry.getRealChance()) {
+                    var backPos = new BlockPos(basePos.getX(), basePos.getY(), basePos.getZ());
+                    placeSelect(level, backPos, blockEntry);
+                }
+
             }
         }
 
@@ -138,8 +142,8 @@ public class PlaceUtil {
             var block = Blocks.CHEST;
             level.setBlockAndUpdate(offsetPos, block.defaultBlockState().setValue(ChestBlock.FACING, Direction.EAST));
             if (level.getBlockEntity(offsetPos) instanceof RandomizableContainerBlockEntity containerBlockEntity)
-                containerBlockEntity.setLootTable(new ResourceLocation(select.getId()),level.getRandom().nextLong());
-                // containerBlockEntity.setLootTable(new ResourceLocation(select.getId()), level.getSeed());
+                containerBlockEntity.setLootTable(new ResourceLocation(select.getId()), level.getRandom().nextLong());
+            // containerBlockEntity.setLootTable(new ResourceLocation(select.getId()), level.getSeed());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_ARCHAEOLOGY)) {
             var block = RegisterFinderUtil.getBlock(select.getId());
             level.setBlockAndUpdate(offsetPos, block.defaultBlockState());

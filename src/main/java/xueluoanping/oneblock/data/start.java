@@ -7,7 +7,6 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.data.blockstate.ItemModelProvider;
-import xueluoanping.oneblock.data.datapacks.DataPacksProvider;
 import xueluoanping.oneblock.data.lang.Lang_EN;
 import xueluoanping.oneblock.data.lang.Lang_ZH;
 import xueluoanping.oneblock.data.loot.GLMProvider;
@@ -32,8 +31,6 @@ public class start {
             //
             // generator.addProvider(event.includeServer(),new LFTLootTableProvider(packOutput));
             generator.addProvider(event.includeServer(),new GLMProvider(packOutput, MODID));
-generator.addProvider(event.includeServer(),new DataPacksProvider(generator));
-
         }
         if (event.includeClient()) {
             generator.addProvider(event.includeClient(),new ItemModelProvider(packOutput,helper));
