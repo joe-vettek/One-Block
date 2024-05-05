@@ -1,0 +1,18 @@
+{
+  "name": "Steaminess",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "mob",
+      "id": "bloomingnature:pelican",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "bloomingnature:muddy_pig",
+      "weight": 2,
+      "count": 1
+    }
+  ]
+}

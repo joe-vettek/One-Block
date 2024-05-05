@@ -1,0 +1,26 @@
+{
+  "name": "Subterranean Depths",
+  "target": "oneblock:phases/12",
+  "list": [
+    {
+      "type": "block",
+      "id": "create:deepslate_zinc_ore",
+      "weight": 20
+    },
+    {
+      "type": "block",
+      "id": "create:asurine",
+      "weight": 30
+    },
+    {
+      "type": "block",
+      "id": "create:crimsite",
+      "weight": 30
+    },
+    {
+      "type": "block",
+      "id": "create:ochrum",
+      "weight": 8
+    }
+  ]
+}

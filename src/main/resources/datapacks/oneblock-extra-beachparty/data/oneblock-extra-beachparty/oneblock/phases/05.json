@@ -1,0 +1,26 @@
+{
+  "name": "04",
+  "target": "oneblock:phases/05",
+  "list": [
+    {
+      "type": "block",
+      "id": "beachparty:sand_dirty",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "beachparty:sand_seastars",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "beachparty:sandwaves",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "beachparty:palm_log",
+      "weight": 6
+    }
+  ]
+}

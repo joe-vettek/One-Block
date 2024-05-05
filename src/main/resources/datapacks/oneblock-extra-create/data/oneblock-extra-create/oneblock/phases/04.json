@@ -1,0 +1,16 @@
+{
+  "name": "Steaminess",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "block",
+      "id": "create:zinc_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "create:veridium",
+      "weight": 6
+    }
+  ]
+}

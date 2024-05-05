@@ -1,0 +1,56 @@
+{
+  "name": "06",
+  "target": "oneblock:phases/07",
+  "list": [
+    {
+      "type": "block",
+      "id": "natures_spirit:aspen_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:maple_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:palo_verde_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:joshua_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:ghaf_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:saxaul_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:sandy_soil",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:pink_sand",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:pink_sandstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:chert",
+      "weight": 4
+    }
+  ]
+}

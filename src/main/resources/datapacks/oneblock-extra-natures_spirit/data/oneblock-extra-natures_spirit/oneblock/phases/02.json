@@ -1,0 +1,21 @@
+{
+  "name": "02",
+  "target": "oneblock:phases/02",
+  "list": [
+    {
+      "type": "block",
+      "id": "natures_spirit:travertine",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:cobbled_travertine",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:mossy_cobbled_travertine",
+      "weight": 2
+    }
+  ]
+}

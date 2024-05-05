@@ -1,0 +1,21 @@
+{
+  "name": "02",
+  "target": "oneblock:phases/02",
+  "list": [
+    {
+      "type": "block",
+      "id": "create:limestone",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "create:veridium",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "create:scoria",
+      "weight": 5
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "03",
+  "target": "oneblock:phases/03",
+  "list": [
+    {
+      "type": "block",
+      "id": "create:zinc_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "create:veridium",
+      "weight": 6
+    }
+  ]
+}

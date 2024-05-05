@@ -1,0 +1,11 @@
+{
+  "name": "08-1",
+  "target": "oneblock:phases/10",
+  "list": [
+    {
+      "type": "block",
+      "id": "natures_spirit:sugi_log",
+      "weight": 5
+    }
+  ]
+}

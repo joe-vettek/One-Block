@@ -38,7 +38,7 @@ public class network extends SimpleJsonResourceReloadListener {
     public static final network instance2 = new network(GSON, "oneblock");
     public static final List<StageData> STAGE_DATA_LIST = new ArrayList<>();
     public static boolean needCheck = false;
-    // public static OneBlockConfig oneBlockConfig = new OneBlockConfig();
+    public static OneBlockConfig oneBlockConfigHolder = new OneBlockConfig();
 
     record StageHolder(StageData data, boolean isBegin, boolean isEnd, int stageRemainCount) {
     }
@@ -151,11 +151,15 @@ public class network extends SimpleJsonResourceReloadListener {
                     STAGE_DATA_LIST.add(stageData);
                 else subStageDataList.add(stageData);
                 OneBlock.logger("Go on", res);
+            } else if (res.toString().equals("oneblock:common/config")) {
+                oneBlockConfigHolder = gson.fromJson(json, OneBlockConfig.class);
             }
+
             // Cuisine.logger(Minecraft.getInstance().isLocalServer());
         });
         // clean extra data
-        var oneBlockConfig = General.getOrder();
+        var oneBlockConfig = oneBlockConfigHolder.getOrder();
+
         var removeList = new ArrayList<StageData>();
         for (StageData s : STAGE_DATA_LIST) {
             if (!oneBlockConfig.contains(s.getResourceLocation().toString())) {
@@ -174,6 +178,9 @@ public class network extends SimpleJsonResourceReloadListener {
         for (StageData subData : subStageDataList) {
             for (StageData data : STAGE_DATA_LIST) {
                 if (data.getResourceLocation().toString().equals(subData.getTarget())) {
+                    for (StageData.BlockEntry subEntry : subData.getList()) {
+                        subEntry.setFrom(subData.getResourceLocation());
+                    }
                     data.getList().addAll(subData.getList());
                     break;
                 }
@@ -190,7 +197,9 @@ public class network extends SimpleJsonResourceReloadListener {
             data.setList(data.getList().stream().filter(blockEntry -> {
                 boolean isValid = blockEntry.isValid(level);
                 if (!isValid) {
-                    OneBlock.error("Error id found in ", data.getResourceLocation(), blockEntry);
+                    OneBlock.error("Skip error id found in ",
+                            blockEntry.getFrom() == null ? data.getResourceLocation() : blockEntry.getFrom()
+                            , blockEntry);
                 }
                 return isValid;
             }).collect(Collectors.toList()));

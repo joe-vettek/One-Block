@@ -1,0 +1,26 @@
+{
+  "name": "03",
+  "target": "oneblock:phases/03",
+  "list": [
+    {
+      "type": "block",
+      "id": "natures_spirit:fir_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:redwood_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:cedar_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:red_moss_block",
+      "weight": 4
+    }
+  ]
+}

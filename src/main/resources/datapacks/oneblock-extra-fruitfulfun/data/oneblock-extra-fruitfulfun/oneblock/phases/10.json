@@ -1,0 +1,11 @@
+{
+  "name": "08-1",
+  "target": "oneblock:phases/10",
+  "list": [
+    {
+      "type": "block",
+      "id": "fruitfulfun:citrus_log",
+      "weight": 8
+    }
+  ]
+}

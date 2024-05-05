@@ -169,6 +169,9 @@ public class StageData {
         // usually for preprocessing
         private float chance;
 
+        // from
+        private ResourceLocation from;
+
         @Override
         public String toString() {
             return "BlockEntry{" +
@@ -372,6 +375,14 @@ public class StageData {
             this.chance = chance;
         }
 
+        public ResourceLocation getFrom() {
+            return from;
+        }
+
+        public void setFrom(ResourceLocation from) {
+            this.from = from;
+        }
+
         public boolean isValid(ServerLevel access) {
             if (getPreprocessing() != null) {
                 for (BlockEntry blockEntry : getPreprocessing()) {
@@ -403,5 +414,7 @@ public class StageData {
                 }
             }
         }
+
+
     }
 }

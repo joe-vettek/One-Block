@@ -1,0 +1,174 @@
+{
+  "name": "04",
+  "target": "oneblock:phases/05",
+  "list": [
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:driftwood_log",
+      "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:tube_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:brain_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:bubble_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:fire_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:horn_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:acan_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:finger_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:star_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:moss_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:petal_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:branch_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:rock_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:pillow_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:silk_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:chrome_coralstone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:prismarine_coralstone",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:elder_prismarine_coralstone",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:acan_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:finger_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:star_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:moss_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:petal_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:branch_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:rock_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:pillow_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:silk_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:chrome_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:prismarine_coral_block",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "upgrade_aquatic:lionfish",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "upgrade_aquatic:thrasher",
+      "weight": 1,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "upgrade_aquatic:great_thrasher",
+      "weight": 1,
+      "count": 1
+    }
+  ]
+}

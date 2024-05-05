@@ -1,0 +1,30 @@
+{
+  "name": "06",
+  "target": "oneblock:phases/07",
+  "list": [
+    {
+      "type": "mob",
+      "id": "bloomingnature:wandering_gardener",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "bloomingnature:deer",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "bloomingnature:boar",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "bloomingnature:bison",
+      "weight": 2,
+      "count": 1
+    }
+  ]
+}

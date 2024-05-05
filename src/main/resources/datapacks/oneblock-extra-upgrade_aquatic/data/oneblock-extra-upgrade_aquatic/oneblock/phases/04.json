@@ -1,0 +1,23 @@
+{
+  "name": "Steaminess",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "block",
+      "id": "upgrade_aquatic:driftwood_log",
+      "weight": 8
+    },
+    {
+      "type": "mob",
+      "id": "upgrade_aquatic:perch",
+      "weight": 3,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "upgrade_aquatic:pike",
+      "weight": 2,
+      "count": 1
+    }
+  ]
+}

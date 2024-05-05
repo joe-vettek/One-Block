@@ -1,0 +1,411 @@
+{
+  "name": "10",
+  "target": "oneblock:phases/13",
+  "list": [
+    {
+      "type": "block",
+      "id": "betterend:endstone_dust",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:end_mycelium",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:end_moss",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:chorus_nylium",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:cave_moss",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:crystal_moss",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:shadow_grass",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:pink_moss",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:amber_moss",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:jungle_moss",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:sangnum",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:rutiscus",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:amber_moss",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "betterend:pallidium_full",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:pallidium_heavy",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:pallidium_thin",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:pallidium_tiny",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:mossy_obsidian",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:flavolite",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:violecite",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:sulphuric_rock",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:virid_jadestone",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:azure_jadestone",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:sandy_jadestone",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:umbralith",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betterend:brimstone"
+    },
+    {
+      "type": "block",
+      "id": "betterend:flavolite_runed",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "betterend:flavolite_runed_eternal",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:dense_snow",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "betterend:emerald_ice",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "betterend:mossy_glowshroom_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:end_lotus_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:pythadendron_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:lacugrove_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:dragon_tree_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:tenanea_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:helix_tree_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:umbrella_tree_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:umbrella_tree_cluster",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:umbrella_tree_cluster_empty",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:jellyshroom_cap_purple",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "betterend:jellyshroom_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:lucernia_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "betterend:amaranita_stem",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:amaranita_hyphae",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:amaranita_hymenophore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "betterend:amaranita_lantern",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:amaranita_cap",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:neon_cactus_block",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "betterend:menger_sponge_wet",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_white",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_gray",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_light_gray",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_black",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_blue",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_lime",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_magenta",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_red",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_orange",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_purple",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_cyan",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_brown",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_green",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_yellow",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_pink",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:hydralux_petal_block_light_blue",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:filalux_lantern",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:ender_ore",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "betterend:amber_ore",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "betterend:thallasium_ore",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:aurora_crystal",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "betterend:smaragdant_crystal",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "betterend:budding_smaragdant_crystal",
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "betterend:dragonfly",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "betterend:end_slime",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "betterend:end_fish",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "betterend:shadow_walker",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "betterend:cubozoa",
+      "weight": 2,
+      "count": 1
+    },
+    {
+      "type": "mob",
+      "id": "betterend:silk_moth",
+      "weight": 2,
+      "count": 1
+    }
+  ]
+}

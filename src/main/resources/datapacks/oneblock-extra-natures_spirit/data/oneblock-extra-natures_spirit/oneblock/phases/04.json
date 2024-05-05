@@ -1,0 +1,16 @@
+{
+  "name": "Steaminess",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "block",
+      "id": "natures_spirit:willow_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:wisteria_log",
+      "weight": 5
+    }
+  ]
+}

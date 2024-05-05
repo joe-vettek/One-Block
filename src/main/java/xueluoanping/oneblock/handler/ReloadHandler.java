@@ -48,12 +48,13 @@ public class ReloadHandler {
         if (event.getPackType() == PackType.SERVER_DATA) {
 
             IModFile modFile = Platform.getModFile(OneBlock.MOD_ID);
-            var list= List.of("test");
+            var list = List.of("bakery", "beachparty", "betterend", "bloomingnature", "candlelight", "create", "fruitfulfun", "natures_spirit", "upgrade_aquatic");
             for (var pack : list) {
-                String packID="oneblock-extra-" + pack;
+                String packID = "oneblock-extra-" + pack;
+                OneBlock.logger(packID);
                 event.addRepositorySource(consumer -> consumer.accept(
-                        Pack.readMetaAndCreate("test", Component.translatable(pack), true,
-                                id -> new ModFilePackResources(pack, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
+                        Pack.readMetaAndCreate(packID, Component.translatable(pack), true,
+                                id -> new ModFilePackResources(packID, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
                                 Pack.Position.BOTTOM, PackSource.BUILT_IN)));
             }
         }
@@ -83,7 +84,7 @@ public class ReloadHandler {
                                                 // e.printStackTrace();
                                             }
                                             String finalPre = pre;
-                                            General.getOrder().stream().filter(s -> s.contains(finalPre)).forEach(builder::suggest);
+                                            network.oneBlockConfigHolder.getOrder().stream().filter(s -> s.contains(finalPre)).forEach(builder::suggest);
                                             return builder.buildFuture();
                                         })
                                         .then(Commands.argument("pos", BlockPosArgument.blockPos())

@@ -1,0 +1,16 @@
+{
+  "name": "08-1",
+  "target": "oneblock:phases/10",
+  "list": [
+    {
+      "type": "block",
+      "id": "bakery:strawberry_crate",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "bakery:oat_crate",
+      "weight": 4
+    }
+  ]
+}
