@@ -21,7 +21,7 @@ public class General {
     static {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
         COMMON_BUILDER.comment("Debug settings").push("Debug");
-        debug = COMMON_BUILDER.comment("Set false to stop output dig log.").define("log", false);
+        debug = COMMON_BUILDER.comment("Set false to stop output dig log.").define("Log", false);
         COMMON_BUILDER.pop();
 
         COMMON_BUILDER.comment("Play settings").push("Play");

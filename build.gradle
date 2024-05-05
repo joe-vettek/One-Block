@@ -310,8 +310,6 @@ tasks.named('processResources', ProcessResources).configure {
             minecraft_version_range   : minecraft_version_range,
             forge_version_range       : forge_version_range,
             loader_version_range      : loader_version_range,
-            dynamictrees_version_range: dynamictrees_version_range,
-            fruittrees_version_range  : fruittrees_version_range,
             mod_id                    : mod_id,
             mod_name                  : mod_name,
             mod_license               : mod_license,

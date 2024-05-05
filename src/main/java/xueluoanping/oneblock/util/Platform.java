@@ -34,4 +34,5 @@ public class Platform {
     public static IModFile getModFile(String s) {
         return ModList.get().getModFileById(s).getFile();
     }
+
 }
