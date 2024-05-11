@@ -1,0 +1,37 @@
+class StageInfo:
+
+    def __init__(self, ids, name="", end_gift=None, stage_gift=None, variety_gift=None):
+        self.id = ids
+        self.name = name
+        self.end_gift = end_gift
+        self.stage_gift = stage_gift
+        self.variety_gift = variety_gift
+
+    def get_phase_id(self):
+        return f"oneblock:phases/{self.id}"
+
+
+STAGE_00 = StageInfo('00', "start", 'ija-one-block:00-gift', 'ija-one-block:00')
+STAGE_01 = StageInfo('01', "plain", 'ija-one-block:01-gift', 'ija-one-block:01', 'ija-one-block:01-variety')
+STAGE_02 = StageInfo('02', "under", 'ija-one-block:02-gift', 'ija-one-block:02', 'ija-one-block:02-variety')
+STAGE_03 = StageInfo('03', "cold", 'ija-one-block:03-gift', 'ija-one-block:03', 'ija-one-block:03-variety')
+STAGE_04 = StageInfo('04', "swamp", 'oneblock:04-gift', 'oneblock:04')
+STAGE_05 = StageInfo('05', "ocean", 'ija-one-block:04-gift', 'ija-one-block:04', 'ija-one-block:04-variety')
+STAGE_06 = StageInfo('06', "forest", 'ija-one-block:05-gift', 'ija-one-block:05', 'ija-one-block:05-variety')
+STAGE_07 = StageInfo('07', "red desert", 'ija-one-block:06-gift', 'ija-one-block:06', 'ija-one-block:06-variety')
+STAGE_08 = StageInfo('08', "nether", 'ija-one-block:07-gift', 'ija-one-block:07', 'ija-one-block:07-variety')
+STAGE_09 = StageInfo('09', "village", 'ija-one-block:08-gift', 'ija-one-block:08', 'ija-one-block:08-variety')
+STAGE_10 = StageInfo('10', "over hills", 'oneblock:10-gift', 'oneblock:10')
+STAGE_11 = StageInfo('11', "isolated land", 'ija-one-block:09-gift', 'ija-one-block:09', 'ija-one-block:09-variety')
+STAGE_12 = StageInfo('12', "under depth", 'oneblock:12-gift', 'oneblock:12')
+STAGE_13 = StageInfo('13', "the end", 'ija-one-block:10-gift', 'ija-one-block:10', 'ija-one-block:10-variety')
+
+TYPE_BLOCK = "block"
+TYPE_GIFT = "gift"
+TYPE_MOB = "mob"
+TYPE_ARCHAEOLOGY = "archaeology"
+TYPE_STRUCTURE = "structure"
+TYPE_TEMPLATE = "template"
+TYPE_CONFIGURED_FEATURE = "configured_feature"
+TYPE_COMMAND = "command"
+TYPE_SOUND = "sound"
