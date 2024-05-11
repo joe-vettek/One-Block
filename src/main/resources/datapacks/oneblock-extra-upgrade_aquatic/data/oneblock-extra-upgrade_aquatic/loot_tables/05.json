@@ -17,11 +17,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -31,11 +38,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -45,11 +59,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -59,11 +80,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -73,11 +101,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -87,11 +122,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -101,11 +143,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -115,11 +164,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -129,11 +185,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -143,11 +206,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -157,11 +227,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -171,11 +248,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -185,11 +269,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -199,11 +290,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -213,11 +311,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -227,11 +332,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -241,11 +353,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -255,11 +374,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -269,11 +395,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -283,11 +416,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -297,11 +437,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         },
@@ -311,11 +458,18 @@
           "weight": 6,
           "functions": [
             {
-              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
               "count": {
                 "min": 2,
                 "max": 4
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         }

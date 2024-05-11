@@ -1,5 +1,5 @@
 {
-  "name": "Steaminess",
+  "name": "",
   "target": "oneblock:phases/04",
   "list": [
     {
@@ -10,14 +10,14 @@
     {
       "type": "mob",
       "id": "upgrade_aquatic:perch",
-      "weight": 3,
-      "count": 1
+      "count": 1,
+      "weight": 3
     },
     {
       "type": "mob",
       "id": "upgrade_aquatic:pike",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     }
   ]
 }

@@ -144,7 +144,7 @@ class LootTableProvider(DataPackProvider):
     def get_loot_table_res(self, table_id):
         return f"oneblock-extra-{self.mod_id}:{table_id}"
 
-    def add_loot(self, table_id, table: dict):
+    def add_loot(self, table_id:str, table: dict):
         self.add(self.get_loot_table_path(table_id), table)
 
 
@@ -160,13 +160,13 @@ class ModifiedLootTableProvider(LootTableProvider):
     def get_glm_path(self):
         return self.get_data_base_path(join("forge", "loot_modifiers", "global_loot_modifiers.json"))
 
-    def get_loot_modifiers_path(self, table_id):
+    def get_loot_modifiers_path(self, table_id:str):
         return self.get_data_path(join("loot_modifiers", f"add_loot_from_{table_id}.json"))
 
-    def get_loot_modifiers_res(self, table_id):
+    def get_loot_modifiers_res(self, table_id:str):
         return f"oneblock-extra-{self.mod_id}:add_loot_from_{table_id}"
 
-    def add_modified_loot(self, target: List[str], table_id, table: dict):
+    def add_modified_loot(self, target: List[str], table_id: str, table: dict):
         self.add_loot(table_id, table)
         modified = {
             "type": "oneblock:add_loot_table",

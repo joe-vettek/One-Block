@@ -1,36 +1,36 @@
 {
-  "name": "05",
+  "name": "",
   "target": "oneblock:phases/06",
   "list": [
     {
       "type": "mob",
       "id": "bloomingnature:red_wolf",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "bloomingnature:raccoon",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "bloomingnature:turkey",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "bloomingnature:owl",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "bloomingnature:termite",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     }
   ]
 }

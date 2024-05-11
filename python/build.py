@@ -20,3 +20,5 @@ if __name__ == '__main__':
 
     for r in run_list:
         r.run()
+
+    print("\nfinished")

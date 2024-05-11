@@ -4,10 +4,6 @@
     {
       "condition": "forge:loot_table_id",
       "loot_table_id": "ija-one-block:08"
-    },
-    {
-      "condition": "forge:loot_table_id",
-      "loot_table_id": "ija-one-block:05"
     }
   ],
   "lootTable": "oneblock-extra-candlelight:09"

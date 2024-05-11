@@ -1,3 +1,6 @@
+import sys
+
+
 class StageInfo:
 
     def __init__(self, ids, name="", end_gift=None, stage_gift=None, variety_gift=None):
@@ -25,6 +28,7 @@ STAGE_10 = StageInfo('10', "over hills", 'oneblock:10-gift', 'oneblock:10')
 STAGE_11 = StageInfo('11', "isolated land", 'ija-one-block:09-gift', 'ija-one-block:09', 'ija-one-block:09-variety')
 STAGE_12 = StageInfo('12', "under depth", 'oneblock:12-gift', 'oneblock:12')
 STAGE_13 = StageInfo('13', "the end", 'ija-one-block:10-gift', 'ija-one-block:10', 'ija-one-block:10-variety')
+STAGE_ALL = StageInfo('all', "after phases")
 
 TYPE_BLOCK = "block"
 TYPE_GIFT = "gift"
@@ -35,3 +39,14 @@ TYPE_TEMPLATE = "template"
 TYPE_CONFIGURED_FEATURE = "configured_feature"
 TYPE_COMMAND = "command"
 TYPE_SOUND = "sound"
+
+
+def get_stage(res):
+    mod = sys.modules[__name__]
+    local_cache = dir(mod)
+    for v in local_cache:
+        if v.startswith("STAGE_"):
+            old_v = getattr(mod, v)
+            if old_v.get_phase_id() == res:
+                return v
+    print(f"error get {res}")

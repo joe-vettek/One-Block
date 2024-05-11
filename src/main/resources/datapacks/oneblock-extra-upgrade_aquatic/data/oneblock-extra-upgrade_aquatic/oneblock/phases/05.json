@@ -1,5 +1,5 @@
 {
-  "name": "04",
+  "name": "",
   "target": "oneblock:phases/05",
   "list": [
     {
@@ -155,20 +155,20 @@
     {
       "type": "mob",
       "id": "upgrade_aquatic:lionfish",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "upgrade_aquatic:thrasher",
-      "weight": 1,
-      "count": 1
+      "count": 1,
+      "weight": 1
     },
     {
       "type": "mob",
       "id": "upgrade_aquatic:great_thrasher",
-      "weight": 1,
-      "count": 1
+      "count": 1,
+      "weight": 1
     }
   ]
 }

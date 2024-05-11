@@ -10,6 +10,13 @@ def save_json(path, js, make_dirs=False):
         json.dump(js, f, ensure_ascii=False, indent=2)
 
 
+def save_text(path, py_text, make_dirs=False):
+    if make_dirs:
+        create_dir(os.path.dirname(path))
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(py_text)
+
+
 def get_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
@@ -58,7 +65,6 @@ def delete_dirs(path):
             os.rmdir(dir_path)
 
 
-
 def is_basic_type(var):
     basic_types = (int, float, bool, str, bytes, type(None))
     return isinstance(var, basic_types)
@@ -96,12 +102,13 @@ def to_dict(self):
 def num(i):
     return str(i) if i > 9 else f"0{i}"
 
+
 def test_time(func):
     def wrapper(*agrs):
         start = time.time()
         result = func(*agrs)
         end = time.time()
-        print(f"Cost time: {int((end - start)*1000)} ms")
+        print(f"Cost time: {int((end - start) * 1000)} ms")
         return result
 
     return wrapper

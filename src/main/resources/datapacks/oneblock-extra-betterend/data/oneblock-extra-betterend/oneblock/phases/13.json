@@ -1,5 +1,5 @@
 {
-  "name": "10",
+  "name": "",
   "target": "oneblock:phases/13",
   "list": [
     {
@@ -129,7 +129,8 @@
     },
     {
       "type": "block",
-      "id": "betterend:brimstone"
+      "id": "betterend:brimstone",
+      "weight": 2
     },
     {
       "type": "block",
@@ -374,38 +375,38 @@
     {
       "type": "mob",
       "id": "betterend:dragonfly",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "betterend:end_slime",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "betterend:end_fish",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "betterend:shadow_walker",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "betterend:cubozoa",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "betterend:silk_moth",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     }
   ]
 }

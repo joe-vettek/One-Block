@@ -1,12 +1,12 @@
 {
-  "name": "11",
+  "name": "",
   "target": "oneblock:phases/11",
   "list": [
     {
       "type": "mob",
       "id": "bloomingnature:mossy_sheep",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     }
   ]
 }

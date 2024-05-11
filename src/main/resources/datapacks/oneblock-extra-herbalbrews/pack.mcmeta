@@ -1,7 +1,7 @@
 {
   "pack": {
-    "_comment": "",
-    "description": "oneblock to herbalbrews compat resources",
+    "_comment": "Auto build by joe-vettek python tool",
+    "description": "oneblock compat resources for herbalbrews",
     "pack_format": 9
   }
 }

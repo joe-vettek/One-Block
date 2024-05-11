@@ -1,7 +1,7 @@
 {
   "pack": {
-    "_comment": "",
-    "description": "oneblock to bakery compat resources",
+    "_comment": "Auto build by joe-vettek python tool",
+    "description": "oneblock compat resources for bakery",
     "pack_format": 9
   }
 }

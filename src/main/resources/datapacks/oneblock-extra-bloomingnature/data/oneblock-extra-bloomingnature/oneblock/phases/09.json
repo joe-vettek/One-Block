@@ -1,12 +1,12 @@
 {
-  "name": "08",
+  "name": "",
   "target": "oneblock:phases/08",
   "list": [
     {
       "type": "mob",
       "id": "bloomingnature:squirrel",
-      "weight": 2,
-      "count": 1
+      "count": 1,
+      "weight": 2
     }
   ]
 }
