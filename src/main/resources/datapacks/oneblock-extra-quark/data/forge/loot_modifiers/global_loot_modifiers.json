@@ -1,0 +1,11 @@
+{
+  "entries": [
+    "oneblock-extra-quark:add_loot_from_cold",
+    "oneblock-extra-quark:add_loot_from_swamp",
+    "oneblock-extra-quark:add_loot_from_hot",
+    "oneblock-extra-quark:add_loot_from_village",
+    "oneblock-extra-quark:add_loot_from_isolated",
+    "oneblock-extra-quark:add_loot_from_depth"
+  ],
+  "replace": false
+}

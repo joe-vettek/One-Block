@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "target": "oneblock:phases/08",
+  "list": [
+    {
+      "type": "mob",
+      "id": "quark:foxhound",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

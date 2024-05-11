@@ -13,17 +13,17 @@ loot06 = SingleLootTableBuilder()
 loot06.add_entry(PoolEntryBuilder("herbalbrews:wild_coffee_plant", weight=6).add_count_function(2, 4))
 loot06.add_entry(PoolEntryBuilder("herbalbrews:wild_yerba_mate_plant", weight=6).add_count_function(2, 4))
 loot06.add_entry(PoolEntryBuilder("herbalbrews:hibiscus", weight=6).add_count_function(2, 4))
-loot_provider.add_modified_loot(target=[constant.STAGE_06.stage_gift], table_id="06", table= loot06)
+loot_provider.add_modified_loot(target=[constant.STAGE_FOREST.stage_gift], table_id="06", table= loot06)
 
 
 # 07
 loot07 = SingleLootTableBuilder()
 loot07.add_entry(PoolEntryBuilder("herbalbrews:wild_rooibos_plant", weight=6).add_count_function(2, 4))
-loot_provider.add_modified_loot(target=[constant.STAGE_07.stage_gift], table_id="07", table= loot07)
+loot_provider.add_modified_loot(target=[constant.STAGE_HOT.stage_gift], table_id="07", table= loot07)
 
 
 # 10
 loot10 = SingleLootTableBuilder()
 loot10.add_entry(PoolEntryBuilder("herbalbrews:lavender", weight=6).add_count_function(2, 4))
 loot10.add_entry(PoolEntryBuilder("herbalbrews:tea_blossom", weight=6).add_count_function(2, 4))
-loot_provider.add_modified_loot(target=[constant.STAGE_10.stage_gift], table_id="10", table= loot10)
+loot_provider.add_modified_loot(target=[constant.STAGE_TRAVEL.stage_gift], table_id="10", table= loot10)

@@ -144,7 +144,7 @@ class LootTableProvider(DataPackProvider):
     def get_loot_table_res(self, table_id):
         return f"oneblock-extra-{self.mod_id}:{table_id}"
 
-    def add_loot(self, table_id:str, table: dict):
+    def add_loot(self, table_id: str, table: dict):
         self.add(self.get_loot_table_path(table_id), table)
 
 
@@ -160,10 +160,10 @@ class ModifiedLootTableProvider(LootTableProvider):
     def get_glm_path(self):
         return self.get_data_base_path(join("forge", "loot_modifiers", "global_loot_modifiers.json"))
 
-    def get_loot_modifiers_path(self, table_id:str):
+    def get_loot_modifiers_path(self, table_id: str):
         return self.get_data_path(join("loot_modifiers", f"add_loot_from_{table_id}.json"))
 
-    def get_loot_modifiers_res(self, table_id:str):
+    def get_loot_modifiers_res(self, table_id: str):
         return f"oneblock-extra-{self.mod_id}:add_loot_from_{table_id}"
 
     def add_modified_loot(self, target: List[str], table_id: str, table: dict):
@@ -175,6 +175,9 @@ class ModifiedLootTableProvider(LootTableProvider):
         }
         self.add(self.get_loot_modifiers_path(table_id), modified)
         self.glm_entries.append(self.get_loot_modifiers_res(table_id))
+
+    def add_modified_loot_simple(self, target: List[str], table: dict):
+        self.add_modified_loot(target, target[0].split(":")[-1], table)
 
     def run(self):
         self.add(self.get_glm_path(), {"entries": self.glm_entries, "replace": False})
@@ -289,3 +292,9 @@ class PhaseProvider(DataPackProvider):
 
     def add_phase(self, table_id, table: dict):
         self.add(self.get_phase_path(table_id), table)
+
+    def add_phase_target(self, table: dict):
+        if table["target"]:
+            self.add_phase(table["target"].split("/")[-1], table)
+        else:
+            raise NotImplementedError

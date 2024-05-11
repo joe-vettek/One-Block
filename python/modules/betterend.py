@@ -9,7 +9,7 @@ sub_provider=PhaseProvider(mod_id)
 run_list.append(sub_provider)
 
 # 13
-stage13 = SubPhaseTableBuilder(target=constant.STAGE_13.get_phase_id())
+stage13 = SubPhaseTableBuilder(target=constant.STAGE_END.get_phase_id())
 stage13.add_block("betterend:endstone_dust", 15)
 stage13.add_block("betterend:end_mycelium", 15)
 stage13.add_block("betterend:end_moss", 15)
@@ -106,4 +106,4 @@ loot13.add_entry(PoolEntryBuilder("betterend:mossy_glowshroom_sapling", weight=6
 loot13.add_entry(PoolEntryBuilder("betterend:helix_tree_sapling", weight=6).add_count_function(2, 4))
 loot13.add_entry(PoolEntryBuilder("betterend:tenanea_sapling", weight=6).add_count_function(2, 4))
 loot13.add_entry(PoolEntryBuilder("betterend:umbrella_tree_sapling", weight=6).add_count_function(2, 4))
-loot_provider.add_modified_loot(target=[constant.STAGE_13.stage_gift], table_id="13", table= loot13)
+loot_provider.add_modified_loot(target=[constant.STAGE_END.stage_gift], table_id="13", table= loot13)

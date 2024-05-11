@@ -9,7 +9,7 @@ sub_provider=PhaseProvider(mod_id)
 run_list.append(sub_provider)
 
 # 10
-stage10 = SubPhaseTableBuilder(target=constant.STAGE_10.get_phase_id())
+stage10 = SubPhaseTableBuilder(target=constant.STAGE_TRAVEL.get_phase_id())
 stage10.add_block("fruitfulfun:citrus_log", 8)
 sub_provider.add_phase("10", stage10)
 
@@ -22,4 +22,4 @@ loot10 = SingleLootTableBuilder()
 loot10.add_entry(PoolEntryBuilder("fruitfulfun:tangerine_sapling", weight=6).add_count_function(2, 4))
 loot10.add_entry(PoolEntryBuilder("fruitfulfun:lime_sapling", weight=6).add_count_function(2, 4))
 loot10.add_entry(PoolEntryBuilder("fruitfulfun:citron_sapling", weight=6).add_count_function(2, 4))
-loot_provider.add_modified_loot(target=[constant.STAGE_10.stage_gift], table_id="10", table= loot10)
+loot_provider.add_modified_loot(target=[constant.STAGE_TRAVEL.stage_gift], table_id="10", table= loot10)

@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "target": "oneblock:phases/10",
+  "list": [
+    {
+      "type": "mob",
+      "id": "quark:shiba",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}
