@@ -6,6 +6,9 @@ from typing import List
 
 from core import util, constant
 
+root = "datapacks"
+use_path = []
+
 
 class AbstractProvider:
 
@@ -18,6 +21,7 @@ class AbstractProvider:
         print(f"Now run in {self.get_location()}")
         for p in self.table:
             util.save_json(p, self.table[p], make_dirs=True)
+            use_path.append(util.stanard_path(p))
 
     def add(self, path, d: dict):
         self.table[path] = d
@@ -32,7 +36,7 @@ class DataPackProvider(AbstractProvider):
         super().__init__(mod_id)
 
     def get_root(self):
-        return "datapacks"
+        return root
 
     def get_datapack_name(self):
         return f"oneblock-extra-{self.mod_id}"
