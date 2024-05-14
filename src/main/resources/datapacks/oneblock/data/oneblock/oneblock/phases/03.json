@@ -1,0 +1,123 @@
+{
+  "name": "",
+  "count": 470,
+  "end_gift": "ija-one-block:03-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:grass_block",
+      "weight": 77
+    },
+    {
+      "type": "block",
+      "id": "minecraft:stone",
+      "weight": 69
+    },
+    {
+      "type": "block",
+      "id": "minecraft:snow_block",
+      "weight": 44
+    },
+    {
+      "type": "block",
+      "id": "minecraft:powder_snow",
+      "weight": 22
+    },
+    {
+      "type": "block",
+      "id": "minecraft:spruce_log",
+      "weight": 24
+    },
+    {
+      "type": "block",
+      "id": "minecraft:packed_ice",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:andesite",
+      "weight": 16
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:stray",
+      "count": 1,
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "minecraft:granite",
+      "weight": 14
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gravel",
+      "weight": 14
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diorite",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:dark_oak_log",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 10
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:fox",
+      "count": 1,
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "minecraft:birch_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gold_ore",
+      "weight": 5
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:wolf",
+      "count": 1,
+      "weight": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:polar_bear",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "weight": 2,
+      "loot_table": "ija-one-block:03"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "weight": 2,
+      "loot_table": "ija-one-block:03-variety"
+    }
+  ]
+}

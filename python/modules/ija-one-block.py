@@ -1,9 +1,15 @@
 from core.provider import *
 
 mod_id = "ija-one-block"
-run_list = [DataPackProvider(mod_id)]
+run_list = []
+
+aa = DataPackProvider(mod_id)
+aa.get_datapack_name = (lambda: "ija-one-block")
+run_list.append(aa)
 
 loot_provider = LootTableProvider(mod_id)
+loot_provider.get_datapack_name = (lambda: "ija-one-block")
+
 run_list.append(loot_provider)
 
 # 00-gift

@@ -1,0 +1,107 @@
+{
+  "name": "",
+  "count": 420,
+  "end_gift": "oneblock:04-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:sand",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:mangrove_log",
+      "weight": 20
+    },
+    {
+      "type": "block",
+      "id": "minecraft:mud",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:muddy_mangrove_roots",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gravel",
+      "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "minecraft:clay",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diorite",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "minecraft:stone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gold_ore",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "minecraft:dark_oak_log",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "minecraft:oak_log",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:frog",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:tadpole",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:cod",
+      "count": 1,
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:salmon",
+      "count": 1,
+      "weight": 4
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "weight": 2,
+      "loot_table": "oneblock:04"
+    }
+  ]
+}

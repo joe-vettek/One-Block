@@ -115,8 +115,8 @@ class LootPoolBuilder(dict):
         self["entries"].append(entry)
         return self
 
-    def add_entry_item(self, id,weight, min, max):
-        self["entries"].append(PoolEntryBuilder(id,weight,use_default_functions=False).add_count_function(min, max))
+    def add_entry_item(self, id, weight, min, max):
+        self["entries"].append(PoolEntryBuilder(id, weight, use_default_functions=False).add_count_function(min, max))
         return self
 
 
@@ -150,7 +150,7 @@ class LootTableProvider(DataPackProvider):
         return self.get_data_path(join("loot_tables", f"{table_id}.json"))
 
     def get_loot_table_res(self, table_id):
-        return f"oneblock-extra-{self.mod_id}:{table_id}"
+        return f"{self.get_datapack_name()}:{table_id}"
 
     def add_loot(self, table_id: str, table: dict):
         self.add(self.get_loot_table_path(table_id), table)
@@ -172,7 +172,7 @@ class ModifiedLootTableProvider(LootTableProvider):
         return self.get_data_path(join("loot_modifiers", f"add_loot_from_{table_id}.json"))
 
     def get_loot_modifiers_res(self, table_id: str):
-        return f"oneblock-extra-{self.mod_id}:add_loot_from_{table_id}"
+        return f"{self.get_datapack_name()}:add_loot_from_{table_id}"
 
     def add_modified_loot(self, target: List[str], table_id: str, table: dict):
         self.add_loot(table_id, table)
@@ -276,6 +276,11 @@ class PhaseTableBuilder(dict):
         self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_MOB, id_c=mob_id, weight=weight, count=count))
         return self
 
+    def add_chest_gift(self, loot_id: str, weight=0, min_times=0, max_times=0):
+        self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_GIFT, id_c=loot_id, weight=weight)
+                       .set_times(min_times, max_times))
+        return self
+
 
 class SubPhaseTableBuilder(PhaseTableBuilder):
     def __init__(self, target: str, lict_v=None):
@@ -296,7 +301,7 @@ class PhaseProvider(DataPackProvider):
         return self.get_data_path(join("oneblock", "phases", f"{table_id}.json"))
 
     def get_phase_res(self, table_id):
-        return f"oneblock-extra-{self.mod_id}:phases/{table_id}"
+        return f"{self.get_datapack_name()}:phases/{table_id}"
 
     def add_phase(self, table_id, table: dict):
         self.add(self.get_phase_path(table_id), table)

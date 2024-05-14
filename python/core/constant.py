@@ -31,6 +31,11 @@ STAGE_DEPTH = StageInfo('12', "under depth", 'oneblock:12-gift', 'oneblock:12')
 STAGE_END = StageInfo('13', "the end", 'ija-one-block:10-gift', 'ija-one-block:10', 'ija-one-block:10-variety')
 STAGE_ALL = StageInfo('all', "after phases")
 
+GIFT_WATER_BUCKET = "ija-one-block:tutorial-waterbucket"
+GIFT_MUSICAL = "ija-one-block:musical"
+GIFT_ODD = "ija-one-block:odd"
+GIFT_RARE = "ija-one-block:rare"
+
 TYPE_BLOCK = "block"
 TYPE_GIFT = "gift"
 TYPE_MOB = "mob"
@@ -51,6 +56,7 @@ def get_stage(res):
             if old_v.get_phase_id() == res:
                 return v
     print(f"error get {res}")
+
 
 def get_stage_by_sid(res):
     mod = sys.modules[__name__]

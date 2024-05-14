@@ -25,6 +25,8 @@ import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
 import xueluoanping.oneblock.util.Platform;
 
+import java.util.List;
+
 // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class ReloadHandler {
     public static ReloadHandler instance = new ReloadHandler();
@@ -55,6 +57,14 @@ public class ReloadHandler {
                         }
                     }
             );
+
+            for (String packID : List.of("ija-one-block", "oneblock")) {
+                event.addRepositorySource(consumer -> consumer.accept(
+                        Pack.readMetaAndCreate(packID, Component.translatable(packID), true,
+                                id -> new ModFilePackResources(packID, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
+                                Pack.Position.BOTTOM, PackSource.BUILT_IN)));
+            }
+
         }
     }
 

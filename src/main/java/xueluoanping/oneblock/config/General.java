@@ -36,12 +36,15 @@ public class General {
         try (var fileList = Files.list(basePath)) {
             fileList.forEach(
                     path -> {
-                        var packageName = path.toString().split("oneblock-extra-")[1];
-                        ForgeConfigSpec.BooleanValue enable =
-                                COMMON_BUILDER
-                                        .comment(String.format("Enable compat package %s", packageName))
-                                        .define(packageName, true);
-                        enableList.put(packageName, enable);
+                        var s = path.toString().split("oneblock-extra-");
+                        if (s.length > 1) {
+                            var packageName = s[1];
+                            ForgeConfigSpec.BooleanValue enable =
+                                    COMMON_BUILDER
+                                            .comment(String.format("Enable compat package %s", packageName))
+                                            .define(packageName, true);
+                            enableList.put(packageName, enable);
+                        }
                     }
             );
         } catch (IOException e) {

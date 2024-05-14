@@ -1,0 +1,115 @@
+{
+  "name": "",
+  "count": 570,
+  "end_gift": "ija-one-block:05-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:cobblestone",
+      "weight": 212
+    },
+    {
+      "type": "block",
+      "id": "minecraft:mossy_cobblestone",
+      "weight": 128
+    },
+    {
+      "type": "block",
+      "id": "minecraft:jungle_log",
+      "weight": 70
+    },
+    {
+      "type": "block",
+      "id": "minecraft:grass_block",
+      "weight": 41
+    },
+    {
+      "type": "block",
+      "id": "minecraft:redstone_ore",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 9
+    },
+    {
+      "type": "block",
+      "id": "minecraft:gold_ore",
+      "weight": 8
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:witch",
+      "count": 1,
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:ocelot",
+      "count": 1,
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:vex",
+      "count": 1,
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:parrot",
+      "count": 6,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:horse",
+      "count": 1,
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diamond_ore",
+      "weight": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:panda",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "weight": 2,
+      "loot_table": "ija-one-block:05"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "weight": 2,
+      "loot_table": "ija-one-block:05-variety"
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:odd",
+      "times": 1
+    },
+    {
+      "type": "gift",
+      "id": "ija-one-block:musical",
+      "times": 1
+    }
+  ]
+}
