@@ -23,6 +23,11 @@
       "id": "minecraft:pig",
       "count": 1,
       "weight": 1
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:00"
     }
   ]
 }

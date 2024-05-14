@@ -145,6 +145,16 @@
       "id": "minecraft:wandering_trader",
       "count": 1,
       "weight": 2
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:06"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:06-variety"
     }
   ]
 }

@@ -88,6 +88,16 @@
       "id": "minecraft:panda",
       "count": 1,
       "weight": 2
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:05"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:05-variety"
     }
   ]
 }

@@ -117,6 +117,16 @@
       "type": "block",
       "id": "minecraft:jack_o_lantern",
       "weight": 3
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:09"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:09-variety"
     }
   ]
 }

@@ -119,6 +119,16 @@
       "type": "block",
       "id": "minecraft:beehive",
       "weight": 1
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:08"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:08-variety"
     }
   ]
 }

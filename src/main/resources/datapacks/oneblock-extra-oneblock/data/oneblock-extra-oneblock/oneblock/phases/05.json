@@ -167,6 +167,16 @@
       "type": "block",
       "id": "minecraft:diamond_ore",
       "weight": 2
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:04"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:04-variety"
     }
   ]
 }

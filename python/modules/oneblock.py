@@ -15,6 +15,7 @@ stage00.add_block("minecraft:grass_block", 19)
 stage00.add_block("minecraft:oak_log", 13)
 stage00.add_block("minecraft:gravel", 5)
 stage00.add_mob("minecraft:pig", 1, 1)
+stage00.add_entry(PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_00.stage_gift))
 sub_provider.add_phase("00", stage00)
 
 # 01
@@ -30,6 +31,10 @@ stage01.add_mob("minecraft:chicken", 1, 1)
 stage01.add_mob("minecraft:sheep", 1, 1)
 stage01.add_mob("minecraft:cow", 1, 1)
 stage01.add_mob("minecraft:pig", 1, 1)
+stage01.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_PLAIN.stage_gift))
+stage01.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_PLAIN.variety_gift))
 sub_provider.add_phase("01", stage01)
 
 # 02
@@ -50,6 +55,10 @@ stage02.add_mob("minecraft:zombie", 2, 2)
 stage02.add_mob("minecraft:spider", 2, 1)
 stage02.add_mob("minecraft:creeper", 3, 1)
 stage02.add_mob("minecraft:mooshroom", 1, 1)
+stage02.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_UNDERGROUND.stage_gift))
+stage02.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_UNDERGROUND.variety_gift))
 sub_provider.add_phase("02", stage02)
 
 # 03
@@ -74,6 +83,10 @@ stage03.add_block("minecraft:birch_log", 5)
 stage03.add_block("minecraft:gold_ore", 5)
 stage03.add_mob("minecraft:wolf", 3, 1)
 stage03.add_mob("minecraft:polar_bear", 2, 1)
+stage03.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_COLD.stage_gift))
+stage03.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_COLD.variety_gift))
 sub_provider.add_phase("03", stage03)
 
 # 04
@@ -96,6 +109,8 @@ stage04.add_mob("minecraft:frog", 1, 1)
 stage04.add_mob("minecraft:tadpole", 2, 1)
 stage04.add_mob("minecraft:cod", 4, 1)
 stage04.add_mob("minecraft:salmon", 4, 1)
+stage04.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_SWAMP.stage_gift))
 sub_provider.add_phase("04", stage04)
 
 # 05
@@ -131,6 +146,10 @@ stage05.add_mob("minecraft:elder_guardian", 2, 2)
 stage05.add_mob("minecraft:pufferfish", 2, 2)
 stage05.add_mob("minecraft:squid", 2, 1)
 stage05.add_block("minecraft:diamond_ore", 2)
+stage05.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_OCEAN.stage_gift))
+stage05.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_OCEAN.variety_gift))
 sub_provider.add_phase("05", stage05)
 
 # 06
@@ -151,6 +170,10 @@ stage06.add_mob("minecraft:parrot", 2, 6)
 stage06.add_mob("minecraft:horse", 4, 1)
 stage06.add_block("minecraft:diamond_ore", 3)
 stage06.add_mob("minecraft:panda", 2, 1)
+stage06.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_FOREST.stage_gift))
+stage06.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_FOREST.variety_gift))
 sub_provider.add_phase("06", stage06)
 
 # 07
@@ -182,6 +205,10 @@ stage07.add_mob("minecraft:fox", 4, 1)
 stage07.add_block("minecraft:diamond_ore", 4)
 stage07.add_mob("minecraft:llama", 4, 1)
 stage07.add_mob("minecraft:wandering_trader", 2, 1)
+stage07.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_HOT.stage_gift))
+stage07.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_HOT.variety_gift))
 sub_provider.add_phase("07", stage07)
 
 # 08
@@ -213,6 +240,10 @@ stage08.add_mob("minecraft:wither_skeleton", 4, 1)
 stage08.add_block("minecraft:ancient_debris", 4)
 stage08.add_block("minecraft:crying_obsidian", 3)
 stage08.add_mob("minecraft:strider", 2, 2)
+stage08.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_NETHER.stage_gift))
+stage08.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_NETHER.variety_gift))
 sub_provider.add_phase("08", stage08)
 
 # 09
@@ -239,6 +270,10 @@ stage09.add_mob("minecraft:zombie_horse", 2, 1)
 stage09.add_mob("minecraft:skeleton_horse", 2, 1)
 stage09.add_block("minecraft:bee_nest", 1)
 stage09.add_block("minecraft:beehive", 1)
+stage09.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_VILLAGE.stage_gift))
+stage09.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_VILLAGE.variety_gift))
 sub_provider.add_phase("09", stage09)
 
 # 10
@@ -259,6 +294,8 @@ stage10.add_block("minecraft:oak_log", 6)
 stage10.add_mob("minecraft:goat", 3, 1)
 stage10.add_mob("minecraft:axolotl", 2, 2)
 stage10.add_block("minecraft:stone", 8)
+stage10.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_TRAVEL.stage_gift))
 sub_provider.add_phase("10", stage10)
 
 # 11
@@ -285,6 +322,10 @@ stage11.add_block("minecraft:diamond_ore", 5)
 stage11.add_mob("minecraft:evoker", 4, 1)
 stage11.add_mob("minecraft:creeper", 4, 1)
 stage11.add_block("minecraft:jack_o_lantern", 3)
+stage11.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_ISOLATED.stage_gift))
+stage11.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_ISOLATED.variety_gift))
 sub_provider.add_phase("11", stage11)
 
 # 12
@@ -313,6 +354,8 @@ stage12.add_block("minecraft:deepslate_diamond_ore", 6)
 stage12.add_mob("minecraft:spider", 2, 1)
 stage12.add_mob("minecraft:glow_squid", 3, 1)
 stage12.add_mob("minecraft:warden", 1, 1)
+stage12.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_DEPTH.stage_gift))
 sub_provider.add_phase("12", stage12)
 
 # 13
@@ -339,12 +382,16 @@ stage13.add_block("minecraft:diamond_ore", 6)
 stage13.add_block("minecraft:lapis_ore", 5)
 stage13.add_block("minecraft:emerald_ore", 3)
 stage13.add_mob("minecraft:shulker", 2, 2)
+stage13.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_END.stage_gift))
+stage13.add_entry(
+    PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_END.variety_gift))
 sub_provider.add_phase("13", stage13)
 
 # all
 stageall = PhaseTableBuilder(count=-1)
 stage13.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_BLOCK, id_c="minecraft:grass_block")
-                  .add_preprocessing(
+.add_preprocessing(
     PhaseEntryBuilder(type_c=constant.TYPE_SOUND, id_c="minecraft:music.overworld.cherry_grove")))
 stageall.add_block("minecraft:grass_block", 294)
 stageall.add_block("minecraft:end_stone", 219)
@@ -490,10 +537,6 @@ stageall.add_block("minecraft:beehive", 1)
 stageall.add_mob("minecraft:panda", 2, 1)
 stageall.add_mob("minecraft:polar_bear", 2, 1)
 sub_provider.add_phase("all", stageall)
-
-# end_portal
-stageend_portal = PhaseTableBuilder(count=1, end_gift="None")
-sub_provider.add_phase("end_portal", stageend_portal)
 
 loot_provider = ModifiedLootTableProvider(mod_id)
 run_list.append(loot_provider)

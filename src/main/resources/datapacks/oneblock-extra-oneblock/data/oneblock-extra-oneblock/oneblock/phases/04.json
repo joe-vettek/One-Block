@@ -96,6 +96,11 @@
       "id": "minecraft:salmon",
       "count": 1,
       "weight": 4
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "oneblock:04"
     }
   ]
 }

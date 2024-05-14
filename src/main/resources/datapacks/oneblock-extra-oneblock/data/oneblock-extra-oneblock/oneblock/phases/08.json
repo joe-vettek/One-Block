@@ -144,6 +144,16 @@
       "id": "minecraft:strider",
       "count": 2,
       "weight": 2
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:07"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:07-variety"
     }
   ]
 }

@@ -97,6 +97,16 @@
       "weight": 2
     },
     {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:10"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:10-variety"
+    },
+    {
       "type": "block",
       "id": "minecraft:grass_block",
       "preprocessing": [

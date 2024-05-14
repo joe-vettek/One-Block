@@ -106,6 +106,16 @@
       "id": "minecraft:polar_bear",
       "count": 1,
       "weight": 2
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:03"
+    },
+    {
+      "type": "gift",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:03-variety"
     }
   ]
 }
