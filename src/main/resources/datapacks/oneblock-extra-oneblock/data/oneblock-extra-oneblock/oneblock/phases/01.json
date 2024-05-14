@@ -1,0 +1,66 @@
+{
+  "name": "",
+  "count": 240,
+  "end_gift": "ija-one-block:01-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:grass_block",
+      "weight": 88
+    },
+    {
+      "type": "block",
+      "id": "minecraft:clay",
+      "weight": 19
+    },
+    {
+      "type": "block",
+      "id": "minecraft:oak_log",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:birch_log",
+      "weight": 11
+    },
+    {
+      "type": "block",
+      "id": "minecraft:melon",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:podzol",
+      "weight": 9
+    },
+    {
+      "type": "block",
+      "id": "minecraft:pumpkin",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:chicken",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:sheep",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:cow",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:pig",
+      "count": 1,
+      "weight": 1
+    }
+  ]
+}

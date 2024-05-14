@@ -1,0 +1,161 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:name_tag",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:cherry_sapling",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:pink_petals",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:glow_berries",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 3
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:pointed_dripstone",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 3
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:axolotl_bucket",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

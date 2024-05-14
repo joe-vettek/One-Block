@@ -13,15 +13,15 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:oak_sapling",
+          "name": "minecraft:salmon_bucket",
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_count",
               "count": {
                 "min": 1,
                 "max": 1
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         }
@@ -39,15 +39,15 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:oak_log",
+          "name": "minecraft:cod_bucket",
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_count",
               "count": {
-                "min": 5,
-                "max": 6
-              }
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
             }
           ]
         }
@@ -65,15 +65,15 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:torch",
+          "name": "minecraft:trident",
           "weight": 1,
           "functions": [
             {
-              "function": "minecraft:set_count",
               "count": {
                 "min": 1,
                 "max": 1
-              }
+              },
+              "function": "minecraft:set_count"
             }
           ]
         }

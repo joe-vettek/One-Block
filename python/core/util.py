@@ -17,7 +17,7 @@ def save_json(path, js, make_dirs=False, replace_anyway=False):
 def save_text(path, py_text, make_dirs=False, replace_anyway=False):
     if make_dirs:
         create_dir(os.path.dirname(path))
-    if not replace_anyway:
+    if not replace_anyway and os.path.isfile(path):
         if get_text(path) == py_text:
             # print("skip for ", path)
             pass

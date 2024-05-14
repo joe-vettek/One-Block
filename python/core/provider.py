@@ -115,6 +115,10 @@ class LootPoolBuilder(dict):
         self["entries"].append(entry)
         return self
 
+    def add_entry_item(self, id,weight, min, max):
+        self["entries"].append(PoolEntryBuilder(id,weight,use_default_functions=False).add_count_function(min, max))
+        return self
+
 
 class LootTableBuilder(dict):
     def __init__(self):

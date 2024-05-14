@@ -1,0 +1,150 @@
+{
+  "name": "",
+  "count": 610,
+  "end_gift": "ija-one-block:06-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:red_sand",
+      "weight": 103
+    },
+    {
+      "type": "block",
+      "id": "minecraft:red_sandstone",
+      "weight": 81
+    },
+    {
+      "type": "block",
+      "id": "minecraft:terracotta",
+      "weight": 40
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sandstone",
+      "weight": 36
+    },
+    {
+      "type": "block",
+      "id": "minecraft:sand",
+      "weight": 31
+    },
+    {
+      "type": "block",
+      "id": "minecraft:acacia_log",
+      "weight": 25
+    },
+    {
+      "type": "block",
+      "id": "minecraft:brown_terracotta",
+      "weight": 24
+    },
+    {
+      "type": "block",
+      "id": "minecraft:orange_terracotta",
+      "weight": 23
+    },
+    {
+      "type": "block",
+      "id": "minecraft:red_terracotta",
+      "weight": 23
+    },
+    {
+      "type": "block",
+      "id": "minecraft:yellow_terracotta",
+      "weight": 23
+    },
+    {
+      "type": "block",
+      "id": "minecraft:redstone_ore",
+      "weight": 20
+    },
+    {
+      "type": "block",
+      "id": "minecraft:light_gray_terracotta",
+      "weight": 17
+    },
+    {
+      "type": "block",
+      "id": "minecraft:white_terracotta",
+      "weight": 17
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:husk",
+      "count": 2,
+      "weight": 16
+    },
+    {
+      "type": "block",
+      "id": "minecraft:emerald_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 11
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coal_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:lapis_ore",
+      "weight": 8
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:pillager",
+      "count": 1,
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:vindicator",
+      "count": 1,
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:donkey",
+      "count": 1,
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:villager",
+      "count": 1,
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:fox",
+      "count": 1,
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "minecraft:diamond_ore",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:llama",
+      "count": 1,
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:wandering_trader",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

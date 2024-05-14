@@ -1,0 +1,91 @@
+{
+  "name": "",
+  "count": 750,
+  "end_gift": "oneblock:10-gift",
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:dripstone_block",
+      "weight": 80
+    },
+    {
+      "type": "block",
+      "id": "minecraft:grass_block",
+      "weight": 50
+    },
+    {
+      "type": "block",
+      "id": "minecraft:coarse_dirt",
+      "weight": 20
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:allay",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:camel",
+      "count": 1,
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "minecraft:cherry_log",
+      "weight": 29
+    },
+    {
+      "type": "block",
+      "id": "minecraft:lapis_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "minecraft:iron_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:emerald_ore",
+      "weight": 12
+    },
+    {
+      "type": "block",
+      "id": "minecraft:copper_ore",
+      "weight": 13
+    },
+    {
+      "type": "block",
+      "id": "minecraft:moss_block",
+      "weight": 16
+    },
+    {
+      "type": "block",
+      "id": "minecraft:rooted_dirt",
+      "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "minecraft:oak_log",
+      "weight": 6
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:goat",
+      "count": 1,
+      "weight": 3
+    },
+    {
+      "type": "mob",
+      "id": "minecraft:axolotl",
+      "count": 2,
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "minecraft:stone",
+      "weight": 8
+    }
+  ]
+}

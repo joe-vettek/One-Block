@@ -30,7 +30,7 @@ public class start {
             // generator.addProvider(event.includeServer(),new FDLItemTagsProvider(packOutput, lookupProvider, blockTags.contentsGetter()));
             //
             // generator.addProvider(event.includeServer(),new LFTLootTableProvider(packOutput));
-            generator.addProvider(event.includeServer(),new GLMProvider(packOutput, MODID));
+            // generator.addProvider(event.includeServer(),new GLMProvider(packOutput, MODID));
         }
         if (event.includeClient()) {
             generator.addProvider(event.includeClient(),new ItemModelProvider(packOutput,helper));

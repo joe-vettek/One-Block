@@ -51,3 +51,13 @@ def get_stage(res):
             if old_v.get_phase_id() == res:
                 return v
     print(f"error get {res}")
+
+def get_stage_by_sid(res):
+    mod = sys.modules[__name__]
+    local_cache = dir(mod)
+    for v in local_cache:
+        if v.startswith("STAGE_"):
+            old_v = getattr(mod, v)
+            if old_v.id == res:
+                return v
+    print(f"error get {res}")
