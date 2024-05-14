@@ -99,12 +99,14 @@
     },
     {
       "type": "gift",
-      "id": "oneblock:04",
+      "id": "minecraft:chest",
+      "loot_table": "oneblock:04",
       "weight": 3
     },
     {
       "type": "gift",
-      "id": "ija-one-block:03-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:03-variety",
       "weight": 1
     }
   ]

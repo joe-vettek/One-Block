@@ -26,14 +26,16 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:00",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:00",
       "weight": 1
     },
     {
       "type": "gift",
-      "id": "ija-one-block:tutorial-waterbucket",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:tutorial-waterbucket",
       "weight": 1,
-      "min_times": 1
+      "times": 1
     },
     {
       "type": "mob",

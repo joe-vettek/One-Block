@@ -101,7 +101,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:07",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:07",
       "weight": 8
     },
     {
@@ -141,7 +142,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:07-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:07-variety",
       "weight": 3
     },
     {
@@ -157,7 +159,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:odd",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:odd",
       "weight": 1
     }
   ]

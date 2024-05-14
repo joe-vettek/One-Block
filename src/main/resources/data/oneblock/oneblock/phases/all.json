@@ -476,7 +476,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:07",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:07",
       "weight": 8
     },
     {
@@ -487,32 +488,38 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:06",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:06",
       "weight": 7
     },
     {
       "type": "gift",
-      "id": "ija-one-block:odd",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:odd",
       "weight": 7
     },
     {
       "type": "gift",
-      "id": "ija-one-block:04",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:04",
       "weight": 7
     },
     {
       "type": "gift",
-      "id": "ija-one-block:03",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:03",
       "weight": 7
     },
     {
       "type": "gift",
-      "id": "ija-one-block:10",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:10",
       "weight": 6
     },
     {
       "type": "gift",
-      "id": "ija-one-block:08",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:08",
       "weight": 6
     },
     {
@@ -565,7 +572,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:05",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:05",
       "weight": 6
     },
     {
@@ -594,7 +602,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:02",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:02",
       "weight": 6
     },
     {
@@ -604,17 +613,20 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:09",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:09",
       "weight": 5
     },
     {
       "type": "gift",
-      "id": "ija-one-block:musical",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:musical",
       "weight": 5
     },
     {
       "type": "gift",
-      "id": "ija-one-block:10-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:10-variety",
       "weight": 4
     },
     {
@@ -631,7 +643,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:08-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:08-variety",
       "weight": 4
     },
     {
@@ -741,12 +754,14 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:01",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:01",
       "weight": 4
     },
     {
       "type": "gift",
-      "id": "ija-one-block:09-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:09-variety",
       "weight": 3
     },
     {
@@ -756,12 +771,14 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:rare",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:rare",
       "weight": 3
     },
     {
       "type": "gift",
-      "id": "ija-one-block:07-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:07-variety",
       "weight": 3
     },
     {
@@ -795,7 +812,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:06-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:06-variety",
       "weight": 2
     },
     {
@@ -806,7 +824,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:05-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:05-variety",
       "weight": 2
     },
     {
@@ -853,7 +872,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:00",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:00",
       "weight": 2
     },
     {
@@ -880,7 +900,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:04-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:04-variety",
       "weight": 1
     },
     {
@@ -891,17 +912,20 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:03-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:03-variety",
       "weight": 1
     },
     {
       "type": "gift",
-      "id": "ija-one-block:02-variety",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:02-variety",
       "weight": 1
     },
     {
       "type": "gift",
-      "id": "ija-one-block:tutorial-waterbucket",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:tutorial-waterbucket",
       "weight": 1,
       "min_times": 1
     }

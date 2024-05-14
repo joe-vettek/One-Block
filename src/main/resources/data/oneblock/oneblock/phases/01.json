@@ -46,7 +46,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:01",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:01",
       "weight": 4
     },
     {

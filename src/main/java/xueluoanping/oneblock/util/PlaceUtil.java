@@ -13,6 +13,7 @@ import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BrushableBlockEntity;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.structure.BoundingBox;
@@ -137,10 +138,13 @@ public class PlaceUtil {
             level.setBlockAndUpdate(offsetPos, block.defaultBlockState());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_GIFT)) {
             // to avoid some problem the gift use id as res
-            var block = Blocks.CHEST;
-            level.setBlockAndUpdate(offsetPos, block.defaultBlockState().setValue(ChestBlock.FACING, Direction.EAST));
+            var block = RegisterFinderUtil.getBlock(select.getId());
+            var state = block.defaultBlockState();
+            state = state.hasProperty(BlockStateProperties.FACING) ?
+                    state.setValue(BlockStateProperties.FACING, Direction.EAST) : state;
+            level.setBlockAndUpdate(offsetPos, state);
             if (level.getBlockEntity(offsetPos) instanceof RandomizableContainerBlockEntity containerBlockEntity)
-                containerBlockEntity.setLootTable(new ResourceLocation(select.getId()), level.getRandom().nextLong());
+                containerBlockEntity.setLootTable(new ResourceLocation(select.getLoot_table()), level.getRandom().nextLong());
             // containerBlockEntity.setLootTable(new ResourceLocation(select.getId()), level.getSeed());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_ARCHAEOLOGY)) {
             var block = RegisterFinderUtil.getBlock(select.getId());
