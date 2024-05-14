@@ -46,17 +46,17 @@ public class ReloadHandler {
         if (event.getPackType() == PackType.SERVER_DATA) {
             IModFile modFile = Platform.getModFile(OneBlock.MOD_ID);
 
-            // General.enableList.forEach(
-            //         (pack, booleanValue) -> {
-            //             if (booleanValue.get()) {
-            //                 String packID = "oneblock-extra-" + pack;
-            //                 event.addRepositorySource(consumer -> consumer.accept(
-            //                         Pack.readMetaAndCreate(packID, Component.translatable(pack), true,
-            //                                 id -> new ModFilePackResources(packID, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
-            //                                 Pack.Position.BOTTOM, PackSource.BUILT_IN)));
-            //             }
-            //         }
-            // );
+            General.enableList.forEach(
+                    (pack, booleanValue) -> {
+                        if (booleanValue.get()) {
+                            String packID = "oneblock-extra-" + pack;
+                            event.addRepositorySource(consumer -> consumer.accept(
+                                    Pack.readMetaAndCreate(packID, Component.translatable(pack), true,
+                                            id -> new ModFilePackResources(packID, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
+                                            Pack.Position.BOTTOM, PackSource.BUILT_IN)));
+                        }
+                    }
+            );
 
             for (String packID : List.of("ija-one-block", "oneblock")) {
                 event.addRepositorySource(consumer -> consumer.accept(

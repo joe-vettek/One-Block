@@ -1,0 +1,13 @@
+{
+  "name": "",
+  "count": 1,
+  "disable_message": true,
+  "bedrock_time": 1,
+  "list": [
+    {
+      "type": "block",
+      "id": "minecraft:lapis_ore",
+      "weight": 1
+    }
+  ]
+}

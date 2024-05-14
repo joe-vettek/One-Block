@@ -1,0 +1,9 @@
+{
+  "list": [
+    {
+      "id": "oneblock-extra-bop:phases/02",
+      "priority": 0,
+      "target": "oneblock:phases/07"
+    }
+  ]
+}

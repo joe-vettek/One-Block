@@ -140,8 +140,8 @@ class LootPoolBuilder(dict):
     def add_entry_item(self, id, weight, min, max, tag=None, enchantments=None):
         pool_entry = PoolEntryBuilder(id, weight, use_default_functions=False).add_count_function(min, max)
         if tag is not None:
-            if type(tag) ==dict:
-                tag=json.dumps(tag)
+            if type(tag) == dict:
+                tag = json.dumps(tag)
             pool_entry = pool_entry.add_nbt_function(tag)
         if enchantments is not None:
             pool_entry = pool_entry.add_enchantments_function(enchantments)
@@ -239,11 +239,11 @@ class PhaseEntryBuilder(dict):
         return self
 
     def set_offset(self, x=0, y=0, z=0):
-        if x > 0:
+        if x != 0:
             self["x"] = x
-        if y > 0:
+        if y != 0:
             self["y"] = y
-        if z > 0:
+        if z != 0:
             self["z"] = z
         return self
 
@@ -310,6 +310,28 @@ class PhaseTableBuilder(dict):
                        .set_times(min_times, max_times))
         return self
 
+    def resort_list(self):
+        cc = self["list"]
+        del self["list"]
+        self["list"] = cc
+        return self
+
+    def set_disable_message(self, disable_message):
+        self["disable_message"] = disable_message
+        self.resort_list()
+        return self
+
+    def set_add_count(self, add_count: int):
+        self["add_count"] = add_count
+        self.resort_list()
+
+        return self
+
+    def set_bedrock_time(self, bedrock_time: int):
+        self["bedrock_time"] = bedrock_time
+        self.resort_list()
+        return self
+
 
 class SubPhaseTableBuilder(PhaseTableBuilder):
     def __init__(self, target: str, lict_v=None):
@@ -335,8 +357,63 @@ class PhaseProvider(DataPackProvider):
     def add_phase(self, table_id, table: dict):
         self.add(self.get_phase_path(table_id), table)
 
+    # skip name
     def add_phase_target(self, table: dict):
         if table["target"]:
             self.add_phase(table["target"].split("/")[-1], table)
         else:
             raise NotImplementedError
+
+
+class SubConfigTableBuilder(dict):
+    def __init__(self, lict_v=None):
+        super().__init__()
+        if lict_v:
+            self["list"] = lict_v
+        else:
+            self["list"] = []
+
+    def add_sub(self, id: str, priority: int, target: str):
+        self["list"].append({
+            "id": id,
+            "priority": priority,
+            "target": target
+        })
+        return self
+
+
+class SubConfigProvider(DataPackProvider):
+
+    def get_location(self):
+        return f"SubConfigProvider {self.mod_id}"
+
+    def get_config_path(self):
+        return self.get_data_path(join("oneblock", "common", f"sub_config.json"))
+
+    def add_config(self, table: SubConfigTableBuilder):
+        self.add(self.get_config_path(), table)
+
+
+class ConfigTableBuilder(dict):
+    def __init__(self, lict_v=None):
+        super().__init__()
+        if lict_v:
+            self["order"] = lict_v
+        else:
+            self["order"] = []
+
+    def add_stage(self, id: str):
+        self["list"].append(id)
+        return self
+
+
+class ConfigProvider(DataPackProvider):
+
+    def get_location(self):
+        return f"ConfigProvider {self.mod_id}"
+
+    def get_config_path(self):
+        return self.get_data_base_path(join("oneblock", "oneblock", "common", f"config.json"))
+
+    def add_config(self, table: ConfigTableBuilder):
+        self.add(self.get_config_path(), table)

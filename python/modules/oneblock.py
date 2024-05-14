@@ -16,6 +16,18 @@ loot_provider = ModifiedLootTableProvider(mod_id)
 loot_provider.get_datapack_name = (lambda: "oneblock")
 run_list.append(loot_provider)
 
+config_provider = ConfigProvider(mod_id)
+config_provider.get_datapack_name = (lambda: "oneblock")
+run_list.append(config_provider)
+
+config_provider.add_config(ConfigTableBuilder(
+    [constant.STAGE_00.get_phase_id(), constant.STAGE_PLAIN.get_phase_id(), constant.STAGE_UNDERGROUND.get_phase_id(),
+     constant.STAGE_COLD.get_phase_id(), constant.STAGE_SWAMP.get_phase_id(), constant.STAGE_OCEAN.get_phase_id(),
+     constant.STAGE_FOREST.get_phase_id(), constant.STAGE_HOT.get_phase_id(), constant.STAGE_NETHER.get_phase_id(),
+     constant.STAGE_VILLAGE.get_phase_id(), constant.STAGE_TRAVEL.get_phase_id(),
+     constant.STAGE_ISOLATED.get_phase_id(), constant.STAGE_DEPTH.get_phase_id(), constant.STAGE_END.get_phase_id(),
+     constant.STAGE_ALL.get_phase_id()]))
+
 # 00
 stage00 = PhaseTableBuilder(count=47, end_gift=constant.STAGE_00.end_gift)
 stage00.add_entry(PhaseEntryBuilder(constant.TYPE_BLOCK, "minecraft:dirt").set_precedence(2, 2))

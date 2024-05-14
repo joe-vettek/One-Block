@@ -7,6 +7,9 @@
       "type": "template",
       "id": "oneblock:end_portal",
       "precedence": 1,
+      "x": -4,
+      "y": -2,
+      "z": -2,
       "preprocessing": [
         {
           "type": "block",
