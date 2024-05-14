@@ -87,14 +87,14 @@ class SetNBTFunctionBuilder(dict):
     def __init__(self, tag: str):
         super().__init__()
         self["tag"] = tag
-        self["function"] = "minecraft:minecraft:set_nbt"
+        self["function"] = "minecraft:set_nbt"
 
 
 class EnchantRandomlyFunctionBuilder(dict):
     def __init__(self, enchantments: List[str]):
         super().__init__()
         self["enchantments"] = enchantments
-        self["function"] = "minecraft:minecraft:set_nbt"
+        self["function"] = "minecraft:enchant_randomly"
 
 
 class PoolEntryBuilder(dict):

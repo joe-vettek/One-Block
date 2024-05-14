@@ -5,13 +5,13 @@
   "list": [
     {
       "type": "block",
-      "id": "minecraft:grass_block",
-      "precedence_end": 5
+      "id": "minecraft:dirt",
+      "precedence": 2
     },
     {
       "type": "block",
-      "id": "minecraft:dirt",
-      "precedence": 2
+      "id": "minecraft:grass_block",
+      "precedence_end": 5
     },
     {
       "type": "block",

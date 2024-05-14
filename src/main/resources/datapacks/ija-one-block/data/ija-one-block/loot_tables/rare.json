@@ -25,7 +25,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:long_fire_resistance\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -43,7 +43,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:strong_healing\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -61,7 +61,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:long_invisibility\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -79,7 +79,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:long_leaping\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -97,7 +97,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:luck\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -115,7 +115,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:long_night_vision\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -133,7 +133,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:long_regeneration\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -151,7 +151,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:long_slow_falling\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -169,7 +169,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:long_strength\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -187,7 +187,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:strong_swiftness\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -205,7 +205,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:strong_turtle_master\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         },
@@ -223,7 +223,7 @@
             },
             {
               "tag": "{\"Potion\": \"minecraft:long_water_breathing\"}",
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:set_nbt"
             }
           ]
         }
@@ -256,7 +256,7 @@
                 "multishot",
                 "quick_charge"
               ],
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:enchant_randomly"
             }
           ]
         },
@@ -279,7 +279,7 @@
                 "power",
                 "punch"
               ],
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:enchant_randomly"
             }
           ]
         },
@@ -307,7 +307,7 @@
                 "smite",
                 "sweeping"
               ],
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:enchant_randomly"
             }
           ]
         },
@@ -329,7 +329,7 @@
                 "fortune",
                 "silk_touch"
               ],
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:enchant_randomly"
             }
           ]
         },
@@ -352,7 +352,7 @@
                 "loyalty",
                 "riptide"
               ],
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:enchant_randomly"
             }
           ]
         },
@@ -373,7 +373,7 @@
                 "piercing",
                 "quick_charge"
               ],
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:enchant_randomly"
             }
           ]
         },
@@ -394,7 +394,7 @@
                 "luck_of_the_sea",
                 "lure"
               ],
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:enchant_randomly"
             }
           ]
         },
@@ -427,7 +427,7 @@
                 "binding_curse",
                 "vanishing_curse"
               ],
-              "function": "minecraft:minecraft:set_nbt"
+              "function": "minecraft:enchant_randomly"
             }
           ]
         }

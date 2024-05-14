@@ -18,8 +18,8 @@ run_list.append(loot_provider)
 
 # 00
 stage00 = PhaseTableBuilder(count=47, end_gift=constant.STAGE_00.end_gift)
-stage00.add_entry(PhaseEntryBuilder(constant.TYPE_BLOCK, "minecraft:grass_block").set_precedence(precedence_end=5))
 stage00.add_entry(PhaseEntryBuilder(constant.TYPE_BLOCK, "minecraft:dirt").set_precedence(2, 2))
+stage00.add_entry(PhaseEntryBuilder(constant.TYPE_BLOCK, "minecraft:grass_block").set_precedence(precedence_end=5))
 stage00.add_block("minecraft:grass_block", 19)
 stage00.add_block("minecraft:oak_log", 13)
 stage00.add_block("minecraft:gravel", 5)
