@@ -3,4 +3,4 @@
 [curseforge](https://legacy.curseforge.com/minecraft/mc-mods/better-one-block)
 
 
-todo: Add meadow and savana
+todo: Add meadow and savana or snow?
