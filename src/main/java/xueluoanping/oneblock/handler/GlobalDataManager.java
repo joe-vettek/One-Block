@@ -9,6 +9,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.storage.DimensionDataStorage;
 import org.jetbrains.annotations.NotNull;
+import xueluoanping.oneblock.api.StageProgress;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,22 +17,22 @@ import java.util.Set;
 
 
 // Todo: clean remain counter in future
-public class OneBlockSave extends SavedData {
+public class GlobalDataManager extends SavedData {
 
-    private final Map<BlockPos, OneBlockProgress> chunkPosData = new HashMap<>();
+    private final Map<BlockPos, StageProgress> chunkPosData = new HashMap<>();
 
     private String hashStageVersion="";
 
-    public OneBlockSave() {
+    public GlobalDataManager() {
     }
 
-    public OneBlockSave(CompoundTag tag) {
+    public GlobalDataManager(CompoundTag tag) {
 
         ListTag list = tag.getList("oneblock", Tag.TAG_COMPOUND);
         for (Tag t : list) {
             CompoundTag manaTag = (CompoundTag) t;
             BlockPos chunkPos = new BlockPos(manaTag.getInt("x"), manaTag.getInt("y"), manaTag.getInt("z"));
-            var p = new OneBlockProgress
+            var p = new StageProgress
                     (manaTag.getString("name"), manaTag.getInt("counter"));
             if (manaTag.contains("bedrockLastTime"))
                 p.counter = manaTag.getInt("bedrockLastTime");
@@ -58,16 +59,16 @@ public class OneBlockSave extends SavedData {
     //     // }else fluidDrawerControllerSave=new FluidDrawerControllerSave();
     // }
 
-    public void update(BlockPos blockPos, OneBlockProgress progress) {
+    public void update(BlockPos blockPos, StageProgress progress) {
         chunkPosData.put(blockPos, progress);
         setDirty();
     }
 
-    public OneBlockProgress getOrDefault(BlockPos pos) {
-        return chunkPosData.getOrDefault(pos, new OneBlockProgress());
+    public StageProgress getOrDefault(BlockPos pos) {
+        return chunkPosData.getOrDefault(pos, new StageProgress());
     }
 
-    public OneBlockProgress get(BlockPos pos) {
+    public StageProgress get(BlockPos pos) {
         return chunkPosData.get(pos);
     }
 
@@ -101,7 +102,7 @@ public class OneBlockSave extends SavedData {
         return tag;
     }
 
-    public static OneBlockSave get(Level worldIn) {
+    public static GlobalDataManager get(Level worldIn) {
         if (!(worldIn instanceof ServerLevel)) {
             throw new RuntimeException("Attempted to get the data from a client world. This is wrong.");
         }
@@ -109,7 +110,7 @@ public class OneBlockSave extends SavedData {
         ServerLevel world = (ServerLevel) worldIn;
 
         DimensionDataStorage storage = world.getDataStorage();
-        return storage.computeIfAbsent(OneBlockSave::new, OneBlockSave::new, "oneblock");
+        return storage.computeIfAbsent(GlobalDataManager::new, GlobalDataManager::new, "oneblock");
     }
 
 

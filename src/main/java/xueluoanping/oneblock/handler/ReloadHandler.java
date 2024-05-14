@@ -13,24 +13,17 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
-import net.minecraft.server.packs.repository.RepositorySource;
 import net.minecraftforge.event.AddPackFindersEvent;
 import net.minecraftforge.event.AddReloadListenerEvent;
 import net.minecraftforge.event.RegisterCommandsEvent;
-import net.minecraftforge.event.TagsUpdatedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.forgespi.locating.IModFile;
 import xueluoanping.oneblock.OneBlock;
+import xueluoanping.oneblock.api.ModFilePackResources;
+import xueluoanping.oneblock.api.StageData;
 import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
 import xueluoanping.oneblock.util.Platform;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.util.List;
-import java.util.function.Consumer;
-import java.util.stream.Collectors;
 
 // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class ReloadHandler {
@@ -53,7 +46,7 @@ public class ReloadHandler {
 
             General.enableList.forEach(
                     (pack, booleanValue) -> {
-                        if(booleanValue.get()) {
+                        if (booleanValue.get()) {
                             String packID = "oneblock-extra-" + pack;
                             event.addRepositorySource(consumer -> consumer.accept(
                                     Pack.readMetaAndCreate(packID, Component.translatable(pack), true,
@@ -68,7 +61,7 @@ public class ReloadHandler {
     @SubscribeEvent
     public void onAddReloadListener(AddReloadListenerEvent event) {
         // event.addListener(network.instance);
-        event.addListener(network.instance2);
+        event.addListener(StageManager.instance2);
 
     }
 
@@ -89,7 +82,10 @@ public class ReloadHandler {
                                                 // e.printStackTrace();
                                             }
                                             String finalPre = pre;
-                                            network.oneBlockConfigHolder.getOrder().stream().filter(s -> s.contains(finalPre)).forEach(builder::suggest);
+                                            StageManager.STAGE_DATA_LIST
+                                                    .stream()
+                                                    .map(stageData -> stageData.getResourceLocation() + "")
+                                                    .filter(s -> s.contains(finalPre)).forEach(builder::suggest);
                                             return builder.buildFuture();
                                         })
                                         .then(Commands.argument("pos", BlockPosArgument.blockPos())
@@ -146,7 +142,7 @@ public class ReloadHandler {
     }
 
     private int list_stage(CommandSourceStack source) {
-        for (StageData stageData : network.STAGE_DATA_LIST) {
+        for (StageData stageData : StageManager.STAGE_DATA_LIST) {
             var stringBuilder = Component.empty().append("Click to Copy " + stageData.getResourceLocation())
                     .withStyle((style) -> style
                             .withColor(TextColor.parseColor("#7FFF00"))
@@ -158,11 +154,12 @@ public class ReloadHandler {
     }
 
     private int skip_to_stage(CommandSourceStack source, ResourceLocation id, BlockPos pos) {
-        OneBlock.logger(id, pos, network.getStageStartPos(id), source.getLevel());
+        int startPos = StageManager.getStageStartPos(id);
+        OneBlock.logger(id, pos, startPos, source.getLevel());
         var save = Levelhandler.getSaveData(source.getLevel());
         var progress = save.get(pos);
         if (progress != null) {
-            progress.counter = network.getStageStartPos(id);
+            progress.counter = startPos;
             save.update(pos, progress);
             source.getLevel().removeBlock(pos, false);
         } else {

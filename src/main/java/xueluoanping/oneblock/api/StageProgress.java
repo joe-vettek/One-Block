@@ -1,9 +1,9 @@
-package xueluoanping.oneblock.handler;
+package xueluoanping.oneblock.api;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 
-class OneBlockProgress {
+public class StageProgress {
     public static final String KEY_NAME = "name";
     public static final String KEY_ID = "id";
     public static final String KEY_TYPE = "type";
@@ -12,11 +12,11 @@ class OneBlockProgress {
     public static final String KEY_END = "end";
     // public static final String KEY_NAME="name";
 
-    public OneBlockProgress(String name, int counter) {
+    public StageProgress(String name, int counter) {
         this(name, counter, 0, new ListTag(), new ListTag(),new ListTag());
     }
 
-    public OneBlockProgress(String name, int counter, int bedrockLastTime, ListTag remainCounter, ListTag quotaCounter, ListTag precedenceCounter) {
+    public StageProgress(String name, int counter, int bedrockLastTime, ListTag remainCounter, ListTag quotaCounter, ListTag precedenceCounter) {
         this.name = name;
         this.counter = counter;
         this.bedrockLastTime = bedrockLastTime;
@@ -26,7 +26,7 @@ class OneBlockProgress {
     }
 
 
-    public OneBlockProgress() {
+    public StageProgress() {
         this("", 0);
     }
 

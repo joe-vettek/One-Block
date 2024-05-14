@@ -28,6 +28,6 @@ if __name__ == '__main__':
             os.remove(o)
             print("Remove",o)
 
-    print("\nfinished")
+    print("finished")
 
 

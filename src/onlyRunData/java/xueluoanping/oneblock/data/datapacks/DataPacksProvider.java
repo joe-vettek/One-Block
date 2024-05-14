@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import xueluoanping.oneblock.ModConstants;
 import xueluoanping.oneblock.OneBlock;
-import xueluoanping.oneblock.handler.StageData;
+import xueluoanping.oneblock.api.StageData;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

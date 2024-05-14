@@ -14,6 +14,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.level.LevelEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import xueluoanping.oneblock.OneBlock;
+import xueluoanping.oneblock.api.StageData;
 import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
 
@@ -26,10 +27,10 @@ public class Levelhandler {
     public static Levelhandler instance = new Levelhandler();
 
     // public static OneBlockSave oneBlockSave;
-    public static final Map<ServerLevel, OneBlockSave> oneBlockSaveHolder = new HashMap<>();
+    public static final Map<ServerLevel, GlobalDataManager> oneBlockSaveHolder = new HashMap<>();
 
 
-    public static OneBlockSave getSaveData(ServerLevel level) {
+    public static GlobalDataManager getSaveData(ServerLevel level) {
         return oneBlockSaveHolder.get(level);
     }
 
@@ -37,7 +38,7 @@ public class Levelhandler {
     public void onLevelLoad(LevelEvent.Load event) {
         if (!event.getLevel().isClientSide())
             for (ServerLevel allLevel : event.getLevel().getServer().getAllLevels()) {
-                oneBlockSaveHolder.put(allLevel, OneBlockSave.get(allLevel));
+                oneBlockSaveHolder.put(allLevel, GlobalDataManager.get(allLevel));
             }
     }
 
@@ -53,10 +54,10 @@ public class Levelhandler {
     @SubscribeEvent
     public void onTick(TickEvent.ServerTickEvent event) {
         // OneBlock.logger(System.currentTimeMillis());
-        if (network.isNeedCheck()) {
-            var old=System.currentTimeMillis();
-            network.onCheck(event.getServer().overworld());
-            OneBlock.logger("Check Cost ",System.currentTimeMillis()-old);
+        if (StageManager.isNeedCheck()) {
+            var old = System.currentTimeMillis();
+            StageManager.onCheck(event.getServer().overworld());
+            OneBlock.logger("Check Cost ", System.currentTimeMillis() - old);
         }
 
         var server = event.getServer();
@@ -73,7 +74,7 @@ public class Levelhandler {
 
     private boolean add = false;
 
-    private void generateBlock(MinecraftServer server, OneBlockSave oneBlockSave, ServerLevel level, BlockPos pos) {
+    private void generateBlock(MinecraftServer server, GlobalDataManager globalDataManager, ServerLevel level, BlockPos pos) {
 
         ClientUtils.playASHParticles(level, pos);
         // Player always dig it and we not get
@@ -81,21 +82,27 @@ public class Levelhandler {
         if (level.isEmptyBlock(pos)) {
             if (General.debug.get())
                 OneBlock.logger("Start Set at ", System.currentTimeMillis());
-            var nowProgress = oneBlockSave.getOrDefault(pos);
-            var stageHolder = network.getStage(nowProgress.counter);
+            var nowProgress = globalDataManager.getOrDefault(pos);
+            var stageHolder = StageManager.getStage(nowProgress.counter);
             var stage = stageHolder.data();
             nowProgress.name = stage.getResName();
             boolean has_gift = stage.getEnd_gift() != null;
             boolean set_gift = has_gift && stageHolder.stageRemainCount() == 1;
             if (stageHolder.isEnd()) {
-                network.setBedrock(level, pos);
-                nowProgress.setBedrockLastTime(stage.getCount() > 0 ? stage.getCount() : 50 * 60);
+                if (stage.getBedrock_time() >= 0) {
+                    StageManager.setBedrock(level, pos);
+                    int lastTime = stage.getBedrock_time() > 0 ? stage.getBedrock_time() :
+                            (stage.getCount() > 0 ? stage.getCount() : 50 * 60);
+                    nowProgress.setBedrockLastTime(lastTime);
+                }
             } else if (set_gift) {
-                network.setGif(level, pos, stage.getEnd_gift());
+                StageManager.setGif(level, pos, stage.getEnd_gift());
             } else {
                 if (stageHolder.isBegin()) {
-                    ClientUtils.tittlePlayerClean(server);
-                    ClientUtils.informNewStage(server, stage.getResName());
+                    if (!stage.isDisable_message()) {
+                        ClientUtils.tittlePlayerClean(server);
+                        ClientUtils.informNewStage(server, stage.getResName());
+                    }
                     // reset the record when a new stage
                     nowProgress.cleanLocalCounter();
                     for (StageData.BlockEntry blockEntry : stage.getList()) {
@@ -122,15 +129,16 @@ public class Levelhandler {
                 }
                 // the last is a gift,so we need to prepare
                 int remainCount = has_gift ? stageHolder.stageRemainCount() - 1 : stageHolder.stageRemainCount();
-                var select = network.setNewBlock(level, pos, stage, remainCount, nowProgress);
+                var select = StageManager.setNewBlock(level, pos, stage, remainCount, nowProgress);
 
                 nowProgress.updateLocalCounter(select.getType(), select.getGlobalId());
             }
             nowProgress.updateCounter();
-            oneBlockSave.update(pos, nowProgress);
+            globalDataManager.update(pos, nowProgress);
             for (ServerPlayer player : level.players()) {
                 level.sendParticles(player, ParticleTypes.CLOUD, false, pos.getX() + 0.5, pos.getY() + 0.8, pos.getZ() + 0.5, 3, 0.5, 0.7, 0.5, 0.025);
             }
+
             // for debug
             if (General.debug.get())
                 ClientUtils.informPlayerProgress(server, nowProgress.name, nowProgress.counter);
@@ -138,7 +146,7 @@ public class Levelhandler {
             if (General.debug.get())
                 OneBlock.logger("End Set at ", System.currentTimeMillis());
         } else if (level.getBlockState(pos).is(Blocks.BEDROCK)) {
-            var oneBlockSaveInstance = oneBlockSave.getOrDefault(pos);
+            var oneBlockSaveInstance = globalDataManager.getOrDefault(pos);
             if (oneBlockSaveInstance.bedrockLastTime <= 0) {
                 level.removeBlock(pos, false);
             } else {
@@ -146,9 +154,10 @@ public class Levelhandler {
                 if (oneBlockSaveInstance.bedrockLastTime % 50 == 0)
                     ClientUtils.tittlePlayer(server, String.valueOf(i));
                 oneBlockSaveInstance.updateBedrockLastTime();
-                oneBlockSave.update(pos, oneBlockSaveInstance);
+                globalDataManager.update(pos, oneBlockSaveInstance);
             }
         }
+
         if (General.collectItemNearby.get()) {
             try {
                 double x = pos.getX() + 0.5;

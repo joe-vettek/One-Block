@@ -1,4 +1,4 @@
-package xueluoanping.oneblock.handler;
+package xueluoanping.oneblock.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -23,6 +23,13 @@ public class StageData {
     private ResourceLocation resourceLocation;
     private String target;
     private List<String> mods;
+
+    private boolean disable_message;
+    private int add_count;
+    // bedrock set before a stage start it means we need time to prepare for a new stage
+    // if you want to set
+    private int bedrock_time;
+
 
 
     @Override
@@ -96,7 +103,31 @@ public class StageData {
         this.mods = mods;
     }
 
-    public BlockEntry selectRandomByWeight(RandomSource random, OneBlockProgress nowProgress, boolean reachRemain, int localCount) {
+    public boolean isDisable_message() {
+        return disable_message;
+    }
+
+    public void setDisable_message(boolean disable_message) {
+        this.disable_message = disable_message;
+    }
+
+    public int getAdd_count() {
+        return add_count;
+    }
+
+    public void setAdd_count(int add_count) {
+        this.add_count = add_count;
+    }
+
+    public int getBedrock_time() {
+        return bedrock_time;
+    }
+
+    public void setBedrock_time(int bedrock_time) {
+        this.bedrock_time = bedrock_time;
+    }
+
+    public BlockEntry selectRandomByWeight(RandomSource random, StageProgress nowProgress, boolean reachRemain, int localCount) {
         var blockEntryStream = this.list;
 
         String fix_uid = nowProgress.checkPrecedence(localCount);
@@ -145,10 +176,14 @@ public class StageData {
         // set it if you need to
         private String uid;
         private int weight;
+        // loot_table was set just for
         private String loot_table;
+        // just for mob
+        private int count;
+
+        // now it doesn't work, if you want to set a block with NBT it's recommended to use a template file
         private String blockstates;
         private String nbt;
-        private int count;
 
         // force to get, ignore when 0
         // we could set it less than 0 but then transfer it into a positive number will help our work

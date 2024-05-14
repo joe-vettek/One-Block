@@ -5,7 +5,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.SectionPos;
 import net.minecraft.core.Vec3i;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
@@ -26,8 +25,7 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 import xueluoanping.oneblock.ModConstants;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.client.OneBlockTranslator;
-import xueluoanping.oneblock.config.General;
-import xueluoanping.oneblock.handler.StageData;
+import xueluoanping.oneblock.api.StageData;
 
 import java.util.Objects;
 import java.util.Optional;

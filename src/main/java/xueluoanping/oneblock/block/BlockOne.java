@@ -25,6 +25,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.ticks.LevelTicks;
+import net.minecraftforge.common.Tags;
 import org.jetbrains.annotations.Nullable;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.handler.Levelhandler;
@@ -35,7 +36,6 @@ public class BlockOne extends Block {
 
     public BlockOne(Properties properties) {
         super(properties);
-
     }
 
     // Add all the properties here, or may cause a null point exception.

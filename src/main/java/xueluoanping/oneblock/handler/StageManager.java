@@ -19,23 +19,24 @@ import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
-import net.minecraftforge.event.TagsUpdatedEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import xueluoanping.oneblock.OneBlock;
-import xueluoanping.oneblock.config.General;
+import xueluoanping.oneblock.api.OneBlockConfig;
+import xueluoanping.oneblock.api.OneBlockSubConfig;
+import xueluoanping.oneblock.api.StageProgress;
+import xueluoanping.oneblock.api.StageData;
 import xueluoanping.oneblock.util.ClientUtils;
 import xueluoanping.oneblock.util.PlaceUtil;
 import xueluoanping.oneblock.util.Platform;
 
 
 // https://github.com/teaconmc/SignMeUp/blob/1.18-forge/src/main/java/org/teacon/signin/data/GuideMapManager.java
-public class network extends SimpleJsonResourceReloadListener {
+public class StageManager extends SimpleJsonResourceReloadListener {
     private static final Gson GSON = new GsonBuilder().setLenient()
             .registerTypeHierarchyAdapter(Component.class, new Component.Serializer())
             .create();
 
     // public static final network instance = new network(GSON, "stages.config");
-    public static final network instance2 = new network(GSON, "oneblock");
+    public static final StageManager instance2 = new StageManager(GSON, "oneblock");
     public static final List<StageData> STAGE_DATA_LIST = new ArrayList<>();
     public static boolean needCheck = false;
     public static OneBlockConfig oneBlockConfigHolder = new OneBlockConfig();
@@ -118,14 +119,14 @@ public class network extends SimpleJsonResourceReloadListener {
         ClientUtils.playHEARTParticles(level, pos);
     }
 
-    public static StageData.BlockEntry setNewBlock(ServerLevel level, BlockPos basePos, StageData stage, int remain, OneBlockProgress nowProgress) {
+    public static StageData.BlockEntry setNewBlock(ServerLevel level, BlockPos basePos, StageData stage, int remain, StageProgress nowProgress) {
         // remain less than 0 if endless stage
         var select = stage.selectRandomByWeight(level.getRandom(), nowProgress, nowProgress.getRemainAmount() >= remain && remain > 0, stage.getCount() - remain);
         PlaceUtil.placeSelect(level, basePos, select);
         return select;
     }
 
-    public network(Gson json, String s) {
+    public StageManager(Gson json, String s) {
         super(json, s);
         OneBlock.logger("data init");
     }
@@ -136,10 +137,14 @@ public class network extends SimpleJsonResourceReloadListener {
         OneBlock.logger("Hello Profile");
         STAGE_DATA_LIST.clear();
         Gson gson = new GsonBuilder().create();
-        var subStageDataList = new ArrayList<StageData>();
+
+        var new_list = new ArrayList<StageData>();
+        var additionalStageDataList = new ArrayList<StageData>();
+        var subStageConfigList = new ArrayList<OneBlockSubConfig.Sub>();
+
         objects.forEach((res, json) -> {
             OneBlock.logger(json.toString(), res);
-            if (res.toString().contains("phases")) {
+            if (res.getPath().contains("phases")) {
                 StageData stageData = gson.fromJson(json, StageData.class);
                 // Check mods
                 if (stageData.getMods() != null) {
@@ -148,40 +153,68 @@ public class network extends SimpleJsonResourceReloadListener {
                 }
                 stageData.setResourceLocation(res);
                 if (stageData.getTarget() == null)
-                    STAGE_DATA_LIST.add(stageData);
-                else subStageDataList.add(stageData);
+                    new_list.add(stageData);
+                else additionalStageDataList.add(stageData);
                 OneBlock.logger("Go on", res);
             } else if (res.toString().equals("oneblock:common/config")) {
                 oneBlockConfigHolder = gson.fromJson(json, OneBlockConfig.class);
+            } else if (res.getPath().equals("common/sub_config")) {
+                subStageConfigList.addAll(gson.fromJson(json, OneBlockSubConfig.class).getList());
             }
-
-            // Cuisine.logger(Minecraft.getInstance().isLocalServer());
         });
-        // clean extra data
-        var oneBlockConfig = oneBlockConfigHolder.getOrder();
 
-        var removeList = new ArrayList<StageData>();
-        for (StageData s : STAGE_DATA_LIST) {
-            if (!oneBlockConfig.contains(s.getResourceLocation().toString())) {
-                removeList.add(s);
+
+        // var sub_Stage=new_list.stream()
+        //         .filter(stageData1 -> stageData1.getResourceLocation().toString().equals(sub.getTarget()))
+        //         .findFirst();
+        // add sub to STAGE_DATA_LIST
+        var subStageMap = new LinkedHashMap<String, List<OneBlockSubConfig.Sub>>();
+        for (String stageID : oneBlockConfigHolder.getOrder()) {
+            for (OneBlockSubConfig.Sub sub : subStageConfigList) {
+                if (stageID.equals(sub.getTarget())) {
+                    if (subStageMap.get(stageID) == null) {
+                        var varTemp = new ArrayList<OneBlockSubConfig.Sub>();
+                        varTemp.add(sub);
+                        subStageMap.put(stageID, varTemp);
+                    } else {
+                        var varTemp = subStageMap.get(stageID);
+                        varTemp.add(sub);
+                        subStageMap.put(stageID, varTemp);
+                    }
+                }
             }
         }
-        STAGE_DATA_LIST.removeAll(removeList);
 
+        oneBlockConfigHolder.setOrder(new ArrayList<>(oneBlockConfigHolder.getOrder()));
+        for (Map.Entry<String, List<OneBlockSubConfig.Sub>> stringListEntry : subStageMap.entrySet()) {
+            var varTemp = stringListEntry.getValue();
+            varTemp.sort(Comparator.comparing(
+                    sub -> -sub.getPriority()
+            ));
+            oneBlockConfigHolder.getOrder()
+                    .addAll(1+oneBlockConfigHolder.getOrder().indexOf(stringListEntry.getKey()),
+                            varTemp.stream().map(OneBlockSubConfig.Sub::getId).toList());
+        }
+
+
+        STAGE_DATA_LIST.addAll(new_list.stream()
+                .filter(stageData -> oneBlockConfigHolder.getOrder().contains(stageData.getResourceLocation().toString()))
+                .toList());
         // sort
         STAGE_DATA_LIST.sort(Comparator.comparing(
-                e -> oneBlockConfig.indexOf(e.getResourceLocation().toString())
+                e -> oneBlockConfigHolder.getOrder().indexOf(e.getResourceLocation().toString())
         ));
 
 
-        // add sub target
-        for (StageData subData : subStageDataList) {
-            for (StageData data : STAGE_DATA_LIST) {
-                if (data.getResourceLocation().toString().equals(subData.getTarget())) {
-                    for (StageData.BlockEntry subEntry : subData.getList()) {
-                        subEntry.setFrom(subData.getResourceLocation());
+        // add additional target
+        for (StageData additionalStage : additionalStageDataList) {
+            for (StageData stage : STAGE_DATA_LIST) {
+                if (stage.getResourceLocation().toString().equals(additionalStage.getTarget())) {
+                    for (StageData.BlockEntry subEntry : additionalStage.getList()) {
+                        subEntry.setFrom(additionalStage.getResourceLocation());
                     }
-                    data.getList().addAll(subData.getList());
+                    stage.setCount(stage.getCount() + additionalStage.getAdd_count());
+                    stage.getList().addAll(additionalStage.getList());
                     break;
                 }
             }
@@ -193,7 +226,7 @@ public class network extends SimpleJsonResourceReloadListener {
 
     public static void onCheck(ServerLevel level) {
 
-        for (StageData data : network.STAGE_DATA_LIST) {
+        for (StageData data : StageManager.STAGE_DATA_LIST) {
             data.setList(data.getList().stream().filter(blockEntry -> {
                 boolean isValid = blockEntry.isValid(level);
                 if (!isValid) {
@@ -213,6 +246,6 @@ public class network extends SimpleJsonResourceReloadListener {
     }
 
     public static void setNeedCheck(boolean needCheck) {
-        network.needCheck = needCheck;
+        StageManager.needCheck = needCheck;
     }
 }
