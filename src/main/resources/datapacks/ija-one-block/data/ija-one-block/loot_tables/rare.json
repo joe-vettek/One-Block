@@ -3,8 +3,8 @@
   "pools": [
     {
       "rolls": {
-        "min": 2,
-        "max": 3
+        "min": 1,
+        "max": 1
       },
       "bonus_rolls": {
         "min": 0,
@@ -19,16 +19,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:long_fire_resistance"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -40,16 +39,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:strong_healing"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -61,16 +59,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:long_invisibility"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -82,16 +79,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:long_leaping"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -103,16 +99,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:luck"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -124,16 +119,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:long_night_vision"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -145,16 +139,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:long_regeneration"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -166,16 +159,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:long_slow_falling"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -187,16 +179,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:long_strength"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -208,16 +199,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:strong_swiftness"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -229,16 +219,15 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
-              "count": {
-                "min": 1,
-                "max": 1
+              "tag": {
+                "Potion": "minecraft:strong_turtle_master"
               },
-              "function": "minecraft:set_count"
+              "function": "minecraft:minecraft:set_nbt"
             }
           ]
         },
@@ -250,14 +239,395 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             },
             {
+              "tag": {
+                "Potion": "minecraft:long_water_breathing"
+              },
+              "function": "minecraft:minecraft:set_nbt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
               "count": {
                 "min": 1,
                 "max": 1
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantments": [
+                "multishot",
+                "quick_charge"
+              ],
+              "function": "minecraft:minecraft:set_nbt"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantments": [
+                "flame",
+                "infinity",
+                "power",
+                "punch"
+              ],
+              "function": "minecraft:minecraft:set_nbt"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantments": [
+                "bane_of_arthropods",
+                "fire_aspect",
+                "fortune",
+                "knockback",
+                "looting",
+                "sharpness",
+                "soul_speed",
+                "smite",
+                "sweeping"
+              ],
+              "function": "minecraft:minecraft:set_nbt"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantments": [
+                "efficiency",
+                "fortune",
+                "silk_touch"
+              ],
+              "function": "minecraft:minecraft:set_nbt"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantments": [
+                "channeling",
+                "impaling",
+                "loyalty",
+                "riptide"
+              ],
+              "function": "minecraft:minecraft:set_nbt"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantments": [
+                "piercing",
+                "quick_charge"
+              ],
+              "function": "minecraft:minecraft:set_nbt"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantments": [
+                "luck_of_the_sea",
+                "lure"
+              ],
+              "function": "minecraft:minecraft:set_nbt"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:book",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "enchantments": [
+                "aqua_affinity",
+                "blast_protection",
+                "depth_strider",
+                "feather_falling",
+                "fire_protection",
+                "frost_walker",
+                "mending",
+                "projectile_protection",
+                "protection",
+                "respiration",
+                "thorns",
+                "unbreaking",
+                "binding_curse",
+                "vanishing_curse"
+              ],
+              "function": "minecraft:minecraft:set_nbt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:totem_of_undying",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:creeper_head",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:zombie_head",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:skeleton_skull",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_horse_armor",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_horse_armor",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_carrot",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 6
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 3
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 0
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 3,
+                "max": 4
               },
               "function": "minecraft:set_count"
             }

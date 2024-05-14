@@ -25,8 +25,7 @@ STAGE_HOT = StageInfo('07', "red desert", 'ija-one-block:06-gift', 'ija-one-bloc
 STAGE_NETHER = StageInfo('08', "nether", 'ija-one-block:07-gift', 'ija-one-block:07', 'ija-one-block:07-variety')
 STAGE_VILLAGE = StageInfo('09', "village", 'ija-one-block:08-gift', 'ija-one-block:08', 'ija-one-block:08-variety')
 STAGE_TRAVEL = StageInfo('10', "over hills", 'oneblock:10-gift', 'oneblock:10')
-STAGE_ISOLATED = StageInfo('11', "isolated land", 'ija-one-block:09-gift', 'ija-one-block:09',
-                           'ija-one-block:09-variety')
+STAGE_ISOLATED = StageInfo('11', "isolated land", 'ija-one-block:09-gift', 'ija-one-block:09','ija-one-block:09-variety')
 STAGE_DEPTH = StageInfo('12', "under depth", 'oneblock:12-gift', 'oneblock:12')
 STAGE_END = StageInfo('13', "the end", 'ija-one-block:10-gift', 'ija-one-block:10', 'ija-one-block:10-variety')
 STAGE_ALL = StageInfo('all', "after phases")

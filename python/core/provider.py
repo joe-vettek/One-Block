@@ -83,6 +83,20 @@ class CountFunctionBuilder(dict):
         self["function"] = "minecraft:set_count"
 
 
+class SetNBTFunctionBuilder(dict):
+    def __init__(self, tag: str):
+        super().__init__()
+        self["tag"] = tag
+        self["function"] = "minecraft:minecraft:set_nbt"
+
+
+class EnchantRandomlyFunctionBuilder(dict):
+    def __init__(self, enchantments: List[str]):
+        super().__init__()
+        self["enchantments"] = enchantments
+        self["function"] = "minecraft:minecraft:set_nbt"
+
+
 class PoolEntryBuilder(dict):
     def __init__(self, name: str, weight: int = 6, use_default_functions=True):
         super().__init__()
@@ -97,6 +111,14 @@ class PoolEntryBuilder(dict):
 
     def add_count_function(self, min_c, max_c):
         self.add_function(CountFunctionBuilder(min_c, max_c))
+        return self
+
+    def add_nbt_function(self, tag):
+        self.add_function(SetNBTFunctionBuilder(tag))
+        return self
+
+    def add_enchantments_function(self, tag):
+        self.add_function(EnchantRandomlyFunctionBuilder(tag))
         return self
 
 
@@ -115,8 +137,13 @@ class LootPoolBuilder(dict):
         self["entries"].append(entry)
         return self
 
-    def add_entry_item(self, id, weight, min, max):
-        self["entries"].append(PoolEntryBuilder(id, weight, use_default_functions=False).add_count_function(min, max))
+    def add_entry_item(self, id, weight, min, max, tag=None, enchantments=None):
+        pool_entry = PoolEntryBuilder(id, weight, use_default_functions=False).add_count_function(min, max)
+        if tag is not None:
+            pool_entry = pool_entry.add_nbt_function(tag)
+        if enchantments is not None:
+            pool_entry = pool_entry.add_enchantments_function(enchantments)
+        self["entries"].append(pool_entry)
         return self
 
 
