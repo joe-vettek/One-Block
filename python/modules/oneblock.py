@@ -17,7 +17,7 @@ loot_provider.get_datapack_name = (lambda: "oneblock")
 run_list.append(loot_provider)
 
 # 00
-stage00 = PhaseTableBuilder(count=47, end_gift="ija-one-block:00-gift")
+stage00 = PhaseTableBuilder(count=47, end_gift=constant.STAGE_00.end_gift)
 stage00.add_entry(PhaseEntryBuilder(constant.TYPE_BLOCK, "minecraft:grass_block").set_precedence(precedence_end=5))
 stage00.add_entry(PhaseEntryBuilder(constant.TYPE_BLOCK, "minecraft:dirt").set_precedence(2, 2))
 stage00.add_block("minecraft:grass_block", 19)
@@ -30,7 +30,7 @@ stage00.add_chest_gift(constant.GIFT_WATER_BUCKET, min_times=1, max_times=1)
 sub_provider.add_phase("00", stage00)
 
 # 01
-stage01 = PhaseTableBuilder(count=240, end_gift="ija-one-block:01-gift")
+stage01 = PhaseTableBuilder(count=240, end_gift=constant.STAGE_PLAIN.end_gift)
 stage01.add_block("minecraft:grass_block", 88)
 stage01.add_block("minecraft:clay", 19)
 stage01.add_block("minecraft:oak_log", 17)
@@ -50,7 +50,7 @@ stage01.add_entry(
 sub_provider.add_phase("01", stage01)
 
 # 02
-stage02 = PhaseTableBuilder(count=390, end_gift="ija-one-block:02-gift")
+stage02 = PhaseTableBuilder(count=390, end_gift=constant.STAGE_UNDERGROUND.end_gift)
 stage02.add_block("minecraft:stone", 97)
 stage02.add_block("minecraft:gravel", 37)
 stage02.add_block("minecraft:dirt", 33)
@@ -76,7 +76,7 @@ stage02.add_entry(
 sub_provider.add_phase("02", stage02)
 
 # 03
-stage03 = PhaseTableBuilder(count=470, end_gift="ija-one-block:03-gift")
+stage03 = PhaseTableBuilder(count=470, end_gift=constant.STAGE_COLD.end_gift)
 stage03.add_block("minecraft:grass_block", 77)
 stage03.add_block("minecraft:stone", 69)
 stage03.add_block("minecraft:snow_block", 44)
@@ -104,7 +104,7 @@ stage03.add_entry(
 sub_provider.add_phase("03", stage03)
 
 # 04
-stage04 = PhaseTableBuilder(count=420, end_gift="oneblock:04-gift")
+stage04 = PhaseTableBuilder(count=420, end_gift=constant.STAGE_SWAMP.end_gift)
 stage04.add_block("minecraft:sand", 10)
 stage04.add_block("minecraft:mangrove_log", 20)
 stage04.add_block("minecraft:mud", 15)
@@ -128,7 +128,7 @@ stage04.add_entry(
 sub_provider.add_phase("04", stage04)
 
 # 05
-stage05 = PhaseTableBuilder(count=700, end_gift="ija-one-block:04-gift")
+stage05 = PhaseTableBuilder(count=700, end_gift=constant.STAGE_OCEAN.end_gift)
 stage05.add_block("minecraft:sand", 79)
 stage05.add_block("minecraft:prismarine", 77)
 stage05.add_block("minecraft:prismarine_bricks", 49)
@@ -169,7 +169,7 @@ stage05.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("05", stage05)
 
 # 06
-stage06 = PhaseTableBuilder(count=570, end_gift="ija-one-block:05-gift")
+stage06 = PhaseTableBuilder(count=570, end_gift=constant.STAGE_FOREST.end_gift)
 stage06.add_block("minecraft:cobblestone", 212)
 stage06.add_block("minecraft:mossy_cobblestone", 128)
 stage06.add_block("minecraft:jungle_log", 70)
@@ -196,7 +196,7 @@ stage06.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("06", stage06)
 
 # 07
-stage07 = PhaseTableBuilder(count=610, end_gift="ija-one-block:06-gift")
+stage07 = PhaseTableBuilder(count=610, end_gift=constant.STAGE_HOT.end_gift)
 stage07.add_block("minecraft:red_sand", 103)
 stage07.add_block("minecraft:red_sandstone", 81)
 stage07.add_block("minecraft:terracotta", 40)
@@ -233,7 +233,7 @@ stage07.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("07", stage07)
 
 # 08
-stage08 = PhaseTableBuilder(count=790, end_gift="ija-one-block:07-gift")
+stage08 = PhaseTableBuilder(count=790, end_gift=constant.STAGE_NETHER.end_gift)
 stage08.add_block("minecraft:netherrack", 95)
 stage08.add_block("minecraft:blackstone", 80)
 stage08.add_block("minecraft:soul_sand", 49)
@@ -270,7 +270,7 @@ stage08.add_chest_gift(constant.GIFT_ODD, min_times=1, max_times=1)
 sub_provider.add_phase("08", stage08)
 
 # 09
-stage09 = PhaseTableBuilder(count=730, end_gift="ija-one-block:08-gift")
+stage09 = PhaseTableBuilder(count=730, end_gift=constant.STAGE_VILLAGE.end_gift)
 stage09.add_block("minecraft:quartz_block", 213)
 stage09.add_block("minecraft:grass_block", 69)
 stage09.add_block("minecraft:oak_log", 50)
@@ -303,7 +303,7 @@ stage09.add_chest_gift(constant.GIFT_RARE, min_times=1, max_times=1)
 sub_provider.add_phase("09", stage09)
 
 # 10
-stage10 = PhaseTableBuilder(count=750, end_gift="oneblock:10-gift")
+stage10 = PhaseTableBuilder(count=750, end_gift=constant.STAGE_TRAVEL.end_gift)
 stage10.add_block("minecraft:dripstone_block", 80)
 stage10.add_block("minecraft:grass_block", 50)
 stage10.add_block("minecraft:coarse_dirt", 20)
@@ -345,7 +345,7 @@ stage10.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("10", stage10)
 
 # 11
-stage11 = PhaseTableBuilder(count=780, end_gift="ija-one-block:09-gift")
+stage11 = PhaseTableBuilder(count=780, end_gift=constant.STAGE_ISOLATED.end_gift)
 stage11.add_block("minecraft:stone_bricks", 139)
 stage11.add_block("minecraft:mossy_stone_bricks", 112)
 stage11.add_block("minecraft:mycelium", 84)
@@ -379,7 +379,7 @@ stage11.add_chest_gift(constant.GIFT_ODD, min_times=1, max_times=1)
 sub_provider.add_phase("11", stage11)
 
 # 12
-stage12 = PhaseTableBuilder(count=750, end_gift="oneblock:12-gift")
+stage12 = PhaseTableBuilder(count=750, end_gift=constant.STAGE_DEPTH.end_gift)
 stage12.add_block("minecraft:deepslate", 150)
 stage12.add_block("minecraft:cobbled_deepslate", 69)
 stage12.add_block("minecraft:tuff", 20)
@@ -411,7 +411,7 @@ stage12.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("12", stage12)
 
 # 13
-stage13 = PhaseTableBuilder(count=850, end_gift="ija-one-block:10-gift")
+stage13 = PhaseTableBuilder(count=850, end_gift=constant.STAGE_END.end_gift)
 stage13.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_TEMPLATE, id_c="oneblock:end_portal")
 .set_precedence(1, 1)
 .set_offset(-4, -2, -2)
