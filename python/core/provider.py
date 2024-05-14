@@ -140,6 +140,8 @@ class LootPoolBuilder(dict):
     def add_entry_item(self, id, weight, min, max, tag=None, enchantments=None):
         pool_entry = PoolEntryBuilder(id, weight, use_default_functions=False).add_count_function(min, max)
         if tag is not None:
+            if type(tag) ==dict:
+                tag=json.dumps(tag)
             pool_entry = pool_entry.add_nbt_function(tag)
         if enchantments is not None:
             pool_entry = pool_entry.add_enchantments_function(enchantments)

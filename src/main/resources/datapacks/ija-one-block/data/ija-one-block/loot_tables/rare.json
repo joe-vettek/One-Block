@@ -24,9 +24,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:long_fire_resistance"
-              },
+              "tag": "{\"Potion\": \"minecraft:long_fire_resistance\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -44,9 +42,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:strong_healing"
-              },
+              "tag": "{\"Potion\": \"minecraft:strong_healing\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -64,9 +60,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:long_invisibility"
-              },
+              "tag": "{\"Potion\": \"minecraft:long_invisibility\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -84,9 +78,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:long_leaping"
-              },
+              "tag": "{\"Potion\": \"minecraft:long_leaping\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -104,9 +96,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:luck"
-              },
+              "tag": "{\"Potion\": \"minecraft:luck\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -124,9 +114,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:long_night_vision"
-              },
+              "tag": "{\"Potion\": \"minecraft:long_night_vision\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -144,9 +132,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:long_regeneration"
-              },
+              "tag": "{\"Potion\": \"minecraft:long_regeneration\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -164,9 +150,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:long_slow_falling"
-              },
+              "tag": "{\"Potion\": \"minecraft:long_slow_falling\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -184,9 +168,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:long_strength"
-              },
+              "tag": "{\"Potion\": \"minecraft:long_strength\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -204,9 +186,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:strong_swiftness"
-              },
+              "tag": "{\"Potion\": \"minecraft:strong_swiftness\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -224,9 +204,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:strong_turtle_master"
-              },
+              "tag": "{\"Potion\": \"minecraft:strong_turtle_master\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
@@ -244,9 +222,7 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": {
-                "Potion": "minecraft:long_water_breathing"
-              },
+              "tag": "{\"Potion\": \"minecraft:long_water_breathing\"}",
               "function": "minecraft:minecraft:set_nbt"
             }
           ]
