@@ -150,7 +150,7 @@ public class PlaceUtil {
             var block = RegisterFinderUtil.getBlock(select.getId());
             level.setBlockAndUpdate(offsetPos, block.defaultBlockState());
             if (level.getBlockEntity(offsetPos) instanceof BrushableBlockEntity brushableBlockEntity)
-                brushableBlockEntity.setLootTable(new ResourceLocation(select.getLoot_table()), level.getSeed());
+                brushableBlockEntity.setLootTable(new ResourceLocation(select.getLoot_table()), level.getRandom().nextLong());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_MOB)) {
             var mob = RegisterFinderUtil.getEntity(select.getId());
             for (int i = 0; i < select.getCount(); i++) {
