@@ -295,6 +295,24 @@ stage10.add_mob("minecraft:goat", 3, 1)
 stage10.add_mob("minecraft:axolotl", 2, 2)
 stage10.add_block("minecraft:stone", 8)
 stage10.add_entry(
+    PhaseEntryBuilder(constant.TYPE_ARCHAEOLOGY, "minecraft:suspicious_sand", 8).set_loot_table(
+        "minecraft:archaeology/desert_pyramid"))
+stage10.add_entry(
+    PhaseEntryBuilder(constant.TYPE_ARCHAEOLOGY, "minecraft:suspicious_sand", 7).set_loot_table(
+        "minecraft:archaeology/desert_well"))
+stage10.add_entry(
+    PhaseEntryBuilder(constant.TYPE_ARCHAEOLOGY, "minecraft:suspicious_sand", 6).set_loot_table(
+        "minecraft:archaeology/ocean_ruin_warm"))
+stage10.add_entry(
+    PhaseEntryBuilder(constant.TYPE_ARCHAEOLOGY, "minecraft:suspicious_gravel", 8).set_loot_table(
+        "minecraft:archaeology/ocean_ruin_cold"))
+stage10.add_entry(
+    PhaseEntryBuilder(constant.TYPE_ARCHAEOLOGY, "minecraft:suspicious_gravel", 12).set_loot_table(
+        "minecraft:archaeology/trail_ruins_common"))
+stage10.add_entry(
+    PhaseEntryBuilder(constant.TYPE_ARCHAEOLOGY, "minecraft:suspicious_gravel", 3).set_loot_table(
+        "minecraft:archaeology/trail_ruins_rare"))
+stage10.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, "minecraft:chest").set_loot_table(constant.STAGE_TRAVEL.stage_gift))
 sub_provider.add_phase("10", stage10)
 

@@ -88,6 +88,42 @@
       "weight": 8
     },
     {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_sand",
+      "weight": 8,
+      "loot_table": "minecraft:archaeology/desert_pyramid"
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_sand",
+      "weight": 7,
+      "loot_table": "minecraft:archaeology/desert_well"
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_sand",
+      "weight": 6,
+      "loot_table": "minecraft:archaeology/ocean_ruin_warm"
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_gravel",
+      "weight": 8,
+      "loot_table": "minecraft:archaeology/ocean_ruin_cold"
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_gravel",
+      "weight": 12,
+      "loot_table": "minecraft:archaeology/trail_ruins_common"
+    },
+    {
+      "type": "archaeology",
+      "id": "minecraft:suspicious_gravel",
+      "weight": 3,
+      "loot_table": "minecraft:archaeology/trail_ruins_rare"
+    },
+    {
       "type": "gift",
       "id": "minecraft:chest",
       "loot_table": "oneblock:10"
