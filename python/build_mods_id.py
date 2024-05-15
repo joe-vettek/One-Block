@@ -1,3 +1,4 @@
+import json
 import os
 from os.path import exists, join
 
@@ -29,23 +30,33 @@ if __name__ == '__main__':
             add_key(map,mod)
             add_key(map[mod],type)
             try:
+                # comment = f'[{item["CreativeTabName"]}] ' if item.get('CreativeTabName') is not  None else ''
                 comment=item["englishName"] \
                     if item["name"] ==item["englishName"] \
                     else item["name"]+' '+item["englishName"]
             except:
                 comment=item["name"]
+
             map[mod][type][name]= {'name':':'.join(registerName),
-                                   'comment':f'# {comment}'}
+                                   'comment':f'# {comment}',
+                                   'tags': json.loads('["'+item["OredictList"].replace(",",'","')[1:-1]+'"]') if item.get("OredictList")is not None else None,
+                                   'nbt':  None,
+                                   }
+
             # map[mod] = registerName[1]
 
     for m in map:
         text=f'# {m}\n'
+        text+=f'from core.api import RegisterEntry,Collections\n'
+        ooo=[]
         for j in map[m]:
-            text+=f'\n\nclass {j}s:'
+            text+=f'\n\nclass {j}(Collections):'
             for c in map[m][j]:
                 text+=f'\n    {map[m][j][c]["comment"]}'
-                text+=f'\n    {c} = "{map[m][j][c]["name"]}"'
-
+                text+=f'\n    {c} = RegisterEntry("{map[m][j][c]["name"]}")'
+            cc=f'{j.lower()}s'.replace("entitys","entities")
+            ooo.append(f'\n{cc} = {j}()')
+        text+=f"\n\n{''.join(ooo)}"
         with open(f'{outpath}/{m}.py','w',encoding='utf-8') as f:
             f.write(text)
 

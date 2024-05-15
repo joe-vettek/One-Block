@@ -1,3 +1,4 @@
+from mods import minecraft
 from core.provider import *
 from core import constant
 
@@ -17,5 +18,5 @@ sub_config_provider.add_config(SubConfigTableBuilder().add_sub(
 
 # 02
 stage02 = PhaseTableBuilder(count=1).set_disable_message(True).set_bedrock_time(1)
-stage02.add_block("minecraft:lapis_ore", 1)
+stage02.add_block(minecraft.blocks.lapis_ore, 1)
 sub_provider.add_phase("test", stage02)

@@ -148,13 +148,4 @@ def test_time(func):
     return wrapper
 
 
-class TagEntry:
-    def __init__(self, id: str, tags: List[str] = None):
-        self.id = id
-        self.tags = tags
 
-    def __str__(self):
-        return f"{self.id}"
-
-    def __repr__(self):
-        return f"{self.id}"
