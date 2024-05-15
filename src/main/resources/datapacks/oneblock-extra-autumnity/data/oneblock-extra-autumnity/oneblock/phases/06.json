@@ -1,0 +1,34 @@
+{
+  "name": "",
+  "target": "oneblock:phases/06",
+  "add_count": 25,
+  "list": [
+    {
+      "type": "block",
+      "id": "autumnity:maple_log",
+      "weight": 7
+    },
+    {
+      "type": "block",
+      "id": "autumnity:sappy_maple_log",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "autumnity:large_pumpkin_slice",
+      "weight": 3
+    },
+    {
+      "type": "mob",
+      "id": "autumnity:snail",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "autumnity:turkey",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

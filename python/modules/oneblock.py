@@ -38,7 +38,8 @@ stage00.add_block(minecraft.blocks.oak_log, 13)
 stage00.add_block(minecraft.blocks.gravel, 5)
 stage00.add_mob(minecraft.entities.pig, 1, 1)
 stage00.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_00.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_00.stage_gift))
 stage00.add_chest_gift(constant.GIFT_WATER_BUCKET, min_times=1, max_times=1)
 sub_provider.add_phase("00", stage00)
 
@@ -56,7 +57,8 @@ stage01.add_mob(minecraft.entities.sheep, 1, 1)
 stage01.add_mob(minecraft.entities.cow, 1, 1)
 stage01.add_mob(minecraft.entities.pig, 1, 1)
 stage01.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_PLAIN.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_PLAIN.stage_gift))
 stage01.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
         constant.STAGE_PLAIN.variety_gift))
@@ -111,9 +113,11 @@ stage03.add_block(minecraft.blocks.gold_ore, 5)
 stage03.add_mob(minecraft.entities.wolf, 3, 1)
 stage03.add_mob(minecraft.entities.polar_bear, 2, 1)
 stage03.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_COLD.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_COLD.stage_gift))
 stage03.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_COLD.variety_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_COLD.variety_gift))
 sub_provider.add_phase("03", stage03)
 
 # 04
@@ -137,7 +141,8 @@ stage04.add_mob(minecraft.entities.tadpole, 2, 1)
 stage04.add_mob(minecraft.entities.salmon, 4, 1)
 stage04.add_mob(minecraft.entities.squid, 2, 1)
 stage04.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_SWAMP.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_SWAMP.stage_gift))
 sub_provider.add_phase("04", stage04)
 
 # 05
@@ -174,7 +179,8 @@ stage05.add_mob(minecraft.entities.pufferfish, 2, 2)
 stage05.add_mob(minecraft.entities.squid, 2, 1)
 stage05.add_block(minecraft.blocks.diamond_ore, 2)
 stage05.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_OCEAN.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_OCEAN.stage_gift))
 stage05.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
         constant.STAGE_OCEAN.variety_gift))
@@ -200,13 +206,15 @@ stage06.add_mob(minecraft.entities.horse, 4, 1)
 stage06.add_block(minecraft.blocks.diamond_ore, 3)
 stage06.add_mob(minecraft.entities.panda, 2, 1)
 stage06.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_FOREST.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_FOREST.stage_gift))
 stage06.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
         constant.STAGE_FOREST.variety_gift))
 stage06.add_chest_gift(constant.GIFT_ODD, min_times=1, max_times=1)
 stage06.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("06", stage06)
+
 
 # 07
 stage07 = PhaseTableBuilder(count=610, end_gift=constant.STAGE_HOT.end_gift)
@@ -238,9 +246,11 @@ stage07.add_block(minecraft.blocks.diamond_ore, 4)
 stage07.add_mob(minecraft.entities.llama, 4, 1)
 stage07.add_mob(minecraft.entities.wandering_trader, 2, 1)
 stage07.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_HOT.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_HOT.stage_gift))
 stage07.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_HOT.variety_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_HOT.variety_gift))
 stage07.add_chest_gift(constant.GIFT_ODD, min_times=1, max_times=1)
 stage07.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("07", stage07)
@@ -275,7 +285,8 @@ stage08.add_block(minecraft.blocks.ancient_debris, 4)
 stage08.add_block(minecraft.blocks.crying_obsidian, 3)
 stage08.add_mob(minecraft.entities.strider, 2, 2)
 stage08.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_NETHER.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_NETHER.stage_gift))
 stage08.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
         constant.STAGE_NETHER.variety_gift))
@@ -352,7 +363,8 @@ stage10.add_entry(
     PhaseEntryBuilder(constant.TYPE_ARCHAEOLOGY, minecraft.blocks.suspicious_gravel, 3).set_loot_table(
         "minecraft:archaeology/trail_ruins_rare"))
 stage10.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_TRAVEL.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_TRAVEL.stage_gift))
 stage10.add_chest_gift(constant.GIFT_RARE, min_times=1, max_times=1)
 stage10.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("10", stage10)
@@ -418,7 +430,8 @@ stage12.add_mob(minecraft.entities.spider, 2, 1)
 stage12.add_mob(minecraft.entities.glow_squid, 3, 1)
 stage12.add_mob(minecraft.entities.warden, 1, 1)
 stage12.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_DEPTH.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_DEPTH.stage_gift))
 stage12.add_chest_gift(constant.GIFT_RARE, min_times=1, max_times=1)
 stage12.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("12", stage12)
@@ -448,9 +461,11 @@ stage13.add_block(minecraft.blocks.lapis_ore, 5)
 stage13.add_block(minecraft.blocks.emerald_ore, 3)
 stage13.add_mob(minecraft.entities.shulker, 2, 2)
 stage13.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_END.stage_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_END.stage_gift))
 stage13.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(constant.STAGE_END.variety_gift))
+    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+        constant.STAGE_END.variety_gift))
 stage13.add_chest_gift(constant.GIFT_RARE, min_times=1, max_times=1)
 stage13.add_chest_gift(constant.GIFT_ODD, min_times=1, max_times=1)
 stage13.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
