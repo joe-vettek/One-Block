@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/10",
+  "list": [
+    {
+      "type": "block",
+      "id": "biomesoplenty:jacaranda_log",
+      "weight": 10
+    }
+  ]
+}

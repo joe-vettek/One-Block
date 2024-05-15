@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/08",
+  "list": [
+    {
+      "type": "block",
+      "id": "biomesoplenty:hellbark_log",
+      "weight": 8
+    }
+  ]
+}

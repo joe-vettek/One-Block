@@ -305,6 +305,11 @@ class PhaseTableBuilder(dict):
         self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_MOB, id_c=mob_id, weight=weight, count=count))
         return self
 
+    def add_mob_limit(self, mob_id: str, weight: int, count: int, min_time=0, max_time=0):
+        entry = PhaseEntryBuilder(type_c=constant.TYPE_MOB, id_c=mob_id, weight=weight, count=count)
+        self.add_entry(entry.set_times(min_time, max_time))
+        return self
+
     def add_chest_gift(self, loot_id: str, weight=0, min_times=0, max_times=0):
         self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_GIFT, id_c=loot_id, weight=weight)
                        .set_times(min_times, max_times))

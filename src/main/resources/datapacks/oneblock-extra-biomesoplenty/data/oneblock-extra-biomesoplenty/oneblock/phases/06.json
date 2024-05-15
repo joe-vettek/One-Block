@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/06",
+  "list": [
+    {
+      "type": "block",
+      "id": "biomesoplenty:mahogany_log",
+      "weight": 10
+    }
+  ]
+}

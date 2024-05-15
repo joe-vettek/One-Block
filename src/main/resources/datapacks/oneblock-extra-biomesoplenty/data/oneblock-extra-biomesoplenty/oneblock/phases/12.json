@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/12",
+  "list": [
+    {
+      "type": "block",
+      "id": "biomesoplenty:origin_grass_block",
+      "weight": 5
+    }
+  ]
+}

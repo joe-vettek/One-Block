@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "target": "oneblock:phases/11",
+  "list": [
+    {
+      "type": "block",
+      "id": "biomesoplenty:umbran_log",
+      "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:magic_log",
+      "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:dead_log",
+      "weight": 8
+    }
+  ]
+}

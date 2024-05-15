@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/05",
+  "list": [
+    {
+      "type": "block",
+      "id": "biomesoplenty:palm_log",
+      "weight": 10
+    }
+  ]
+}
