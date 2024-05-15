@@ -1,6 +1,17 @@
 {
   "entries": [
-    "oneblock-extra-biomesoplenty:add_loot_from_06"
+    "oneblock-extra-biomesoplenty:add_loot_from_01",
+    "oneblock-extra-biomesoplenty:add_loot_from_01",
+    "oneblock-extra-biomesoplenty:add_loot_from_03",
+    "oneblock-extra-biomesoplenty:add_loot_from_04",
+    "oneblock-extra-biomesoplenty:add_loot_from_05",
+    "oneblock-extra-biomesoplenty:add_loot_from_06",
+    "oneblock-extra-biomesoplenty:add_loot_from_07",
+    "oneblock-extra-biomesoplenty:add_loot_from_08",
+    "oneblock-extra-biomesoplenty:add_loot_from_09",
+    "oneblock-extra-biomesoplenty:add_loot_from_10",
+    "oneblock-extra-biomesoplenty:add_loot_from_11",
+    "oneblock-extra-biomesoplenty:add_loot_from_12"
   ],
   "replace": false
 }

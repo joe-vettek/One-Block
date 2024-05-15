@@ -3,8 +3,8 @@
   "pools": [
     {
       "rolls": {
-        "min": 1,
-        "max": 2
+        "min": 0,
+        "max": 1
       },
       "bonus_rolls": {
         "min": 0,
@@ -13,70 +13,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:mahogany_sapling",
-          "weight": 4,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "biomesoplenty:maple_sapling",
-          "weight": 4,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "biomesoplenty:yellow_autumn_sapling",
-          "weight": 4,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "biomesoplenty:orange_autumn_sapling",
+          "name": "biomesoplenty:flowering_oak_sapling",
           "weight": 4,
           "functions": [
             {
@@ -99,7 +36,7 @@
     },
     {
       "rolls": {
-        "min": 1,
+        "min": 0,
         "max": 1
       },
       "bonus_rolls": {
@@ -109,7 +46,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:sprout",
+          "name": "biomesoplenty:huge_clover_petal",
           "weight": 4,
           "functions": [
             {
@@ -130,8 +67,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:goldenrod",
-          "weight": 6,
+          "name": "biomesoplenty:clover",
+          "weight": 4,
           "functions": [
             {
               "count": {
@@ -151,8 +88,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:bush",
-          "weight": 5,
+          "name": "biomesoplenty:blue_hydrangea",
+          "weight": 4,
           "functions": [
             {
               "count": {
@@ -172,8 +109,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:orange_cosmos",
-          "weight": 5,
+          "name": "biomesoplenty:barley",
+          "weight": 4,
           "functions": [
             {
               "count": {

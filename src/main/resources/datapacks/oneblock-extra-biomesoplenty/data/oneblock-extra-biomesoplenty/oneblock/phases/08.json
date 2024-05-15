@@ -6,6 +6,21 @@
       "type": "block",
       "id": "biomesoplenty:hellbark_log",
       "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:porous_flesh",
+      "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:rose_quartz_block",
+      "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:brimstone",
+      "weight": 8
     }
   ]
 }

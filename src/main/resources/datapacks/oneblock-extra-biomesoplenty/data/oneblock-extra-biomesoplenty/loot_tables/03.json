@@ -13,7 +13,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:mahogany_sapling",
+          "name": "biomesoplenty:fir_sapling",
           "weight": 4,
           "functions": [
             {
@@ -34,7 +34,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:maple_sapling",
+          "name": "biomesoplenty:redwood_sapling",
           "weight": 4,
           "functions": [
             {
@@ -55,7 +55,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:yellow_autumn_sapling",
+          "name": "biomesoplenty:rainbow_birch_sapling",
           "weight": 4,
           "functions": [
             {
@@ -68,28 +68,7 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "biomesoplenty:orange_autumn_sapling",
-          "weight": 4,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
+                "max": 1
               },
               "function": "minecraft:set_count"
             }
@@ -99,7 +78,7 @@
     },
     {
       "rolls": {
-        "min": 1,
+        "min": 0,
         "max": 1
       },
       "bonus_rolls": {
@@ -109,7 +88,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:sprout",
+          "name": "biomesoplenty:toadstool",
           "weight": 4,
           "functions": [
             {
@@ -130,50 +109,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:goldenrod",
-          "weight": 6,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "biomesoplenty:bush",
-          "weight": 5,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "biomesoplenty:orange_cosmos",
-          "weight": 5,
+          "name": "biomesoplenty:violet",
+          "weight": 4,
           "functions": [
             {
               "count": {

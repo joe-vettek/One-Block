@@ -171,6 +171,21 @@ class SingleLootTableBuilder(LootTableBuilder):
         return self
 
 
+class MultiPoolLootTableBuilder(LootTableBuilder):
+    def __init__(self):
+        super().__init__()
+        self.pool_index = -1
+
+    def create_new_pool(self, rolls_min=2, rolls_max=3, bonus_rolls_min=0, bonus_rolls_max=1):
+        self.pool_index += 1
+        self.add_pool(
+            LootPoolBuilder(CountBuilder(rolls_min, rolls_max), CountBuilder(bonus_rolls_min, bonus_rolls_max)))
+
+    def add_entry(self, entry: PoolEntryBuilder):
+        self["pools"][self.pool_index]["entries"].append(entry)
+        return self
+
+
 class LootTableProvider(DataPackProvider):
     def get_location(self):
         return f"LootTableProvider {self.mod_id}"

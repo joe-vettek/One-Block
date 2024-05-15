@@ -13,70 +13,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:mahogany_sapling",
-          "weight": 4,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "biomesoplenty:maple_sapling",
-          "weight": 4,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "biomesoplenty:yellow_autumn_sapling",
-          "weight": 4,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "biomesoplenty:orange_autumn_sapling",
+          "name": "biomesoplenty:willow_sapling",
           "weight": 4,
           "functions": [
             {
@@ -100,7 +37,7 @@
     {
       "rolls": {
         "min": 1,
-        "max": 1
+        "max": 2
       },
       "bonus_rolls": {
         "min": 0,
@@ -109,7 +46,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:sprout",
+          "name": "biomesoplenty:waterlily",
           "weight": 4,
           "functions": [
             {
@@ -130,8 +67,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:goldenrod",
-          "weight": 6,
+          "name": "biomesoplenty:huge_lily_pad",
+          "weight": 4,
           "functions": [
             {
               "count": {
@@ -151,8 +88,8 @@
         },
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:bush",
-          "weight": 5,
+          "name": "biomesoplenty:reed",
+          "weight": 4,
           "functions": [
             {
               "count": {
@@ -172,8 +109,50 @@
         },
         {
           "type": "minecraft:item",
-          "name": "biomesoplenty:orange_cosmos",
-          "weight": 5,
+          "name": "biomesoplenty:pink_daffodil",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "biomesoplenty:cattail",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            },
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "biomesoplenty:willow_vine",
+          "weight": 2,
           "functions": [
             {
               "count": {

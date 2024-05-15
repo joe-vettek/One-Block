@@ -6,6 +6,16 @@
       "type": "block",
       "id": "biomesoplenty:jacaranda_log",
       "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:black_sand",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:black_sandstone",
+      "weight": 5
     }
   ]
 }

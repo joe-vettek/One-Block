@@ -6,6 +6,21 @@
       "type": "block",
       "id": "biomesoplenty:origin_grass_block",
       "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:glowing_moss_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:glowing_moss_block",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:spider_egg",
+      "weight": 1
     }
   ]
 }

@@ -6,6 +6,21 @@
       "type": "block",
       "id": "biomesoplenty:palm_log",
       "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:white_sand",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:white_sandstone",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "biomesoplenty:dried_salt",
+      "weight": 5
     }
   ]
 }
