@@ -185,15 +185,19 @@ public class StageManager extends SimpleJsonResourceReloadListener {
             }
         }
 
+        // add to config list
         oneBlockConfigHolder.setOrder(new ArrayList<>(oneBlockConfigHolder.getOrder()));
-        for (Map.Entry<String, List<OneBlockSubConfig.Sub>> stringListEntry : subStageMap.entrySet()) {
-            var varTemp = stringListEntry.getValue();
+        oneBlockConfigHolder.setStageLink(new LinkedHashMap<>());
+        for (Map.Entry<String, List<OneBlockSubConfig.Sub>> subEntry : subStageMap.entrySet()) {
+            var varTemp = subEntry.getValue();
             varTemp.sort(Comparator.comparing(
                     sub -> -sub.getPriority()
             ));
             oneBlockConfigHolder.getOrder()
-                    .addAll(1+oneBlockConfigHolder.getOrder().indexOf(stringListEntry.getKey()),
+                    .addAll(1+oneBlockConfigHolder.getOrder().indexOf(subEntry.getKey()),
                             varTemp.stream().map(OneBlockSubConfig.Sub::getId).toList());
+            varTemp.forEach(sub ->
+                    oneBlockConfigHolder.getStageLink().put(sub.getId(),sub.getTarget()));
         }
 
 
@@ -209,7 +213,9 @@ public class StageManager extends SimpleJsonResourceReloadListener {
         // add additional target
         for (StageData additionalStage : additionalStageDataList) {
             for (StageData stage : STAGE_DATA_LIST) {
-                if (stage.getResourceLocation().toString().equals(additionalStage.getTarget())) {
+                if (stage.getResourceLocation().toString().equals(additionalStage.getTarget())
+                ||oneBlockConfigHolder.matchSubWithAddition(stage.getResourceLocation().toString(),additionalStage.getTarget())
+                ) {
                     for (StageData.BlockEntry subEntry : additionalStage.getList()) {
                         subEntry.setFrom(additionalStage.getResourceLocation());
                     }

@@ -1,6 +1,7 @@
 import json
 import os
 import time
+from typing import List
 
 
 def save_json(path, js, make_dirs=False, replace_anyway=False):
@@ -35,16 +36,31 @@ def get_json(path):
         return json.load(f)
 
 
+def get_multi_json(path):
+    file_text = get_text(path).strip()
+    try:
+        if len(file_text) > 0:
+            return [json.loads(i) for i in file_text.split('\n')]
+        return []
+    except:
+        print(path)
+        pass
+
+
 def copy_json(js):
     return json.loads(json.dumps(js))
 
 
-def stanard_path(path):
+def standard_path(path):
     return os.path.realpath(os.path.normpath(path))
 
 
+def get_file_name(path):
+    return os.path.basename(path).split(".")[0]
+
+
 def readDir(dirPath, filter=None):
-    dirPath = stanard_path(dirPath)
+    dirPath = standard_path(dirPath)
     allFiles = []
     __readDir__(dirPath, allFiles)
     return allFiles if filter is None else [i for i in allFiles if i.endswith(filter) or i.endswith(filter.upper())]
@@ -130,3 +146,15 @@ def test_time(func):
         return result
 
     return wrapper
+
+
+class TagEntry:
+    def __init__(self, id: str, tags: List[str] = None):
+        self.id = id
+        self.tags = tags
+
+    def __str__(self):
+        return f"{self.id}"
+
+    def __repr__(self):
+        return f"{self.id}"

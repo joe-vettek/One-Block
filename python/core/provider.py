@@ -21,7 +21,7 @@ class AbstractProvider:
         print(f"Now run in {self.get_location()}")
         for p in self.table:
             util.save_json(p, self.table[p], make_dirs=True)
-            use_path.append(util.stanard_path(p))
+            use_path.append(util.standard_path(p))
 
     def add(self, path, d: dict):
         self.table[path] = d
