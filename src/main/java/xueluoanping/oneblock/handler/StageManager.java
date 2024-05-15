@@ -194,10 +194,10 @@ public class StageManager extends SimpleJsonResourceReloadListener {
                     sub -> -sub.getPriority()
             ));
             oneBlockConfigHolder.getOrder()
-                    .addAll(1+oneBlockConfigHolder.getOrder().indexOf(subEntry.getKey()),
+                    .addAll(1 + oneBlockConfigHolder.getOrder().indexOf(subEntry.getKey()),
                             varTemp.stream().map(OneBlockSubConfig.Sub::getId).toList());
             varTemp.forEach(sub ->
-                    oneBlockConfigHolder.getStageLink().put(sub.getId(),sub.getTarget()));
+                    oneBlockConfigHolder.getStageLink().put(sub.getId(), sub.getTarget()));
         }
 
 
@@ -213,15 +213,17 @@ public class StageManager extends SimpleJsonResourceReloadListener {
         // add additional target
         for (StageData additionalStage : additionalStageDataList) {
             for (StageData stage : STAGE_DATA_LIST) {
-                if (stage.getResourceLocation().toString().equals(additionalStage.getTarget())
-                ||oneBlockConfigHolder.matchSubWithAddition(stage.getResourceLocation().toString(),additionalStage.getTarget())
-                ) {
-                    for (StageData.BlockEntry subEntry : additionalStage.getList()) {
-                        subEntry.setFrom(additionalStage.getResourceLocation());
+                if (!stage.isDisable_addition()) {
+                    if (stage.getResourceLocation().toString().equals(additionalStage.getTarget())
+                            || oneBlockConfigHolder.matchSubWithAddition(stage.getResourceLocation().toString(), additionalStage.getTarget())
+                    ) {
+                        for (StageData.BlockEntry subEntry : additionalStage.getList()) {
+                            subEntry.setFrom(additionalStage.getResourceLocation());
+                        }
+                        stage.setCount(stage.getCount() + additionalStage.getAdd_count());
+                        stage.getList().addAll(additionalStage.getList());
+                        break;
                     }
-                    stage.setCount(stage.getCount() + additionalStage.getAdd_count());
-                    stage.getList().addAll(additionalStage.getList());
-                    break;
                 }
             }
         }

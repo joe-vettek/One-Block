@@ -30,6 +30,8 @@ public class StageData {
     // if you want to set
     private int bedrock_time;
 
+    private boolean disable_addition;
+
 
 
     @Override
@@ -125,6 +127,14 @@ public class StageData {
 
     public void setBedrock_time(int bedrock_time) {
         this.bedrock_time = bedrock_time;
+    }
+
+    public boolean isDisable_addition() {
+        return disable_addition;
+    }
+
+    public void setDisable_addition(boolean disable_addition) {
+        this.disable_addition = disable_addition;
     }
 
     public BlockEntry selectRandomByWeight(RandomSource random, StageProgress nowProgress, boolean reachRemain, int localCount) {

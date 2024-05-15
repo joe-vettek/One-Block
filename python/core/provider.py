@@ -321,10 +321,14 @@ class PhaseTableBuilder(dict):
         self.resort_list()
         return self
 
+    def set_disable_addition(self, disable_addition):
+        self["disable_addition"] = disable_addition
+        self.resort_list()
+        return self
+
     def set_add_count(self, add_count: int):
         self["add_count"] = add_count
         self.resort_list()
-
         return self
 
     def set_bedrock_time(self, bedrock_time: int):
