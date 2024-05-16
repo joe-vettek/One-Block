@@ -1,0 +1,10 @@
+{
+  "type": "oneblock:add_loot_table",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "ija-one-block:07"
+    }
+  ],
+  "lootTable": "oneblock-extra-betternether:08"
+}

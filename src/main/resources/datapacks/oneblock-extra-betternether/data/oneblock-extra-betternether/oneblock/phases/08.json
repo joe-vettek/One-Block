@@ -1,0 +1,128 @@
+{
+  "name": "",
+  "target": "oneblock:phases/08",
+  "add_count": 100,
+  "list": [
+    {
+      "type": "block",
+      "id": "betternether:anchor_tree_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:mushroom_fir_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:nether_sakura_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:rubeus_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:stalagnate_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:wart_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:willow_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:sepia_bone_grass",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:cincinnasite_ore",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:nether_ruby_ore",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:netherrack_moss",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:nether_mycelium",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:jungle_grass",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:mushroom_grass",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:sepia_mushroom_grass",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:swampland_grass",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "betternether:ceiling_mushrooms",
+      "weight": 5
+    },
+    {
+      "type": "mob",
+      "id": "betternether:firefly",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "betternether:naga",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "betternether:skull",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "betternether:flying_pig",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "betternether:hydrogen_jellyfish",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "betternether:jungle_skeleton",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}
