@@ -1,0 +1,22 @@
+{
+  "name": "",
+  "target": "oneblock:phases/10",
+  "list": [
+    {
+      "type": "block",
+      "id": "bloomingnature:chestnut_log",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "bloomingnature:travertin",
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "bloomingnature:squirrel",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

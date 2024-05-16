@@ -3,6 +3,11 @@
   "target": "oneblock:phases/06",
   "list": [
     {
+      "type": "block",
+      "id": "bloomingnature:forest_moss",
+      "weight": 5
+    },
+    {
       "type": "mob",
       "id": "bloomingnature:red_wolf",
       "count": 1,

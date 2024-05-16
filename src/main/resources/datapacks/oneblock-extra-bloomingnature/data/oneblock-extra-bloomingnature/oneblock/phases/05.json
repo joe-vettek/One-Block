@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "block",
+      "id": "bloomingnature:fan_palm_log",
+      "weight": 5
+    }
+  ]
+}

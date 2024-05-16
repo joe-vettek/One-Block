@@ -1,0 +1,113 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bloomingnature:ebony_sapling",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bloomingnature:swamp_cypress_sapling",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bloomingnature:swamp_oak_sapling",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bloomingnature:cardinal",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bloomingnature:reed",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bloomingnature:cattail",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

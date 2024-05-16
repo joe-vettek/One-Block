@@ -3,6 +3,26 @@
   "target": "oneblock:phases/04",
   "list": [
     {
+      "type": "block",
+      "id": "bloomingnature:ebony_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "bloomingnature:swamp_oak_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "bloomingnature:swamp_cypress_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "bloomingnature:marsh_block",
+      "weight": 5
+    },
+    {
       "type": "mob",
       "id": "bloomingnature:pelican",
       "count": 1,

@@ -3,10 +3,32 @@
   "target": "oneblock:phases/07",
   "list": [
     {
+      "type": "block",
+      "id": "bloomingnature:baobab_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "bloomingnature:quicksand",
+      "weight": 4
+    },
+    {
       "type": "mob",
       "id": "bloomingnature:wandering_gardener",
       "count": 1,
       "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "bloomingnature:termite",
+      "count": 1,
+      "weight": 2,
+      "preprocessing": [
+        {
+          "type": "block",
+          "id": "bloomingnature:termite_mound"
+        }
+      ]
     },
     {
       "type": "mob",

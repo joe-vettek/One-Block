@@ -1,0 +1,59 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "bloomingnature:fir_sapling",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bloomingnature:larch_sapling",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "bloomingnature:aspen_sapling",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
