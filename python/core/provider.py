@@ -122,6 +122,17 @@ class PoolEntryBuilder(dict):
         return self
 
 
+class SimplePoolEntryBuilder(PoolEntryBuilder):
+    def __init__(self, name: str, weight: int = 6):
+        super().__init__(name, weight, False)
+
+
+class CountPoolEntryBuilder(PoolEntryBuilder):
+    def __init__(self, name: str, weight: int = 6, min=1, max=2):
+        super().__init__(name, weight, False)
+        self.add_count_function(min,max)
+
+
 class LootPoolBuilder(dict):
     def __init__(self, rolls: CountBuilder = None, bonus_rolls: CountBuilder = None):
         super().__init__()
@@ -316,7 +327,7 @@ class PhaseTableBuilder(dict):
         self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_BLOCK, id_c=block_id, weight=weight))
         return self
 
-    def add_mob(self, mob_id: str, weight: int, count: int):
+    def add_mob(self, mob_id: str, weight: int, count=1):
         self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_MOB, id_c=mob_id, weight=weight, count=count))
         return self
 

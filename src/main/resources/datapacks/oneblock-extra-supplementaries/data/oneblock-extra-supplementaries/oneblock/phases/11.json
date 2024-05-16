@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "target": "oneblock:phases/11",
+  "list": [
+    {
+      "type": "mob",
+      "id": "supplementaries:red_merchant",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}
