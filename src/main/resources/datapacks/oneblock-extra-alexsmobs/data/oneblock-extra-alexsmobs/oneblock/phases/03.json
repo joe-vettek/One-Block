@@ -1,0 +1,30 @@
+{
+  "name": "",
+  "target": "oneblock:phases/03",
+  "list": [
+    {
+      "type": "mob",
+      "id": "alexsmobs:tusklin",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:froststalker",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:moose",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:snow_leopard",
+      "count": 1,
+      "weight": 1
+    }
+  ]
+}

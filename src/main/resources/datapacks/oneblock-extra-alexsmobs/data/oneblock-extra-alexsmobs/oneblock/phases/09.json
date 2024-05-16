@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "target": "oneblock:phases/09",
+  "list": [
+    {
+      "type": "mob",
+      "id": "alexsmobs:crow",
+      "count": 1,
+      "weight": 1
+    }
+  ]
+}

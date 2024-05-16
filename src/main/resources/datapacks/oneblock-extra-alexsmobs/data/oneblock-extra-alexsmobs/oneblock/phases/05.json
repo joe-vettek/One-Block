@@ -1,0 +1,90 @@
+{
+  "name": "",
+  "target": "oneblock:phases/05",
+  "list": [
+    {
+      "type": "mob",
+      "id": "alexsmobs:orca",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:seal",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:cachalot_whale",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:hammerhead_shark",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:blobfish",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:frilled_shark",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:comb_jelly",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:flying_fish",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:mimic_octopus",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:giant_squid",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:lobster",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:mantis_shrimp",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:skelewag",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:seagull",
+      "count": 1,
+      "weight": 1
+    }
+  ]
+}

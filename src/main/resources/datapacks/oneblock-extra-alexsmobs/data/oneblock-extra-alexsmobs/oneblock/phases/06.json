@@ -1,0 +1,102 @@
+{
+  "name": "",
+  "target": "oneblock:phases/06",
+  "list": [
+    {
+      "type": "mob",
+      "id": "alexsmobs:banana_slug",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:leafcutter_ant",
+      "count": 1,
+      "weight": 2,
+      "preprocessing": [
+        {
+          "type": "block",
+          "id": "alexsmobs:leafcutter_anthill"
+        }
+      ]
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:toucan",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:blue_jay",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:potoo",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:hummingbird",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:grizzly_bear",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:gorilla",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:capuchin_monkey",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:tasmanian_devil",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:tiger",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:anteater",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:bison",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:sugar_glider",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:skunk",
+      "count": 1,
+      "weight": 1
+    }
+  ]
+}

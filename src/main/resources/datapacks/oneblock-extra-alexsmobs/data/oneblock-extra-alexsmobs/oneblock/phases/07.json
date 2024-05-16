@@ -1,0 +1,84 @@
+{
+  "name": "",
+  "target": "oneblock:phases/07",
+  "list": [
+    {
+      "type": "mob",
+      "id": "alexsmobs:guster",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:tarantula_hawk",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:triops",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:rattlesnake",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:roadrunner",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:emu",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:gazelle",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:elephant",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:kangaroo",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:maned_wolf",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:gelada_monkey",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:jerboa",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:rhinoceros",
+      "count": 1,
+      "weight": 1
+    }
+  ]
+}

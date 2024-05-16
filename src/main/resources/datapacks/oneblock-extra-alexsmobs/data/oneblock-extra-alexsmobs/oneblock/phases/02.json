@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "target": "oneblock:phases/02",
+  "list": [
+    {
+      "type": "mob",
+      "id": "alexsmobs:cockroach",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "name": "",
+  "target": "oneblock:phases/08",
+  "list": [
+    {
+      "type": "mob",
+      "id": "alexsmobs:bone_serpent",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:crimson_mosquito",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:warped_toad",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:soul_vulture",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:dropbear",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:straddler",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:stradpole",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:warped_mosco",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:laviathan",
+      "count": 1,
+      "weight": 1
+    }
+  ]
+}

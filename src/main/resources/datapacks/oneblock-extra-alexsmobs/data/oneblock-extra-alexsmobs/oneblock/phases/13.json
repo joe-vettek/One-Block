@@ -1,0 +1,42 @@
+{
+  "name": "",
+  "target": "oneblock:phases/13",
+  "list": [
+    {
+      "type": "mob",
+      "id": "alexsmobs:endergrade",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:mimicube",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:spectre",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:enderiophage",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:cosmaw",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "alexsmobs:cosmic_cod",
+      "count": 1,
+      "weight": 1
+    }
+  ]
+}
