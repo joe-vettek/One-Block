@@ -20,7 +20,7 @@ run_list.append(loot_provider)
 
 # 10
 loot10 = SingleLootTableBuilder()
-loot10.add_entry(PoolEntryBuilder(fruitfulfun.blocks.tangerine_sapling, weight=6).add_count_function(2, 4))
-loot10.add_entry(PoolEntryBuilder(fruitfulfun.blocks.lime_sapling, weight=6).add_count_function(2, 4))
-loot10.add_entry(PoolEntryBuilder(fruitfulfun.blocks.citron_sapling, weight=6).add_count_function(2, 4))
+loot10.add_entry(SimplePoolEntryBuilder(fruitfulfun.blocks.tangerine_sapling, weight=6).add_count_function(2, 4))
+loot10.add_entry(SimplePoolEntryBuilder(fruitfulfun.blocks.lime_sapling, weight=6).add_count_function(2, 4))
+loot10.add_entry(SimplePoolEntryBuilder(fruitfulfun.blocks.citron_sapling, weight=6).add_count_function(2, 4))
 loot_provider.add_modified_loot(target=[constant.STAGE_TRAVEL.stage_gift], table_id="10", table= loot10)

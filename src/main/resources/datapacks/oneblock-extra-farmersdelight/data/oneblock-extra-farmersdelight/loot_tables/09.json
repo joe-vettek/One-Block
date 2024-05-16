@@ -22,13 +22,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -37,13 +30,6 @@
           "name": "farmersdelight:wild_onions",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,

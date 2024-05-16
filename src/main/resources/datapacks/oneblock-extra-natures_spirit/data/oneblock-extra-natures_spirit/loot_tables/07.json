@@ -3,8 +3,8 @@
   "pools": [
     {
       "rolls": {
-        "min": 2,
-        "max": 3
+        "min": 1,
+        "max": 2
       },
       "bonus_rolls": {
         "min": 0,
@@ -16,13 +16,6 @@
           "name": "natures_spirit:marigold",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -39,13 +32,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -58,13 +44,6 @@
           "name": "natures_spirit:saxaul_sapling",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -81,13 +60,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -100,13 +72,6 @@
           "name": "natures_spirit:ghaf_sapling",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -123,13 +88,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -142,13 +100,6 @@
           "name": "natures_spirit:yellow_maple_sapling",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -165,13 +116,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -184,13 +128,6 @@
           "name": "natures_spirit:joshua_sapling",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,

@@ -23,5 +23,5 @@ run_list.append(loot_provider)
 
 # 05
 loot05 = SingleLootTableBuilder()
-loot05.add_entry(PoolEntryBuilder(beachparty.blocks.palm_sapling, weight=6).add_count_function(2, 4))
+loot05.add_entry(SimplePoolEntryBuilder(beachparty.blocks.palm_sapling, weight=6).add_count_function(2, 4))
 loot_provider.add_modified_loot(target=[constant.STAGE_OCEAN.stage_gift], table_id="05", table= loot05)

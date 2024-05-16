@@ -18,13 +18,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 3
               },
@@ -43,13 +36,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -58,13 +44,6 @@
           "name": "minecraft:salmon",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -81,13 +60,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 0,
                 "max": 1
               },
@@ -102,13 +74,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 3
               },
@@ -121,13 +86,6 @@
           "name": "minecraft:seagrass",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,

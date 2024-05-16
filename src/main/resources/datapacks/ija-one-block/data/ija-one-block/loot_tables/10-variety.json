@@ -19,13 +19,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -40,13 +33,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -58,13 +44,6 @@
           "name": "minecraft:wheat_seeds",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -85,13 +64,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -100,13 +72,6 @@
           "name": "minecraft:oak_sapling",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -124,13 +89,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -142,13 +100,6 @@
           "name": "minecraft:wheat_seeds",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -163,13 +114,6 @@
           "name": "minecraft:leather",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -190,13 +134,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -205,13 +142,6 @@
           "name": "minecraft:pumpkin_seeds",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -229,13 +159,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -247,13 +170,6 @@
           "name": "minecraft:sweet_berries",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -271,13 +187,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -292,13 +201,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -310,13 +212,6 @@
           "name": "minecraft:feather",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -337,13 +232,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -352,13 +240,6 @@
           "name": "minecraft:leather",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -379,13 +260,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -394,13 +268,6 @@
           "name": "minecraft:coal",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -421,13 +288,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -436,13 +296,6 @@
           "name": "minecraft:brown_mushroom",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -459,13 +312,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -478,13 +324,6 @@
           "name": "minecraft:bone",
           "weight": 5,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -501,13 +340,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 3,
                 "max": 5
               },
@@ -520,13 +352,6 @@
           "name": "minecraft:rabbit_hide",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -547,13 +372,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -562,13 +380,6 @@
           "name": "minecraft:iron_ingot",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -589,13 +400,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -604,13 +408,6 @@
           "name": "minecraft:gold_ingot",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -631,13 +428,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -646,13 +436,6 @@
           "name": "minecraft:blue_ice",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -673,13 +456,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -688,13 +464,6 @@
           "name": "minecraft:prismarine_shard",
           "weight": 5,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -709,13 +478,6 @@
           "name": "minecraft:prismarine_crystals",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -736,13 +498,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -751,13 +506,6 @@
           "name": "minecraft:ink_sac",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -774,13 +522,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 3
               },
@@ -793,13 +534,6 @@
           "name": "minecraft:seagrass",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -816,13 +550,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -835,13 +562,6 @@
           "name": "minecraft:dried_kelp",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -862,13 +582,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -877,13 +590,6 @@
           "name": "minecraft:tube_coral",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -904,13 +610,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -919,13 +618,6 @@
           "name": "minecraft:horn_coral",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -946,13 +638,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -961,13 +646,6 @@
           "name": "minecraft:bubble_coral_fan",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -988,13 +666,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1003,13 +674,6 @@
           "name": "minecraft:fire_coral",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1030,13 +694,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1045,13 +702,6 @@
           "name": "minecraft:brain_coral",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1072,13 +722,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1087,13 +730,6 @@
           "name": "minecraft:nautilus_shell",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1111,13 +747,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -1129,13 +758,6 @@
           "name": "minecraft:trident",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1153,13 +775,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -1174,13 +789,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -1192,13 +800,6 @@
           "name": "minecraft:lapis_lazuli",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1219,13 +820,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1240,13 +834,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1255,13 +842,6 @@
           "name": "minecraft:coal",
           "weight": 5,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1279,13 +859,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -1297,13 +870,6 @@
           "name": "minecraft:bamboo",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1320,13 +886,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 3
               },
@@ -1341,13 +900,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -1360,13 +912,6 @@
           "name": "minecraft:bone_meal",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1384,13 +929,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -1402,13 +940,6 @@
           "name": "minecraft:paper",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1426,13 +957,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -1444,13 +968,6 @@
           "name": "minecraft:lead",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1467,13 +984,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -1486,13 +996,6 @@
           "name": "minecraft:bone",
           "weight": 7,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1509,13 +1012,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 3
               },
@@ -1528,13 +1024,6 @@
           "name": "minecraft:redstone",
           "weight": 5,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1555,13 +1044,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1576,13 +1058,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1591,13 +1066,6 @@
           "name": "minecraft:cactus",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1615,13 +1083,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -1636,13 +1097,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -1654,13 +1108,6 @@
           "name": "minecraft:quartz",
           "weight": 5,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1678,13 +1125,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -1696,13 +1136,6 @@
           "name": "minecraft:twisting_vines",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1719,13 +1152,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 3
               },
@@ -1738,13 +1164,6 @@
           "name": "minecraft:lava_bucket",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1765,13 +1184,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1780,13 +1192,6 @@
           "name": "minecraft:blaze_rod",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1807,13 +1212,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1822,13 +1220,6 @@
           "name": "minecraft:blaze_powder",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1849,13 +1240,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1864,13 +1248,6 @@
           "name": "minecraft:nether_wart",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1891,13 +1268,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1906,13 +1276,6 @@
           "name": "minecraft:wither_skeleton_skull",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1927,13 +1290,6 @@
           "name": "minecraft:honey_bottle",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -1954,13 +1310,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -1969,13 +1318,6 @@
           "name": "minecraft:beetroot_seeds",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -1996,13 +1338,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -2011,13 +1346,6 @@
           "name": "minecraft:slime_ball",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -2035,13 +1363,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -2056,13 +1377,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -2074,13 +1388,6 @@
           "name": "minecraft:experience_bottle",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -2098,13 +1405,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -2116,13 +1416,6 @@
           "name": "minecraft:cake",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -2140,13 +1433,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -2158,13 +1444,6 @@
           "name": "minecraft:name_tag",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -2182,13 +1461,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -2200,13 +1472,6 @@
           "name": "minecraft:leather_horse_armor",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -2224,13 +1489,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -2242,13 +1500,6 @@
           "name": "minecraft:rotten_flesh",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -2265,13 +1516,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -2284,13 +1528,6 @@
           "name": "minecraft:dead_bush",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -2307,13 +1544,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 3
               },
@@ -2326,13 +1556,6 @@
           "name": "minecraft:poisonous_potato",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -2349,13 +1572,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 3,
                 "max": 4
               },
@@ -2368,13 +1584,6 @@
           "name": "minecraft:emerald",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -2395,13 +1604,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -2410,13 +1612,6 @@
           "name": "minecraft:spectral_arrow",
           "weight": 7,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 3,
@@ -2433,13 +1628,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -2452,13 +1640,6 @@
           "name": "minecraft:ender_pearl",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -2475,13 +1656,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -2494,13 +1668,6 @@
           "name": "minecraft:ender_eye",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -2521,13 +1688,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -2536,13 +1696,6 @@
           "name": "minecraft:diamond",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -2557,13 +1710,6 @@
           "name": "minecraft:dragon_breath",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,

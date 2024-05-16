@@ -3,8 +3,8 @@
   "pools": [
     {
       "rolls": {
-        "min": 2,
-        "max": 3
+        "min": 1,
+        "max": 2
       },
       "bonus_rolls": {
         "min": 0,
@@ -16,13 +16,6 @@
           "name": "natures_spirit:willow_sapling",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -43,13 +36,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -58,13 +44,6 @@
           "name": "natures_spirit:blue_wisteria_sapling",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -85,13 +64,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -100,13 +72,6 @@
           "name": "natures_spirit:purple_wisteria_sapling",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -127,13 +92,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -148,13 +106,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -163,13 +114,6 @@
           "name": "natures_spirit:lotus_stem",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,

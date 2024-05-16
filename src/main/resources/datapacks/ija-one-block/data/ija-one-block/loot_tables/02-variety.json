@@ -19,13 +19,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 3
               },
               "function": "minecraft:set_count"
@@ -40,13 +33,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -58,13 +44,6 @@
           "name": "minecraft:wheat_seeds",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -85,13 +64,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -100,13 +72,6 @@
           "name": "minecraft:oak_sapling",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -124,13 +89,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -142,13 +100,6 @@
           "name": "minecraft:wheat_seeds",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -163,13 +114,6 @@
           "name": "minecraft:leather",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -190,13 +134,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -205,13 +142,6 @@
           "name": "minecraft:pumpkin_seeds",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -229,13 +159,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -247,13 +170,6 @@
           "name": "minecraft:sweet_berries",
           "weight": 1,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -271,13 +187,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -292,13 +201,6 @@
             {
               "count": {
                 "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
                 "max": 1
               },
               "function": "minecraft:set_count"
@@ -310,13 +212,6 @@
           "name": "minecraft:feather",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -337,13 +232,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -352,13 +240,6 @@
           "name": "minecraft:leather",
           "weight": 4,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,
@@ -379,13 +260,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -394,13 +268,6 @@
           "name": "minecraft:coal",
           "weight": 3,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -421,13 +288,6 @@
                 "max": 2
               },
               "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
             }
           ]
         },
@@ -436,13 +296,6 @@
           "name": "minecraft:brown_mushroom",
           "weight": 2,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 1,

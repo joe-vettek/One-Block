@@ -18,13 +18,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -37,13 +30,6 @@
           "name": "betterend:lucernia_sapling",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -60,13 +46,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -79,13 +58,6 @@
           "name": "betterend:pythadendron_sapling",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -102,13 +74,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -121,13 +86,6 @@
           "name": "betterend:helix_tree_sapling",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,
@@ -144,13 +102,6 @@
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
                 "min": 2,
                 "max": 4
               },
@@ -163,13 +114,6 @@
           "name": "betterend:umbrella_tree_sapling",
           "weight": 6,
           "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            },
             {
               "count": {
                 "min": 2,

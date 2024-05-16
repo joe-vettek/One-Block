@@ -21,7 +21,7 @@ run_list.append(loot_provider)
 # 06
 loot06 = SingleLootTableBuilder(1, 1)
 loot06.add_entry(
-    PoolEntryBuilder(supplementaries.blocks.flax_seeds, weight=6, use_default_functions=False)
+    SimplePoolEntryBuilder(supplementaries.blocks.flax_seeds, weight=6)
     .add_count_function(1, 2))
 loot_provider.add_modified_loot(target=[constant.STAGE_FOREST.stage_gift,constant.STAGE_ISOLATED.stage_gift],
                                 table_id=constant.STAGE_FOREST.id, table=loot06)
