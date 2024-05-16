@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "target": "oneblock:phases/05",
+  "list": [
+    {
+      "type": "block",
+      "id": "ecologics:coconut_log",
+      "weight": 10
+    },
+    {
+      "type": "mob",
+      "id": "ecologics:coconut_crab",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/12",
+  "list": [
+    {
+      "type": "block",
+      "id": "ecologics:azalea_log",
+      "weight": 4
+    }
+  ]
+}

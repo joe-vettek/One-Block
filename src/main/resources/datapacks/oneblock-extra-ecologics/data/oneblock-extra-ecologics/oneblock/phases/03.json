@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "target": "oneblock:phases/03",
+  "list": [
+    {
+      "type": "block",
+      "id": "ecologics:thin_ice",
+      "weight": 5
+    },
+    {
+      "type": "mob",
+      "id": "ecologics:penguin",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

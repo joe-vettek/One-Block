@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "target": "oneblock:phases/06",
+  "list": [
+    {
+      "type": "mob",
+      "id": "ecologics:squirrel",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}
