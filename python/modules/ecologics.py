@@ -33,14 +33,6 @@ stage09 = SubPhaseTableBuilder(target=constant.STAGE_VILLAGE.get_phase_id())
 stage09.add_block(ecologics.blocks.walnut_log, 5)
 sub_provider.add_phase("09", stage09)
 
-# 10
-stage10 = SubPhaseTableBuilder(target=constant.STAGE_TRAVEL.get_phase_id())
-sub_provider.add_phase("10", stage10)
-
-# 11
-stage11 = SubPhaseTableBuilder(target=constant.STAGE_ISOLATED.get_phase_id())
-sub_provider.add_phase("11", stage11)
-
 # 12
 stage12 = SubPhaseTableBuilder(target=constant.STAGE_DEPTH.get_phase_id())
 stage12.add_block(ecologics.blocks.azalea_log, 4)

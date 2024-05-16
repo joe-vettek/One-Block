@@ -1,0 +1,33 @@
+{
+  "name": "",
+  "target": "oneblock:phases/10",
+  "list": [
+    {
+      "type": "block",
+      "id": "meadow:limestone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "meadow:mossy_cobbled_limestone",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "meadow:pine_log",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "meadow:wooly_cow",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "meadow:water_buffalo",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}
