@@ -1226,7 +1226,3 @@ class Entity(Collections):
 items = Item()
 blocks = Block()
 entities = Entity()
-
-cc=[i for i in blocks.dir() if "log" in i and not "stripped"]
-for c in cc:
-    print(f'stage08.add_block(betternether.blocks.{c}, 5)')

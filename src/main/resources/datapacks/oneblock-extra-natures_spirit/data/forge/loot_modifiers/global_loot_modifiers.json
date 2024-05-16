@@ -3,9 +3,12 @@
     "oneblock-extra-natures_spirit:add_loot_from_03",
     "oneblock-extra-natures_spirit:add_loot_from_04",
     "oneblock-extra-natures_spirit:add_loot_from_05",
+    "oneblock-extra-natures_spirit:add_loot_from_06",
     "oneblock-extra-natures_spirit:add_loot_from_07",
+    "oneblock-extra-natures_spirit:add_loot_from_09",
     "oneblock-extra-natures_spirit:add_loot_from_10",
-    "oneblock-extra-natures_spirit:add_loot_from_11"
+    "oneblock-extra-natures_spirit:add_loot_from_11",
+    "oneblock-extra-natures_spirit:add_loot_from_oneblock:12"
   ],
   "replace": false
 }

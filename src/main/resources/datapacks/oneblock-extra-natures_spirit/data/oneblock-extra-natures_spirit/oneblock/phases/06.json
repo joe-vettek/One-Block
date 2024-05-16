@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/06",
+  "list": [
+    {
+      "type": "block",
+      "id": "natures_spirit:shiitake_mushroom_block",
+      "weight": 2
+    }
+  ]
+}

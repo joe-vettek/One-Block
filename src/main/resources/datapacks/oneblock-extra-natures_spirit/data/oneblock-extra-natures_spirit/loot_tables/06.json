@@ -13,7 +13,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:sugi_sapling",
+          "name": "natures_spirit:shiitake_mushroom",
           "weight": 6,
           "functions": [
             {
@@ -24,28 +24,16 @@
               "function": "minecraft:set_count"
             }
           ]
-        }
-      ]
-    },
-    {
-      "rolls": {
-        "min": 1,
-        "max": 2
-      },
-      "bonus_rolls": {
-        "min": 0,
-        "max": 1
-      },
-      "entries": [
+        },
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:bluebell",
+          "name": "natures_spirit:tiger_lily",
           "weight": 6,
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
+                "min": 2,
+                "max": 4
               },
               "function": "minecraft:set_count"
             }
@@ -53,13 +41,13 @@
         },
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:anemone",
+          "name": "natures_spirit:blue_iris",
           "weight": 6,
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
+                "min": 2,
+                "max": 4
               },
               "function": "minecraft:set_count"
             }
@@ -67,13 +55,13 @@
         },
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:tall_oat_grass",
+          "name": "natures_spirit:black_iris",
           "weight": 6,
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
+                "min": 2,
+                "max": 4
               },
               "function": "minecraft:set_count"
             }
@@ -81,13 +69,13 @@
         },
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:oat_grass",
+          "name": "natures_spirit:red_heather",
           "weight": 6,
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
+                "min": 2,
+                "max": 4
               },
               "function": "minecraft:set_count"
             }
@@ -95,13 +83,13 @@
         },
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:tall_melic_grass",
+          "name": "natures_spirit:white_heather",
           "weight": 6,
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
+                "min": 2,
+                "max": 4
               },
               "function": "minecraft:set_count"
             }
@@ -109,13 +97,13 @@
         },
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:melic_grass",
+          "name": "natures_spirit:purple_heather",
           "weight": 6,
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
+                "min": 2,
+                "max": 4
               },
               "function": "minecraft:set_count"
             }
@@ -123,13 +111,13 @@
         },
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:lavender",
+          "name": "natures_spirit:large_flaxen_fern",
           "weight": 6,
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
+                "min": 2,
+                "max": 4
               },
               "function": "minecraft:set_count"
             }
@@ -137,13 +125,55 @@
         },
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:foxglove",
+          "name": "natures_spirit:large_lush_fern",
           "weight": 6,
           "functions": [
             {
               "count": {
-                "min": 1,
-                "max": 2
+                "min": 2,
+                "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:flaxen_fern",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:lush_fern",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:snapdragon",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 4
               },
               "function": "minecraft:set_count"
             }

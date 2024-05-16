@@ -11,6 +11,91 @@
       "type": "block",
       "id": "natures_spirit:wisteria_log",
       "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:black_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:blue_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:brown_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:cyan_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:gray_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:green_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:light_blue_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:light_gray_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:lime_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:magenta_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:orange_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:pink_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:purple_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:red_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:white_kaolin",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:yellow_kaolin",
+      "weight": 2
     }
   ]
 }

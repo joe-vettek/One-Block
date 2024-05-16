@@ -34,6 +34,16 @@
     },
     {
       "type": "block",
+      "id": "natures_spirit:desert_turnip_root_block",
+      "weight": 1
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:desert_turnip_root_block",
+      "weight": 2
+    },
+    {
+      "type": "block",
       "id": "natures_spirit:sandy_soil",
       "weight": 5
     },
@@ -51,6 +61,91 @@
       "type": "block",
       "id": "natures_spirit:chert",
       "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:cyan_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:black_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:blue_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:brown_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:cyan_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:gray_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:green_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:light_blue_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:light_gray_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:lime_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:magenta_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:orange_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:pink_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:purple_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:red_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:white_chalk",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "natures_spirit:yellow_chalk",
+      "weight": 2
     }
   ]
 }

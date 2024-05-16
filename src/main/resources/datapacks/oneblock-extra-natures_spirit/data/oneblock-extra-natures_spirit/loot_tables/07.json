@@ -13,20 +13,6 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "natures_spirit:marigold",
-          "weight": 6,
-          "functions": [
-            {
-              "count": {
-                "min": 2,
-                "max": 4
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "name": "natures_spirit:red_maple_sapling",
           "weight": 6,
           "functions": [
@@ -132,6 +118,158 @@
               "count": {
                 "min": 2,
                 "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:marigold",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 3
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:desert_turnip",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:protea",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:ornate_succulent",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:drowsy_succulent",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:aureate_succulent",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:sage_succulent",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:foamy_succulent",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:imperial_succulent",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "natures_spirit:regal_succulent",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 2
               },
               "function": "minecraft:set_count"
             }
