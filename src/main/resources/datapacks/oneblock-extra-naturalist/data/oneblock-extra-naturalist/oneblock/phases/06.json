@@ -1,0 +1,54 @@
+{
+  "name": "",
+  "target": "oneblock:phases/06",
+  "list": [
+    {
+      "type": "mob",
+      "id": "naturalist:snail",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:bear",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:snake",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:deer",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:butterfly",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:caterpillar",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:canary",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:bluejay",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

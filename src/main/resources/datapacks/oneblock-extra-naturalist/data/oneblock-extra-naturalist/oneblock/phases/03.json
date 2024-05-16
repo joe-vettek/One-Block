@@ -1,0 +1,12 @@
+{
+  "name": "",
+  "target": "oneblock:phases/03",
+  "list": [
+    {
+      "type": "mob",
+      "id": "naturalist:robin",
+      "count": 1,
+      "weight": 1
+    }
+  ]
+}

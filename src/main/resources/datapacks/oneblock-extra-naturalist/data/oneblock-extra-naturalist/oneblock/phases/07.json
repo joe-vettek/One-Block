@@ -1,0 +1,66 @@
+{
+  "name": "",
+  "target": "oneblock:phases/07",
+  "list": [
+    {
+      "type": "mob",
+      "id": "naturalist:rattlesnake",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:rhino",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:lion",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:elephant",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:zebra",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:giraffe",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:hippo",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:boar",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:lizard",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:lizard_tail",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

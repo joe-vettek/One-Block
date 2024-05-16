@@ -1,0 +1,42 @@
+{
+  "name": "",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "mob",
+      "id": "naturalist:firefly",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:dragonfly",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:catfish",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:alligator",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:bass",
+      "count": 1,
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "naturalist:duck",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

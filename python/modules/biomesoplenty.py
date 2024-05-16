@@ -40,10 +40,10 @@ stage06.add_block(biomesoplenty.blocks.mahogany_log, 10)
 sub_provider.add_phase("06", stage06)
 
 # 07
-stage06 = SubPhaseTableBuilder(target=constant.STAGE_HOT.get_phase_id())
-stage06.add_block(biomesoplenty.blocks.orange_sand, 5)
-stage06.add_block(biomesoplenty.blocks.orange_sandstone, 5)
-sub_provider.add_phase("06", stage06)
+stage07 = SubPhaseTableBuilder(target=constant.STAGE_HOT.get_phase_id())
+stage07.add_block(biomesoplenty.blocks.orange_sand, 5)
+stage07.add_block(biomesoplenty.blocks.orange_sandstone, 5)
+sub_provider.add_phase("07", stage07)
 
 # 08
 stage08 = SubPhaseTableBuilder(target=constant.STAGE_NETHER.get_phase_id())
