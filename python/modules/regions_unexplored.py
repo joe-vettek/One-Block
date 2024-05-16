@@ -100,7 +100,8 @@ loot01.create_new_pool(0, 1)
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.orange_coneflower, weight=4).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.purple_coneflower, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.white_snowbelle, weight=2).add_count_function(1, 1))
-loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.light_gray_snowbelle, weight=2).add_count_function(1, 1))
+loot01.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.light_gray_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.gray_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.red_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.orange_snowbelle, weight=2).add_count_function(1, 1))
@@ -108,14 +109,14 @@ loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.yellow_snowbel
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.lime_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.green_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.cyan_snowbelle, weight=2).add_count_function(1, 1))
-loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.light_blue_snowbelle, weight=2).add_count_function(1, 1))
+loot01.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.light_blue_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.blue_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.purple_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.magenta_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.pink_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.brown_snowbelle, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.black_snowbelle, weight=2).add_count_function(1, 1))
-loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.hyacinth_flowers, weight=2).add_count_function(1, 1))
 loot_provider.add_modified_loot(target=[constant.STAGE_PLAIN.stage_gift],
                                 table_id=constant.STAGE_PLAIN.id, table=loot01)
 # 02
@@ -193,11 +194,15 @@ loot04.add_entry(
 loot04.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.willow_shrub, weight=4).add_count_function(1, 2))
 loot04.create_new_pool(0, 1)
 loot04.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.duckweed, weight=4).add_count_function(1, 2))
-loot04.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.flowering_lily_pad, weight=4).add_count_function(1, 2))
+loot04.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.flowering_lily_pad, weight=4).add_count_function(1, 2))
 loot04.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.day_lily, weight=4).add_count_function(1, 2))
-loot04.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.blue_magnolia_flowers, weight=4).add_count_function(1, 2))
-loot04.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.pink_magnolia_flowers, weight=4).add_count_function(1, 2))
-loot04.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.white_magnolia_flowers, weight=4).add_count_function(1, 2))
+loot04.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.blue_magnolia_flowers, weight=4).add_count_function(1, 2))
+loot04.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.pink_magnolia_flowers, weight=4).add_count_function(1, 2))
+loot04.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.white_magnolia_flowers, weight=4).add_count_function(1, 2))
 
 loot_provider.add_modified_loot(target=[constant.STAGE_SWAMP.stage_gift],
                                 table_id=constant.STAGE_SWAMP.id, table=loot04)
@@ -249,13 +254,13 @@ loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.acacia_shrub, 
 loot07.create_new_pool(0, 1)
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.barrel_cactus, weight=3).add_count_function(1, 1))
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.sandy_grass, weight=3).add_count_function(1, 1))
-loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.small_desert_shrub, weight=3).add_count_function(1, 1))
+loot07.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.small_desert_shrub, weight=3).add_count_function(1, 1))
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.steppe_grass, weight=3).add_count_function(1, 1))
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.steppe_shrub, weight=3).add_count_function(1, 1))
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.sandy_tall_grass, weight=3).add_count_function(1, 1))
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.steppe_tall_grass, weight=3).add_count_function(1, 1))
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.windswept_grass, weight=3).add_count_function(1, 1))
-loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.hyacinth_flowers, weight=6).add_count_function(1, 1))
 loot_provider.add_modified_loot(target=[constant.STAGE_HOT.stage_gift],
                                 table_id=constant.STAGE_HOT.id, table=loot07)
 
@@ -287,11 +292,14 @@ loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.cobalt_earligh
 loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.glister_bulb, weight=4).add_count_function(1, 1))
 loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.glister_spire, weight=4).add_count_function(1, 1))
 loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.mycotoxic_daisy, weight=4).add_count_function(1, 1))
-loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.tall_cobalt_earlight, weight=4).add_count_function(1, 1))
-loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.tall_cobalt_earlight, weight=4).add_count_function(1, 1))
-loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.tall_cobalt_earlight, weight=4).add_count_function(1, 1))
-
-
+loot08.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.tall_cobalt_earlight, weight=4).add_count_function(1, 1))
+loot08.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.hyacinth_bloom, weight=4).add_count_function(1, 1))
+loot08.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.tall_hyacinth_stock, weight=4).add_count_function(1, 1))
+loot08.add_entry(
+    SimplePoolEntryBuilder(regions_unexplored.blocks.hyacinth_flowers, weight=4).add_count_function(1, 1))
 loot_provider.add_modified_loot(target=[constant.STAGE_NETHER.stage_gift],
                                 table_id=constant.STAGE_NETHER.id, table=loot08)
 
