@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "block",
+      "id": "regions_unexplored:willow_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:magnolia_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:cypress_log",
+      "weight": 5
+    }
+  ]
+}

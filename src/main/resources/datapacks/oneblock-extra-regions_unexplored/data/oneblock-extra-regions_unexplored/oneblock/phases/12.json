@@ -1,0 +1,31 @@
+{
+  "name": "",
+  "target": "oneblock:phases/12",
+  "list": [
+    {
+      "type": "block",
+      "id": "regions_unexplored:alpha_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:alpha_grass_block",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:prismoss",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:deepslate_prismoss",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:deepslate_grass_block",
+      "weight": 2
+    }
+  ]
+}

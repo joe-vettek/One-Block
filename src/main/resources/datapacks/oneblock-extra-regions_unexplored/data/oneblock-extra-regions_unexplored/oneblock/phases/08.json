@@ -1,0 +1,82 @@
+{
+  "name": "",
+  "target": "oneblock:phases/08",
+  "add_count": 50,
+  "list": [
+    {
+      "type": "block",
+      "id": "regions_unexplored:cobalt_log",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:raw_redstone_block",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:brimsprout_nylium",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:cobalt_nylium",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:glistering_nylium",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:glistering_wart",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:overgrown_bone_block",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:mycotoxic_moss",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:chalk_grass_block",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:chalk",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:argillite_grass_block",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:argillite",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:cobalt_obsidian",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:ash",
+      "weight": 3
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:volcanic_ash",
+      "weight": 3
+    }
+  ]
+}

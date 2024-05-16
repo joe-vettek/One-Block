@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "target": "oneblock:phases/11",
+  "list": [
+    {
+      "type": "block",
+      "id": "regions_unexplored:dead_log",
+      "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:brimwood_log",
+      "weight": 8
+    }
+  ]
+}

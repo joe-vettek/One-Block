@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/10",
+  "list": [
+    {
+      "type": "block",
+      "id": "regions_unexplored:mauve_log",
+      "weight": 4
+    }
+  ]
+}

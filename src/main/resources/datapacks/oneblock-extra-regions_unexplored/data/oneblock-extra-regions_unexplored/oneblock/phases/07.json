@@ -1,0 +1,26 @@
+{
+  "name": "",
+  "target": "oneblock:phases/07",
+  "list": [
+    {
+      "type": "block",
+      "id": "regions_unexplored:joshua_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:kapok_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:socotra_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:baobab_log",
+      "weight": 5
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "target": "oneblock:phases/05",
+  "list": [
+    {
+      "type": "block",
+      "id": "regions_unexplored:blackwood_log",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:eucalyptus_log",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "regions_unexplored:palm_log",
+      "weight": 5
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/06",
+  "list": [
+    {
+      "type": "block",
+      "id": "regions_unexplored:bamboo_log",
+      "weight": 6
+    }
+  ]
+}

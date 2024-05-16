@@ -96,7 +96,6 @@ loot02.add_entry(SimplePoolEntryBuilder(biomesoplenty.blocks.webbing, weight=4).
 loot02.add_entry(SimplePoolEntryBuilder(biomesoplenty.blocks.stringy_cobweb, weight=2).add_count_function(1, 1))
 loot02.add_entry(SimplePoolEntryBuilder(biomesoplenty.blocks.hanging_cobweb, weight=2).add_count_function(1, 1))
 loot02.add_entry(SimplePoolEntryBuilder(biomesoplenty.blocks.glowworm_silk, weight=2).add_count_function(1, 1))
-
 loot_provider.add_modified_loot(target=[constant.STAGE_PLAIN.stage_gift],
                                 table_id=constant.STAGE_PLAIN.id, table=loot02)
 
