@@ -96,7 +96,7 @@ sub_provider.add_phase("12", stage12)
 
 # 01
 loot01 = MultiPoolLootTableBuilder()
-loot01.create_new_pool(0, 1)
+loot01.create_new_pool(1, 2)
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.orange_coneflower, weight=4).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.purple_coneflower, weight=2).add_count_function(1, 1))
 loot01.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.white_snowbelle, weight=2).add_count_function(1, 1))
@@ -144,7 +144,7 @@ loot03.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.redwood_saplin
 loot03.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.silver_birch_sapling, weight=3).add_count_function(1, 1))
 loot03.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.small_oak_sapling, weight=3).add_count_function(1, 1))
-loot03.create_new_pool(0, 1)
+loot03.create_new_pool(1, 2)
 loot03.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.ashen_shrub, weight=4).add_count_function(1, 2))
 loot03.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.larch_shrub, weight=4).add_count_function(1, 2))
 loot03.add_entry(
@@ -159,7 +159,7 @@ loot03.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.redwood_shrub,
 loot03.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.silver_birch_shrub, weight=3).add_count_function(1, 1))
 loot03.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.birch_shrub, weight=4).add_count_function(1, 2))
-loot03.create_new_pool(0, 1)
+loot03.create_new_pool(1, 1)
 loot03.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.ashen_grass, weight=4).add_count_function(1, 2))
 loot03.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.bladed_grass, weight=4).add_count_function(1, 2))
 loot03.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.bladed_tall_grass, weight=4).add_count_function(1, 2))
@@ -192,7 +192,7 @@ loot04.add_entry(
 loot04.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.white_magnolia_shrub, weight=4).add_count_function(1, 2))
 loot04.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.willow_shrub, weight=4).add_count_function(1, 2))
-loot04.create_new_pool(0, 1)
+loot04.create_new_pool(1, 1)
 loot04.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.duckweed, weight=4).add_count_function(1, 2))
 loot04.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.flowering_lily_pad, weight=4).add_count_function(1, 2))
@@ -208,7 +208,7 @@ loot_provider.add_modified_loot(target=[constant.STAGE_SWAMP.stage_gift],
                                 table_id=constant.STAGE_SWAMP.id, table=loot04)
 # 05
 loot05 = MultiPoolLootTableBuilder()
-loot05.create_new_pool(1, 2)
+loot05.create_new_pool(1, 1)
 loot05.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.blackwood_sapling, weight=4).add_count_function(1, 2))
 loot05.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.eucalyptus_sapling, weight=4).add_count_function(1, 2))
@@ -251,7 +251,7 @@ loot07.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.small_desert_shrub, weight=3).add_count_function(1, 1))
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.baobab_shrub, weight=3).add_count_function(1, 1))
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.acacia_shrub, weight=3).add_count_function(1, 1))
-loot07.create_new_pool(0, 1)
+loot07.create_new_pool(1, 1)
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.barrel_cactus, weight=3).add_count_function(1, 1))
 loot07.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.sandy_grass, weight=3).add_count_function(1, 1))
 loot07.add_entry(
@@ -268,7 +268,7 @@ loot_provider.add_modified_loot(target=[constant.STAGE_HOT.stage_gift],
 loot08 = MultiPoolLootTableBuilder()
 loot08.create_new_pool(0, 1)
 loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.cobalt_sapling, weight=4).add_count_function(1, 1))
-loot08.create_new_pool(0, 1)
+loot08.create_new_pool(1, 2)
 loot08.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.blackstone_cluster, weight=4).add_count_function(1, 1))
 loot08.add_entry(
@@ -311,7 +311,7 @@ loot09.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.flowering_sapl
 loot09.create_new_pool(0, 1)
 loot09.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.oak_shrub, weight=4).add_count_function(1, 2))
 loot09.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.flowering_shrub, weight=4).add_count_function(1, 2))
-loot09.create_new_pool(0, 1)
+loot09.create_new_pool(1, 2)
 loot09.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.daisy, weight=4).add_count_function(1, 2))
 loot09.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.dorcel, weight=4).add_count_function(1, 2))
 loot09.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.hibiscus, weight=4).add_count_function(1, 2))
@@ -332,7 +332,7 @@ loot10.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.mauve_sapling,
 loot10.create_new_pool(0, 1)
 loot10.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.mauve_shrub, weight=4).add_count_function(1, 2))
 loot10.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.cherry_shrub, weight=4).add_count_function(1, 2))
-loot10.create_new_pool(0, 1)
+loot10.create_new_pool(1, 2)
 loot10.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.clover, weight=4).add_count_function(1, 2))
 loot10.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.aster, weight=4).add_count_function(1, 2))
 loot10.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.felicia_daisy, weight=4).add_count_function(1, 2))
@@ -345,7 +345,7 @@ loot_provider.add_modified_loot(target=[constant.STAGE_TRAVEL.stage_gift],
                                 table_id=constant.STAGE_TRAVEL.id, table=loot10)
 # 11
 loot11 = MultiPoolLootTableBuilder()
-loot11.create_new_pool(1, 2)
+loot11.create_new_pool(1, 1)
 loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.dead_sapling, weight=4).add_count_function(1, 2))
 loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.dead_pine_sapling, weight=4).add_count_function(1, 2))
 loot11.add_entry(
@@ -366,7 +366,7 @@ loot_provider.add_modified_loot(target=[constant.STAGE_ISOLATED.stage_gift],
 loot12 = MultiPoolLootTableBuilder()
 loot12.create_new_pool(0, 1)
 loot12.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.alpha_sapling, weight=4).add_count_function(1, 2))
-loot12.create_new_pool(0, 1)
+loot12.create_new_pool(1, 2)
 loot12.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.spanish_moss, weight=4).add_count_function(1, 2))
 loot12.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.blue_bioshroom, weight=4).add_count_function(1, 2))
 loot12.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.green_bioshroom, weight=4).add_count_function(1, 2))
