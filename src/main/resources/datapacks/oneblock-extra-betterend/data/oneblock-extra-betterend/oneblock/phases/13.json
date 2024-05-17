@@ -5,127 +5,127 @@
     {
       "type": "block",
       "id": "betterend:endstone_dust",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:end_mycelium",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:end_moss",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:chorus_nylium",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:cave_moss",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:crystal_moss",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:shadow_grass",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:pink_moss",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:amber_moss",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:jungle_moss",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:sangnum",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:rutiscus",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:amber_moss",
-      "weight": 15
+      "weight": 5
     },
     {
       "type": "block",
       "id": "betterend:pallidium_full",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:pallidium_heavy",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:pallidium_thin",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:pallidium_tiny",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:mossy_obsidian",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:flavolite",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:violecite",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:sulphuric_rock",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:virid_jadestone",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:azure_jadestone",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:sandy_jadestone",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
       "id": "betterend:umbralith",
-      "weight": 5
+      "weight": 2
     },
     {
       "type": "block",
@@ -155,42 +155,42 @@
     {
       "type": "block",
       "id": "betterend:mossy_glowshroom_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
       "id": "betterend:end_lotus_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
       "id": "betterend:pythadendron_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
       "id": "betterend:lacugrove_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
       "id": "betterend:dragon_tree_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
       "id": "betterend:tenanea_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
       "id": "betterend:helix_tree_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
       "id": "betterend:umbrella_tree_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
@@ -210,12 +210,12 @@
     {
       "type": "block",
       "id": "betterend:jellyshroom_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
       "id": "betterend:lucernia_log",
-      "weight": 7
+      "weight": 1
     },
     {
       "type": "block",
@@ -230,7 +230,7 @@
     {
       "type": "block",
       "id": "betterend:amaranita_hymenophore",
-      "weight": 12
+      "weight": 2
     },
     {
       "type": "block",
@@ -360,7 +360,7 @@
     {
       "type": "block",
       "id": "betterend:aurora_crystal",
-      "weight": 3
+      "weight": 1
     },
     {
       "type": "block",
