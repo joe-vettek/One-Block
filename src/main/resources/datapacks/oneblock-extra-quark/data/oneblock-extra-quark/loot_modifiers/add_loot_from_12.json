@@ -3,8 +3,8 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "ija-one-block:06"
+      "loot_table_id": "oneblock:12"
     }
   ],
-  "lootTable": "oneblock-extra-quark:hot"
+  "lootTable": "oneblock-extra-quark:12"
 }

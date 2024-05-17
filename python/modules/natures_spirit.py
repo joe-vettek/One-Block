@@ -249,4 +249,4 @@ loot12.add_entry(SimplePoolEntryBuilder(natures_spirit.blocks.calcite_cluster, w
 loot12.add_entry(SimplePoolEntryBuilder(natures_spirit.blocks.large_calcite_bud, weight=6).add_count_function(1, 1))
 loot12.add_entry(SimplePoolEntryBuilder(natures_spirit.blocks.small_calcite_bud, weight=6).add_count_function(1, 1))
 loot_provider.add_modified_loot(target=[constant.STAGE_DEPTH.stage_gift],
-                                table_id=constant.STAGE_DEPTH.stage_gift, table=loot12)
+                                table_id=constant.STAGE_DEPTH.id, table=loot12)

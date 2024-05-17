@@ -3,8 +3,8 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "oneblock:04"
+      "loot_table_id": "oneblock:12"
     }
   ],
-  "lootTable": "oneblock-extra-quark:swamp"
+  "lootTable": "oneblock-extra-natures_spirit:12"
 }
