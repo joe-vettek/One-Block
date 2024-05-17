@@ -52,20 +52,6 @@
               "function": "minecraft:set_count"
             }
           ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "regions_unexplored:brimwood_sapling",
-          "weight": 4,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
         }
       ]
     },
@@ -110,20 +96,6 @@
         {
           "type": "minecraft:item",
           "name": "regions_unexplored:enchanted_birch_shrub",
-          "weight": 4,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "regions_unexplored:brimwood_shrub",
           "weight": 4,
           "functions": [
             {

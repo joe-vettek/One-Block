@@ -56,6 +56,7 @@ stage08.set_add_count(50)
 stage08.add_block(regions_unexplored.blocks.cobalt_log, 4)
 stage08.add_block(regions_unexplored.blocks.raw_redstone_block, 3)
 stage08.add_block(regions_unexplored.blocks.brimsprout_nylium, 3)
+stage08.add_block(regions_unexplored.blocks.brimwood_log, 8)
 stage08.add_block(regions_unexplored.blocks.cobalt_nylium, 3)
 stage08.add_block(regions_unexplored.blocks.glistering_nylium, 3)
 stage08.add_block(regions_unexplored.blocks.glistering_wart, 3)
@@ -82,7 +83,6 @@ sub_provider.add_phase("10", stage10)
 # 11
 stage11 = SubPhaseTableBuilder(target=constant.STAGE_ISOLATED.get_phase_id())
 stage11.add_block(regions_unexplored.blocks.dead_log, 8)
-stage11.add_block(regions_unexplored.blocks.brimwood_log, 8)
 sub_provider.add_phase("11", stage11)
 
 # 12
@@ -268,7 +268,9 @@ loot_provider.add_modified_loot(target=[constant.STAGE_HOT.stage_gift],
 loot08 = MultiPoolLootTableBuilder()
 loot08.create_new_pool(0, 1)
 loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.cobalt_sapling, weight=4).add_count_function(1, 1))
+loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.brimwood_sapling, weight=4).add_count_function(1, 2))
 loot08.create_new_pool(1, 2)
+loot08.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.brimwood_shrub, weight=4).add_count_function(1, 2))
 loot08.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.blackstone_cluster, weight=4).add_count_function(1, 1))
 loot08.add_entry(
@@ -350,13 +352,11 @@ loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.dead_sapling, 
 loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.dead_pine_sapling, weight=4).add_count_function(1, 2))
 loot11.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.enchanted_birch_sapling, weight=4).add_count_function(1, 2))
-loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.brimwood_sapling, weight=4).add_count_function(1, 2))
 loot11.create_new_pool(0, 1)
 loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.dead_shrub, weight=4).add_count_function(1, 2))
 loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.dead_pine_shrub, weight=4).add_count_function(1, 2))
 loot11.add_entry(
     SimplePoolEntryBuilder(regions_unexplored.blocks.enchanted_birch_shrub, weight=4).add_count_function(1, 2))
-loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.brimwood_shrub, weight=4).add_count_function(1, 2))
 loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.elephant_ear, weight=4).add_count_function(1, 2))
 loot11.add_entry(SimplePoolEntryBuilder(regions_unexplored.blocks.wilting_trillium, weight=4).add_count_function(1, 2))
 
