@@ -1,0 +1,26 @@
+{
+  "name": "",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "block",
+      "id": "thermal:nickel_ore",
+      "weight": 4
+    },
+    {
+      "type": "block",
+      "id": "thermal:tin_ore",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "thermal:apatite_ore",
+      "weight": 6
+    },
+    {
+      "type": "block",
+      "id": "thermal:tin_ore",
+      "weight": 6
+    }
+  ]
+}
