@@ -1,8 +1,9 @@
 package xueluoanping.oneblock.data.lang;
 
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.common.data.LanguageProvider;
+
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.data.LanguageProvider;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.client.OneBlockTranslator;
 

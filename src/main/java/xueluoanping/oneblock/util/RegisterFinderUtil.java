@@ -2,20 +2,23 @@ package xueluoanping.oneblock.util;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager;
+import net.minecraft.world.level.storage.loot.LootTable;
 
 public class RegisterFinderUtil {
 
     public static EntityType<?> getEntity(String s) {
-        return getEntity(new ResourceLocation(s));
+        return getEntity(ResourceLocation.parse(s));
     }
 
     public static EntityType<?> getEntity(ResourceLocation rs) {
@@ -23,7 +26,7 @@ public class RegisterFinderUtil {
     }
 
     public static Block getBlock(String s) {
-        return getBlock(new ResourceLocation(s));
+        return getBlock(ResourceLocation.parse(s));
     }
 
     // BuiltInRegistries
@@ -32,7 +35,7 @@ public class RegisterFinderUtil {
     }
 
     public static Item getItem(String s) {
-        return getItem(new ResourceLocation(s));
+        return getItem(ResourceLocation.parse(s));
     }
 
     public static Item getItem(ResourceLocation rs) {
@@ -40,7 +43,7 @@ public class RegisterFinderUtil {
     }
 
     public static Item getItem(String s, String s2) {
-        return getItem(new ResourceLocation(s, s2));
+        return getItem(ResourceLocation.fromNamespaceAndPath(s, s2));
     }
 
 
@@ -57,7 +60,7 @@ public class RegisterFinderUtil {
     }
 
     public static SoundEvent getSound(String id) {
-        return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation(id));
+        return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse(id));
     }
 
     public static ResourceLocation getSoundKey(SoundEvent soundEvent) {
@@ -70,7 +73,7 @@ public class RegisterFinderUtil {
     }
 
     public static Structure getStructure(ServerLevel serverLevel, String s) {
-        var res = getStructureKey(new ResourceLocation(s));
+        var res = getStructureKey(ResourceLocation.parse(s));
         return res == null ? null : serverLevel.structureManager().registryAccess()
                 .registryOrThrow(Registries.STRUCTURE)
                 .get(res);
@@ -81,16 +84,29 @@ public class RegisterFinderUtil {
     // ConfiguredFeature is a specific terrain feature.
     // PlacedFeature is a terrain feature with specific placement conditions set.
     public static ConfiguredFeature<?, ?> getConfiguredFeature(ServerLevel serverLevel, String s) {
-        var res = serverLevel.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).get(new ResourceLocation(s));
-        return res != null ? res : serverLevel.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).get(new ResourceLocation("minecraft", "oak_bees_005"));
+        var res = serverLevel.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).get(ResourceLocation.parse(s));
+        return res != null ? res : serverLevel.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE).get(ResourceLocation.fromNamespaceAndPath("minecraft", "oak_bees_005"));
     }
 
     // public static Feature<?> getFeature(String s) {
-    //     return BuiltInRegistries.FEATURE.get(new ResourceLocation(s));
+    //     return BuiltInRegistries.FEATURE.get(ResourceLocation.parse(s));
     // }
 
     public static boolean checkTemplateKey(ServerLevel serverLevel, String s) {
         StructureTemplateManager structuretemplatemanager = serverLevel.getStructureManager();
         return structuretemplatemanager.listTemplates().anyMatch(ss -> ss.toString().equals(s));
+    }
+
+
+    public static ResourceKey<LootTable> getLootTable(ResourceLocation resourceLocation) {
+        return ResourceKey.create(Registries.LOOT_TABLE, resourceLocation);
+    }
+
+    public static ResourceKey<LootTable> getLootTable(String s, String s2) {
+        return ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath(s, s2));
+    }
+
+    public static ResourceKey<LootTable> getLootTable(String s) {
+        return ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse(s));
     }
 }

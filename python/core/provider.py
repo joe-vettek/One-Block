@@ -130,7 +130,7 @@ class SimplePoolEntryBuilder(PoolEntryBuilder):
 class CountPoolEntryBuilder(PoolEntryBuilder):
     def __init__(self, name: str, weight: int = 6, min=1, max=2):
         super().__init__(name, weight, False)
-        self.add_count_function(min,max)
+        self.add_count_function(min, max)
 
 
 class LootPoolBuilder(dict):
@@ -151,9 +151,10 @@ class LootPoolBuilder(dict):
     def add_entry_item(self, id, weight, min, max, tag=None, enchantments=None):
         pool_entry = PoolEntryBuilder(id, weight, use_default_functions=False).add_count_function(min, max)
         if tag is not None:
-            if type(tag) == dict:
-                tag = json.dumps(tag)
-            pool_entry = pool_entry.add_nbt_function(tag)
+            # pool_entry = pool_entry.add_nbt_function(tag)
+            cc = {"components": {"minecraft:potion_contents": {"potion": ""}}, "function": "minecraft:set_components"}
+            cc["components"]["minecraft:potion_contents"]["potion"] = tag["Potion"]
+            pool_entry.add_function(cc)
         if enchantments is not None:
             pool_entry = pool_entry.add_enchantments_function(enchantments)
         self["entries"].append(pool_entry)
@@ -202,7 +203,7 @@ class LootTableProvider(DataPackProvider):
         return f"LootTableProvider {self.mod_id}"
 
     def get_loot_table_path(self, table_id):
-        return self.get_data_path(join("loot_tables", f"{table_id}.json"))
+        return self.get_data_path(join("loot_table", f"{table_id}.json"))
 
     def get_loot_table_res(self, table_id):
         return f"{self.get_datapack_name()}:{table_id}"
@@ -266,11 +267,11 @@ class PhaseEntryBuilder(dict):
 
     def set_offset(self, x=0, y=0, z=0):
         if x != 0:
-            self["x"] = x
+            self["offset_x"] = x
         if y != 0:
-            self["y"] = y
+            self["offset_y"] = y
         if z != 0:
-            self["z"] = z
+            self["offset_z"] = z
         return self
 
     def set_precedence(self, precedence_start=0, precedence_end=0):

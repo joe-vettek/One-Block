@@ -4,17 +4,16 @@ package xueluoanping.oneblock.client;
 
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import xueluoanping.oneblock.ModContents;
 import xueluoanping.oneblock.OneBlock;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientSetup {
 
 
@@ -35,9 +34,9 @@ public class ClientSetup {
 
 //    注意static是单次，比如启动类，没有比如右击事件
     @SubscribeEvent
-    @OnlyIn(Dist.CLIENT)
+
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        // FluidDrawersLegacyMod.logger("Register Renderer");
+        // FluidDrawersLegacylogger("Register Renderer");
         // event.registerBlockEntityRenderer(ModContents.tankTileEntityType.get(),
         //         TESRFluidDrawer::new);
     }

@@ -5,7 +5,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.SectionPos;
 import net.minecraft.core.Vec3i;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.MobSpawnType;
@@ -63,10 +65,11 @@ public class PlaceUtil {
         placeTemplate(level, base, resourceLocation, Rotation.NONE, Mirror.NONE, 1f);
     }
 
-    public static void placeTemplate(ServerLevel level, BlockPos base, ResourceLocation resourceLocation, Rotation rotation, Mirror mirror, float integrity) {
+    public static void placeTemplate(ServerLevel level, BlockPos startPos, ResourceLocation resourceLocation, Rotation rotation, Mirror mirror, float integrity) {
 
         StructureTemplateManager structuretemplatemanager = level.getStructureManager();
         Optional<StructureTemplate> optional;
+
         try {
             // if (General.debug.get()) {
             //     level.registryAccess().registryOrThrow(Registries.TEMPLATE_POOL).entrySet();
@@ -83,20 +86,20 @@ public class PlaceUtil {
 
             StructureTemplate structuretemplate = optional.get();
             // var size = structuretemplate.getSize();
-            // base=base.offset(size.);
-            Vec3i center = new Vec3i(base.getX(), base.getY(), base.getZ());
+            // startPos=startPos.offset(size.);
+            Vec3i center = new Vec3i(startPos.getX(), startPos.getY(), startPos.getZ());
 
 
-            checkLoaded(level, new ChunkPos(base), new ChunkPos(base.offset(structuretemplate.getSize())));
+            checkLoaded(level, new ChunkPos(startPos), new ChunkPos(startPos.offset(structuretemplate.getSize())));
             StructurePlaceSettings structureplacesettings = (new StructurePlaceSettings()).setMirror(mirror).setRotation(rotation);
             // degree of intactness
             if (integrity < 1.0F) {
                 structureplacesettings.clearProcessors().addProcessor(new BlockRotProcessor(integrity)).setRandom(level.getRandom());
             }
             // above to start
-            // base = base.above();
-            boolean flag = structuretemplate.placeInWorld(level, base, base, structureplacesettings, level.getRandom(), Block.UPDATE_CLIENTS);
-            OneBlock.error("Place " + flag + resourceLocation.toString());
+            // startPos = startPos.above();
+            boolean flag = structuretemplate.placeInWorld(level, startPos, startPos, structureplacesettings, level.getRandom(), Block.UPDATE_CLIENTS);
+            OneBlock.logger("Place " + flag + resourceLocation.toString());
 
             // Clear tick counter? not sure if We need it and it may cause other problem if there are blocks exist
             level.getBlockTicks().clearArea(BoundingBox.fromCorners(center, center.offset(structuretemplate.getSize())));
@@ -144,13 +147,13 @@ public class PlaceUtil {
                     state.setValue(BlockStateProperties.FACING, Direction.EAST) : state;
             level.setBlockAndUpdate(offsetPos, state);
             if (level.getBlockEntity(offsetPos) instanceof RandomizableContainerBlockEntity containerBlockEntity)
-                containerBlockEntity.setLootTable(new ResourceLocation(select.getLoot_table()), level.getRandom().nextLong());
-            // containerBlockEntity.setLootTable(new ResourceLocation(select.getId()), level.getSeed());
+                containerBlockEntity.setLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse(select.getLoot_table())), level.getRandom().nextLong());
+            // containerBlockEntity.setLootTable(ResourceLocation.parse(select.getId()), level.getSeed());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_ARCHAEOLOGY)) {
             var block = RegisterFinderUtil.getBlock(select.getId());
             level.setBlockAndUpdate(offsetPos, block.defaultBlockState());
             if (level.getBlockEntity(offsetPos) instanceof BrushableBlockEntity brushableBlockEntity)
-                brushableBlockEntity.setLootTable(new ResourceLocation(select.getLoot_table()), level.getRandom().nextLong());
+                brushableBlockEntity.setLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse(select.getLoot_table())), level.getRandom().nextLong());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_MOB)) {
             var mob = RegisterFinderUtil.getEntity(select.getId());
             for (int i = 0; i < select.getCount(); i++) {
@@ -163,11 +166,11 @@ public class PlaceUtil {
             ClientUtils.playSpawnSound(level, offsetPos);
             ClientUtils.playCloudParticles(level, offsetPos);
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_TEMPLATE)) {
-            placeTemplate(level, offsetPos, new ResourceLocation(select.getId()));
+            placeTemplate(level, offsetPos,  ResourceLocation.parse(select.getId()));
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_STRUCTURE)) {
-            placeStructure(level, offsetPos, new ResourceLocation(select.getId()));
+            placeStructure(level, offsetPos, ResourceLocation.parse(select.getId()));
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_CONFIGURED_FEATURE)) {
-            placeFeature(level, offsetPos, new ResourceLocation(select.getId()));
+            placeFeature(level, offsetPos, ResourceLocation.parse(select.getId()));
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_SOUND)) {
             ClientUtils.placeSound(level, offsetPos, select.getId());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_COMMAND)) {

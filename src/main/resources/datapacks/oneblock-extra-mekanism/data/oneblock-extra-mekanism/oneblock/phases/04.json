@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "block",
+      "id": "mekanism:block_salt",
+      "weight": 5
+    }
+  ]
+}

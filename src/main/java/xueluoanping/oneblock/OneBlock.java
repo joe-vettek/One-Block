@@ -2,16 +2,12 @@ package xueluoanping.oneblock;
 
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
-import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import xueluoanping.oneblock.config.General;
@@ -30,84 +26,36 @@ public class OneBlock {
 
     public static final boolean useLogger = Objects.equals(System.getProperty("forgegradle.runs.dev"), "true");
 
-    public OneBlock() {
-        // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register the enqueueIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+    public OneBlock(IEventBus modEventBus, ModContainer modContainer) {
 
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::gatherData);
+        // modEventBus.register(ControllerFluidCapabilityHandler.instance);
+        modEventBus.addListener(this::gatherData);
+        modEventBus.addListener(ModContents::onAddPackFindersEvent);
 
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
-        // MinecraftForge.EVENT_BUS.register(TreeGrowHandler.instance);
-        ModContents.BLOCK_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModContents.ITEM_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModContents.BLOCK_ENTITY_TYPE_DEFERRED_REGISTER.register(FMLJavaModLoadingContext.get().getModEventBus());
-        ModContents.LOOT_MODIFIERS.register(FMLJavaModLoadingContext.get().getModEventBus());
+        // Register the Deferred Register to the mod event bus so blocks get registered
+        ModContents.BLOCK_DEFERRED_REGISTER.register(modEventBus);
+        ModContents.ITEM_DEFERRED_REGISTER.register(modEventBus);
+        ModContents.LOOT_MODIFIERS.register(modEventBus);
 
+        // Register ourselves for server and other game events we are interested in.
+        // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
+        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
 
-        MinecraftForge.EVENT_BUS.register(Levelhandler.instance);
-        MinecraftForge.EVENT_BUS.register(ReloadHandler.instance);
-        MinecraftForge.EVENT_BUS.register(ReloadHandler.instance);
+        NeoForge.EVENT_BUS.register(Levelhandler.instance);
+        NeoForge.EVENT_BUS.register(ReloadHandler.instance);
+        NeoForge.EVENT_BUS.register(ReloadHandler.instance);
 
-        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, General.COMMON_CONFIG);
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(ReloadHandler::onAddPackFindersEvent);
+        // Register the item to a creative tab
+        // modContainer.addListener(this::gatherData);
+        // modContainer.addListener(this::FMLCommonSetup);
+        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
+        modContainer.registerConfig(ModConfig.Type.COMMON, General.COMMON_CONFIG);
 
     }
 
 
-    private void setup(final FMLCommonSetupEvent event) {
-        // some preinit code
-        //        LOGGER.info("HELLO FROM PREINIT");
-        //        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-    }
-
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
-        //        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().options);
-    }
-
-    private void enqueueIMC(final InterModEnqueueEvent event) {
-        // some example code to dispatch IMC to another mod
-        //        InterModComms.sendTo("examplemod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
-    }
-
-    private void processIMC(final InterModProcessEvent event) {
-        // some example code to receive and process InterModComms from other mods
-        //        LOGGER.info("Got IMC {}", event.getIMCStream().
-        //                map(m->m.getMessageSupplier().get()).
-        //                collect(Collectors.toList()));
-
-    }
-
-
-    // You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
-    // Event bus for receiving Registry Events)
-    // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-    // public static class RegistryEvents {
-    //     @SubscribeEvent
-    //     public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
-    //         // register a new block here
-    //         //            LOGGER.info("HELLO from Register Block");
-    //     }
-    // }
 
     public void gatherData(final GatherDataEvent event) {
-        // Resources.MANAGER.gatherData();
-
-        // GatherDataHelper.gatherAllData(
-        //         MOD_ID,
-        //         event,
-        //         SoilProperties.REGISTRY,
-        //         Family.REGISTRY,
-        //         Species.REGISTRY,
-        //         LeavesProperties.REGISTRY
-        // );
         start.dataGen(event);
     }
 
@@ -130,6 +78,6 @@ public class OneBlock {
     }
 
     public static ResourceLocation rl(String name) {
-        return new ResourceLocation(OneBlock.MOD_ID, name);
+        return ResourceLocation.fromNamespaceAndPath(OneBlock.MOD_ID, name);
     }
 }

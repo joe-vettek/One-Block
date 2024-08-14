@@ -106,13 +106,13 @@ public class ClientUtils {
         float pitch = 1.0f;
         float minVolume = 0.0f;
         Vec3 vec3_base = basePos.getCenter();
-        Holder<SoundEvent> holder = Holder.direct(SoundEvent.createVariableRangeEvent(new ResourceLocation(select)));
+        Holder<SoundEvent> holder = Holder.direct(SoundEvent.createVariableRangeEvent( ResourceLocation.parse(select)));
         SoundSource soundSource = SoundSource.BLOCKS;
         try {
             var values = SoundSource.values();
             boolean found=false;
             for (SoundSource value : values) {
-                if (value.getName().equals(new ResourceLocation(select).getPath().split("\\.")[0])) {
+                if (value.getName().equals(ResourceLocation.parse(select).getPath().split("\\.")[0])) {
                     soundSource = value;
                     found=true;
                     break;

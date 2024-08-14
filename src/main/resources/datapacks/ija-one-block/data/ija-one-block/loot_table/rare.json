@@ -24,8 +24,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:long_fire_resistance\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:long_fire_resistance"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -42,8 +46,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:strong_healing\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_healing"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -60,8 +68,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:long_invisibility\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:long_invisibility"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -78,8 +90,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:long_leaping\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:long_leaping"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -96,8 +112,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:luck\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:luck"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -114,8 +134,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:long_night_vision\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:long_night_vision"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -132,8 +156,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:long_regeneration\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:long_regeneration"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -150,8 +178,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:long_slow_falling\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:long_slow_falling"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -168,8 +200,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:long_strength\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:long_strength"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -186,8 +222,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:strong_swiftness\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_swiftness"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -204,8 +244,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:strong_turtle_master\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:strong_turtle_master"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         },
@@ -222,8 +266,12 @@
               "function": "minecraft:set_count"
             },
             {
-              "tag": "{\"Potion\": \"minecraft:long_water_breathing\"}",
-              "function": "minecraft:set_nbt"
+              "components": {
+                "minecraft:potion_contents": {
+                  "potion": "minecraft:long_water_breathing"
+                }
+              },
+              "function": "minecraft:set_components"
             }
           ]
         }

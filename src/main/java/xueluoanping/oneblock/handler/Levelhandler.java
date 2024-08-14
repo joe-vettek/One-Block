@@ -10,9 +10,9 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.level.LevelEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.level.LevelEvent;
+import net.neoforged.neoforge.event.tick.LevelTickEvent;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.api.StageData;
 import xueluoanping.oneblock.config.General;
@@ -52,20 +52,23 @@ public class Levelhandler {
 
     // 只需要保持item位置即可
     @SubscribeEvent
-    public void onTick(TickEvent.ServerTickEvent event) {
+    public void onTick(LevelTickEvent.Post event) {
+        if (event.getLevel() instanceof ServerLevel)
         // OneBlock.logger(System.currentTimeMillis());
-        if (StageManager.isNeedCheck()) {
-            var old = System.currentTimeMillis();
-            StageManager.onCheck(event.getServer().overworld());
-            OneBlock.logger("Check Cost ", System.currentTimeMillis() - old);
-        }
+        {
+            if (StageManager.isNeedCheck()) {
+                var old = System.currentTimeMillis();
+                StageManager.onCheck(event.getLevel().getServer().overworld());
+                OneBlock.logger("Check Cost ", System.currentTimeMillis() - old);
+            }
 
-        var server = event.getServer();
-        for (ServerLevel level : server.getAllLevels()) {
-            var oneBlockSave = getSaveData(level);
-            for (BlockPos pos : oneBlockSave.getBlockPos()) {
-                if (level.isLoaded(pos))
-                    generateBlock(server, oneBlockSave, level, pos);
+            var server = event.getLevel().getServer();
+            for (ServerLevel level : server.getAllLevels()) {
+                var oneBlockSave = getSaveData(level);
+                for (BlockPos pos : oneBlockSave.getBlockPos()) {
+                    if (level.isLoaded(pos))
+                        generateBlock(server, oneBlockSave, level, pos);
+                }
             }
         }
         // ServerLevel level = server.overworld();

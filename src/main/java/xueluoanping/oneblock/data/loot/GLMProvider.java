@@ -1,54 +1,60 @@
 package xueluoanping.oneblock.data.loot;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
-import net.minecraftforge.common.data.GlobalLootModifierProvider;
-import net.minecraftforge.common.loot.LootTableIdCondition;
-import xueluoanping.oneblock.loot.modifier.AddLootTableModifier;
 
-import java.util.List;
+import net.neoforged.neoforge.common.data.GlobalLootModifierProvider;
+import net.neoforged.neoforge.common.loot.LootTableIdCondition;
+import xueluoanping.oneblock.OneBlock;
+import xueluoanping.oneblock.loot.modifier.AddLootTableModifier;
+import xueluoanping.oneblock.util.RegisterFinderUtil;
+
+import java.util.concurrent.CompletableFuture;
 
 public class GLMProvider extends GlobalLootModifierProvider {
-    public GLMProvider(PackOutput gen, String modid) {
-        super(gen, modid);
+    public GLMProvider(PackOutput gen, CompletableFuture<HolderLookup.Provider> registries, String modid) {
+        super(gen, registries, modid);
     }
 
     @Override
     protected void start() {
         String variety = "-variety";
 
-        var cond=new LootItemCondition[7];
+        var cond = new LootItemCondition[7];
         for (int i = 4; i < 11; i++) {
-            cond[i-4]=LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build();
+            cond[i - 4] = LootTableIdCondition.builder(ResourceLocation.fromNamespaceAndPath("ija-one-block", num(i) + variety)).build();
         }
 
         this.add("add_loot_from_04", new AddLootTableModifier(cond,
-                new ResourceLocation("oneblock", "04")));
+                RegisterFinderUtil.getLootTable(OneBlock.MOD_ID, "04")));
 
-        cond=new LootItemCondition[2];
+        cond = new LootItemCondition[2];
         for (int i = 9; i < 11; i++) {
-            cond[i-9]=LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build();
+            cond[i - 9] = LootTableIdCondition.builder(ResourceLocation.fromNamespaceAndPath("ija-one-block", num(i) + variety)).build();
         }
         this.add("add_loot_from_10", new AddLootTableModifier(cond,
-                new ResourceLocation("oneblock", "10")));
+                RegisterFinderUtil.getLootTable(OneBlock.MOD_ID, "10")));
 
 
         this.add("add_loot_from_12", new AddLootTableModifier(new LootItemCondition[]{
-                LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(10) + variety)).build()
-        }, new ResourceLocation("oneblock", "12")));
+                LootTableIdCondition.builder(ResourceLocation.fromNamespaceAndPath("ija-one-block", num(10) + variety)).build()
+        }, RegisterFinderUtil.getLootTable(OneBlock.MOD_ID, "12")));
 
 
-        cond=new LootItemCondition[7];
+        cond = new LootItemCondition[7];
         for (int i = 4; i < 11; i++) {
-            cond[i-4]=LootTableIdCondition.builder(new ResourceLocation("ija-one-block", num(i) + variety)).build();
+            cond[i - 4] = LootTableIdCondition.builder(ResourceLocation.fromNamespaceAndPath("ija-one-block", num(i) + variety)).build();
         }
         this.add("add_loot_from_copper", new AddLootTableModifier(cond,
-                new ResourceLocation("oneblock", "copper")));
+                RegisterFinderUtil.getLootTable(OneBlock.MOD_ID, "copper")));
     }
 
 
     public String num(int num) {
         return num > 9 ? num + "" : "0" + num;
     }
+
+
 }

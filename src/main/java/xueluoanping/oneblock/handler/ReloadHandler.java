@@ -10,22 +10,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.HoverEvent;
 import net.minecraft.network.chat.TextColor;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.packs.PackType;
-import net.minecraft.server.packs.repository.Pack;
-import net.minecraft.server.packs.repository.PackSource;
-import net.minecraftforge.event.AddPackFindersEvent;
-import net.minecraftforge.event.AddReloadListenerEvent;
-import net.minecraftforge.event.RegisterCommandsEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.forgespi.locating.IModFile;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.AddReloadListenerEvent;
+import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import xueluoanping.oneblock.OneBlock;
-import xueluoanping.oneblock.api.ModFilePackResources;
 import xueluoanping.oneblock.api.StageData;
-import xueluoanping.oneblock.config.General;
 import xueluoanping.oneblock.util.ClientUtils;
-import xueluoanping.oneblock.util.Platform;
-
-import java.util.List;
 
 // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class ReloadHandler {
@@ -39,34 +29,6 @@ public class ReloadHandler {
     // public void onLevelSave(LevelEvent.Save event) {
     //
     // }
-
-
-    public static void onAddPackFindersEvent(AddPackFindersEvent event) {
-
-        if (event.getPackType() == PackType.SERVER_DATA) {
-            IModFile modFile = Platform.getModFile(OneBlock.MOD_ID);
-
-            General.enableList.forEach(
-                    (pack, booleanValue) -> {
-                        if (booleanValue.get()) {
-                            String packID = "oneblock-extra-" + pack;
-                            event.addRepositorySource(consumer -> consumer.accept(
-                                    Pack.readMetaAndCreate(packID, Component.translatable(pack), true,
-                                            id -> new ModFilePackResources(packID, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
-                                            Pack.Position.BOTTOM, PackSource.BUILT_IN)));
-                        }
-                    }
-            );
-
-            for (String packID : List.of("ija-one-block", "oneblock")) {
-                event.addRepositorySource(consumer -> consumer.accept(
-                        Pack.readMetaAndCreate(packID, Component.translatable(packID), true,
-                                id -> new ModFilePackResources(packID, modFile, "datapacks/" + packID), PackType.SERVER_DATA,
-                                Pack.Position.BOTTOM, PackSource.BUILT_IN)));
-            }
-
-        }
-    }
 
     @SubscribeEvent
     public void onAddReloadListener(AddReloadListenerEvent event) {
@@ -155,7 +117,7 @@ public class ReloadHandler {
         for (StageData stageData : StageManager.STAGE_DATA_LIST) {
             var stringBuilder = Component.empty().append("Click to Copy " + stageData.getResourceLocation())
                     .withStyle((style) -> style
-                            .withColor(TextColor.parseColor("#7FFF00"))
+                            .withColor(TextColor.parseColor("#7FFF00").getOrThrow())
                             .withHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, Component.empty().append("Click it to copy")))
                             .withClickEvent(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, stageData.toString())));
             ClientUtils.informPlayer(source.getServer(), stringBuilder);

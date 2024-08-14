@@ -1,6 +1,6 @@
 package xueluoanping.oneblock.config;
 
-import net.minecraftforge.common.ForgeConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.util.Platform;
 
@@ -12,14 +12,14 @@ import java.util.List;
 import java.util.Map;
 
 public class General {
-    public static ForgeConfigSpec COMMON_CONFIG;
-    public static ForgeConfigSpec.BooleanValue debug;
-    public static ForgeConfigSpec.BooleanValue collectItemNearby;
-    // public static ForgeConfigSpec.ConfigValue<String> order;
-    public static Map<String, ForgeConfigSpec.BooleanValue> enableList = new HashMap<>();
+    public static ModConfigSpec COMMON_CONFIG;
+    public static ModConfigSpec.BooleanValue debug;
+    public static ModConfigSpec.BooleanValue collectItemNearby;
+    // public static ModConfigSpec.ConfigValue<String> order;
+    public static Map<String, ModConfigSpec.BooleanValue> enableList = new HashMap<>();
 
     static {
-        ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
+        ModConfigSpec.Builder COMMON_BUILDER = new ModConfigSpec.Builder();
         COMMON_BUILDER.comment("Debug settings").push("Debug");
         debug = COMMON_BUILDER.comment("Set false to stop output dig log.").define("Log", false);
         COMMON_BUILDER.pop();
@@ -40,7 +40,7 @@ public class General {
                         if (s.length > 1) {
                             var packageName = s[1];
                             if (Platform.isModLoaded(packageName)) {
-                                ForgeConfigSpec.BooleanValue enable =
+                                ModConfigSpec.BooleanValue enable =
                                         COMMON_BUILDER
                                                 .comment(String.format("Enable compat package %s", packageName))
                                                 .define(packageName, true);

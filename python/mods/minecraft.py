@@ -1280,7 +1280,7 @@ class Block(Collections):
     # 诡异菌 Warped Fungus
     warped_fungus = RegisterEntry("minecraft:warped_fungus")
     # 草 Grass
-    grass = RegisterEntry("minecraft:grass")
+    short_grass = RegisterEntry("minecraft:short_grass")
     # 蕨 Fern
     fern = RegisterEntry("minecraft:fern")
     # 枯萎的灌木 Dead Bush
@@ -2162,7 +2162,7 @@ class Item(Collections):
     # 荧光墨囊 Glow Ink Sac
     glow_ink_sac = RegisterEntry("minecraft:glow_ink_sac")
     # 鳞甲 Scute
-    scute = RegisterEntry("minecraft:scute")
+    turtle_scute = RegisterEntry("minecraft:turtle_scute")
     # 黏液球 Slimeball
     slime_ball = RegisterEntry("minecraft:slime_ball")
     # 黏土球 Clay Ball

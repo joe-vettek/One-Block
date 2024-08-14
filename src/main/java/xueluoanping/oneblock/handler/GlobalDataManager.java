@@ -1,14 +1,15 @@
 package xueluoanping.oneblock.handler;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.storage.DimensionDataStorage;
 import org.jetbrains.annotations.NotNull;
+import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.api.StageProgress;
 
 import java.util.HashMap;
@@ -26,9 +27,9 @@ public class GlobalDataManager extends SavedData {
     public GlobalDataManager() {
     }
 
-    public GlobalDataManager(CompoundTag tag) {
+    public GlobalDataManager(HolderLookup.Provider provider,CompoundTag tag) {
 
-        ListTag list = tag.getList("oneblock", Tag.TAG_COMPOUND);
+        ListTag list = tag.getList(OneBlock.MOD_ID, Tag.TAG_COMPOUND);
         for (Tag t : list) {
             CompoundTag manaTag = (CompoundTag) t;
             BlockPos chunkPos = new BlockPos(manaTag.getInt("x"), manaTag.getInt("y"), manaTag.getInt("z"));
@@ -56,7 +57,7 @@ public class GlobalDataManager extends SavedData {
     //     p.counter++;
     //     chunkPosData.put(blockPos, p);
     //     setDirty();
-    //     // }else fluidDrawerControllerSave=new FluidDrawerControllerSave();
+    //     // }else fluidDrawerControllerSave=new GlobalDataManager();
     // }
 
     public void update(BlockPos blockPos, StageProgress progress) {
@@ -83,7 +84,7 @@ public class GlobalDataManager extends SavedData {
     }
 
     @Override
-    public @NotNull CompoundTag save(CompoundTag tag) {
+    public @NotNull CompoundTag save(CompoundTag tag,HolderLookup.@NotNull Provider provider) {
         ListTag list = new ListTag();
         chunkPosData.forEach((chunkPos, mana) -> {
             CompoundTag manaTag = new CompoundTag();
@@ -97,21 +98,25 @@ public class GlobalDataManager extends SavedData {
             manaTag.put("precedenceCounter", mana.precedenceCounter);
             list.add(manaTag);
         });
-        tag.put("oneblock", list);
+        tag.put(OneBlock.MOD_ID, list);
         tag.putString("hashStageVersion","");
         return tag;
     }
 
-    public static GlobalDataManager get(Level worldIn) {
-        if (!(worldIn instanceof ServerLevel)) {
-            throw new RuntimeException("Attempted to get the data from a client world. This is wrong.");
-        }
-        // ServerLevel world = worldIn.getServer().getLevel(Level.OVERWORLD);
-        ServerLevel world = (ServerLevel) worldIn;
-
-        DimensionDataStorage storage = world.getDataStorage();
-        return storage.computeIfAbsent(GlobalDataManager::new, GlobalDataManager::new, "oneblock");
+    public static GlobalDataManager get(ServerLevel serverLevel) {
+        DimensionDataStorage storage = serverLevel.getDataStorage();
+        return storage.computeIfAbsent(
+                new Factory<>(() -> create(serverLevel),
+                        ((compoundTag, provider) -> load(serverLevel, compoundTag, provider))),
+                OneBlock.MOD_ID);
     }
 
+    private static GlobalDataManager load(ServerLevel serverLevel, CompoundTag compoundTag, HolderLookup.Provider provider) {
+        return new GlobalDataManager(serverLevel.registryAccess(),compoundTag);
+    }
+
+    private static GlobalDataManager create(ServerLevel serverLevel) {
+        return new GlobalDataManager();
+    }
 
 }

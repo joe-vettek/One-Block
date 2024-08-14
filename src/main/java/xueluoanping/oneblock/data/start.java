@@ -3,13 +3,13 @@ package xueluoanping.oneblock.data;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.data.event.GatherDataEvent;
+
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.data.event.GatherDataEvent;
 import xueluoanping.oneblock.OneBlock;
-import xueluoanping.oneblock.data.blockstate.ItemModelProvider;
+import xueluoanping.oneblock.data.blockstate.CItemModelProvider;
 import xueluoanping.oneblock.data.lang.Lang_EN;
 import xueluoanping.oneblock.data.lang.Lang_ZH;
-import xueluoanping.oneblock.data.loot.GLMProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -33,7 +33,7 @@ public class start {
             // generator.addProvider(event.includeServer(),new GLMProvider(packOutput, MODID));
         }
         if (event.includeClient()) {
-            generator.addProvider(event.includeClient(),new ItemModelProvider(packOutput,helper));
+            generator.addProvider(event.includeClient(),new CItemModelProvider(packOutput,helper));
             generator.addProvider(event.includeClient(),new Lang_EN(packOutput,helper));
             generator.addProvider(event.includeClient(),new Lang_ZH(packOutput,helper));
         }

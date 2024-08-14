@@ -8,6 +8,7 @@ def dynamic_import(file_path, runs):
     with open(file_path, 'r') as file:
         code = file.read()
     code += "\nruns.extend(run_list)"
+    print(file_path)
     exec(code)
 
 

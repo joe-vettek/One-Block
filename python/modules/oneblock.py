@@ -440,7 +440,7 @@ sub_provider.add_phase("12", stage12)
 stage13 = PhaseTableBuilder(count=850, end_gift=constant.STAGE_END.end_gift)
 stage13.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_TEMPLATE, id_c="oneblock:end_portal")
 .set_precedence(1, 1)
-.set_offset(-4, -2, -2)
+.set_offset(-2, -4, -2)
 .add_preprocessing(PhaseEntryBuilder(type_c=constant.TYPE_BLOCK, id_c=minecraft.blocks.end_stone))
 .add_preprocessing(
     PhaseEntryBuilder(type_c=constant.TYPE_SOUND, id_c="minecraft:block.end_portal.spawn"))

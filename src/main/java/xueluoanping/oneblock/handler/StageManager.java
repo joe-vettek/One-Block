@@ -10,7 +10,8 @@ import com.google.gson.JsonElement;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.packs.resources.ResourceManager;
@@ -32,11 +33,11 @@ import xueluoanping.oneblock.util.Platform;
 // https://github.com/teaconmc/SignMeUp/blob/1.18-forge/src/main/java/org/teacon/signin/data/GuideMapManager.java
 public class StageManager extends SimpleJsonResourceReloadListener {
     private static final Gson GSON = new GsonBuilder().setLenient()
-            .registerTypeHierarchyAdapter(Component.class, new Component.Serializer())
+            // .registerTypeHierarchyAdapter(Component.class, new Component.Serializer())
             .create();
 
     // public static final network instance = new network(GSON, "stages.config");
-    public static final StageManager instance2 = new StageManager(GSON, "oneblock");
+    public static final StageManager instance2 = new StageManager(GSON, OneBlock.MOD_ID);
     public static final List<StageData> STAGE_DATA_LIST = new ArrayList<>();
     public static boolean needCheck = false;
     public static OneBlockConfig oneBlockConfigHolder = new OneBlockConfig();
@@ -115,7 +116,7 @@ public class StageManager extends SimpleJsonResourceReloadListener {
         var block = Blocks.CHEST;
         level.setBlockAndUpdate(pos, block.defaultBlockState().setValue(ChestBlock.FACING, Direction.EAST));
         if (level.getBlockEntity(pos) instanceof RandomizableContainerBlockEntity entity)
-            entity.setLootTable(new ResourceLocation(lootTable), level.getSeed());
+            entity.setLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse(lootTable)), level.getSeed());
         ClientUtils.playHEARTParticles(level, pos);
     }
 
