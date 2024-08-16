@@ -43,6 +43,7 @@ public class General {
                                 ModConfigSpec.BooleanValue enable =
                                         COMMON_BUILDER
                                                 .comment(String.format("Enable compat package %s", packageName))
+                                                .translation(packageName)
                                                 .define(packageName, true);
                                 enableList.put(packageName, enable);
                             }

@@ -83,6 +83,12 @@
       "weight": 2
     },
     {
+      "type": "mob",
+      "id": "minecraft:breeze",
+      "count": 1,
+      "weight": 2
+    },
+    {
       "type": "block",
       "id": "minecraft:stone",
       "weight": 8

@@ -140,6 +140,7 @@ stage04.add_mob(minecraft.entities.frog, 1, 1)
 stage04.add_mob(minecraft.entities.tadpole, 2, 1)
 stage04.add_mob(minecraft.entities.salmon, 4, 1)
 stage04.add_mob(minecraft.entities.squid, 2, 1)
+stage04.add_mob("minecraft:bogged", 2)
 stage04.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
         constant.STAGE_SWAMP.stage_gift))
@@ -343,6 +344,7 @@ stage10.add_block(minecraft.blocks.rooted_dirt, 8)
 stage10.add_block(minecraft.blocks.oak_log, 6)
 stage10.add_mob(minecraft.entities.goat, 3, 1)
 stage10.add_mob(minecraft.entities.axolotl, 2, 2)
+stage10.add_mob("minecraft:breeze", 2)
 stage10.add_block(minecraft.blocks.stone, 8)
 stage10.add_entry(
     PhaseEntryBuilder(constant.TYPE_ARCHAEOLOGY, minecraft.blocks.suspicious_sand, 8).set_loot_table(

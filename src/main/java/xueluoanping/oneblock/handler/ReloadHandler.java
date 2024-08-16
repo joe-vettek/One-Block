@@ -5,17 +5,25 @@ import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.ResourceLocationArgument;
 import net.minecraft.commands.arguments.coordinates.BlockPosArgument;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.HoverEvent;
 import net.minecraft.network.chat.TextColor;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.flag.FeatureElement;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.AddReloadListenerEvent;
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.api.StageData;
 import xueluoanping.oneblock.util.ClientUtils;
+
+import java.util.List;
+import java.util.Map;
 
 // @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.DEDICATED_SERVER)
 public class ReloadHandler {
@@ -97,6 +105,14 @@ public class ReloadHandler {
                         .then(Commands.literal("list_stage_info")
                                 .executes((stackCommandContext) ->
                                         list_stage(stackCommandContext.getSource()))));
+
+        dispatcher.register(
+                Commands.literal(OneBlock.MOD_ID)
+                        .requires((sourceStack) -> sourceStack.hasPermission(2))
+                        .then(Commands.literal("export")
+                                .then(Commands.literal("all").executes((stackCommandContext) ->
+                                        export_all(stackCommandContext.getSource())))
+                        ));
         // dispatcher.register(
         //         Commands.literal(OneBlock.MOD_ID)
         //                 .requires((sourceStack) -> sourceStack.hasPermission(2))
@@ -111,6 +127,17 @@ public class ReloadHandler {
         //                 )
         //
         // );
+    }
+
+    private int export_all(CommandSourceStack source) {
+        for (ResourceKey resourceKey : List.of(Registries.BLOCK, Registries.ITEM, Registries.ENTITY_TYPE)) {
+            for (Object entry : BuiltInRegistries.REGISTRY.getOrThrow(resourceKey).entrySet()) {
+                if (entry instanceof Map.Entry mapEntry) {
+                    OneBlock.logger(mapEntry.getKey());
+                }
+            }
+        }
+        return 1;
     }
 
     private int list_stage(CommandSourceStack source) {

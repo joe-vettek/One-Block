@@ -4,6 +4,7 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import xueluoanping.oneblock.ModContents;
 import xueluoanping.oneblock.OneBlock;
+import xueluoanping.oneblock.config.General;
 
 public class Lang_EN extends LangHelper {
     public Lang_EN(PackOutput gen, ExistingFileHelper helper) {
@@ -34,10 +35,20 @@ public class Lang_EN extends LangHelper {
 
         add(ModContents.one_stone.get(), "One Stone");
         add(ModContents.fantasy_bracelet.get(), "Fantasy Bracelet");
-        var itemStack=ModContents.fantasy_bracelet.get().getDefaultInstance();
+        var itemStack = ModContents.fantasy_bracelet.get().getDefaultInstance();
         itemStack.setDamageValue(1);
-        add(itemStack,"Shattered Bracelet");
+        add(itemStack, "Shattered Bracelet");
         addCustomName("mob", "Gift from the Up");
+
+
+        add("oneblock.configuration.Debug", "Debug");
+        add("oneblock.configuration.Play", "Play");
+        add("oneblock.configuration.Compat", "Compat");
+
+        add("oneblock.configuration.Log", "Log");
+        add("oneblock.configuration.CollectItem", "Collect Item");
+
+
     }
 
 

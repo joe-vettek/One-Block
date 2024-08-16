@@ -7,6 +7,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.fml.loading.FMLLoader;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
@@ -64,7 +65,7 @@ public class OneBlock {
     }
 
     public static void logger(Object... x) {
-        if (useLogger) {
+        if (useLogger|| !FMLEnvironment.production) {
             LOGGER.info(getStr(x));
         }
     }

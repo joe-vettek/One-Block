@@ -1241,6 +1241,8 @@ lootbuilder_rare_3.add_entry_item(minecraft.items.golden_apple, 1, 1, 2)
 lootbuilder_rare_3.add_entry_item(minecraft.items.golden_carrot, 1, 2, 4)
 lootbuilder_rare_3.add_entry_item(minecraft.items.emerald, 1, 2, 6)
 lootbuilder_rare_3.add_entry_item(minecraft.items.diamond, 1, 1, 3)
+lootbuilder_rare_3.add_entry_item("minecraft:heavy_core", 1, 1, 3)
+lootbuilder_rare_3.add_entry_item("minecraft:flow_armor_trim_smithing_template", 1, 1, 1)
 rare.add_pool(lootbuilder_rare_3)
 
 lootbuilder_rare_4=LootPoolBuilder(CountBuilder(1, 2),CountBuilder(0, 0))

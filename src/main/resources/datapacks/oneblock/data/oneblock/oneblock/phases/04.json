@@ -98,6 +98,12 @@
       "weight": 2
     },
     {
+      "type": "mob",
+      "id": "minecraft:bogged",
+      "count": 1,
+      "weight": 2
+    },
+    {
       "type": "gift",
       "id": "minecraft:chest",
       "weight": 2,
