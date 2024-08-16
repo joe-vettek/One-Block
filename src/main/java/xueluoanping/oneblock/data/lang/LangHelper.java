@@ -38,4 +38,5 @@ public abstract class LangHelper extends LanguageProvider {
     private final String locale;
     public final String modid;
 
+
 }

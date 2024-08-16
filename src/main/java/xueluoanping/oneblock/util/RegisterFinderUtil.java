@@ -9,6 +9,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.structure.Structure;
@@ -17,11 +18,14 @@ import net.minecraft.world.level.storage.loot.LootTable;
 
 public class RegisterFinderUtil {
 
+    // BuiltInRegistries.REGISTRY.getOrThrow(Registries.BLOCK)
+
     public static EntityType<?> getEntity(String s) {
         return getEntity(ResourceLocation.parse(s));
     }
 
     public static EntityType<?> getEntity(ResourceLocation rs) {
+
         return BuiltInRegistries.ENTITY_TYPE.get(rs);
     }
 

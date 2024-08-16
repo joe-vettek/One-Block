@@ -20,6 +20,7 @@ import net.minecraft.util.profiling.ProfilerFiller;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
+import net.minecraft.world.level.levelgen.structure.BoundingBox;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.api.OneBlockConfig;
 import xueluoanping.oneblock.api.OneBlockSubConfig;
@@ -124,6 +125,7 @@ public class StageManager extends SimpleJsonResourceReloadListener {
         // remain less than 0 if endless stage
         var select = stage.selectRandomByWeight(level.getRandom(), nowProgress, nowProgress.getRemainAmount() >= remain && remain > 0, stage.getCount() - remain);
         PlaceUtil.placeSelect(level, basePos, select);
+        level.getBlockTicks().clearArea(BoundingBox.fromCorners(basePos, basePos));
         return select;
     }
 
