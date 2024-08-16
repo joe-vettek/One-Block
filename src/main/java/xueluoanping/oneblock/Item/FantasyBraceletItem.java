@@ -34,16 +34,18 @@ public class FantasyBraceletItem extends Item {
                     if (itemstack.getDamageValue() != 0) {
                         var oldPos = save.remove(pos);
                         if (oldPos != null) {
-                            itemstack.setDamageValue(0);
-                            level.removeBlock(pos,false);
+                            if (!player.isCreative())
+                                itemstack.setDamageValue(0);
+                            level.removeBlock(pos, false);
                         }
 
                     } else {
-                        itemstack.setDamageValue(1);
+                        if (!player.isCreative())
+                            itemstack.setDamageValue(1);
                         // save.remove(pos);
                         // save.update(pos, save.getOrDefault(pos));
                         // level.removeBlock(pos, false);
-                        level.setBlockAndUpdate(pos,ModContents.one_stone.get().defaultBlockState());
+                        level.setBlockAndUpdate(pos, ModContents.one_stone.get().defaultBlockState());
                     }
 
                     // if (!player.isCreative())
@@ -61,8 +63,8 @@ public class FantasyBraceletItem extends Item {
 
     @Override
     public String getDescriptionId(ItemStack stack) {
-        if (stack.getDamageValue()==1)
-            return super.getDescriptionId(stack)+"_1";
+        if (stack.getDamageValue() == 1)
+            return super.getDescriptionId(stack) + "_1";
         return super.getDescriptionId(stack);
     }
 }
