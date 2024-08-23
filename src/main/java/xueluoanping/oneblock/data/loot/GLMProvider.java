@@ -18,6 +18,7 @@ public class GLMProvider extends GlobalLootModifierProvider {
         super(gen, registries, modid);
     }
 
+    //  can not work together
     @Override
     protected void start() {
         String variety = "-variety";
@@ -27,8 +28,6 @@ public class GLMProvider extends GlobalLootModifierProvider {
             cond[i - 4] = LootTableIdCondition.builder(ResourceLocation.fromNamespaceAndPath("ija-one-block", num(i) + variety)).build();
         }
 
-        this.add("add_loot_from_04", new AddLootTableModifier(cond,
-                RegisterFinderUtil.getLootTable(OneBlock.MOD_ID, "04")));
 
         cond = new LootItemCondition[2];
         for (int i = 9; i < 11; i++) {
