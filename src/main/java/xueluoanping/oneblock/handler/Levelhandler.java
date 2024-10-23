@@ -45,9 +45,12 @@ public class Levelhandler {
 
     @SubscribeEvent
     public void onLevelSave(LevelEvent.Unload event) {
-        if (!event.getLevel().isClientSide())
-            oneBlockSaveHolder.clear();
-        // oneBlockSave = null;
+        if (!event.getLevel().isClientSide()
+                && event.getLevel() instanceof ServerLevel serverLevel)
+            // oneBlockSaveHolder.clear();
+        {
+            oneBlockSaveHolder.remove(serverLevel);
+        }        // oneBlockSave = null;
     }
 
     // 只需要保持item位置即可
