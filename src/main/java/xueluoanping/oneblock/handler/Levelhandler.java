@@ -40,7 +40,7 @@ public class Levelhandler {
     public void onLevelLoad(LevelEvent.Load event) {
         if (!event.getLevel().isClientSide())
             for (ServerLevel allLevel : event.getLevel().getServer().getAllLevels()) {
-                oneBlockSaveHolder.put(allLevel, GlobalDataManager.get(allLevel));
+                oneBlockSaveHolder.putIfAbsent(allLevel, GlobalDataManager.get(allLevel));
             }
     }
 
