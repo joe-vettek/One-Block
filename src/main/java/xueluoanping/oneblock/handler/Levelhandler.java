@@ -32,6 +32,9 @@ public class Levelhandler {
 
     public static GlobalDataManager getSaveData(ServerLevel level) {
         GlobalDataManager globalDataManager = oneBlockSaveHolder.get(level);
+        if(globalDataManager==null){
+            OneBlock.LOGGER.error("Null One Block Level Data from Level : {}", level);
+        }
         return globalDataManager != null ?
                 globalDataManager : oneBlockSaveHolder.put(level, GlobalDataManager.get(level));
     }
