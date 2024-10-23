@@ -38,10 +38,11 @@ public class Levelhandler {
 
     @SubscribeEvent
     public void onLevelLoad(LevelEvent.Load event) {
-        if (!event.getLevel().isClientSide())
-            for (ServerLevel allLevel : event.getLevel().getServer().getAllLevels()) {
-                oneBlockSaveHolder.putIfAbsent(allLevel, GlobalDataManager.get(allLevel));
-            }
+        if (!event.getLevel().isClientSide()  && event.getLevel() instanceof ServerLevel serverLevel)
+            oneBlockSaveHolder.putIfAbsent(serverLevel, GlobalDataManager.get(serverLevel));
+            // for (ServerLevel allLevel : event.getLevel().getServer().getAllLevels()) {
+            //     oneBlockSaveHolder.putIfAbsent(allLevel, GlobalDataManager.get(allLevel));
+            // }
     }
 
 
@@ -58,23 +59,29 @@ public class Levelhandler {
     // 只需要保持item位置即可
     @SubscribeEvent
     public void onTick(LevelTickEvent.Post event) {
-        if (event.getLevel() instanceof ServerLevel)
+        if (event.getLevel() instanceof ServerLevel serverLevel)
         // OneBlock.logger(System.currentTimeMillis());
         {
             if (StageManager.isNeedCheck()) {
                 var old = System.currentTimeMillis();
-                StageManager.onCheck(event.getLevel().getServer().overworld());
+                // event.getLevel().getServer().overworld()
+                StageManager.onCheck(serverLevel.getLevel());
                 OneBlock.logger("Check Cost ", System.currentTimeMillis() - old);
             }
 
-            var server = event.getLevel().getServer();
-            for (ServerLevel level : server.getAllLevels()) {
-                var oneBlockSave = getSaveData(level);
-                for (BlockPos pos : oneBlockSave.getBlockPos()) {
-                    if (level.isLoaded(pos))
-                        generateBlock(server, oneBlockSave, level, pos);
-                }
+            var oneBlockSave = getSaveData(serverLevel);
+            for (BlockPos pos : oneBlockSave.getBlockPos()) {
+                if (serverLevel.isLoaded(pos))
+                    generateBlock(serverLevel.getServer(), oneBlockSave, serverLevel, pos);
             }
+            // var server = event.getLevel().getServer();
+            // for (ServerLevel level : server.getAllLevels()) {
+            //     var oneBlockSave = getSaveData(level);
+            //     for (BlockPos pos : oneBlockSave.getBlockPos()) {
+            //         if (level.isLoaded(pos))
+            //             generateBlock(server, oneBlockSave, level, pos);
+            //     }
+            // }
         }
         // ServerLevel level = server.overworld();
 
