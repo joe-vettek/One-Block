@@ -31,7 +31,9 @@ public class Levelhandler {
 
 
     public static GlobalDataManager getSaveData(ServerLevel level) {
-        return oneBlockSaveHolder.get(level);
+        GlobalDataManager globalDataManager = oneBlockSaveHolder.get(level);
+        return globalDataManager != null ?
+                globalDataManager : oneBlockSaveHolder.put(level, GlobalDataManager.get(level));
     }
 
     @SubscribeEvent
@@ -47,7 +49,7 @@ public class Levelhandler {
     public void onLevelSave(LevelEvent.Unload event) {
         if (!event.getLevel().isClientSide()
                 && event.getLevel() instanceof ServerLevel serverLevel)
-            // oneBlockSaveHolder.clear();
+        // oneBlockSaveHolder.clear();
         {
             oneBlockSaveHolder.remove(serverLevel);
         }        // oneBlockSave = null;
