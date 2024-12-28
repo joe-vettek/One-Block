@@ -2,19 +2,27 @@ package xueluoanping.oneblock.config;
 
 import net.neoforged.neoforge.common.ModConfigSpec;
 import xueluoanping.oneblock.OneBlock;
+import xueluoanping.oneblock.client.OneBlockTranslator;
 import xueluoanping.oneblock.util.Platform;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class General {
     public static ModConfigSpec COMMON_CONFIG;
     public static ModConfigSpec.BooleanValue debug;
     public static ModConfigSpec.BooleanValue collectItemNearby;
+    public static ModConfigSpec.BooleanValue addMobName;
+    public static ModConfigSpec.BooleanValue allowStructure;
+    public static ModConfigSpec.BooleanValue allowSound;
+    public static ModConfigSpec.BooleanValue allowFeature;
+    public static ModConfigSpec.BooleanValue allowCommand;
+    public static ModConfigSpec.BooleanValue allowHostileMobs;
+
+    public static ModConfigSpec.ConfigValue<String> mobName;
+
     // public static ModConfigSpec.ConfigValue<String> order;
     public static Map<String, ModConfigSpec.BooleanValue> enableList = new HashMap<>();
 
@@ -27,6 +35,20 @@ public class General {
         COMMON_BUILDER.comment("Play settings").push("Play");
         collectItemNearby = COMMON_BUILDER.comment("Set true to collect item dropped nearby the oneblock but may cause some delay.")
                 .define("CollectItem", true);
+        addMobName = COMMON_BUILDER.comment("Set true to add a name for the mobs which spawn.")
+                .define("AddMobName", true);
+        mobName = COMMON_BUILDER.comment("Set the lang key for mob name.")
+                .define("MobName", OneBlockTranslator.getCustomName("mob"), o -> o instanceof String);
+        allowHostileMobs = COMMON_BUILDER.comment("Set true to summon unfriendly mobs.")
+                .define("AllowUnfriendlyMobs", true);
+        allowStructure = COMMON_BUILDER.comment("Set true to allow structure being placed.")
+                .define("AllowGenerateStructure", true);
+        allowFeature = COMMON_BUILDER.comment("Set true to allow feature being placed.")
+                .define("AllowGenerateFeature", true);
+        allowCommand = COMMON_BUILDER.comment("Set true to allow commands using.")
+                .define("AllowCommand", true);
+        allowSound = COMMON_BUILDER.comment("Set true to allow sounds being played.")
+                .define("AllowPlaySound", true);
         COMMON_BUILDER.pop();
 
         // order = COMMON_BUILDER.comment("Set stage order.").
