@@ -27,6 +27,7 @@ import xueluoanping.oneblock.ModConstants;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.client.OneBlockTranslator;
 import xueluoanping.oneblock.api.StageData;
+import xueluoanping.oneblock.config.General;
 
 import java.util.Objects;
 import java.util.Optional;
@@ -153,25 +154,34 @@ public class PlaceUtil {
                 brushableBlockEntity.setLootTable(new ResourceLocation(select.getLoot_table()), level.getRandom().nextLong());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_MOB)) {
             var mob = RegisterFinderUtil.getEntity(select.getId());
-            for (int i = 0; i < select.getCount(); i++) {
-                var entity = mob.spawn(level, offsetPos.above(2), MobSpawnType.NATURAL);
-                if (entity != null) {
-                    entity.moveTo(offsetPos.getX() + 0.5 + 0.05 * i, offsetPos.getY() + 1.6, offsetPos.getZ() + 0.5 + 0.05 * i);
-                    entity.setCustomName(Component.translatable(OneBlockTranslator.getCustomName("mob")));
+            if (General.allowHostileMobs.get() || mob.getCategory().isFriendly()) {
+                for (int i = 0; i < select.getCount(); i++) {
+                    var entity = mob.spawn(level, offsetPos.above(2), MobSpawnType.NATURAL);
+                    if (entity != null) {
+                        entity.moveTo(offsetPos.getX() + 0.5 + 0.05 * i, offsetPos.getY() + 1.6, offsetPos.getZ() + 0.5 + 0.05 * i);
+                        if (General.addMobName.get()) {
+                            entity.setCustomName(Component.translatable(General.mobName.get()));
+                        }
+                    }
                 }
+                ClientUtils.playSpawnSound(level, offsetPos);
+                ClientUtils.playCloudParticles(level, offsetPos);
             }
-            ClientUtils.playSpawnSound(level, offsetPos);
-            ClientUtils.playCloudParticles(level, offsetPos);
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_TEMPLATE)) {
-            placeTemplate(level, offsetPos, new ResourceLocation(select.getId()));
+            if (General.allowStructure.get())
+                placeTemplate(level, offsetPos, new ResourceLocation(select.getId()));
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_STRUCTURE)) {
-            placeStructure(level, offsetPos, new ResourceLocation(select.getId()));
+            if (General.allowStructure.get())
+                placeStructure(level, offsetPos, new ResourceLocation(select.getId()));
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_CONFIGURED_FEATURE)) {
-            placeFeature(level, offsetPos, new ResourceLocation(select.getId()));
+            if (General.allowFeature.get())
+                placeFeature(level, offsetPos, new ResourceLocation(select.getId()));
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_SOUND)) {
-            ClientUtils.placeSound(level, offsetPos, select.getId());
+            if (General.allowSound.get())
+                ClientUtils.placeSound(level, offsetPos, select.getId());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_COMMAND)) {
-            CommandUtils.performCommand(level.getServer(), offsetPos, select.getId());
+            if (General.allowCommand.get())
+                CommandUtils.performCommand(level.getServer(), offsetPos, select.getId());
         }
     }
 }
