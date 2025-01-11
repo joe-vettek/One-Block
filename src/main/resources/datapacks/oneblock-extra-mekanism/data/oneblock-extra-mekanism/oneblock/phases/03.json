@@ -6,6 +6,11 @@
       "type": "block",
       "id": "mekanism:tin_ore",
       "weight": 8
+    },
+    {
+      "type": "block",
+      "id": "mekanism:tin_ore",
+      "weight": 5
     }
   ]
 }

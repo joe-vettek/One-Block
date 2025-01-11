@@ -10,9 +10,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.animal.horse.AbstractHorse;
+import net.minecraft.world.entity.animal.horse.SkeletonHorse;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BrushableBlockEntity;
@@ -33,8 +37,10 @@ import xueluoanping.oneblock.client.OneBlockTranslator;
 import xueluoanping.oneblock.api.StageData;
 import xueluoanping.oneblock.config.General;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.regex.Pattern;
 
 public class PlaceUtil {
 
@@ -142,6 +148,9 @@ public class PlaceUtil {
         if (Objects.equals(select.getType(), ModConstants.TYPE_BLOCK)) {
             var block = RegisterFinderUtil.getBlock(select.getId());
             level.setBlockAndUpdate(offsetPos, block.defaultBlockState());
+            BoundingBox.encapsulatingPositions(List.of(offsetPos)).ifPresent(
+                    boundingBox -> level.getBlockTicks().clearArea(boundingBox)
+            );
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_GIFT)) {
             // to avoid some problem the gift use id as res
             var block = RegisterFinderUtil.getBlock(select.getId());
@@ -159,10 +168,27 @@ public class PlaceUtil {
                 brushableBlockEntity.setLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse(select.getLoot_table())), level.getRandom().nextLong());
         } else if (Objects.equals(select.getType(), ModConstants.TYPE_MOB)) {
             var mob = RegisterFinderUtil.getEntity(select.getId());
-            if (General.allowHostileMobs.getAsBoolean() || mob.getCategory().isFriendly()) {
+            if ((General.allowHostileMobs.getAsBoolean() || mob.getCategory().isFriendly())
+                    && General.disableMobs.get().stream().noneMatch(s -> {
+                try {
+                    Pattern pattern = Pattern.compile(s);
+                    return pattern.matcher(select.getId()).matches();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return false;
+                }
+            })) {
                 for (int i = 0; i < select.getCount(); i++) {
                     var entity = mob.spawn(level, offsetPos.above(2), MobSpawnType.NATURAL);
-
+                    if (entity instanceof SkeletonHorse skeletonHorse) {
+                        if (level.getRandom().nextFloat() <= General.tamedSkeletonHorseChance.get())
+                            skeletonHorse.setTamed(true);
+                    }
+                    if (entity instanceof AbstractHorse abstractHorse) {
+                        if (level.getRandom().nextFloat() <= General.horseWithSaddleChance.get()) {
+                            abstractHorse.equipSaddle(Items.SADDLE.getDefaultInstance(),SoundSource.NEUTRAL);
+                        }
+                    }
                     if (entity != null) {
                         entity.moveTo(offsetPos.getX() + 0.5 + 0.05 * i, offsetPos.getY() + 1.6, offsetPos.getZ() + 0.5 + 0.05 * i);
                         if (General.addMobName.getAsBoolean()) {

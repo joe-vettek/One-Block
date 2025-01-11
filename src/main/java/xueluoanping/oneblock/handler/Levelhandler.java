@@ -153,9 +153,9 @@ public class Levelhandler {
             }
             nowProgress.updateCounter();
             globalDataManager.update(pos, nowProgress);
-            for (ServerPlayer player : level.players()) {
-                level.sendParticles(player, ParticleTypes.CLOUD, false, pos.getX() + 0.5, pos.getY() + 0.8, pos.getZ() + 0.5, 3, 0.5, 0.7, 0.5, 0.025);
-            }
+            // for (ServerPlayer player : level.players()) {
+            //     level.sendParticles(player, ParticleTypes.CLOUD, false, pos.getX() + 0.5, pos.getY() + 0.8, pos.getZ() + 0.5, 3, 0.5, 0.7, 0.5, 0.025);
+            // }
 
             // for debug
             if (General.debug.get())

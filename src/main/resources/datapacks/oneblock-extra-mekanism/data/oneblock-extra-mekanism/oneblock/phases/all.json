@@ -1,0 +1,36 @@
+{
+  "name": "",
+  "target": "oneblock:phases/all",
+  "list": [
+    {
+      "type": "block",
+      "id": "mekanism:deepslate_fluorite_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "mekanism:deepslate_lead_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "mekanism:deepslate_tin_ore",
+      "weight": 15
+    },
+    {
+      "type": "block",
+      "id": "mekanism:deepslate_osmium_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "mekanism:deepslate_uranium_ore",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "mekanism:block_salt",
+      "weight": 10
+    }
+  ]
+}
