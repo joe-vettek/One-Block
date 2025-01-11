@@ -140,7 +140,7 @@
       "type": "mob",
       "id": "minecraft:endermite",
       "count": 1,
-      "weight": 57
+      "weight": 8
     },
     {
       "type": "block",
@@ -306,7 +306,7 @@
       "type": "mob",
       "id": "minecraft:enderman",
       "count": 1,
-      "weight": 18
+      "weight": 10
     },
     {
       "type": "block",
@@ -347,13 +347,13 @@
       "type": "mob",
       "id": "minecraft:slime",
       "count": 1,
-      "weight": 16
+      "weight": 8
     },
     {
       "type": "mob",
       "id": "minecraft:bee",
       "count": 1,
-      "weight": 16
+      "weight": 4
     },
     {
       "type": "block",

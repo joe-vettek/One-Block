@@ -121,7 +121,7 @@
       "type": "mob",
       "id": "minecraft:ghast",
       "count": 1,
-      "weight": 4
+      "weight": 2
     },
     {
       "type": "mob",
@@ -142,7 +142,7 @@
     {
       "type": "mob",
       "id": "minecraft:strider",
-      "count": 2,
+      "count": 1,
       "weight": 2
     },
     {

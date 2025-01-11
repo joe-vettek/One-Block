@@ -115,19 +115,19 @@
       "type": "mob",
       "id": "minecraft:donkey",
       "count": 1,
-      "weight": 4
+      "weight": 1
     },
     {
       "type": "mob",
       "id": "minecraft:villager",
       "count": 1,
-      "weight": 4
+      "weight": 3
     },
     {
       "type": "mob",
       "id": "minecraft:fox",
       "count": 1,
-      "weight": 4
+      "weight": 1
     },
     {
       "type": "block",
@@ -138,13 +138,13 @@
       "type": "mob",
       "id": "minecraft:llama",
       "count": 1,
-      "weight": 4
+      "weight": 2
     },
     {
       "type": "mob",
       "id": "minecraft:wandering_trader",
       "count": 1,
-      "weight": 2
+      "weight": 1
     },
     {
       "type": "gift",

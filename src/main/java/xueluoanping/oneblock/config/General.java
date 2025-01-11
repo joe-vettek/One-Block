@@ -1,5 +1,7 @@
 package xueluoanping.oneblock.config;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.common.ForgeConfigSpec;
 import xueluoanping.oneblock.OneBlock;
 import xueluoanping.oneblock.client.OneBlockTranslator;
@@ -11,6 +13,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
+import java.util.regex.PatternSyntaxException;
 
 public class General {
     public static ForgeConfigSpec COMMON_CONFIG;
@@ -23,10 +27,25 @@ public class General {
     public static ForgeConfigSpec.BooleanValue allowFeature;
     public static ForgeConfigSpec.BooleanValue allowCommand;
     public static ForgeConfigSpec.BooleanValue allowHostileMobs;
+    public static ForgeConfigSpec.ConfigValue<List<? extends String>> disableMobs;
     public static ForgeConfigSpec.ConfigValue<String> mobName;
-    
+    public static ForgeConfigSpec.DoubleValue tamedSkeletonHorseChance;
+    public static ForgeConfigSpec.DoubleValue horseWithSaddleChance;
+
     // public static ForgeConfigSpec.ConfigValue<String> order;
     public static Map<String, ForgeConfigSpec.BooleanValue> enableList = new HashMap<>();
+
+    public static boolean isValidRegex(Object o) {
+        if (!(o instanceof String regex)) {
+            return false;
+        }
+        try {
+            Pattern.compile(regex);
+            return true;
+        } catch (PatternSyntaxException e) {
+            return false;
+        }
+    }
 
     static {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
@@ -43,6 +62,12 @@ public class General {
                 .define("MobName", OneBlockTranslator.getCustomName("mob"), o -> o instanceof String);
         allowHostileMobs = COMMON_BUILDER.comment("Set true to summon unfriendly mobs.")
                 .define("AllowUnfriendlyMobs", true);
+        disableMobs = COMMON_BUILDER.comment("Disable mobs via regular expressions, such as minecraft:*horse or minecraft:rabbit.")
+                .defineListAllowEmpty("DisableMobs", ArrayList::new, General::isValidRegex);
+        tamedSkeletonHorseChance = COMMON_BUILDER.comment("The chance of tamed skeleton horse spawn.")
+                .defineInRange("TamedSkeletonHorseChance", 0.3d, 0, 1);
+        horseWithSaddleChance = COMMON_BUILDER.comment("The chance of horse spawn with saddle.")
+                .defineInRange("HorseWithSaddleChance", 0.25d, 0, 1);
         allowStructure = COMMON_BUILDER.comment("Set true to allow structure being placed.")
                 .define("AllowGenerateStructure", true);
         allowFeature = COMMON_BUILDER.comment("Set true to allow feature being placed.")

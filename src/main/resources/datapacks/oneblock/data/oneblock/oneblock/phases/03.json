@@ -83,7 +83,7 @@
       "type": "mob",
       "id": "minecraft:fox",
       "count": 1,
-      "weight": 6
+      "weight": 1
     },
     {
       "type": "block",
@@ -99,13 +99,13 @@
       "type": "mob",
       "id": "minecraft:wolf",
       "count": 1,
-      "weight": 3
+      "weight": 1
     },
     {
       "type": "mob",
       "id": "minecraft:polar_bear",
       "count": 1,
-      "weight": 2
+      "weight": 1
     },
     {
       "type": "gift",

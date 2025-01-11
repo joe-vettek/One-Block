@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "target": "oneblock:phases/05",
+  "list": [
+    {
+      "type": "block",
+      "id": "mekanism:block_salt",
+      "weight": 5
+    },
+    {
+      "type": "block",
+      "id": "mekanism:tin_ore",
+      "weight": 5
+    }
+  ]
+}

@@ -45,13 +45,13 @@
       "type": "mob",
       "id": "minecraft:endermite",
       "count": 2,
-      "weight": 57
+      "weight": 6
     },
     {
       "type": "mob",
       "id": "minecraft:enderman",
       "count": 1,
-      "weight": 18
+      "weight": 10
     },
     {
       "type": "block",

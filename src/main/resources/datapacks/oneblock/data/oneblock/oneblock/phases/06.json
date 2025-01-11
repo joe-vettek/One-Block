@@ -58,7 +58,7 @@
       "type": "mob",
       "id": "minecraft:ocelot",
       "count": 1,
-      "weight": 6
+      "weight": 1
     },
     {
       "type": "mob",
@@ -76,7 +76,7 @@
       "type": "mob",
       "id": "minecraft:horse",
       "count": 1,
-      "weight": 4
+      "weight": 1
     },
     {
       "type": "block",
@@ -87,7 +87,7 @@
       "type": "mob",
       "id": "minecraft:panda",
       "count": 1,
-      "weight": 2
+      "weight": 1
     },
     {
       "type": "gift",

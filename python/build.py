@@ -9,6 +9,10 @@ def dynamic_import(file_path, runs):
         code = file.read()
     code += "\nruns.extend(run_list)"
     exec(code)
+    # try:
+    #     exec(code)
+    # except:
+    #     print("!!!!!!!",file_path)
 
 
 provider.root = "../src/main/resources/datapacks"
@@ -17,6 +21,7 @@ if __name__ == '__main__':
     old=util.readDir(provider.root)
     run_list = []
     for p in os.listdir('modules'):
+        # print(p.split(".")[0])
         dynamic_import(f'modules/{p}', run_list)
 
     for r in run_list:
