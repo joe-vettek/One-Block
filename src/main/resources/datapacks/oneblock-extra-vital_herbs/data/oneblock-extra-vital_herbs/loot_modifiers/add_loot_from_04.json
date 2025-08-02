@@ -3,8 +3,8 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "ija-one-block:05"
+      "loot_table_id": "oneblock:04"
     }
   ],
-  "lootTable": "oneblock-extra-teastory:06"
+  "lootTable": "oneblock-extra-vital_herbs:04"
 }

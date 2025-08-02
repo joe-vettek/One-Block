@@ -14,7 +14,7 @@ run_list.append(sub_provider)
 # 01
 loot01 = SingleLootTableBuilder()
 loot01.add_entry(SimplePoolEntryBuilder(kaleidoscope_cookery.blocks.lettuce_seed, weight=6).add_count_function(1, 2))
-loot_provider.add_modified_loot(target=[constant.STAGE_COLD.stage_gift], table_id="01", table= loot01)
+loot_provider.add_modified_loot(target=[constant.STAGE_PLAIN.stage_gift], table_id="01", table= loot01)
 
 
 # 04
@@ -26,7 +26,7 @@ loot_provider.add_modified_loot(target=[constant.STAGE_SWAMP.stage_gift], table_
 # 06
 loot06 = SingleLootTableBuilder()
 loot06.add_entry(SimplePoolEntryBuilder(kaleidoscope_cookery.blocks.chili_seed, weight=6).add_count_function(1, 2))
-loot_provider.add_modified_loot(target=[constant.STAGE_OCEAN.stage_gift], table_id="06", table= loot06)
+loot_provider.add_modified_loot(target=[constant.STAGE_FOREST.stage_gift], table_id="06", table= loot06)
 
 
 # 09

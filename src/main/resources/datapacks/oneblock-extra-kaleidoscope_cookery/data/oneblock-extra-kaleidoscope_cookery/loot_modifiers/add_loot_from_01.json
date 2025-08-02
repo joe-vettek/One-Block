@@ -3,7 +3,7 @@
   "conditions": [
     {
       "condition": "forge:loot_table_id",
-      "loot_table_id": "ija-one-block:03"
+      "loot_table_id": "ija-one-block:01"
     }
   ],
   "lootTable": "oneblock-extra-kaleidoscope_cookery:01"

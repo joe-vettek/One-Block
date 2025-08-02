@@ -1,0 +1,14 @@
+{
+  "name": "",
+  "target": "oneblock:phases/08",
+  "add_count": 2,
+  "list": [
+    {
+      "type": "mob",
+      "id": "vital_herbs:wisp",
+      "count": 1,
+      "weight": 2,
+      "max_times": 2
+    }
+  ]
+}

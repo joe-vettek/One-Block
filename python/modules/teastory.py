@@ -14,7 +14,7 @@ run_list.append(sub_provider)
 # 01
 loot01 = SingleLootTableBuilder()
 loot01.add_entry(SimplePoolEntryBuilder(teastory.blocks.wild_cucumber, weight=6).add_count_function(1, 2))
-loot_provider.add_modified_loot(target=[constant.STAGE_COLD.stage_gift], table_id="01", table= loot01)
+loot_provider.add_modified_loot(target=[constant.STAGE_PLAIN.stage_gift], table_id="01", table= loot01)
 
 
 # 03
@@ -35,7 +35,7 @@ loot06.add_entry(SimplePoolEntryBuilder(teastory.blocks.wild_tea_plant, weight=6
 loot06.add_entry(SimplePoolEntryBuilder(teastory.blocks.wild_chili, weight=6).add_count_function(1, 2))
 loot06.add_entry(SimplePoolEntryBuilder(teastory.blocks.wild_grape, weight=6).add_count_function(1, 2))
 loot06.add_entry(SimplePoolEntryBuilder(teastory.blocks.wild_bitter_gourd, weight=6).add_count_function(1, 2))
-loot_provider.add_modified_loot(target=[constant.STAGE_OCEAN.stage_gift], table_id="06", table= loot06)
+loot_provider.add_modified_loot(target=[constant.STAGE_FOREST.stage_gift], table_id="06", table= loot06)
 
 
 # 10

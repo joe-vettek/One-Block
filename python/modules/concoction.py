@@ -30,13 +30,13 @@ loot06.add_entry(SimplePoolEntryBuilder(concoction.blocks.wild_cabbage, weight=6
 loot06.add_entry(SimplePoolEntryBuilder(concoction.blocks.wild_carrot, weight=6).add_count_function(1, 2))
 loot06.add_entry(SimplePoolEntryBuilder(concoction.blocks.wild_onion, weight=6).add_count_function(1, 2))
 loot06.add_entry(SimplePoolEntryBuilder(concoction.blocks.wild_spicy_pepper, weight=6).add_count_function(1, 2))
-loot_provider.add_modified_loot(target=[constant.STAGE_OCEAN.stage_gift], table_id="06", table= loot06)
+loot_provider.add_modified_loot(target=[constant.STAGE_FOREST.stage_gift], table_id="06", table= loot06)
 
 
 # 07
 loot07 = SingleLootTableBuilder()
 loot07.add_entry(SimplePoolEntryBuilder(concoction.blocks.wild_cotton, weight=6).add_count_function(1, 2))
-loot_provider.add_modified_loot(target=[constant.STAGE_OCEAN.stage_gift], table_id="07", table= loot07)
+loot_provider.add_modified_loot(target=[constant.STAGE_HOT.stage_gift], table_id="07", table= loot07)
 
 
 # 09

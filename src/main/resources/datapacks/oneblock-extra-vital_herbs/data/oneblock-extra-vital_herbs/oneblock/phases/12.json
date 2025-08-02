@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "target": "oneblock:phases/12",
+  "list": [
+    {
+      "type": "block",
+      "id": "vital_herbs:deepslate_aura_crystal_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "vital_herbs:green_slate",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "vital_herbs:lichen_mite",
+      "count": 2,
+      "weight": 2,
+      "max_times": 3
+    }
+  ]
+}
