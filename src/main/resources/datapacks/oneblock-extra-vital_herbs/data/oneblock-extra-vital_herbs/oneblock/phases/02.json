@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "target": "oneblock:phases/02",
+  "list": [
+    {
+      "type": "block",
+      "id": "vital_herbs:aura_crystal_ore",
+      "weight": 10
+    },
+    {
+      "type": "block",
+      "id": "vital_herbs:green_slate",
+      "weight": 6
+    }
+  ]
+}

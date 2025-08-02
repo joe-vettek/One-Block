@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/09",
+  "list": [
+    {
+      "type": "block",
+      "id": "kaleidoscope_cookery:straw_block",
+      "weight": 4
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/all",
+  "list": [
+    {
+      "type": "block",
+      "id": "vital_herbs:deepslate_aura_crystal_ore",
+      "weight": 10
+    }
+  ]
+}
