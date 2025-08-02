@@ -113,66 +113,6 @@ class Block(Collections):
     wooden_tray = RegisterEntry("teastory:wooden_tray")
     # 木桶 Wooden Barrel
     wooden_barrel = RegisterEntry("teastory:wooden_barrel")
-    # block.teastory.minecraft.oak_trellis
-    minecraft.oak_trellis = RegisterEntry("teastory:minecraft.oak_trellis")
-    # block.teastory.minecraft.dark_oak_trellis
-    minecraft.dark_oak_trellis = RegisterEntry("teastory:minecraft.dark_oak_trellis")
-    # block.teastory.nomansland.trimmed_dark_oak_trellis
-    nomansland.trimmed_dark_oak_trellis = RegisterEntry("teastory:nomansland.trimmed_dark_oak_trellis")
-    # block.teastory.minecraft.crimson_trellis
-    minecraft.crimson_trellis = RegisterEntry("teastory:minecraft.crimson_trellis")
-    # block.teastory.nomansland.trimmed_bamboo_trellis
-    nomansland.trimmed_bamboo_trellis = RegisterEntry("teastory:nomansland.trimmed_bamboo_trellis")
-    # block.teastory.minecraft.jungle_trellis
-    minecraft.jungle_trellis = RegisterEntry("teastory:minecraft.jungle_trellis")
-    # block.teastory.nomansland.trimmed_walnut_trellis
-    nomansland.trimmed_walnut_trellis = RegisterEntry("teastory:nomansland.trimmed_walnut_trellis")
-    # block.teastory.nomansland.pine_trellis
-    nomansland.pine_trellis = RegisterEntry("teastory:nomansland.pine_trellis")
-    # block.teastory.nomansland.trimmed_jungle_trellis
-    nomansland.trimmed_jungle_trellis = RegisterEntry("teastory:nomansland.trimmed_jungle_trellis")
-    # block.teastory.minecraft.mangrove_trellis
-    minecraft.mangrove_trellis = RegisterEntry("teastory:minecraft.mangrove_trellis")
-    # block.teastory.minecraft.acacia_trellis
-    minecraft.acacia_trellis = RegisterEntry("teastory:minecraft.acacia_trellis")
-    # block.teastory.nomansland.walnut_trellis
-    nomansland.walnut_trellis = RegisterEntry("teastory:nomansland.walnut_trellis")
-    # block.teastory.nomansland.trimmed_mangrove_trellis
-    nomansland.trimmed_mangrove_trellis = RegisterEntry("teastory:nomansland.trimmed_mangrove_trellis")
-    # block.teastory.nomansland.trimmed_cherry_trellis
-    nomansland.trimmed_cherry_trellis = RegisterEntry("teastory:nomansland.trimmed_cherry_trellis")
-    # block.teastory.nomansland.trimmed_birch_trellis
-    nomansland.trimmed_birch_trellis = RegisterEntry("teastory:nomansland.trimmed_birch_trellis")
-    # block.teastory.minecraft.cherry_trellis
-    minecraft.cherry_trellis = RegisterEntry("teastory:minecraft.cherry_trellis")
-    # block.teastory.nomansland.trimmed_maple_trellis
-    nomansland.trimmed_maple_trellis = RegisterEntry("teastory:nomansland.trimmed_maple_trellis")
-    # block.teastory.nomansland.trimmed_acacia_trellis
-    nomansland.trimmed_acacia_trellis = RegisterEntry("teastory:nomansland.trimmed_acacia_trellis")
-    # block.teastory.nomansland.trimmed_oak_trellis
-    nomansland.trimmed_oak_trellis = RegisterEntry("teastory:nomansland.trimmed_oak_trellis")
-    # block.teastory.minecraft.warped_trellis
-    minecraft.warped_trellis = RegisterEntry("teastory:minecraft.warped_trellis")
-    # block.teastory.nomansland.willow_trellis
-    nomansland.willow_trellis = RegisterEntry("teastory:nomansland.willow_trellis")
-    # block.teastory.minecraft.spruce_trellis
-    minecraft.spruce_trellis = RegisterEntry("teastory:minecraft.spruce_trellis")
-    # block.teastory.nomansland.trimmed_warped_trellis
-    nomansland.trimmed_warped_trellis = RegisterEntry("teastory:nomansland.trimmed_warped_trellis")
-    # block.teastory.nomansland.trimmed_willow_trellis
-    nomansland.trimmed_willow_trellis = RegisterEntry("teastory:nomansland.trimmed_willow_trellis")
-    # block.teastory.nomansland.trimmed_crimson_trellis
-    nomansland.trimmed_crimson_trellis = RegisterEntry("teastory:nomansland.trimmed_crimson_trellis")
-    # block.teastory.minecraft.birch_trellis
-    minecraft.birch_trellis = RegisterEntry("teastory:minecraft.birch_trellis")
-    # block.teastory.nomansland.trimmed_pine_trellis
-    nomansland.trimmed_pine_trellis = RegisterEntry("teastory:nomansland.trimmed_pine_trellis")
-    # block.teastory.minecraft.bamboo_trellis
-    minecraft.bamboo_trellis = RegisterEntry("teastory:minecraft.bamboo_trellis")
-    # block.teastory.nomansland.maple_trellis
-    nomansland.maple_trellis = RegisterEntry("teastory:nomansland.maple_trellis")
-    # block.teastory.nomansland.trimmed_spruce_trellis
-    nomansland.trimmed_spruce_trellis = RegisterEntry("teastory:nomansland.trimmed_spruce_trellis")
 
 class Item(Collections):
     # 辣椒 Chili

@@ -45,7 +45,7 @@ loot09.add_entry(SimplePoolEntryBuilder(concoction.blocks.wild_tomato, weight=6)
 loot_provider.add_modified_loot(target=[constant.STAGE_VILLAGE.stage_gift, constant.STAGE_FOREST.stage_gift], table_id="09", table= loot09)
 
 
-# 09
+# 10
 loot10 = SingleLootTableBuilder()
 loot10.add_entry(SimplePoolEntryBuilder(concoction.blocks.wild_potato, weight=6).add_count_function(1, 2))
 loot_provider.add_modified_loot(target=[constant.STAGE_TRAVEL.stage_gift], table_id="10", table= loot10)
