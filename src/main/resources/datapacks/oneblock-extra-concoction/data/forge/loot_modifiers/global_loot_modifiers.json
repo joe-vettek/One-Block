@@ -1,0 +1,11 @@
+{
+  "entries": [
+    "oneblock-extra-concoction:add_loot_from_01",
+    "oneblock-extra-concoction:add_loot_from_04",
+    "oneblock-extra-concoction:add_loot_from_06",
+    "oneblock-extra-concoction:add_loot_from_07",
+    "oneblock-extra-concoction:add_loot_from_09",
+    "oneblock-extra-concoction:add_loot_from_10"
+  ],
+  "replace": false
+}

@@ -11,7 +11,7 @@ run_list.append(loot_provider)
 sub_provider = PhaseProvider(mod_id)
 run_list.append(sub_provider)
 
-# 03
+# 01
 loot01 = SingleLootTableBuilder()
 loot01.add_entry(SimplePoolEntryBuilder(kaleidoscope_cookery.blocks.lettuce_seed, weight=6).add_count_function(1, 2))
 loot_provider.add_modified_loot(target=[constant.STAGE_COLD.stage_gift], table_id="01", table= loot01)
