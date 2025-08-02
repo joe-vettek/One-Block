@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/09",
+  "list": [
+    {
+      "type": "block",
+      "id": "nomansland:walnut_log",
+      "weight": 5
+    }
+  ]
+}

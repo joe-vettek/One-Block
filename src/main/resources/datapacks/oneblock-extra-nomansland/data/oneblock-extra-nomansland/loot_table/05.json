@@ -1,0 +1,59 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:seashells",
+          "weight": 1,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:short_beachgrass",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:tall_beachgrass",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

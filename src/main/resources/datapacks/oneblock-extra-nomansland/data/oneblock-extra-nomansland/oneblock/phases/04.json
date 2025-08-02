@@ -1,0 +1,29 @@
+{
+  "name": "",
+  "target": "oneblock:phases/04",
+  "list": [
+    {
+      "type": "block",
+      "id": "nomansland:willow_log",
+      "weight": 4
+    },
+    {
+      "type": "mob",
+      "id": "nomansland:billhook_bass",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "nomansland:goose",
+      "count": 1,
+      "weight": 2
+    },
+    {
+      "type": "mob",
+      "id": "nomansland:billhook_bass",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

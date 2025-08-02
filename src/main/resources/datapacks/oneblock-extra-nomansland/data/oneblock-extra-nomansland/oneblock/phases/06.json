@@ -1,0 +1,22 @@
+{
+  "name": "",
+  "target": "oneblock:phases/06",
+  "list": [
+    {
+      "type": "block",
+      "id": "nomansland:maple_log",
+      "weight": 2
+    },
+    {
+      "type": "block",
+      "id": "nomansland:field_mushroom_block",
+      "weight": 1
+    },
+    {
+      "type": "mob",
+      "id": "nomansland:deer",
+      "count": 1,
+      "weight": 2
+    }
+  ]
+}

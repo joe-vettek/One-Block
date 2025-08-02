@@ -1,0 +1,11 @@
+{
+  "name": "",
+  "target": "oneblock:phases/12",
+  "list": [
+    {
+      "type": "block",
+      "id": "nomansland:budding_quartzite",
+      "weight": 4
+    }
+  ]
+}

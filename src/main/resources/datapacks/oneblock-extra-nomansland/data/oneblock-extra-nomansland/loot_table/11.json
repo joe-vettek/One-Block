@@ -1,0 +1,85 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:autumnal_oak_sapling",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "bonus_rolls": {
+        "min": 0,
+        "max": 1
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:mycelium_growths",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:mycelium_sprouts",
+          "weight": 4,
+          "functions": [
+            {
+              "count": {
+                "min": 2,
+                "max": 4
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "nomansland:dried_grass",
+          "weight": 6,
+          "functions": [
+            {
+              "count": {
+                "min": 1,
+                "max": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

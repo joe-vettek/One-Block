@@ -22,7 +22,9 @@ if __name__ == '__main__':
         #     file_id = file_id[:-len('_entity')]
         a = util.get_multi_json(i)
         for item in a:
-            registerName: str = item["registerName"].replace(":entities/", ":").split(':')
+            registerName: str = (item["registerName"].replace(":entities/", ":")
+                                 .replace("ResourceKey[minecraft:loot_table / ","").replace("]","")
+                                 .split(':'))
             type = item["type"]
             mod = registerName[0]
             name = registerName[1].replace("/", "_")

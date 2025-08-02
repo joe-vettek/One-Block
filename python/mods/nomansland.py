@@ -506,6 +506,17 @@ class Item(Collections):
     # Deer Spawn Egg
     deer_spawn_egg = RegisterEntry("nomansland:deer_spawn_egg")
 
+class Entity(Collections):
+    # Billhook Bass
+    billhook_bass = RegisterEntry("nomansland:billhook_bass")
+    # Deer
+    deer = RegisterEntry("nomansland:deer")
+    # entity.nomansland.goose
+    goose = RegisterEntry("nomansland:goose")
+    # entity.nomansland.moose
+    moose = RegisterEntry("nomansland:moose")
+
 
 blocks = Block()
 items = Item()
+entities = Entity()

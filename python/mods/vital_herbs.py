@@ -210,6 +210,15 @@ class Block(Collections):
     # 紧实荷包牡丹 Compacted Bleeding Heart
     compacted_bleeding_heart = RegisterEntry("vital_herbs:compacted_bleeding_heart")
 
+class Entity(Collections):
+    # 幽灵火花 Wisp
+    wisp = RegisterEntry("vital_herbs:wisp")
+    # 地衣螨 Lichen Mite
+    lichen_mite = RegisterEntry("vital_herbs:lichen_mite")
+    # Ring
+    pedestal_ring = RegisterEntry("vital_herbs:pedestal_ring")
+
 
 items = Item()
 blocks = Block()
+entities = Entity()

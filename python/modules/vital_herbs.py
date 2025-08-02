@@ -70,14 +70,14 @@ sub_provider.add_phase("02", stage02)
 # 08
 stage08 = SubPhaseTableBuilder(target=constant.STAGE_NETHER.get_phase_id())
 stage08.set_add_count(2)
-stage08.add_mob_limit("vital_herbs:wisp", 2,1,0,2)
+stage08.add_mob_limit(vital_herbs.entities.wisp, 2,1,0,2)
 sub_provider.add_phase("08", stage08)
 
 # 12
 stage12 = SubPhaseTableBuilder(target=constant.STAGE_DEPTH.get_phase_id())
 stage12.add_block(vital_herbs.blocks.deepslate_aura_crystal_ore, 10)
 stage12.add_block(vital_herbs.blocks.green_slate, 4)
-stage12.add_mob_limit("vital_herbs:lichen_mite", 2,2,0,3)
+stage12.add_mob_limit(vital_herbs.entities.lichen_mite, 2,2,0,3)
 sub_provider.add_phase("12", stage12)
 
 # all
