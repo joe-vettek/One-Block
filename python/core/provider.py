@@ -5,6 +5,7 @@ from os.path import join
 from typing import List
 
 from core import util, constant
+from mods import minecraft
 
 root = "datapacks"
 use_path = []
@@ -222,7 +223,7 @@ class ModifiedLootTableProvider(LootTableProvider):
         return f"ModifiedLootTableProvider {self.mod_id}"
 
     def get_glm_path(self):
-        return self.get_data_base_path(join("forge", "loot_modifiers", "global_loot_modifiers.json"))
+        return self.get_data_base_path(join("neoforge", "loot_modifiers", "global_loot_modifiers.json"))
 
     def get_loot_modifiers_path(self, table_id: str):
         return self.get_data_path(join("loot_modifiers", f"add_loot_from_{table_id}.json"))
@@ -234,7 +235,7 @@ class ModifiedLootTableProvider(LootTableProvider):
         self.add_loot(table_id, table)
         modified = {
             "type": "oneblock:add_loot_table",
-            "conditions": [{"condition": "forge:loot_table_id", "loot_table_id": t} for t in target],
+            "conditions": [{"condition": "neoforge:loot_table_id", "loot_table_id": t} for t in target],
             "lootTable": self.get_loot_table_res(table_id)
         }
         self.add(self.get_loot_modifiers_path(table_id), modified)
@@ -338,7 +339,8 @@ class PhaseTableBuilder(dict):
         return self
 
     def add_chest_gift(self, loot_id: str, weight=0, min_times=0, max_times=0):
-        self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_GIFT, id_c=loot_id, weight=weight)
+        self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_GIFT, id_c=minecraft.blocks.chest, weight=weight)
+        .set_loot_table(loot_id)
                        .set_times(min_times, max_times))
         return self
 

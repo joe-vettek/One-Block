@@ -134,7 +134,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:rare",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:rare",
       "times": 1
     }
   ]

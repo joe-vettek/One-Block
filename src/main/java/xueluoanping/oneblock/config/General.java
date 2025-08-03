@@ -54,7 +54,7 @@ public class General {
         collectItemNearby = COMMON_BUILDER.comment("Set true to collect item dropped nearby the oneblock but may cause some delay.")
                 .define("CollectItem", true);
         addMobName = COMMON_BUILDER.comment("Set true to add a name for the mobs which spawn.")
-                .define("AddMobName", true);
+                .define("AddMobName", false);
         mobName = COMMON_BUILDER.comment("Set the lang key for mob name.")
                 .define("MobName", OneBlockTranslator.getCustomName("mob"), o -> o instanceof String);
         disableMobs = COMMON_BUILDER.comment("Disable mobs via regular expressions, such as minecraft:*horse or minecraft:rabbit.")

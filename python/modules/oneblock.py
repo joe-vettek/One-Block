@@ -59,9 +59,9 @@ stage01.add_mob(minecraft.entities.pig, 1, 1)
 stage01.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
         constant.STAGE_PLAIN.stage_gift))
-stage01.add_entry(
-    PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
-        constant.STAGE_PLAIN.variety_gift))
+# stage01.add_entry(
+#     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
+#         constant.STAGE_PLAIN.variety_gift))
 sub_provider.add_phase("01", stage01)
 
 # 02
