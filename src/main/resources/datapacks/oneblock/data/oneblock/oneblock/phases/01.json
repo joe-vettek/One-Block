@@ -50,6 +50,7 @@
       "id": "minecraft:sheep",
       "count": 1,
       "weight": 1,
+      "min_times": 1,
       "max_times": 2
     },
     {
@@ -57,7 +58,6 @@
       "id": "minecraft:cow",
       "count": 1,
       "weight": 1,
-      "min_times": 1,
       "max_times": 2
     },
     {
@@ -71,7 +71,8 @@
       "type": "gift",
       "id": "minecraft:chest",
       "weight": 2,
-      "loot_table": "ija-one-block:01"
+      "loot_table": "ija-one-block:01",
+      "min_times": 1
     }
   ]
 }

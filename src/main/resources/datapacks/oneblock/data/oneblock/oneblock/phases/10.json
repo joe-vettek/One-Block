@@ -128,7 +128,8 @@
       "type": "gift",
       "id": "minecraft:chest",
       "weight": 2,
-      "loot_table": "oneblock:10"
+      "loot_table": "oneblock:10",
+      "min_times": 1
     },
     {
       "type": "gift",
