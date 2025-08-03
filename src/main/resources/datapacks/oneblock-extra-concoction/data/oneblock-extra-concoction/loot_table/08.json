@@ -13,21 +13,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "concoction:corn_seeds",
-          "weight": 6,
-          "functions": [
-            {
-              "count": {
-                "min": 1,
-                "max": 2
-              },
-              "function": "minecraft:set_count"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "concoction:wild_potato",
+          "name": "concoction:reapper_seeds",
           "weight": 6,
           "functions": [
             {

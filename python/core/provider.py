@@ -287,8 +287,8 @@ class PhaseEntryBuilder(dict):
 
     def set_times(self, min_times=0, max_times=0):
         if not min_times == max_times:
-            if min_times > max_times:
-                raise ValueError(f"min_times {min_times} can't  bigger than max_times {max_times}")
+            # if min_times > max_times:
+            #     raise ValueError(f"min_times {min_times} can't  bigger than max_times {max_times}")
             if min_times > 0:
                 self["min_times"] = min_times
             if max_times > 0:

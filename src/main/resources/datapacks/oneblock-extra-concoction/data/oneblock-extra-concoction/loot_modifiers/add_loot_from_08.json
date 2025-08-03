@@ -3,8 +3,8 @@
   "conditions": [
     {
       "condition": "neoforge:loot_table_id",
-      "loot_table_id": "ija-one-block:08"
+      "loot_table_id": "ija-one-block:07"
     }
   ],
-  "lootTable": "oneblock-extra-concoction:09"
+  "lootTable": "oneblock-extra-concoction:08"
 }

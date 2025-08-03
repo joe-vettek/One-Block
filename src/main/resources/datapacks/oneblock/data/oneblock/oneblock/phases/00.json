@@ -38,7 +38,8 @@
       "type": "gift",
       "id": "minecraft:chest",
       "weight": 2,
-      "loot_table": "ija-one-block:00"
+      "loot_table": "ija-one-block:00",
+      "min_times": 1
     },
     {
       "type": "gift",
