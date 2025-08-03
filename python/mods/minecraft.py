@@ -17,6 +17,8 @@ class Block(Collections):
     oak_stairs = RegisterEntry("minecraft:oak_stairs")
     # 橡木台阶 Oak Slab
     oak_slab = RegisterEntry("minecraft:oak_slab")
+    # 书架 Oak Bookshelf
+    bookshelf = RegisterEntry("minecraft:bookshelf")
     # 橡木栅栏 Oak Fence
     oak_fence = RegisterEntry("minecraft:oak_fence")
     # 橡木栅栏门 Oak Fence Gate
@@ -425,6 +427,34 @@ class Block(Collections):
     deepslate_tile_wall = RegisterEntry("minecraft:deepslate_tile_wall")
     # 强化深板岩 Reinforced Deepslate
     reinforced_deepslate = RegisterEntry("minecraft:reinforced_deepslate")
+    # 凝灰岩 Tuff
+    tuff = RegisterEntry("minecraft:tuff")
+    # 凝灰岩楼梯 Tuff Stairs
+    tuff_stairs = RegisterEntry("minecraft:tuff_stairs")
+    # 凝灰岩台阶 Tuff Slab
+    tuff_slab = RegisterEntry("minecraft:tuff_slab")
+    # 凝灰岩墙 Tuff Wall
+    tuff_wall = RegisterEntry("minecraft:tuff_wall")
+    # 雕纹凝灰岩 Chiseled Tuff
+    chiseled_tuff = RegisterEntry("minecraft:chiseled_tuff")
+    # 磨制凝灰岩 Polished Tuff
+    polished_tuff = RegisterEntry("minecraft:polished_tuff")
+    # 磨制凝灰岩楼梯 Polished Tuff Stairs
+    polished_tuff_stairs = RegisterEntry("minecraft:polished_tuff_stairs")
+    # 磨制凝灰岩台阶 Polished Tuff Slab
+    polished_tuff_slab = RegisterEntry("minecraft:polished_tuff_slab")
+    # 磨制凝灰岩墙 Polished Tuff Wall
+    polished_tuff_wall = RegisterEntry("minecraft:polished_tuff_wall")
+    # 凝灰岩砖 Tuff Bricks
+    tuff_bricks = RegisterEntry("minecraft:tuff_bricks")
+    # 凝灰岩砖楼梯 Tuff Brick Stairs
+    tuff_brick_stairs = RegisterEntry("minecraft:tuff_brick_stairs")
+    # 凝灰岩砖台阶 Tuff Brick Slab
+    tuff_brick_slab = RegisterEntry("minecraft:tuff_brick_slab")
+    # 凝灰岩砖墙 Tuff Brick Wall
+    tuff_brick_wall = RegisterEntry("minecraft:tuff_brick_wall")
+    # 雕纹凝灰岩砖 Chiseled Tuff Bricks
+    chiseled_tuff_bricks = RegisterEntry("minecraft:chiseled_tuff_bricks")
     # 红砖块 Bricks
     bricks = RegisterEntry("minecraft:bricks")
     # 红砖楼梯 Brick Stairs
@@ -599,7 +629,7 @@ class Block(Collections):
     iron_trapdoor = RegisterEntry("minecraft:iron_trapdoor")
     # 重质测重压力板 Heavy Weighted Pressure Plate
     heavy_weighted_pressure_plate = RegisterEntry("minecraft:heavy_weighted_pressure_plate")
-    # 锁链 Iron Chain
+    # 锁链 Chain
     chain = RegisterEntry("minecraft:chain")
     # 金块 Block of Gold
     gold_block = RegisterEntry("minecraft:gold_block")
@@ -637,68 +667,148 @@ class Block(Collections):
     amethyst_block = RegisterEntry("minecraft:amethyst_block")
     # 铜块 Block of Copper
     copper_block = RegisterEntry("minecraft:copper_block")
+    # 雕纹铜块 Chiseled Copper
+    chiseled_copper = RegisterEntry("minecraft:chiseled_copper")
+    # 铜格栅 Copper Grate
+    copper_grate = RegisterEntry("minecraft:copper_grate")
     # 切制铜块 Cut Copper
     cut_copper = RegisterEntry("minecraft:cut_copper")
     # 切制铜楼梯 Cut Copper Stairs
     cut_copper_stairs = RegisterEntry("minecraft:cut_copper_stairs")
     # 切制铜台阶 Cut Copper Slab
     cut_copper_slab = RegisterEntry("minecraft:cut_copper_slab")
+    # 铜门 Copper Door
+    copper_door = RegisterEntry("minecraft:copper_door")
+    # 铜活板门 Copper Trapdoor
+    copper_trapdoor = RegisterEntry("minecraft:copper_trapdoor")
+    # 铜灯 Copper Bulb
+    copper_bulb = RegisterEntry("minecraft:copper_bulb")
     # 斑驳的铜块 Exposed Copper
     exposed_copper = RegisterEntry("minecraft:exposed_copper")
+    # 斑驳的雕纹铜块 Exposed Chiseled Copper
+    exposed_chiseled_copper = RegisterEntry("minecraft:exposed_chiseled_copper")
+    # 斑驳的铜格栅 Exposed Copper Grate
+    exposed_copper_grate = RegisterEntry("minecraft:exposed_copper_grate")
     # 斑驳的切制铜块 Exposed Cut Copper
     exposed_cut_copper = RegisterEntry("minecraft:exposed_cut_copper")
     # 斑驳的切制铜楼梯 Exposed Cut Copper Stairs
     exposed_cut_copper_stairs = RegisterEntry("minecraft:exposed_cut_copper_stairs")
     # 斑驳的切制铜台阶 Exposed Cut Copper Slab
     exposed_cut_copper_slab = RegisterEntry("minecraft:exposed_cut_copper_slab")
+    # 斑驳的铜门 Exposed Copper Door
+    exposed_copper_door = RegisterEntry("minecraft:exposed_copper_door")
+    # 斑驳的铜活板门 Exposed Copper Trapdoor
+    exposed_copper_trapdoor = RegisterEntry("minecraft:exposed_copper_trapdoor")
+    # 斑驳的铜灯 Exposed Copper Bulb
+    exposed_copper_bulb = RegisterEntry("minecraft:exposed_copper_bulb")
     # 锈蚀的铜块 Weathered Copper
     weathered_copper = RegisterEntry("minecraft:weathered_copper")
+    # 锈蚀的雕纹铜块 Weathered Chiseled Copper
+    weathered_chiseled_copper = RegisterEntry("minecraft:weathered_chiseled_copper")
+    # 锈蚀的铜格栅 Weathered Copper Grate
+    weathered_copper_grate = RegisterEntry("minecraft:weathered_copper_grate")
     # 锈蚀的切制铜块 Weathered Cut Copper
     weathered_cut_copper = RegisterEntry("minecraft:weathered_cut_copper")
     # 锈蚀的切制铜楼梯 Weathered Cut Copper Stairs
     weathered_cut_copper_stairs = RegisterEntry("minecraft:weathered_cut_copper_stairs")
     # 锈蚀的切制铜台阶 Weathered Cut Copper Slab
     weathered_cut_copper_slab = RegisterEntry("minecraft:weathered_cut_copper_slab")
+    # 锈蚀的铜门 Weathered Copper Door
+    weathered_copper_door = RegisterEntry("minecraft:weathered_copper_door")
+    # 锈蚀的铜活板门 Weathered Copper Trapdoor
+    weathered_copper_trapdoor = RegisterEntry("minecraft:weathered_copper_trapdoor")
+    # 锈蚀的铜灯 Weathered Copper Bulb
+    weathered_copper_bulb = RegisterEntry("minecraft:weathered_copper_bulb")
     # 氧化的铜块 Oxidized Copper
     oxidized_copper = RegisterEntry("minecraft:oxidized_copper")
+    # 氧化的雕纹铜块 Oxidized Chiseled Copper
+    oxidized_chiseled_copper = RegisterEntry("minecraft:oxidized_chiseled_copper")
+    # 氧化的铜格栅 Oxidized Copper Grate
+    oxidized_copper_grate = RegisterEntry("minecraft:oxidized_copper_grate")
     # 氧化的切制铜块 Oxidized Cut Copper
     oxidized_cut_copper = RegisterEntry("minecraft:oxidized_cut_copper")
     # 氧化的切制铜楼梯 Oxidized Cut Copper Stairs
     oxidized_cut_copper_stairs = RegisterEntry("minecraft:oxidized_cut_copper_stairs")
     # 氧化的切制铜台阶 Oxidized Cut Copper Slab
     oxidized_cut_copper_slab = RegisterEntry("minecraft:oxidized_cut_copper_slab")
+    # 氧化的铜门 Oxidized Copper Door
+    oxidized_copper_door = RegisterEntry("minecraft:oxidized_copper_door")
+    # 氧化的铜活板门 Oxidized Copper Trapdoor
+    oxidized_copper_trapdoor = RegisterEntry("minecraft:oxidized_copper_trapdoor")
+    # 氧化的铜灯 Oxidized Copper Bulb
+    oxidized_copper_bulb = RegisterEntry("minecraft:oxidized_copper_bulb")
     # 涂蜡的铜块 Waxed Block of Copper
     waxed_copper_block = RegisterEntry("minecraft:waxed_copper_block")
+    # 涂蜡的雕纹铜块 Waxed Chiseled Copper
+    waxed_chiseled_copper = RegisterEntry("minecraft:waxed_chiseled_copper")
+    # 涂蜡的铜格栅 Waxed Copper Grate
+    waxed_copper_grate = RegisterEntry("minecraft:waxed_copper_grate")
     # 涂蜡的切制铜块 Waxed Cut Copper
     waxed_cut_copper = RegisterEntry("minecraft:waxed_cut_copper")
     # 涂蜡的切制铜楼梯 Waxed Cut Copper Stairs
     waxed_cut_copper_stairs = RegisterEntry("minecraft:waxed_cut_copper_stairs")
     # 涂蜡的切制铜台阶 Waxed Cut Copper Slab
     waxed_cut_copper_slab = RegisterEntry("minecraft:waxed_cut_copper_slab")
+    # 涂蜡的铜门 Waxed Copper Door
+    waxed_copper_door = RegisterEntry("minecraft:waxed_copper_door")
+    # 涂蜡的铜活板门 Waxed Copper Trapdoor
+    waxed_copper_trapdoor = RegisterEntry("minecraft:waxed_copper_trapdoor")
+    # 涂蜡的铜灯 Waxed Copper Bulb
+    waxed_copper_bulb = RegisterEntry("minecraft:waxed_copper_bulb")
     # 涂蜡的斑驳铜块 Waxed Exposed Copper
     waxed_exposed_copper = RegisterEntry("minecraft:waxed_exposed_copper")
+    # 涂蜡的斑驳雕纹铜块 Waxed Exposed Chiseled Copper
+    waxed_exposed_chiseled_copper = RegisterEntry("minecraft:waxed_exposed_chiseled_copper")
+    # 涂蜡的斑驳铜格栅 Waxed Exposed Copper Grate
+    waxed_exposed_copper_grate = RegisterEntry("minecraft:waxed_exposed_copper_grate")
     # 涂蜡的斑驳切制铜块 Waxed Exposed Cut Copper
     waxed_exposed_cut_copper = RegisterEntry("minecraft:waxed_exposed_cut_copper")
     # 涂蜡的斑驳切制铜楼梯 Waxed Exposed Cut Copper Stairs
     waxed_exposed_cut_copper_stairs = RegisterEntry("minecraft:waxed_exposed_cut_copper_stairs")
     # 涂蜡的斑驳切制铜台阶 Waxed Exposed Cut Copper Slab
     waxed_exposed_cut_copper_slab = RegisterEntry("minecraft:waxed_exposed_cut_copper_slab")
+    # 涂蜡的斑驳铜门 Waxed Exposed Copper Door
+    waxed_exposed_copper_door = RegisterEntry("minecraft:waxed_exposed_copper_door")
+    # 涂蜡的斑驳铜活板门 Waxed Exposed Copper Trapdoor
+    waxed_exposed_copper_trapdoor = RegisterEntry("minecraft:waxed_exposed_copper_trapdoor")
+    # 涂蜡的斑驳铜灯 Waxed Exposed Copper Bulb
+    waxed_exposed_copper_bulb = RegisterEntry("minecraft:waxed_exposed_copper_bulb")
     # 涂蜡的锈蚀铜块 Waxed Weathered Copper
     waxed_weathered_copper = RegisterEntry("minecraft:waxed_weathered_copper")
+    # 涂蜡的锈蚀雕纹铜块 Waxed Weathered Chiseled Copper
+    waxed_weathered_chiseled_copper = RegisterEntry("minecraft:waxed_weathered_chiseled_copper")
+    # 涂蜡的锈蚀铜格栅 Waxed Weathered Copper Grate
+    waxed_weathered_copper_grate = RegisterEntry("minecraft:waxed_weathered_copper_grate")
     # 涂蜡的锈蚀切制铜块 Waxed Weathered Cut Copper
     waxed_weathered_cut_copper = RegisterEntry("minecraft:waxed_weathered_cut_copper")
     # 涂蜡的锈蚀切制铜楼梯 Waxed Weathered Cut Copper Stairs
     waxed_weathered_cut_copper_stairs = RegisterEntry("minecraft:waxed_weathered_cut_copper_stairs")
     # 涂蜡的锈蚀切制铜台阶 Waxed Weathered Cut Copper Slab
     waxed_weathered_cut_copper_slab = RegisterEntry("minecraft:waxed_weathered_cut_copper_slab")
+    # 涂蜡的锈蚀铜门 Waxed Weathered Copper Door
+    waxed_weathered_copper_door = RegisterEntry("minecraft:waxed_weathered_copper_door")
+    # 涂蜡的锈蚀铜活板门 Waxed Weathered Copper Trapdoor
+    waxed_weathered_copper_trapdoor = RegisterEntry("minecraft:waxed_weathered_copper_trapdoor")
+    # 涂蜡的锈蚀铜灯 Waxed Weathered Copper Bulb
+    waxed_weathered_copper_bulb = RegisterEntry("minecraft:waxed_weathered_copper_bulb")
     # 涂蜡的氧化铜块 Waxed Oxidized Copper
     waxed_oxidized_copper = RegisterEntry("minecraft:waxed_oxidized_copper")
+    # 涂蜡的氧化雕纹铜块 Waxed Oxidized Chiseled Copper
+    waxed_oxidized_chiseled_copper = RegisterEntry("minecraft:waxed_oxidized_chiseled_copper")
+    # 涂蜡的氧化铜格栅 Waxed Oxidized Copper Grate
+    waxed_oxidized_copper_grate = RegisterEntry("minecraft:waxed_oxidized_copper_grate")
     # 涂蜡的氧化切制铜块 Waxed Oxidized Cut Copper
     waxed_oxidized_cut_copper = RegisterEntry("minecraft:waxed_oxidized_cut_copper")
     # 涂蜡的氧化切制铜楼梯 Waxed Oxidized Cut Copper Stairs
     waxed_oxidized_cut_copper_stairs = RegisterEntry("minecraft:waxed_oxidized_cut_copper_stairs")
     # 涂蜡的氧化切制铜台阶 Waxed Oxidized Cut Copper Slab
     waxed_oxidized_cut_copper_slab = RegisterEntry("minecraft:waxed_oxidized_cut_copper_slab")
+    # 涂蜡的氧化铜门 Waxed Oxidized Copper Door
+    waxed_oxidized_copper_door = RegisterEntry("minecraft:waxed_oxidized_copper_door")
+    # 涂蜡的氧化铜活板门 Waxed Oxidized Copper Trapdoor
+    waxed_oxidized_copper_trapdoor = RegisterEntry("minecraft:waxed_oxidized_copper_trapdoor")
+    # 涂蜡的氧化铜灯 Waxed Oxidized Copper Bulb
+    waxed_oxidized_copper_bulb = RegisterEntry("minecraft:waxed_oxidized_copper_bulb")
     # 白色羊毛 White Wool
     white_wool = RegisterEntry("minecraft:white_wool")
     # 淡灰色羊毛 Light Gray Wool
@@ -1095,13 +1205,15 @@ class Block(Collections):
     magenta_banner = RegisterEntry("minecraft:magenta_banner")
     # 粉红色旗帜 Pink Banner
     pink_banner = RegisterEntry("minecraft:pink_banner")
+    # 饰纹陶罐 Decorated Pot
+    decorated_pot = RegisterEntry("minecraft:decorated_pot")
     # 草方块 Grass Block
     grass_block = RegisterEntry("minecraft:grass_block")
     # 灰化土 Podzol
     podzol = RegisterEntry("minecraft:podzol")
     # 菌丝体 Mycelium
     mycelium = RegisterEntry("minecraft:mycelium")
-    # 土径 Dirt Path
+    # 土径 Grass Path
     dirt_path = RegisterEntry("minecraft:dirt_path")
     # 泥土 Dirt
     dirt = RegisterEntry("minecraft:dirt")
@@ -1137,8 +1249,6 @@ class Block(Collections):
     moss_carpet = RegisterEntry("minecraft:moss_carpet")
     # 方解石 Calcite
     calcite = RegisterEntry("minecraft:calcite")
-    # 凝灰岩 Tuff
-    tuff = RegisterEntry("minecraft:tuff")
     # 滴水石块 Dripstone Block
     dripstone_block = RegisterEntry("minecraft:dripstone_block")
     # 滴水石锥 Pointed Dripstone
@@ -1279,7 +1389,7 @@ class Block(Collections):
     crimson_fungus = RegisterEntry("minecraft:crimson_fungus")
     # 诡异菌 Warped Fungus
     warped_fungus = RegisterEntry("minecraft:warped_fungus")
-    # 草 Grass
+    # 矮草丛 Short Grass
     short_grass = RegisterEntry("minecraft:short_grass")
     # 蕨 Fern
     fern = RegisterEntry("minecraft:fern")
@@ -1383,7 +1493,7 @@ class Block(Collections):
     pitcher_pod = RegisterEntry("minecraft:pitcher_pod")
     # 发光浆果 Glow Berries
     glow_berries = RegisterEntry("minecraft:glow_berries")
-    # 甜浆果 Sweet Berries
+    # 甜浆果 Lingonberries
     sweet_berries = RegisterEntry("minecraft:sweet_berries")
     # 下界疣 Nether Wart
     nether_wart = RegisterEntry("minecraft:nether_wart")
@@ -1505,15 +1615,15 @@ class Block(Collections):
     soul_torch = RegisterEntry("minecraft:soul_torch")
     # 红石火把 Redstone Torch
     redstone_torch = RegisterEntry("minecraft:redstone_torch")
-    # 灯笼 Iron Lantern
+    # 灯笼 Lantern
     lantern = RegisterEntry("minecraft:lantern")
-    # 灵魂灯笼 Iron Soul Lantern
+    # 灵魂灯笼 Soul Lantern
     soul_lantern = RegisterEntry("minecraft:soul_lantern")
     # 末地烛 End Rod
     end_rod = RegisterEntry("minecraft:end_rod")
     # 红石灯 Redstone Lamp
     redstone_lamp = RegisterEntry("minecraft:redstone_lamp")
-    # 工作台 Oak Crafting Table
+    # 橡木工作台 Crafting Table
     crafting_table = RegisterEntry("minecraft:crafting_table")
     # 切石机 Stonecutter
     stonecutter = RegisterEntry("minecraft:stonecutter")
@@ -1527,7 +1637,7 @@ class Block(Collections):
     grindstone = RegisterEntry("minecraft:grindstone")
     # 织布机 Loom
     loom = RegisterEntry("minecraft:loom")
-    # 熔炉 Cobblestone Furnace
+    # 熔炉 Furnace
     furnace = RegisterEntry("minecraft:furnace")
     # 烟熏炉 Smoker
     smoker = RegisterEntry("minecraft:smoker")
@@ -1563,9 +1673,9 @@ class Block(Collections):
     conduit = RegisterEntry("minecraft:conduit")
     # 磁石 Lodestone
     lodestone = RegisterEntry("minecraft:lodestone")
-    # 梯子 Oak Ladder
+    # 梯子 Ladder
     ladder = RegisterEntry("minecraft:ladder")
-    # 脚手架 Scaffolding
+    # 脚手架 Bamboo Scaffolding
     scaffolding = RegisterEntry("minecraft:scaffolding")
     # 蜂箱 Beehive
     beehive = RegisterEntry("minecraft:beehive")
@@ -1577,10 +1687,6 @@ class Block(Collections):
     lightning_rod = RegisterEntry("minecraft:lightning_rod")
     # 花盆 Flower Pot
     flower_pot = RegisterEntry("minecraft:flower_pot")
-    # 饰纹陶罐 Decorated Pot
-    decorated_pot = RegisterEntry("minecraft:decorated_pot")
-    # 书架 Oak Bookshelf
-    bookshelf = RegisterEntry("minecraft:bookshelf")
     # 雕纹书架 Chiseled Bookshelf
     chiseled_bookshelf = RegisterEntry("minecraft:chiseled_bookshelf")
     # 讲台 Lectern
@@ -1629,7 +1735,7 @@ class Block(Collections):
     warped_sign = RegisterEntry("minecraft:warped_sign")
     # 悬挂式诡异木告示牌 Warped Hanging Sign
     warped_hanging_sign = RegisterEntry("minecraft:warped_hanging_sign")
-    # 箱子 Oak Chest
+    # 箱子 Chest
     chest = RegisterEntry("minecraft:chest")
     # 木桶 Barrel
     barrel = RegisterEntry("minecraft:barrel")
@@ -1655,6 +1761,8 @@ class Block(Collections):
     dragon_egg = RegisterEntry("minecraft:dragon_egg")
     # 末地传送门框架 End Portal Frame
     end_portal_frame = RegisterEntry("minecraft:end_portal_frame")
+    # 宝库 Vault
+    vault = RegisterEntry("minecraft:vault")
     # 虫蚀石头 Infested Stone
     infested_stone = RegisterEntry("minecraft:infested_stone")
     # 虫蚀圆石 Infested Cobblestone
@@ -1695,9 +1803,11 @@ class Block(Collections):
     dispenser = RegisterEntry("minecraft:dispenser")
     # 投掷器 Dropper
     dropper = RegisterEntry("minecraft:dropper")
+    # 合成器 Crafter
+    crafter = RegisterEntry("minecraft:crafter")
     # 漏斗 Hopper
     hopper = RegisterEntry("minecraft:hopper")
-    # 陷阱箱 Oak Trapped Chest
+    # 陷阱箱 Trapped Chest
     trapped_chest = RegisterEntry("minecraft:trapped_chest")
     # 侦测器 Observer
     observer = RegisterEntry("minecraft:observer")
@@ -1719,8 +1829,12 @@ class Block(Collections):
     potato = RegisterEntry("minecraft:potato")
     # 蛋糕 Cake
     cake = RegisterEntry("minecraft:cake")
+    # 沉重核心 Heavy Core
+    heavy_core = RegisterEntry("minecraft:heavy_core")
     # 刷怪笼 Monster Spawner
     spawner = RegisterEntry("minecraft:spawner")
+    # 试炼刷怪笼 Trial Spawner
+    trial_spawner = RegisterEntry("minecraft:trial_spawner")
     # 命令方块 Command Block
     command_block = RegisterEntry("minecraft:command_block")
     # 连锁型命令方块 Chain Command Block
@@ -1835,6 +1949,8 @@ class Item(Collections):
     milk_bucket = RegisterEntry("minecraft:milk_bucket")
     # 钓鱼竿 Fishing Rod
     fishing_rod = RegisterEntry("minecraft:fishing_rod")
+    # 收纳袋 Bundle
+    bundle = RegisterEntry("minecraft:bundle")
     # 打火石 Flint and Steel
     flint_and_steel = RegisterEntry("minecraft:flint_and_steel")
     # 火焰弹 Fire Charge
@@ -1861,6 +1977,8 @@ class Item(Collections):
     map = RegisterEntry("minecraft:map")
     # 书与笔 Book and Quill
     writable_book = RegisterEntry("minecraft:writable_book")
+    # 风弹 Wind Charge
+    wind_charge = RegisterEntry("minecraft:wind_charge")
     # 末影珍珠 Ender Pearl
     ender_pearl = RegisterEntry("minecraft:ender_pearl")
     # 鞘翅 Elytra
@@ -1930,15 +2048,21 @@ class Item(Collections):
     # 音乐唱片 Music Disc
     music_disc_11 = RegisterEntry("minecraft:music_disc_11")
     # 音乐唱片 Music Disc
+    music_disc_creator_music_box = RegisterEntry("minecraft:music_disc_creator_music_box")
+    # 音乐唱片 Music Disc
     music_disc_wait = RegisterEntry("minecraft:music_disc_wait")
     # 音乐唱片 Music Disc
+    music_disc_creator = RegisterEntry("minecraft:music_disc_creator")
+    # 音乐唱片 Music Disc
+    music_disc_precipice = RegisterEntry("minecraft:music_disc_precipice")
+    # 音乐唱片 Music Disc
     music_disc_otherside = RegisterEntry("minecraft:music_disc_otherside")
+    # 音乐唱片 Music Disc
+    music_disc_relic = RegisterEntry("minecraft:music_disc_relic")
     # 音乐唱片 Music Disc
     music_disc_5 = RegisterEntry("minecraft:music_disc_5")
     # 音乐唱片 Music Disc
     music_disc_pigstep = RegisterEntry("minecraft:music_disc_pigstep")
-    # 音乐唱片 Music Disc
-    music_disc_relic = RegisterEntry("minecraft:music_disc_relic")
     # 木剑 Wooden Sword
     wooden_sword = RegisterEntry("minecraft:wooden_sword")
     # 石剑 Stone Sword
@@ -1953,6 +2077,8 @@ class Item(Collections):
     netherite_sword = RegisterEntry("minecraft:netherite_sword")
     # 三叉戟 Trident
     trident = RegisterEntry("minecraft:trident")
+    # 重锤 Mace
+    mace = RegisterEntry("minecraft:mace")
     # 盾牌 Shield
     shield = RegisterEntry("minecraft:shield")
     # 皮革帽子 Leather Cap
@@ -2013,6 +2139,8 @@ class Item(Collections):
     golden_horse_armor = RegisterEntry("minecraft:golden_horse_armor")
     # 钻石马铠 Diamond Horse Armor
     diamond_horse_armor = RegisterEntry("minecraft:diamond_horse_armor")
+    # 狼铠 Wolf Armor
+    wolf_armor = RegisterEntry("minecraft:wolf_armor")
     # 不死图腾 Totem of Undying
     totem_of_undying = RegisterEntry("minecraft:totem_of_undying")
     # 雪球 Snowball
@@ -2061,9 +2189,9 @@ class Item(Collections):
     mutton = RegisterEntry("minecraft:mutton")
     # 熟羊肉 Cooked Mutton
     cooked_mutton = RegisterEntry("minecraft:cooked_mutton")
-    # 生鸡肉 Raw Chicken
+    # 生鸡肉 Raw Poultry
     chicken = RegisterEntry("minecraft:chicken")
-    # 熟鸡肉 Cooked Chicken
+    # 熟鸡肉 Cooked Poultry
     cooked_chicken = RegisterEntry("minecraft:cooked_chicken")
     # 生兔肉 Raw Rabbit
     rabbit = RegisterEntry("minecraft:rabbit")
@@ -2101,6 +2229,8 @@ class Item(Collections):
     suspicious_stew = RegisterEntry("minecraft:suspicious_stew")
     # 蜂蜜瓶 Honey Bottle
     honey_bottle = RegisterEntry("minecraft:honey_bottle")
+    # 不祥之瓶 Ominous Bottle
+    ominous_bottle = RegisterEntry("minecraft:ominous_bottle")
     # 药水 Potion
     potion = RegisterEntry("minecraft:potion")
     # 喷溅药水 Splash Potion
@@ -2123,7 +2253,7 @@ class Item(Collections):
     lapis_lazuli = RegisterEntry("minecraft:lapis_lazuli")
     # 钻石 Diamond
     diamond = RegisterEntry("minecraft:diamond")
-    # 下界石英 Nether Quartz
+    # 下界石英 Quartz
     quartz = RegisterEntry("minecraft:quartz")
     # 紫水晶碎片 Amethyst Shard
     amethyst_shard = RegisterEntry("minecraft:amethyst_shard")
@@ -2161,8 +2291,10 @@ class Item(Collections):
     ink_sac = RegisterEntry("minecraft:ink_sac")
     # 荧光墨囊 Glow Ink Sac
     glow_ink_sac = RegisterEntry("minecraft:glow_ink_sac")
-    # 鳞甲 Scute
+    # 海龟鳞甲 Turtle Scute
     turtle_scute = RegisterEntry("minecraft:turtle_scute")
+    # 犰狳鳞甲 Armadillo Scute
+    armadillo_scute = RegisterEntry("minecraft:armadillo_scute")
     # 黏液球 Slimeball
     slime_ball = RegisterEntry("minecraft:slime_ball")
     # 黏土球 Clay Ball
@@ -2177,6 +2309,8 @@ class Item(Collections):
     heart_of_the_sea = RegisterEntry("minecraft:heart_of_the_sea")
     # 烈焰棒 Blaze Rod
     blaze_rod = RegisterEntry("minecraft:blaze_rod")
+    # 旋风棒 Breeze Rod
+    breeze_rod = RegisterEntry("minecraft:breeze_rod")
     # 下界之星 Nether Star
     nether_star = RegisterEntry("minecraft:nether_star")
     # 潜影壳 Shulker Shell
@@ -2267,6 +2401,10 @@ class Item(Collections):
     globe_banner_pattern = RegisterEntry("minecraft:globe_banner_pattern")
     # 旗帜图案 Banner Pattern
     piglin_banner_pattern = RegisterEntry("minecraft:piglin_banner_pattern")
+    # 旗帜图案 Banner Pattern
+    flow_banner_pattern = RegisterEntry("minecraft:flow_banner_pattern")
+    # 旗帜图案 Banner Pattern
+    guster_banner_pattern = RegisterEntry("minecraft:guster_banner_pattern")
     # 垂钓纹样陶片 Angler Pottery Sherd
     angler_pottery_sherd = RegisterEntry("minecraft:angler_pottery_sherd")
     # 弓箭纹样陶片 Archer Pottery Sherd
@@ -2281,10 +2419,14 @@ class Item(Collections):
     burn_pottery_sherd = RegisterEntry("minecraft:burn_pottery_sherd")
     # 危机纹样陶片 Danger Pottery Sherd
     danger_pottery_sherd = RegisterEntry("minecraft:danger_pottery_sherd")
+    # 涡流纹样陶片 Flow Pottery Sherd
+    flow_pottery_sherd = RegisterEntry("minecraft:flow_pottery_sherd")
     # 探险纹样陶片 Explorer Pottery Sherd
     explorer_pottery_sherd = RegisterEntry("minecraft:explorer_pottery_sherd")
     # 挚友纹样陶片 Friend Pottery Sherd
     friend_pottery_sherd = RegisterEntry("minecraft:friend_pottery_sherd")
+    # 旋风纹样陶片 Guster Pottery Sherd
+    guster_pottery_sherd = RegisterEntry("minecraft:guster_pottery_sherd")
     # 爱心纹样陶片 Heart Pottery Sherd
     heart_pottery_sherd = RegisterEntry("minecraft:heart_pottery_sherd")
     # 心碎纹样陶片 Heartbreak Pottery Sherd
@@ -2299,6 +2441,8 @@ class Item(Collections):
     plenty_pottery_sherd = RegisterEntry("minecraft:plenty_pottery_sherd")
     # 珍宝纹样陶片 Prize Pottery Sherd
     prize_pottery_sherd = RegisterEntry("minecraft:prize_pottery_sherd")
+    # 刮削纹样陶片 Scrape Pottery Sherd
+    scrape_pottery_sherd = RegisterEntry("minecraft:scrape_pottery_sherd")
     # 麦捆纹样陶片 Sheaf Pottery Sherd
     sheaf_pottery_sherd = RegisterEntry("minecraft:sheaf_pottery_sherd")
     # 树荫纹样陶片 Shelter Pottery Sherd
@@ -2341,12 +2485,22 @@ class Item(Collections):
     eye_armor_trim_smithing_template = RegisterEntry("minecraft:eye_armor_trim_smithing_template")
     # 锻造模板 Smithing Template
     spire_armor_trim_smithing_template = RegisterEntry("minecraft:spire_armor_trim_smithing_template")
+    # 锻造模板 Smithing Template
+    flow_armor_trim_smithing_template = RegisterEntry("minecraft:flow_armor_trim_smithing_template")
+    # 锻造模板 Smithing Template
+    bolt_armor_trim_smithing_template = RegisterEntry("minecraft:bolt_armor_trim_smithing_template")
     # 附魔之瓶 Bottle o' Enchanting
     experience_bottle = RegisterEntry("minecraft:experience_bottle")
+    # 试炼钥匙 Trial Key
+    trial_key = RegisterEntry("minecraft:trial_key")
+    # 不祥试炼钥匙 Ominous Trial Key
+    ominous_trial_key = RegisterEntry("minecraft:ominous_trial_key")
     # 附魔书 Enchanted Book
     enchanted_book = RegisterEntry("minecraft:enchanted_book")
     # 悦灵刷怪蛋 Allay Spawn Egg
     allay_spawn_egg = RegisterEntry("minecraft:allay_spawn_egg")
+    # 犰狳刷怪蛋 Armadillo Spawn Egg
+    armadillo_spawn_egg = RegisterEntry("minecraft:armadillo_spawn_egg")
     # 美西螈刷怪蛋 Axolotl Spawn Egg
     axolotl_spawn_egg = RegisterEntry("minecraft:axolotl_spawn_egg")
     # 蝙蝠刷怪蛋 Bat Spawn Egg
@@ -2355,6 +2509,10 @@ class Item(Collections):
     bee_spawn_egg = RegisterEntry("minecraft:bee_spawn_egg")
     # 烈焰人刷怪蛋 Blaze Spawn Egg
     blaze_spawn_egg = RegisterEntry("minecraft:blaze_spawn_egg")
+    # 沼骸刷怪蛋 Bogged Spawn Egg
+    bogged_spawn_egg = RegisterEntry("minecraft:bogged_spawn_egg")
+    # 旋风人刷怪蛋 Breeze Spawn Egg
+    breeze_spawn_egg = RegisterEntry("minecraft:breeze_spawn_egg")
     # 骆驼刷怪蛋 Camel Spawn Egg
     camel_spawn_egg = RegisterEntry("minecraft:camel_spawn_egg")
     # 猫刷怪蛋 Cat Spawn Egg
@@ -2503,6 +2661,8 @@ class Item(Collections):
 class Entity(Collections):
     # 悦灵 Allay
     allay = RegisterEntry("minecraft:allay")
+    # 犰狳 Armadillo
+    armadillo = RegisterEntry("minecraft:armadillo")
     # 美西螈 Axolotl
     axolotl = RegisterEntry("minecraft:axolotl")
     # 蝙蝠 Bat
@@ -2511,6 +2671,10 @@ class Entity(Collections):
     bee = RegisterEntry("minecraft:bee")
     # 烈焰人 Blaze
     blaze = RegisterEntry("minecraft:blaze")
+    # 沼骸 Bogged
+    bogged = RegisterEntry("minecraft:bogged")
+    # 旋风人 Breeze
+    breeze = RegisterEntry("minecraft:breeze")
     # 骆驼 Camel
     camel = RegisterEntry("minecraft:camel")
     # 猫 Cat
@@ -2633,7 +2797,7 @@ class Entity(Collections):
     turtle = RegisterEntry("minecraft:turtle")
     # 恼鬼 Vex
     vex = RegisterEntry("minecraft:vex")
-    # 村民 Villager
+    # 无业 Unemployed
     villager = RegisterEntry("minecraft:villager")
     # 卫道士 Vindicator
     vindicator = RegisterEntry("minecraft:vindicator")

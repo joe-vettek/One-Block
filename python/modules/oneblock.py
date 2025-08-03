@@ -52,10 +52,10 @@ stage01.add_block(minecraft.blocks.birch_log, 11)
 stage01.add_block(minecraft.blocks.melon, 10)
 stage01.add_block(minecraft.blocks.podzol, 9)
 stage01.add_block(minecraft.blocks.pumpkin, 6)
-stage01.add_mob(minecraft.items.chicken, 1, 1)
-stage01.add_mob(minecraft.entities.sheep, 1, 1)
-stage01.add_mob(minecraft.entities.cow, 1, 1)
-stage01.add_mob(minecraft.entities.pig, 1, 1)
+stage01.add_mob_limit(minecraft.items.chicken, 1, 1, max_time=2)
+stage01.add_mob_limit(minecraft.entities.sheep, 1, 1, max_time=2)
+stage01.add_mob_limit(minecraft.entities.cow, 1, 1, min_time=1, max_time=2)
+stage01.add_mob_limit(minecraft.entities.pig, 1, 1, max_time=2)
 stage01.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
         constant.STAGE_PLAIN.stage_gift))
@@ -81,7 +81,7 @@ stage02.add_mob(minecraft.items.rabbit, 1, 1)
 stage02.add_mob(minecraft.entities.zombie, 2, 2)
 stage02.add_mob(minecraft.entities.spider, 2, 1)
 stage02.add_mob(minecraft.entities.creeper, 3, 1)
-stage02.add_mob(minecraft.entities.mooshroom, 1, 1)
+stage02.add_mob_limit(minecraft.entities.mooshroom, 1, 1, max_time=1)
 stage02.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
         constant.STAGE_UNDERGROUND.stage_gift))
@@ -140,7 +140,7 @@ stage04.add_mob(minecraft.entities.frog, 2, 1)
 stage04.add_mob(minecraft.entities.tadpole, 1, 1)
 stage04.add_mob(minecraft.entities.salmon, 4, 1)
 stage04.add_mob(minecraft.entities.squid, 1, 1)
-stage04.add_mob("minecraft:bogged", 2)
+stage04.add_mob(minecraft.entities.bogged, 2)
 stage04.add_entry(
     PhaseEntryBuilder(constant.TYPE_GIFT, minecraft.blocks.chest, weight=2).set_loot_table(
         constant.STAGE_SWAMP.stage_gift))
@@ -215,7 +215,6 @@ stage06.add_entry(
 stage06.add_chest_gift(constant.GIFT_ODD, min_times=1, max_times=1)
 stage06.add_chest_gift(constant.GIFT_MUSICAL, min_times=1, max_times=1)
 sub_provider.add_phase("06", stage06)
-
 
 # 07
 stage07 = PhaseTableBuilder(count=610, end_gift=constant.STAGE_HOT.end_gift)
@@ -333,7 +332,7 @@ stage10.add_block(minecraft.blocks.dripstone_block, 80)
 stage10.add_block(minecraft.blocks.grass_block, 50)
 stage10.add_block(minecraft.blocks.coarse_dirt, 20)
 stage10.add_mob(minecraft.entities.allay, 1, 1)
-stage10.add_mob(minecraft.entities.camel, 2, 1)
+stage10.add_mob_limit(minecraft.entities.camel, 2, 1, max_time=3)
 stage10.add_block(minecraft.blocks.cherry_log, 29)
 stage10.add_block(minecraft.blocks.lapis_ore, 15)
 stage10.add_block(minecraft.blocks.iron_ore, 13)
@@ -344,7 +343,7 @@ stage10.add_block(minecraft.blocks.rooted_dirt, 8)
 stage10.add_block(minecraft.blocks.oak_log, 6)
 stage10.add_mob(minecraft.entities.goat, 1, 1)
 stage10.add_mob(minecraft.entities.axolotl, 2, 2)
-stage10.add_mob("minecraft:breeze", 2)
+stage10.add_mob(minecraft.entities.breeze, 2)
 stage10.add_block(minecraft.blocks.stone, 8)
 stage10.add_entry(
     PhaseEntryBuilder(constant.TYPE_ARCHAEOLOGY, minecraft.blocks.suspicious_sand, 8).set_loot_table(
