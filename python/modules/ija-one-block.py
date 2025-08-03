@@ -1251,6 +1251,6 @@ rare.add_pool(lootbuilder_rare_4)
 
 
 # tutorial-waterbucket
-loottutorial_waterbucket = SingleLootTableBuilder()
+loottutorial_waterbucket = SingleLootTableBuilder(rolls_min=1, rolls_max=1, bonus_rolls_min=0, bonus_rolls_max=0)
 loottutorial_waterbucket.add_entry(SimplePoolEntryBuilder(minecraft.items.water_bucket, weight=1).add_count_function(1, 1))
 loot_provider.add_loot(table_id="tutorial-waterbucket", table=loottutorial_waterbucket)

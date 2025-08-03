@@ -33,7 +33,6 @@ public class StageData {
     private boolean disable_addition;
 
 
-
     @Override
     public String toString() {
         Gson gson = new GsonBuilder().create();
@@ -156,7 +155,7 @@ public class StageData {
                 .filter(blockEntry -> nowProgress.checkQuota(blockEntry.getType(), blockEntry.getGlobalId()))
                 .mapToInt(BlockEntry::getWeight).sum();
 
-        if (totalWeight <= 0) {
+        if (totalWeight < 0 || (totalWeight == 0 && !reachRemain)) {
             OneBlock.error("Found error in", this.getResName(), reachRemain, localCount, totalWeight, nowProgress, this.list);
             // Todo: fix the problem
             blockEntryStream = this.list;
@@ -165,6 +164,8 @@ public class StageData {
                     .filter(blockEntry -> nowProgress.checkQuota(blockEntry.getType(), blockEntry.getGlobalId()))
                     .mapToInt(BlockEntry::getWeight).sum();
             // throw new IllegalArgumentException( OneBlock.getStr("Found error in", this.getResName(),reachRemain,localCount, totalWeight, nowProgress,this.list));
+        } else if (totalWeight == 0 && !blockEntryStream.isEmpty()) {
+            return blockEntryStream.get(0);
         }
 
         int randomNumber = random.nextInt(totalWeight) + 1;
@@ -220,23 +221,26 @@ public class StageData {
         @Override
         public String toString() {
             return "BlockEntry{" +
-                    "type='" + type + '\'' +
+                    "blockstates='" + blockstates + '\'' +
+                    ", type='" + type + '\'' +
                     ", id='" + id + '\'' +
                     ", uid='" + uid + '\'' +
                     ", weight=" + weight +
                     ", loot_table='" + loot_table + '\'' +
-                    ", blockstates='" + blockstates + '\'' +
-                    ", nbt='" + nbt + '\'' +
                     ", count=" + count +
-                    ", fix_start=" + precedence_start +
-                    ", fix_end=" + precedence_end +
+                    ", nbt='" + nbt + '\'' +
+                    ", precedence_start=" + precedence_start +
+                    ", precedence=" + precedence +
+                    ", precedence_end=" + precedence_end +
                     ", min_times=" + min_times +
                     ", max_times=" + max_times +
+                    ", times=" + times +
                     ", preprocessing=" + preprocessing +
                     ", offset_x=" + offset_x +
                     ", offset_y=" + offset_y +
                     ", offset_z=" + offset_z +
                     ", chance=" + chance +
+                    ", from=" + from +
                     '}';
         }
 
@@ -442,7 +446,8 @@ public class StageData {
                 case ModConstants.TYPE_BLOCK -> {
                     return RegisterFinderUtil.getBlockKey(RegisterFinderUtil.getBlock(getId())).toString().equals(getId());
                 }
-                case ModConstants.TYPE_GIFT, ModConstants.TYPE_COMMAND, ModConstants.TYPE_ARCHAEOLOGY, ModConstants.TYPE_STRUCTURE, ModConstants.TYPE_CONFIGURED_FEATURE -> {
+                case ModConstants.TYPE_GIFT, ModConstants.TYPE_COMMAND, ModConstants.TYPE_ARCHAEOLOGY,
+                     ModConstants.TYPE_STRUCTURE, ModConstants.TYPE_CONFIGURED_FEATURE -> {
                     return true;
                 }
                 case ModConstants.TYPE_MOB -> {
