@@ -28,7 +28,8 @@
       "type": "mob",
       "id": "minecraft:camel",
       "count": 1,
-      "weight": 2
+      "weight": 2,
+      "max_times": 3
     },
     {
       "type": "block",

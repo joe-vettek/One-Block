@@ -131,7 +131,7 @@ class SimplePoolEntryBuilder(PoolEntryBuilder):
 class CountPoolEntryBuilder(PoolEntryBuilder):
     def __init__(self, name: str, weight: int = 6, min=1, max=2):
         super().__init__(name, weight, False)
-        self.add_count_function(min,max)
+        self.add_count_function(min, max)
 
 
 class LootPoolBuilder(dict):
@@ -339,7 +339,7 @@ class PhaseTableBuilder(dict):
 
     def add_chest_gift(self, loot_id: str, weight=0, min_times=0, max_times=0):
         self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_GIFT, id_c=minecraft.blocks.chest, weight=weight)
-        .set_loot_table(loot_id)
+                       .set_loot_table(loot_id)
                        .set_times(min_times, max_times))
         return self
 

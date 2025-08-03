@@ -86,7 +86,8 @@
       "type": "mob",
       "id": "minecraft:mooshroom",
       "count": 1,
-      "weight": 1
+      "weight": 1,
+      "max_times": 1
     },
     {
       "type": "gift",

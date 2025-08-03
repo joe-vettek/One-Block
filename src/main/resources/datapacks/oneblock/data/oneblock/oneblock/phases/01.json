@@ -42,25 +42,30 @@
       "type": "mob",
       "id": "minecraft:chicken",
       "count": 1,
-      "weight": 1
+      "weight": 1,
+      "max_times": 2
     },
     {
       "type": "mob",
       "id": "minecraft:sheep",
       "count": 1,
-      "weight": 1
+      "weight": 1,
+      "max_times": 2
     },
     {
       "type": "mob",
       "id": "minecraft:cow",
       "count": 1,
-      "weight": 1
+      "weight": 1,
+      "min_times": 1,
+      "max_times": 2
     },
     {
       "type": "mob",
       "id": "minecraft:pig",
       "count": 1,
-      "weight": 1
+      "weight": 1,
+      "max_times": 2
     },
     {
       "type": "gift",
