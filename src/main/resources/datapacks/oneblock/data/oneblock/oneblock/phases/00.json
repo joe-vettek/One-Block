@@ -42,7 +42,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:tutorial-waterbucket",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:tutorial-waterbucket",
       "times": 1
     }
   ]

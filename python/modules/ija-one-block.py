@@ -581,7 +581,8 @@ loot07_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.blaze_powder, we
 loot07_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.netherite_scrap, weight=1).add_count_function(1, 2))
 loot07_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.nether_wart, weight=1).add_count_function(1, 2))
 loot07_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.nether_sprouts, weight=1).add_count_function(1, 2))
-loot07_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.wither_skeleton_skull, weight=1).add_count_function(1, 1))
+loot07_variety.add_entry(
+    SimplePoolEntryBuilder(minecraft.blocks.wither_skeleton_skull, weight=1).add_count_function(1, 1))
 loot_provider.add_loot(table_id="07-variety", table=loot07_variety)
 
 # 07
@@ -707,13 +708,15 @@ loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.blaze_powder, we
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.netherite_scrap, weight=1).add_count_function(1, 2))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.nether_wart, weight=1).add_count_function(1, 2))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.nether_sprouts, weight=1).add_count_function(1, 2))
-loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.wither_skeleton_skull, weight=1).add_count_function(1, 1))
+loot08_variety.add_entry(
+    SimplePoolEntryBuilder(minecraft.blocks.wither_skeleton_skull, weight=1).add_count_function(1, 1))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.honey_bottle, weight=6).add_count_function(2, 4))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.honeycomb, weight=5).add_count_function(1, 2))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.beetroot_seeds, weight=4).add_count_function(1, 3))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.beetroot_soup, weight=3).add_count_function(1, 2))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.slime_ball, weight=3).add_count_function(2, 4))
-loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.glistering_melon_slice, weight=3).add_count_function(1, 3))
+loot08_variety.add_entry(
+    SimplePoolEntryBuilder(minecraft.items.glistering_melon_slice, weight=3).add_count_function(1, 3))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.golden_carrot, weight=3).add_count_function(1, 3))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.experience_bottle, weight=3).add_count_function(2, 4))
 loot08_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.fire_charge, weight=3).add_count_function(1, 3))
@@ -846,13 +849,15 @@ loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.blaze_powder, we
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.netherite_scrap, weight=1).add_count_function(1, 2))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.nether_wart, weight=1).add_count_function(1, 2))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.nether_sprouts, weight=1).add_count_function(1, 2))
-loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.wither_skeleton_skull, weight=1).add_count_function(1, 1))
+loot09_variety.add_entry(
+    SimplePoolEntryBuilder(minecraft.blocks.wither_skeleton_skull, weight=1).add_count_function(1, 1))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.honey_bottle, weight=6).add_count_function(2, 4))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.honeycomb, weight=5).add_count_function(1, 2))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.beetroot_seeds, weight=4).add_count_function(1, 3))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.beetroot_soup, weight=3).add_count_function(1, 2))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.slime_ball, weight=3).add_count_function(2, 4))
-loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.glistering_melon_slice, weight=3).add_count_function(1, 3))
+loot09_variety.add_entry(
+    SimplePoolEntryBuilder(minecraft.items.glistering_melon_slice, weight=3).add_count_function(1, 3))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.golden_carrot, weight=3).add_count_function(1, 3))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.experience_bottle, weight=3).add_count_function(2, 4))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.fire_charge, weight=3).add_count_function(1, 3))
@@ -865,7 +870,8 @@ loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.cobweb, weight=
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.rotten_flesh, weight=6).add_count_function(2, 4))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.bone, weight=6).add_count_function(2, 4))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.dead_bush, weight=6).add_count_function(2, 3))
-loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.fermented_spider_eye, weight=5).add_count_function(2, 3))
+loot09_variety.add_entry(
+    SimplePoolEntryBuilder(minecraft.items.fermented_spider_eye, weight=5).add_count_function(2, 3))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.poisonous_potato, weight=4).add_count_function(2, 3))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.gunpowder, weight=3).add_count_function(3, 4))
 loot09_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.emerald, weight=2).add_count_function(2, 3))
@@ -988,13 +994,15 @@ loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.blaze_powder, we
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.netherite_scrap, weight=1).add_count_function(1, 2))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.nether_wart, weight=1).add_count_function(1, 2))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.nether_sprouts, weight=1).add_count_function(1, 2))
-loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.wither_skeleton_skull, weight=1).add_count_function(1, 1))
+loot10_variety.add_entry(
+    SimplePoolEntryBuilder(minecraft.blocks.wither_skeleton_skull, weight=1).add_count_function(1, 1))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.honey_bottle, weight=6).add_count_function(2, 4))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.honeycomb, weight=5).add_count_function(1, 2))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.beetroot_seeds, weight=4).add_count_function(1, 3))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.beetroot_soup, weight=3).add_count_function(1, 2))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.slime_ball, weight=3).add_count_function(2, 4))
-loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.glistering_melon_slice, weight=3).add_count_function(1, 3))
+loot10_variety.add_entry(
+    SimplePoolEntryBuilder(minecraft.items.glistering_melon_slice, weight=3).add_count_function(1, 3))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.golden_carrot, weight=3).add_count_function(1, 3))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.experience_bottle, weight=3).add_count_function(2, 4))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.fire_charge, weight=3).add_count_function(1, 3))
@@ -1007,7 +1015,8 @@ loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.cobweb, weight=
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.rotten_flesh, weight=6).add_count_function(2, 4))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.bone, weight=6).add_count_function(2, 4))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.blocks.dead_bush, weight=6).add_count_function(2, 3))
-loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.fermented_spider_eye, weight=5).add_count_function(2, 3))
+loot10_variety.add_entry(
+    SimplePoolEntryBuilder(minecraft.items.fermented_spider_eye, weight=5).add_count_function(2, 3))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.poisonous_potato, weight=4).add_count_function(2, 3))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.gunpowder, weight=3).add_count_function(3, 4))
 loot10_variety.add_entry(SimplePoolEntryBuilder(minecraft.items.emerald, weight=2).add_count_function(2, 3))
@@ -1035,21 +1044,21 @@ loot10.add_entry(SimplePoolEntryBuilder(minecraft.items.dragon_breath, weight=1)
 loot_provider.add_loot(table_id="10", table=loot10)
 
 # musical
-musical= LootTableBuilder()
+musical = LootTableBuilder()
 loot_provider.add_loot(table_id="musical", table=musical)
-lootbuilder_musical_1=LootPoolBuilder(CountBuilder(1, 2),CountBuilder(0, 0))
+lootbuilder_musical_1 = LootPoolBuilder(CountBuilder(1, 2), CountBuilder(0, 0))
 lootbuilder_musical_1.add_entry_item(minecraft.items.paper, 1, 2, 4)
 lootbuilder_musical_1.add_entry_item(minecraft.blocks.string, 1, 2, 3)
 lootbuilder_musical_1.add_entry_item(minecraft.items.feather, 1, 2, 3)
 lootbuilder_musical_1.add_entry_item(minecraft.items.ink_sac, 1, 2, 4)
 musical.add_pool(lootbuilder_musical_1)
 
-lootbuilder_musical_2=LootPoolBuilder(CountBuilder(1, 1),CountBuilder(0, 0))
+lootbuilder_musical_2 = LootPoolBuilder(CountBuilder(1, 1), CountBuilder(0, 0))
 lootbuilder_musical_2.add_entry_item(minecraft.items.writable_book, 1, 1, 1)
 lootbuilder_musical_2.add_entry_item(minecraft.items.book, 1, 2, 4)
 musical.add_pool(lootbuilder_musical_2)
 
-lootbuilder_musical_3=LootPoolBuilder(CountBuilder(1, 1),CountBuilder(0, 1))
+lootbuilder_musical_3 = LootPoolBuilder(CountBuilder(1, 1), CountBuilder(0, 1))
 lootbuilder_musical_3.add_entry_item(minecraft.items.music_disc_13, 1, 1, 1)
 lootbuilder_musical_3.add_entry_item(minecraft.items.music_disc_blocks, 1, 1, 1)
 lootbuilder_musical_3.add_entry_item(minecraft.items.music_disc_chirp, 1, 1, 1)
@@ -1065,11 +1074,10 @@ lootbuilder_musical_3.add_entry_item(minecraft.items.music_disc_far, 1, 1, 1)
 lootbuilder_musical_3.add_entry_item(minecraft.items.music_disc_pigstep, 1, 1, 1)
 musical.add_pool(lootbuilder_musical_3)
 
-
 # odd
-odd= LootTableBuilder()
+odd = LootTableBuilder()
 loot_provider.add_loot(table_id="odd", table=odd)
-lootbuilder_odd_1=LootPoolBuilder(CountBuilder(1, 1),CountBuilder(0, 0))
+lootbuilder_odd_1 = LootPoolBuilder(CountBuilder(1, 1), CountBuilder(0, 0))
 lootbuilder_odd_1.add_entry_item(minecraft.items.bat_spawn_egg, 1, 1, 1)
 lootbuilder_odd_1.add_entry_item(minecraft.items.bee_spawn_egg, 1, 1, 1)
 lootbuilder_odd_1.add_entry_item(minecraft.items.blaze_spawn_egg, 1, 1, 1)
@@ -1131,7 +1139,7 @@ lootbuilder_odd_1.add_entry_item(minecraft.items.zombie_villager_spawn_egg, 1, 1
 lootbuilder_odd_1.add_entry_item(minecraft.items.zombified_piglin_spawn_egg, 1, 1, 1)
 odd.add_pool(lootbuilder_odd_1)
 
-lootbuilder_odd_2=LootPoolBuilder(CountBuilder(1, 1),CountBuilder(0, 1))
+lootbuilder_odd_2 = LootPoolBuilder(CountBuilder(1, 1), CountBuilder(0, 1))
 lootbuilder_odd_2.add_entry_item(minecraft.items.black_dye, 1, 2, 5)
 lootbuilder_odd_2.add_entry_item(minecraft.items.red_dye, 1, 2, 5)
 lootbuilder_odd_2.add_entry_item(minecraft.items.green_dye, 1, 2, 5)
@@ -1150,7 +1158,7 @@ lootbuilder_odd_2.add_entry_item(minecraft.items.orange_dye, 1, 2, 5)
 lootbuilder_odd_2.add_entry_item(minecraft.items.white_dye, 1, 2, 5)
 odd.add_pool(lootbuilder_odd_2)
 
-lootbuilder_odd_3=LootPoolBuilder(CountBuilder(1, 1),CountBuilder(0, 1))
+lootbuilder_odd_3 = LootPoolBuilder(CountBuilder(1, 1), CountBuilder(0, 1))
 lootbuilder_odd_3.add_entry_item(minecraft.blocks.dandelion, 1, 2, 5)
 lootbuilder_odd_3.add_entry_item(minecraft.blocks.poppy, 1, 2, 5)
 lootbuilder_odd_3.add_entry_item(minecraft.blocks.red_tulip, 1, 2, 5)
@@ -1179,7 +1187,7 @@ lootbuilder_odd_3.add_entry_item(minecraft.blocks.crimson_fungus, 1, 1, 3)
 lootbuilder_odd_3.add_entry_item(minecraft.blocks.warped_fungus, 1, 1, 3)
 odd.add_pool(lootbuilder_odd_3)
 
-lootbuilder_odd_4=LootPoolBuilder(CountBuilder(1, 1),CountBuilder(0, 1))
+lootbuilder_odd_4 = LootPoolBuilder(CountBuilder(1, 1), CountBuilder(0, 1))
 lootbuilder_odd_4.add_entry_item(minecraft.blocks.oak_sapling, 1, 1, 2)
 lootbuilder_odd_4.add_entry_item(minecraft.blocks.spruce_sapling, 1, 1, 2)
 lootbuilder_odd_4.add_entry_item(minecraft.blocks.birch_sapling, 1, 1, 2)
@@ -1200,37 +1208,48 @@ lootbuilder_odd_4.add_entry_item(minecraft.blocks.cocoa_beans, 1, 1, 2)
 lootbuilder_odd_4.add_entry_item(minecraft.blocks.carrot, 1, 1, 2)
 odd.add_pool(lootbuilder_odd_4)
 
-
 # rare
-rare= LootTableBuilder()
+rare = LootTableBuilder()
 loot_provider.add_loot(table_id="rare", table=rare)
-lootbuilder_rare_1=LootPoolBuilder(CountBuilder(1, 1),CountBuilder(0, 1))
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:long_fire_resistance"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:strong_healing"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:long_invisibility"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:long_leaping"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:luck"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:long_night_vision"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:long_regeneration"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:long_slow_falling"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:long_strength"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:strong_swiftness"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:strong_turtle_master"})
-lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion":"minecraft:long_water_breathing"})
+lootbuilder_rare_1 = LootPoolBuilder(CountBuilder(1, 1), CountBuilder(0, 1))
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1,
+                                  {"Potion": "minecraft:long_fire_resistance"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion": "minecraft:strong_healing"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion": "minecraft:long_invisibility"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion": "minecraft:long_leaping"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion": "minecraft:luck"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion": "minecraft:long_night_vision"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion": "minecraft:long_regeneration"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion": "minecraft:long_slow_falling"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion": "minecraft:long_strength"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1, {"Potion": "minecraft:strong_swiftness"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1,
+                                  {"Potion": "minecraft:strong_turtle_master"})
+lootbuilder_rare_1.add_entry_item(minecraft.items.lingering_potion, 1, 1, 1,
+                                  {"Potion": "minecraft:long_water_breathing"})
 rare.add_pool(lootbuilder_rare_1)
 
-lootbuilder_rare_2=LootPoolBuilder(CountBuilder(1, 1),CountBuilder(0, 0))
-lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,enchantments=['multishot', 'quick_charge'])
-lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,enchantments=['flame', 'infinity', 'power', 'punch'])
-lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,enchantments=['bane_of_arthropods', 'fire_aspect', 'fortune', 'knockback', 'looting', 'sharpness', 'soul_speed', 'smite', 'sweeping'])
-lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,enchantments=['efficiency', 'fortune', 'silk_touch'])
-lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,enchantments=['channeling', 'impaling', 'loyalty', 'riptide'])
-lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,enchantments=['piercing', 'quick_charge'])
-lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,enchantments=['luck_of_the_sea', 'lure'])
-lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,enchantments=['aqua_affinity', 'blast_protection', 'depth_strider', 'feather_falling', 'fire_protection', 'frost_walker', 'mending', 'projectile_protection', 'protection', 'respiration', 'thorns', 'unbreaking', 'binding_curse', 'vanishing_curse'])
+lootbuilder_rare_2 = LootPoolBuilder(CountBuilder(1, 1), CountBuilder(0, 0))
+lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None, enchantments=['multishot', 'quick_charge'])
+lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,
+                                  enchantments=['flame', 'infinity', 'power', 'punch'])
+lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,
+                                  enchantments=['bane_of_arthropods', 'fire_aspect', 'fortune', 'knockback', 'looting',
+                                                'sharpness', 'soul_speed', 'smite', 'sweeping'])
+lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,
+                                  enchantments=['efficiency', 'fortune', 'silk_touch'])
+lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,
+                                  enchantments=['channeling', 'impaling', 'loyalty', 'riptide'])
+lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None, enchantments=['piercing', 'quick_charge'])
+lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None, enchantments=['luck_of_the_sea', 'lure'])
+lootbuilder_rare_2.add_entry_item(minecraft.items.book, 1, 1, 1, tag=None,
+                                  enchantments=['aqua_affinity', 'blast_protection', 'depth_strider', 'feather_falling',
+                                                'fire_protection', 'frost_walker', 'mending', 'projectile_protection',
+                                                'protection', 'respiration', 'thorns', 'unbreaking', 'binding_curse',
+                                                'vanishing_curse'])
 rare.add_pool(lootbuilder_rare_2)
 
-lootbuilder_rare_3=LootPoolBuilder(CountBuilder(0, 1),CountBuilder(0, 0))
+lootbuilder_rare_3 = LootPoolBuilder(CountBuilder(0, 1), CountBuilder(0, 0))
 lootbuilder_rare_3.add_entry_item(minecraft.items.totem_of_undying, 1, 1, 1)
 lootbuilder_rare_3.add_entry_item(minecraft.blocks.creeper_head, 1, 1, 1)
 lootbuilder_rare_3.add_entry_item(minecraft.blocks.zombie_head, 1, 1, 1)
@@ -1243,12 +1262,12 @@ lootbuilder_rare_3.add_entry_item(minecraft.items.emerald, 1, 2, 6)
 lootbuilder_rare_3.add_entry_item(minecraft.items.diamond, 1, 1, 3)
 rare.add_pool(lootbuilder_rare_3)
 
-lootbuilder_rare_4=LootPoolBuilder(CountBuilder(1, 2),CountBuilder(0, 0))
+lootbuilder_rare_4 = LootPoolBuilder(CountBuilder(1, 2), CountBuilder(0, 0))
 lootbuilder_rare_4.add_entry_item(minecraft.items.gold_ingot, 1, 3, 4)
 rare.add_pool(lootbuilder_rare_4)
 
-
 # tutorial-waterbucket
-loottutorial_waterbucket = SingleLootTableBuilder()
-loottutorial_waterbucket.add_entry(SimplePoolEntryBuilder(minecraft.items.water_bucket, weight=1).add_count_function(1, 1))
+loottutorial_waterbucket = SingleLootTableBuilder(rolls_min=1, rolls_max=1, bonus_rolls_min=0, bonus_rolls_max=0)
+loottutorial_waterbucket.add_entry(
+    SimplePoolEntryBuilder(minecraft.items.water_bucket, weight=1).add_count_function(1, 1))
 loot_provider.add_loot(table_id="tutorial-waterbucket", table=loottutorial_waterbucket)

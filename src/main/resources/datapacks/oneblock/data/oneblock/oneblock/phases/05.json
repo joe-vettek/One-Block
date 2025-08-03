@@ -182,7 +182,8 @@
     },
     {
       "type": "gift",
-      "id": "ija-one-block:musical",
+      "id": "minecraft:chest",
+      "loot_table": "ija-one-block:musical",
       "times": 1
     }
   ]

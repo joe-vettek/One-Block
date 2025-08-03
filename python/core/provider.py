@@ -5,6 +5,7 @@ from os.path import join
 from typing import List
 
 from core import util, constant
+from mods import minecraft
 
 root = "datapacks"
 use_path = []
@@ -337,7 +338,8 @@ class PhaseTableBuilder(dict):
         return self
 
     def add_chest_gift(self, loot_id: str, weight=0, min_times=0, max_times=0):
-        self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_GIFT, id_c=loot_id, weight=weight)
+        self.add_entry(PhaseEntryBuilder(type_c=constant.TYPE_GIFT, id_c=minecraft.blocks.chest, weight=weight)
+        .set_loot_table(loot_id)
                        .set_times(min_times, max_times))
         return self
 
